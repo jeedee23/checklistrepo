@@ -55,7 +55,7 @@
         },
         {
           "label": "End plates:",
-          "done": false
+          "done": true
         },
         {
           "label": "Slot for shaft (through seal)",
@@ -100,7 +100,7 @@
         },
         {
           "label": "Ceramic bearing rests at seal",
-          "done": false
+          "done": true
         },
         {
           "label": "Non-motor side:",
