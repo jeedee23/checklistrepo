@@ -1,0 +1,233 @@
+{
+  "title": "Checklistddv",
+  "chapters": [
+    {
+      "title": "1. Body DDV",
+      "items": [
+        {
+          "label": "Body optimized (hung); welds complete.",
+          "done": false
+        },
+        {
+          "label": "Drill:",
+          "done": false
+        },
+        {
+          "label": "8 \u00d7 \u00d87.5 mm holes",
+          "done": false
+        },
+        {
+          "label": "12 \u00d7 \u00d85 mm holes",
+          "done": false
+        }
+      ]
+    },
+    {
+      "title": "2. Doors DDV",
+      "items": [
+        {
+          "label": "Two new 2 mm doors made (flexible & strong).",
+          "done": false
+        },
+        {
+          "label": "Upper door needs slight clearance adjustment.",
+          "done": false
+        },
+        {
+          "label": "Hinges:",
+          "done": false
+        },
+        {
+          "label": "Both use \u00d812 mm shaft. Consider adding PP bushings to avoid SST grinding\u2014food-grade grease may suffice.",
+          "done": false
+        },
+        {
+          "label": "Hinge Shaft & End Plates:",
+          "done": false
+        },
+        {
+          "label": "Shaft cut to 1345 mm- with circlips 5 mm from ends.",
+          "done": false
+        },
+        {
+          "label": "End plates:",
+          "done": false
+        },
+        {
+          "label": "Slot for shaft (through seal)",
+          "done": false
+        },
+        {
+          "label": "Weld-on hang-up arms (weld while mounted)",
+          "done": false
+        }
+      ]
+    },
+    {
+      "title": "3. Upper Door Drive",
+      "items": [
+        {
+          "label": "Arms (laser-cut):",
+          "done": false
+        },
+        {
+          "label": "Drill:",
+          "done": false
+        },
+        {
+          "label": "1 \u00d7 M6 tapped hole (for flat on drive shaft)",
+          "done": false
+        },
+        {
+          "label": "2 \u00d7 \u00d85 mm through holes (for spring steel - arriving tomorrow)",
+          "done": false
+        },
+        {
+          "label": "Shaft & End Plates:",
+          "done": false
+        },
+        {
+          "label": "Shaft cut to 1410 mm",
+          "done": false
+        },
+        {
+          "label": "Circlip on non-motor side",
+          "done": false
+        },
+        {
+          "label": "Ceramic bearing rests at seal",
+          "done": false
+        },
+        {
+          "label": "Non-motor side:",
+          "done": false
+        },
+        {
+          "label": "3D-printed cap (maybe 3 mounting holes)",
+          "done": false
+        },
+        {
+          "label": "Motor side:",
+          "done": false
+        },
+        {
+          "label": "ISO KF40 tri-clamp male 20 mm (needs helper tool for correct alignment)",
+          "done": false
+        },
+        {
+          "label": "Shaft flats for arm bolts",
+          "done": false
+        },
+        {
+          "label": "Connect to flexible bellow (Meam stock)",
+          "done": false
+        },
+        {
+          "label": "Weld ISO KF40 50 & 20 nipples together with additive- then lathe smooth",
+          "done": false
+        },
+        {
+          "label": "Pfeiffer feedthrough (TBD) to be lathed to fit shaft gap",
+          "done": false
+        },
+        {
+          "label": "Stepper motor connects directly to feedthrough",
+          "done": false
+        },
+        {
+          "label": "Total length: 355 mm \u2013 likely too long- needs robust support (TBD week of April 21)",
+          "done": false
+        },
+        {
+          "label": "Pros: vacuum feedthrough- no complex gear; Cons: structural challenge",
+          "done": false
+        },
+        {
+          "label": "Electrical Connector Box:",
+          "done": false
+        },
+        {
+          "label": "3D printed- mounted with 3D-printed clamp (holds stepper + feedthrough)",
+          "done": false
+        }
+      ]
+    },
+    {
+      "title": "4. Lower Door Drive",
+      "items": [
+        {
+          "label": "Minor changes:",
+          "done": false
+        },
+        {
+          "label": "Swapped position",
+          "done": false
+        },
+        {
+          "label": "Now uses flexible coupling",
+          "done": false
+        },
+        {
+          "label": "Door is 2 mm; shaft \u00d812 mm",
+          "done": false
+        }
+      ]
+    },
+    {
+      "title": "5. Upper Seal",
+      "items": [
+        {
+          "label": "Likely functional as-is; one final print version may improve performance.",
+          "done": false
+        }
+      ]
+    },
+    {
+      "title": "6. Lower Seal",
+      "items": [
+        {
+          "label": "Thin flat seal: start printing ASAP tomorrow- ready in 24h.",
+          "done": false
+        },
+        {
+          "label": "Should be final version.",
+          "done": false
+        }
+      ]
+    },
+    {
+      "title": "7. Motors & Connector Plug",
+      "items": [
+        {
+          "label": "Both motors to get TPU navy blue flexible jackets",
+          "done": false
+        },
+        {
+          "label": "Wiring integrated in the seal",
+          "done": false
+        },
+        {
+          "label": "Connector plug: large 3D-printed piece combining drive-through and stepper (upper door)",
+          "done": false
+        }
+      ]
+    },
+    {
+      "title": "8. Control & Software",
+      "items": [
+        {
+          "label": "Minor updates (~1h)",
+          "done": false
+        },
+        {
+          "label": "Finalize MCU enclosure",
+          "done": false
+        },
+        {
+          "label": "Stepper motor power to be set after spring-arm tests",
+          "done": false
+        }
+      ]
+    }
+  ]
+}
