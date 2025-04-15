@@ -21,7 +21,7 @@
           "done": false
         },
         {
-          "label": "close weld unused holes",
+          "label": "Close weld unused holes",
           "done": false
         }
       ]
@@ -39,7 +39,7 @@
         },
         {
           "label": "Hinges:",
-          "done": true
+          "done": false
         },
         {
           "label": "Both use Ø12 mm shaft. Consider adding PP bushings to avoid SST grinding—food-grade grease may suffice.",
@@ -55,7 +55,7 @@
         },
         {
           "label": "End plates:",
-          "done": true
+          "done": false
         },
         {
           "label": "Slot for shaft (through seal)",
@@ -100,7 +100,7 @@
         },
         {
           "label": "Ceramic bearing rests at seal",
-          "done": true
+          "done": false
         },
         {
           "label": "Non-motor side:",
