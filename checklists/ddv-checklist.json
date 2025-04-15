@@ -13,11 +13,11 @@
           "done": false
         },
         {
-          "label": "8 \u00d7 \u00d87.5 mm holes",
+          "label": "8 × Ø7.5 mm holes",
           "done": false
         },
         {
-          "label": "12 \u00d7 \u00d85 mm holes",
+          "label": "12 × Ø5 mm holes",
           "done": false
         }
       ]
@@ -27,7 +27,7 @@
       "items": [
         {
           "label": "Two new 2 mm doors made (flexible & strong).",
-          "done": false
+          "done": true
         },
         {
           "label": "Upper door needs slight clearance adjustment.",
@@ -38,7 +38,7 @@
           "done": false
         },
         {
-          "label": "Both use \u00d812 mm shaft. Consider adding PP bushings to avoid SST grinding\u2014food-grade grease may suffice.",
+          "label": "Both use Ø12 mm shaft. Consider adding PP bushings to avoid SST grinding—food-grade grease may suffice.",
           "done": false
         },
         {
@@ -68,18 +68,18 @@
       "items": [
         {
           "label": "Arms (laser-cut):",
-          "done": false
+          "done": true
         },
         {
           "label": "Drill:",
           "done": false
         },
         {
-          "label": "1 \u00d7 M6 tapped hole (for flat on drive shaft)",
+          "label": "1 × M6 tapped hole (for flat on drive shaft)",
           "done": false
         },
         {
-          "label": "2 \u00d7 \u00d85 mm through holes (for spring steel - arriving tomorrow)",
+          "label": "2 × Ø5 mm through holes (for spring steel - arriving tomorrow)",
           "done": false
         },
         {
@@ -135,7 +135,7 @@
           "done": false
         },
         {
-          "label": "Total length: 355 mm \u2013 likely too long- needs robust support (TBD week of April 21)",
+          "label": "Total length: 355 mm – likely too long- needs robust support (TBD week of April 21)",
           "done": false
         },
         {
@@ -168,7 +168,7 @@
           "done": false
         },
         {
-          "label": "Door is 2 mm; shaft \u00d812 mm",
+          "label": "Door is 2 mm; shaft Ø12 mm",
           "done": false
         }
       ]
