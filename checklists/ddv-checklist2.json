@@ -1,0 +1,33 @@
+{
+  "title": "ddv-checklist2",
+  "items": [
+    {
+      "label": "Chapter 1",
+      "done": false,
+      "children": [
+        {
+          "label": "Level 1",
+          "done": false,
+          "children": [
+            {
+              "label": "Level 2",
+              "done": false,
+              "children": [
+                {
+                  "label": "Level 3",
+                  "done": false,
+                  "children": [
+                    {
+                      "label": "Level 4",
+                      "done": false
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
