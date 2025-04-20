@@ -16,7 +16,7 @@
           "done": false
         },
         {
-          "label": "Fast-blow fuse (Eaton 25A KLKE-25)",
+          "label": "Fast-blow fuse (Eaton 25A KLKE-25) not needed",
           "done": false
         },
         {
@@ -36,15 +36,15 @@
       "done": false,
       "children": [
         {
-          "label": "Triac TPDV1240RG (40A, 1200V)",
+          "label": "Triac TPDV1240RG (40A, 1200V)L1 & L2",
           "done": false
         },
         {
-          "label": "Gate triggered by MOC3052",
+          "label": "Gate triggered by MOC3052 optocoupler with two outputs",
           "done": false
         },
         {
-          "label": "Snubber: 150\u202f\u03a9 + 0.15\u202f\u00b5F Nichicon PPA2253150KN",
+          "label": "Snubber: 47 Ω + 0.15 µF Nichicon PPA2253150KN (triple or single?)",
           "done": false
         },
         {
@@ -60,7 +60,7 @@
       "done": false,
       "children": [
         {
-          "label": "47\u202f\u03a9 10W flameproof resistor",
+          "label": "47 Ω 10W flameproof resistor",
           "done": false
         },
         {
@@ -70,7 +70,30 @@
       ]
     },
     {
-      "label": "Voltage Detection (AC Monitoring)",
+      "label": "Voltage detection primary",
+      "done": false,
+      "children": [
+        {
+          "label": "Transformer winding 75:1 ratio",
+          "done": false,
+          "children": []
+        },
+        {
+          "label": "output to voltage divider  (10k/5.6k)",
+          "done": false
+        },
+        {
+          "label": "Input to STM32 ADC",
+          "done": false
+        }
+      ]
+    },
+    {
+      "label": "New item",
+      "done": false
+    },
+    {
+      "label": "Voltage Detection secondary(AC Monitoring)",
       "responsible": "Jeamichel",
       "targetDate": "2025-04-20",
       "done": false,
@@ -92,19 +115,19 @@
           "done": false
         },
         {
-          "label": "Test scaling up to 1200\u202fV spikes",
+          "label": "Test scaling up to 1200 V spikes",
           "done": false
         }
       ]
     },
     {
-      "label": "Current Sensing",
+      "label": "Current Sensing on line, primary and secondary",
       "responsible": "Johan",
       "targetDate": "2025-04-20",
       "done": false,
       "children": [
         {
-          "label": "ACS711ELCTR-25AB-T wired to ADC",
+          "label": "3 times ACS711ELCTR-25AB-T wired to ADC",
           "done": false
         },
         {
@@ -120,7 +143,7 @@
       "done": false,
       "children": [
         {
-          "label": "LM35DZ mounted",
+          "label": "LM35DZ mounted, on triacs",
           "done": false
         },
         {
