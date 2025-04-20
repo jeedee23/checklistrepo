@@ -8,8 +8,8 @@
     {
       "label": "Body DDV",
       "done": false,
-      "responsible": "",
-      "targetDate": "",
+      "responsible": "Hung",
+      "targetDate": "2025-04-22",
       "children": [
         {
           "label": "Body optimized (hung); welds complete.",
