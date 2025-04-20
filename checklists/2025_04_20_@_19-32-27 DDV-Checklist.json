@@ -11,19 +11,20 @@
         },
         {
           "label": "Drill:",
-          "done": true
+          "done": true,
+          "bold": true
         },
         {
           "label": "8 × Ø7.5 mm holes",
-          "done": false
+          "done": true
         },
         {
           "label": "12 × Ø5 mm holes",
-          "done": false
+          "done": true
         },
         {
           "label": "Close weld unused holes",
-          "done": false
+          "done": true
         }
       ]
     },
@@ -37,25 +38,27 @@
         },
         {
           "label": "Upper door needs slight clearance adjustment.",
-          "done": false
+          "done": true
         },
         {
           "label": "Hinges:",
-          "done": false,
+          "done": true,
           "children": [
             {
-              "label": "Both use Ø12 mm shaft. Consider adding PP bushings to avoid SST grinding—food-gr",
-              "done": false
+              "label": "Both use Ø12 mm shaft.We considered not to add grinding protection",
+              "done": true,
+              "bold": true,
+              "color": "rgba(255,0,0,1)"
             },
             {
               "label": "Hinge Shaft & End Plates:",
-              "done": false
+              "done": true
+            },
+            {
+              "label": "Shaft cut and fits into end plates milled out slot",
+              "done": true
             }
           ]
-        },
-        {
-          "label": "Shaft cut to 1345 mm- with circlips 5 mm from ends.",
-          "done": false
         },
         {
           "label": "End plates:",
@@ -63,7 +66,7 @@
           "children": [
             {
               "label": "Slot for shaft (through seal)",
-              "done": false
+              "done": true
             },
             {
               "label": "Weld-on hang-up arms (weld while mounted)",
@@ -79,7 +82,8 @@
       "children": [
         {
           "label": "Arms (laser-cut):",
-          "done": true
+          "done": true,
+          "children": []
         },
         {
           "label": "Drill:",
