@@ -2,99 +2,243 @@
   "title": "Ddv Checklist",
   "items": [
     {
-      "label": "1. Body DDV",
+      "label": "Body DDV",
       "done": false,
       "children": [
-        { "label": "Body optimized (hung); welds complete.", "done": true },
-        { "label": "Drill:", "done": true },
-        { "label": "8 × Ø7.5 mm holes", "done": false },
-        { "label": "12 × Ø5 mm holes", "done": false },
-        { "label": "Close weld unused holes", "done": false }
+        {
+          "label": "Body optimized (hung); welds complete.",
+          "done": true
+        },
+        {
+          "label": "Drill:",
+          "done": true
+        },
+        {
+          "label": "8 × Ø7.5 mm holes",
+          "done": false
+        },
+        {
+          "label": "12 × Ø5 mm holes",
+          "done": false
+        },
+        {
+          "label": "Close weld unused holes",
+          "done": false
+        }
       ]
     },
     {
       "label": "2. Doors DDV",
       "done": false,
       "children": [
-        { "label": "Two new 2 mm doors made (flexible & strong).", "done": true },
-        { "label": "Upper door needs slight clearance adjustment.", "done": false },
-        { "label": "Hinges:", "done": false },
-        { "label": "Both use Ø12 mm shaft. Consider adding PP bushings to avoid SST grinding—food-grade grease may suffice.", "done": false },
-        { "label": "Hinge Shaft & End Plates:", "done": false },
-        { "label": "Shaft cut to 1345 mm- with circlips 5 mm from ends.", "done": false },
-        { "label": "End plates:", "done": false },
-        { "label": "Slot for shaft (through seal)", "done": false },
-        { "label": "Weld-on hang-up arms (weld while mounted)", "done": false }
+        {
+          "label": "Two new 2 mm doors made (flexible & strong).",
+          "done": true
+        },
+        {
+          "label": "Upper door needs slight clearance adjustment.",
+          "done": false
+        },
+        {
+          "label": "Hinges:",
+          "done": false
+        },
+        {
+          "label": "Both use Ø12 mm shaft. Consider adding PP bushings to avoid SST grinding—food-grade grease may suffice.",
+          "done": false
+        },
+        {
+          "label": "Hinge Shaft & End Plates:",
+          "done": false
+        },
+        {
+          "label": "Shaft cut to 1345 mm- with circlips 5 mm from ends.",
+          "done": false
+        },
+        {
+          "label": "End plates:",
+          "done": false
+        },
+        {
+          "label": "Slot for shaft (through seal)",
+          "done": false
+        },
+        {
+          "label": "Weld-on hang-up arms (weld while mounted)",
+          "done": false
+        }
       ]
     },
     {
       "label": "3. Upper Door Drive",
       "done": false,
       "children": [
-        { "label": "Arms (laser-cut):", "done": true },
-        { "label": "Drill:", "done": false },
-        { "label": "1 × M6 tapped hole (for flat on drive shaft)", "done": false },
-        { "label": "2 × Ø5 mm through holes (for spring steel - arriving tomorrow)", "done": false },
-        { "label": "Shaft & End Plates:", "done": false },
-        { "label": "Shaft cut to 1410 mm", "done": false },
-        { "label": "Circlip on non-motor side", "done": false },
-        { "label": "Ceramic bearing rests at seal", "done": false },
-        { "label": "Non-motor side:", "done": false },
-        { "label": "3D-printed cap (maybe 3 mounting holes)", "done": false },
-        { "label": "Motor side:", "done": false },
-        { "label": "ISO KF40 tri-clamp male 20 mm (needs helper tool for correct alignment)", "done": false },
-        { "label": "Shaft flats for arm bolts", "done": false },
-        { "label": "Connect to flexible bellow (Meam stock)", "done": false },
-        { "label": "Weld ISO KF40 50 & 20 nipples together with additive- then lathe smooth", "done": false },
-        { "label": "Pfeiffer feedthrough (TBD) to be lathed to fit shaft gap", "done": false },
-        { "label": "Stepper motor connects directly to feedthrough", "done": false },
-        { "label": "Total length: 355 mm – likely too long- needs robust support (TBD week of April 21)", "done": false },
-        { "label": "Pros: vacuum feedthrough- no complex gear; Cons: structural challenge", "done": false },
-        { "label": "Electrical Connector Box:", "done": false },
-        { "label": "3D printed- mounted with 3D-printed clamp (holds stepper + feedthrough)", "done": false }
+        {
+          "label": "Arms (laser-cut):",
+          "done": true
+        },
+        {
+          "label": "Drill:",
+          "done": false
+        },
+        {
+          "label": "1 × M6 tapped hole (for flat on drive shaft)",
+          "done": false
+        },
+        {
+          "label": "2 × Ø5 mm through holes (for spring steel - arriving tomorrow)",
+          "done": false
+        },
+        {
+          "label": "Shaft & End Plates:",
+          "done": false
+        },
+        {
+          "label": "Shaft cut to 1410 mm",
+          "done": false
+        },
+        {
+          "label": "Circlip on non-motor side",
+          "done": false
+        },
+        {
+          "label": "Ceramic bearing rests at seal",
+          "done": false
+        },
+        {
+          "label": "Non-motor side:",
+          "done": false
+        },
+        {
+          "label": "3D-printed cap (maybe 3 mounting holes)",
+          "done": false
+        },
+        {
+          "label": "Motor side:",
+          "done": false
+        },
+        {
+          "label": "ISO KF40 tri-clamp male 20 mm (needs helper tool for correct alignment)",
+          "done": false
+        },
+        {
+          "label": "Shaft flats for arm bolts",
+          "done": false
+        },
+        {
+          "label": "Connect to flexible bellow (Meam stock)",
+          "done": false
+        },
+        {
+          "label": "Weld ISO KF40 50 & 20 nipples together with additive- then lathe smooth",
+          "done": false
+        },
+        {
+          "label": "Pfeiffer feedthrough (TBD) to be lathed to fit shaft gap",
+          "done": false
+        },
+        {
+          "label": "Stepper motor connects directly to feedthrough",
+          "done": false
+        },
+        {
+          "label": "Total length: 355 mm – likely too long- needs robust support (TBD week of April 21)",
+          "done": false
+        },
+        {
+          "label": "Pros: vacuum feedthrough- no complex gear; Cons: structural challenge",
+          "done": false
+        },
+        {
+          "label": "Electrical Connector Box:",
+          "done": false
+        },
+        {
+          "label": "3D printed- mounted with 3D-printed clamp (holds stepper + feedthrough)",
+          "done": false
+        }
       ]
     },
     {
       "label": "4. Lower Door Drive",
       "done": false,
       "children": [
-        { "label": "Minor changes:", "done": false },
-        { "label": "Swapped position", "done": false },
-        { "label": "Now uses flexible coupling", "done": false },
-        { "label": "Door is 2 mm; shaft Ø12 mm", "done": false }
+        {
+          "label": "Minor changes:",
+          "done": false
+        },
+        {
+          "label": "Swapped position",
+          "done": false
+        },
+        {
+          "label": "Now uses flexible coupling",
+          "done": false
+        },
+        {
+          "label": "Door is 2 mm; shaft Ø12 mm",
+          "done": false
+        }
       ]
     },
     {
       "label": "5. Upper Seal",
       "done": false,
       "children": [
-        { "label": "Likely functional as-is; one final print version may improve performance.", "done": false }
+        {
+          "label": "Likely functional as-is; one final print version may improve performance.",
+          "done": false
+        }
       ]
     },
     {
       "label": "6. Lower Seal",
       "done": false,
       "children": [
-        { "label": "Thin flat seal: start printing ASAP tomorrow- ready in 24h.", "done": false },
-        { "label": "Should be final version.", "done": false }
+        {
+          "label": "Thin flat seal: start printing ASAP tomorrow- ready in 24h.",
+          "done": false
+        },
+        {
+          "label": "Should be final version.",
+          "done": false
+        }
       ]
     },
     {
       "label": "7. Motors & Connector Plug",
       "done": false,
       "children": [
-        { "label": "Both motors to get TPU navy blue flexible jackets", "done": false },
-        { "label": "Wiring integrated in the seal", "done": false },
-        { "label": "Connector plug: large 3D-printed piece combining drive-through and stepper (upper door)", "done": false }
+        {
+          "label": "Both motors to get TPU navy blue flexible jackets",
+          "done": false
+        },
+        {
+          "label": "Wiring integrated in the seal",
+          "done": false
+        },
+        {
+          "label": "Connector plug: large 3D-printed piece combining drive-through and stepper (upper door)",
+          "done": false
+        }
       ]
     },
     {
       "label": "8. Control & Software",
       "done": false,
       "children": [
-        { "label": "Minor updates (~1h)", "done": false },
-        { "label": "Finalize MCU enclosure", "done": false },
-        { "label": "Stepper motor power to be set after spring-arm tests", "done": false }
+        {
+          "label": "Minor updates (~1h)",
+          "done": false
+        },
+        {
+          "label": "Finalize MCU enclosure",
+          "done": false
+        },
+        {
+          "label": "Stepper motor power to be set after spring-arm tests",
+          "done": false
+        }
       ]
     }
   ]
