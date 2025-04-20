@@ -1,0 +1,253 @@
+{
+  "title": "Custom SSR System - Project Checklist",
+  "collaborators": [
+    "Johan",
+    "Jeamichel"
+  ],
+  "items": [
+    {
+      "label": "Power Input & Protection",
+      "responsible": "Johan",
+      "targetDate": "2025-04-20",
+      "done": false,
+      "children": [
+        {
+          "label": "EMI filter (X2 cap + MOV)",
+          "done": false
+        },
+        {
+          "label": "Fast-blow fuse (Eaton 25A KLKE-25)",
+          "done": false
+        },
+        {
+          "label": "MOV across AC line",
+          "done": false
+        },
+        {
+          "label": "Surge suppression path verified",
+          "done": false
+        }
+      ]
+    },
+    {
+      "label": "Triac Switching",
+      "responsible": "Jeamichel",
+      "targetDate": "2025-04-20",
+      "done": false,
+      "children": [
+        {
+          "label": "Triac TPDV1240RG (40A, 1200V)",
+          "done": false
+        },
+        {
+          "label": "Gate triggered by MOC3052",
+          "done": false
+        },
+        {
+          "label": "Snubber: 150\u202f\u03a9 + 0.15\u202f\u00b5F Nichicon PPA2253150KN",
+          "done": false
+        },
+        {
+          "label": "Verify heatsinking via aluminum chassis",
+          "done": false
+        }
+      ]
+    },
+    {
+      "label": "Snubber Power Check",
+      "responsible": "Johan",
+      "targetDate": "2025-04-20",
+      "done": false,
+      "children": [
+        {
+          "label": "47\u202f\u03a9 10W flameproof resistor",
+          "done": false
+        },
+        {
+          "label": "Simulate power dissipation under load",
+          "done": false
+        }
+      ]
+    },
+    {
+      "label": "Voltage Detection (AC Monitoring)",
+      "responsible": "Jeamichel",
+      "targetDate": "2025-04-20",
+      "done": false,
+      "children": [
+        {
+          "label": "Transformer winding 400:1 ratio",
+          "done": false
+        },
+        {
+          "label": "Custom winding tool ready",
+          "done": false
+        },
+        {
+          "label": "Output to voltage divider (10k/5.6k)",
+          "done": false
+        },
+        {
+          "label": "Input to STM32 ADC",
+          "done": false
+        },
+        {
+          "label": "Test scaling up to 1200\u202fV spikes",
+          "done": false
+        }
+      ]
+    },
+    {
+      "label": "Current Sensing",
+      "responsible": "Johan",
+      "targetDate": "2025-04-20",
+      "done": false,
+      "children": [
+        {
+          "label": "ACS711ELCTR-25AB-T wired to ADC",
+          "done": false
+        },
+        {
+          "label": "Verified real-time current feedback",
+          "done": false
+        }
+      ]
+    },
+    {
+      "label": "Temperature Feedback",
+      "responsible": "Jeamichel",
+      "targetDate": "2025-04-20",
+      "done": false,
+      "children": [
+        {
+          "label": "LM35DZ mounted",
+          "done": false
+        },
+        {
+          "label": "ADC input verified",
+          "done": false
+        }
+      ]
+    },
+    {
+      "label": "Control Logic (MCU)",
+      "responsible": "Johan",
+      "targetDate": "2025-04-20",
+      "done": false,
+      "children": [
+        {
+          "label": "STM32G431 installed",
+          "done": false
+        },
+        {
+          "label": "GPIO triggers opto",
+          "done": false
+        },
+        {
+          "label": "ADC channels wired (V/I/T)",
+          "done": false
+        },
+        {
+          "label": "Burst/phase firmware hybrid",
+          "done": false
+        }
+      ]
+    },
+    {
+      "label": "RS-485 Communication",
+      "responsible": "Jeamichel",
+      "targetDate": "2025-04-20",
+      "done": false,
+      "children": [
+        {
+          "label": "MAX3087EESA mounted",
+          "done": false
+        },
+        {
+          "label": "SM712 ESD diode + TVS protection",
+          "done": false
+        },
+        {
+          "label": "RJ45 ports + terminator setup",
+          "done": false
+        },
+        {
+          "label": "DIP switch tested",
+          "done": false
+        }
+      ]
+    },
+    {
+      "label": "Zero-Cross Detection",
+      "responsible": "Johan",
+      "targetDate": "2025-04-20",
+      "done": false,
+      "children": [
+        {
+          "label": "Zero-cross detection implemented in firmware",
+          "done": false
+        },
+        {
+          "label": "Verified zero sync vs power phase",
+          "done": false
+        }
+      ]
+    },
+    {
+      "label": "Firmware",
+      "responsible": "Jeamichel",
+      "targetDate": "2025-04-20",
+      "done": false,
+      "children": [
+        {
+          "label": "PID regulation verified",
+          "done": false
+        },
+        {
+          "label": "Modbus-like RS485 support",
+          "done": false
+        },
+        {
+          "label": "EEPROM config save working",
+          "done": false
+        }
+      ]
+    },
+    {
+      "label": "GUI & Debug",
+      "responsible": "Johan",
+      "targetDate": "2025-04-20",
+      "done": false,
+      "children": [
+        {
+          "label": "Python GUI debug hooks",
+          "done": false
+        },
+        {
+          "label": "RS485 & UART monitoring",
+          "done": false
+        }
+      ]
+    },
+    {
+      "label": "Enclosure",
+      "responsible": "Jeamichel",
+      "targetDate": "2025-04-20",
+      "done": false,
+      "children": [
+        {
+          "label": "Aluminum box installed",
+          "done": false
+        },
+        {
+          "label": "Cable glands mounted",
+          "done": false
+        },
+        {
+          "label": "CNC labeling ready",
+          "done": false
+        }
+      ]
+    }
+  ]
+}
