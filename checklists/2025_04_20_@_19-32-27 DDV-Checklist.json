@@ -37,8 +37,8 @@
     {
       "label": "Doors DDV",
       "done": false,
-      "responsible": "",
-      "targetDate": "",
+      "responsible": "Johan",
+      "targetDate": "2025-04-23",
       "children": [
         {
           "label": "Two new 2 mm doors made (flexible & strong).",
