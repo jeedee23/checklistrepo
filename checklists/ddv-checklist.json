@@ -41,15 +41,17 @@
         },
         {
           "label": "Hinges:",
-          "done": false
-        },
-        {
-          "label": "Both use Ø12 mm shaft. Consider adding PP bushings to avoid SST grinding—food-grade grease may suffice.",
-          "done": false
-        },
-        {
-          "label": "Hinge Shaft & End Plates:",
-          "done": false
+          "done": false,
+          "children": [
+            {
+              "label": "Both use Ø12 mm shaft. Consider adding PP bushings to avoid SST grinding—food-gr",
+              "done": false
+            },
+            {
+              "label": "Hinge Shaft & End Plates:",
+              "done": false
+            }
+          ]
         },
         {
           "label": "Shaft cut to 1345 mm- with circlips 5 mm from ends.",
@@ -57,15 +59,17 @@
         },
         {
           "label": "End plates:",
-          "done": false
-        },
-        {
-          "label": "Slot for shaft (through seal)",
-          "done": false
-        },
-        {
-          "label": "Weld-on hang-up arms (weld while mounted)",
-          "done": false
+          "done": false,
+          "children": [
+            {
+              "label": "Slot for shaft (through seal)",
+              "done": false
+            },
+            {
+              "label": "Weld-on hang-up arms (weld while mounted)",
+              "done": false
+            }
+          ]
         }
       ]
     },
@@ -79,15 +83,17 @@
         },
         {
           "label": "Drill:",
-          "done": false
-        },
-        {
-          "label": "1 × M6 tapped hole (for flat on drive shaft)",
-          "done": false
-        },
-        {
-          "label": "2 × Ø5 mm through holes (for spring steel - arriving tomorrow)",
-          "done": false
+          "done": false,
+          "children": [
+            {
+              "label": "1 × M6 tapped hole (for flat on drive shaft)",
+              "done": false
+            },
+            {
+              "label": "2 × Ø5 mm through holes (for spring steel - arriving tomorrow)",
+              "done": false
+            }
+          ]
         },
         {
           "label": "Shaft & End Plates:",
