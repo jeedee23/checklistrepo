@@ -95,64 +95,64 @@
             },
             {
               "label": "2 × Ø5 mm through holes (for spring steel - arriving tomorrow)",
-              "done": false
+              "done": true
             }
           ]
         },
         {
           "label": "Shaft & End Plates:",
-          "done": false
-        },
-        {
-          "label": "Shaft cut to 1410 mm",
-          "done": false
-        },
-        {
-          "label": "Circlip on non-motor side",
-          "done": false
-        },
-        {
-          "label": "Ceramic bearing rests at seal",
-          "done": false
+          "done": false,
+          "children": [
+            {
+              "label": "Shaft cut to 1410 mm",
+              "done": false
+            },
+            {
+              "label": "Circlip on non-motor side",
+              "done": false
+            },
+            {
+              "label": "Ceramic bearing rests at seal",
+              "done": true
+            }
+          ]
         },
         {
           "label": "Non-motor side:",
-          "done": false
-        },
-        {
-          "label": "3D-printed cap (maybe 3 mounting holes)",
-          "done": false
+          "done": false,
+          "children": [
+            {
+              "label": "3D-printed cap (maybe 3 mounting holes)",
+              "done": false
+            },
+            {
+              "label": "ISO KF40 tri-clamp male 20 mm (needs helper tool for correct alignment)",
+              "done": false
+            },
+            {
+              "label": "Shaft flats for arm bolts",
+              "done": false
+            },
+            {
+              "label": "Connect to flexible bellow (Meam stock)",
+              "done": false
+            },
+            {
+              "label": "Weld ISO KF40 50 & 20 nipples together with additive- then lathe smooth",
+              "done": false
+            },
+            {
+              "label": "Pfeiffer feedthrough (TBD) to be lathed to fit shaft gap",
+              "done": false
+            },
+            {
+              "label": "Stepper motor connects directly to feedthrough",
+              "done": false
+            }
+          ]
         },
         {
           "label": "Motor side:",
-          "done": false
-        },
-        {
-          "label": "ISO KF40 tri-clamp male 20 mm (needs helper tool for correct alignment)",
-          "done": false
-        },
-        {
-          "label": "Shaft flats for arm bolts",
-          "done": false
-        },
-        {
-          "label": "Connect to flexible bellow (Meam stock)",
-          "done": false
-        },
-        {
-          "label": "Weld ISO KF40 50 & 20 nipples together with additive- then lathe smooth",
-          "done": false
-        },
-        {
-          "label": "Pfeiffer feedthrough (TBD) to be lathed to fit shaft gap",
-          "done": false
-        },
-        {
-          "label": "Stepper motor connects directly to feedthrough",
-          "done": false
-        },
-        {
-          "label": "Total length: 355 mm – likely too long- needs robust support (TBD week of April 21)",
           "done": false
         },
         {
@@ -168,6 +168,10 @@
           "done": false
         }
       ]
+    },
+    {
+      "label": "Total length: 355 mm – likely too long- needs robust support (TBD week of April 21)",
+      "done": false
     },
     {
       "label": "4. Lower Door Drive",
