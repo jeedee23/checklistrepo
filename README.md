@@ -1,0 +1,1 @@
+This repository contains short checlists available for users that have access. they can change, add, copy, and later also paste from excel. The purpose is to have a printable very short and clear overview af todo's
