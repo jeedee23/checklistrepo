@@ -1,9 +1,12 @@
 {
   "title": "Ddv Checklist",
+  "collaborators": [],
   "items": [
     {
       "label": "Body DDV",
       "done": false,
+      "responsible": "",
+      "targetDate": "",
       "children": [
         {
           "label": "Body optimized (hung); welds complete.",
@@ -31,6 +34,8 @@
     {
       "label": "Doors DDV",
       "done": false,
+      "responsible": "",
+      "targetDate": "",
       "children": [
         {
           "label": "Two new 2 mm doors made (flexible & strong).",
@@ -79,6 +84,8 @@
     {
       "label": "Upper Door Drive",
       "done": false,
+      "responsible": "",
+      "targetDate": "",
       "children": [
         {
           "label": "Arms (laser-cut):",
@@ -171,11 +178,15 @@
     },
     {
       "label": "Total length: 355 mm – likely too long- needs robust support (TBD week of April 21)",
-      "done": false
+      "done": false,
+      "responsible": "",
+      "targetDate": ""
     },
     {
       "label": "4. Lower Door Drive",
       "done": false,
+      "responsible": "",
+      "targetDate": "",
       "children": [
         {
           "label": "Minor changes:",
@@ -198,6 +209,8 @@
     {
       "label": "5. Upper Seal",
       "done": false,
+      "responsible": "",
+      "targetDate": "",
       "children": [
         {
           "label": "Likely functional as-is; one final print version may improve performance.",
@@ -208,6 +221,8 @@
     {
       "label": "6. Lower Seal",
       "done": false,
+      "responsible": "",
+      "targetDate": "",
       "children": [
         {
           "label": "Thin flat seal: start printing ASAP tomorrow- ready in 24h.",
@@ -222,6 +237,8 @@
     {
       "label": "7. Motors & Connector Plug",
       "done": false,
+      "responsible": "",
+      "targetDate": "",
       "children": [
         {
           "label": "Both motors to get TPU navy blue flexible jackets",
@@ -240,6 +257,8 @@
     {
       "label": "8. Control & Software",
       "done": false,
+      "responsible": "",
+      "targetDate": "",
       "children": [
         {
           "label": "Minor updates (~1h)",
