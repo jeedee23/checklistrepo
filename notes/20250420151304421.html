@@ -1,0 +1,19 @@
+Bonjour Louis
+Voici ce que j’ai compris :
+1.	1. À l’arrivée, on branche le 24VDC (protégé côté client avec un fusible 2A) :
+- De notre côté, j’ai mis un fusible 3A pour plus de marge.
+- Ce 24V alimente :
+  • Les électrovannes de nettoyage (en 24VDC direct),
+  • L’alimentation step-down vers 12VDC (qui ne fournit que 3A max),
+  • L’alimentation step-down vers 5VDC pour les relais (la LED bleue du module s’allume correctement = ok),
+  • L’ESP32 (via le 5V régulé du relais).
+2.	2. Problème constaté : dès qu’on branche le 24V, le disjoncteur de 2A côté client saute immédiatement.
+- Pourtant, tous les relais sont en logique inverse :
+  • digitalWrite(pin, LOW) → active le relais (et coupe donc la bobine NC → OFF)
+  • Donc, au démarrage, tous les relais devraient être à LOW = relais activé = solénoïdes désactivés.
+3.	3. Hypothèse : une des électrovannes de nettoyage serait en court-circuit ? Ou un relais mal branché (inversion O19 ?) provoquerait un court-circuit immédiat.
+Actions proposées :
+- Faire un petit programme de test simple : tous les relais à LOW, et les activer un à un pour identifier s’il y a un court-circuit.
+- Contrôle visuel des câbles de O19 (direction clapet) : attention, si les deux relais de O19 sont activés en même temps → court-circuit assuré.
+- Éventuellement tester les électrovannes une à une hors carte.
+- Si besoin : repasser tous les relais sur les bornes NO et modifier le code (digitalWrite HIGH au repos).
