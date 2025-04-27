@@ -1,8 +1,8 @@
 {
    "columns": {
     "no": 20,
-    "label": 65,
-    "unit": 480,
+    "label": 465,
+    "unit": 40,
     "qty_est": 69,
     "qty_real": 78,
     "price_unit": 91,
