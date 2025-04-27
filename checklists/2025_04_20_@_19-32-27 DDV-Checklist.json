@@ -92,7 +92,7 @@
         }
       ],
       "rowHeight": 45,
-      "collapsed": true
+      "collapsed": false
     },
     {
       "label": "Doors DDV",
@@ -210,8 +210,7 @@
             }
           ]
         }
-      ],
-      "collapsed": true
+      ]
     },
     {
       "label": "Upper Door Drive",
