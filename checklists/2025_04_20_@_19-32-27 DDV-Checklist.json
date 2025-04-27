@@ -1,16 +1,34 @@
 {
   "title": "Ddv Checklist",
-  "collaborators": ["Johan", "Hung", "Cuong", "Robert", "Mohamed", "Jeamichel"],
-  "unitChoices": ["kg", "ton", "hr", "sec", "m", "m²", "m³", "l", "pc"],
+  "collaborators": [
+    "Johan",
+    "Hung",
+    "Cuong",
+    "Robert",
+    "Mohamed",
+    "Jeamichel"
+  ],
+  "unitChoices": [
+    "kg",
+    "ton",
+    "hr",
+    "sec",
+    "m",
+    "mÂ²",
+    "mÂ³",
+    "l",
+    "pc"
+  ],
   "columns": {
-    "label": 40,
-    "unit": 10,
-    "qty_est": 8,
-    "qty_real": 8,
-    "price_unit": 10,
-    "total_price": 10,
-    "date": 12,
-    "who": 15
+    "label": 65,
+    "unit": 238,
+    "qty_est": 69,
+    "qty_real": 78,
+    "price_unit": 91,
+    "total_price": 105,
+    "date": 112,
+    "who": 15,
+    "undefined": 79
   },
   "items": [
     {
@@ -20,7 +38,7 @@
       "qty_est": "",
       "qty_real": "",
       "price_unit": "",
-      "total_price": "",
+      "total_price": 0,
       "date": "2025-04-22",
       "who": "Hung",
       "children": [
@@ -31,7 +49,7 @@
           "qty_est": "",
           "qty_real": "",
           "price_unit": "",
-          "total_price": "",
+          "total_price": 0,
           "date": "",
           "who": ""
         },
@@ -43,29 +61,29 @@
           "qty_est": "",
           "qty_real": "",
           "price_unit": "",
-          "total_price": "",
+          "total_price": 0,
           "date": "",
           "who": ""
         },
         {
-          "label": "8 × Ø7.5 mm holes",
+          "label": "8 Ã Ã7.5 mm holes",
           "done": true,
           "unit": "",
           "qty_est": "",
           "qty_real": "",
           "price_unit": "",
-          "total_price": "",
+          "total_price": 0,
           "date": "",
           "who": ""
         },
         {
-          "label": "12 × Ø5 mm holes",
+          "label": "12 Ã Ã5 mm holes",
           "done": true,
           "unit": "",
           "qty_est": "",
           "qty_real": "",
           "price_unit": "",
-          "total_price": "",
+          "total_price": 0,
           "date": "",
           "who": ""
         },
@@ -76,11 +94,13 @@
           "qty_est": "",
           "qty_real": "",
           "price_unit": "",
-          "total_price": "",
+          "total_price": 0,
           "date": "",
           "who": ""
         }
-      ]
+      ],
+      "rowHeight": 45,
+      "collapsed": false
     },
     {
       "label": "Doors DDV",
@@ -89,7 +109,7 @@
       "qty_est": "",
       "qty_real": "",
       "price_unit": "",
-      "total_price": "",
+      "total_price": 0,
       "date": "2025-04-23",
       "who": "Johan",
       "children": [
@@ -100,7 +120,7 @@
           "qty_est": "",
           "qty_real": "",
           "price_unit": "",
-          "total_price": "",
+          "total_price": 0,
           "date": "",
           "who": ""
         },
@@ -111,7 +131,7 @@
           "qty_est": "",
           "qty_real": "",
           "price_unit": "",
-          "total_price": "",
+          "total_price": 0,
           "date": "",
           "who": ""
         },
@@ -122,12 +142,12 @@
           "qty_est": "",
           "qty_real": "",
           "price_unit": "",
-          "total_price": "",
+          "total_price": 0,
           "date": "",
           "who": "",
           "children": [
             {
-              "label": "Both use Ø12 mm shaft. We considered not to add grinding protection",
+              "label": "Both use Ã12 mm shaft. We considered not to add grinding protection",
               "done": true,
               "bold": true,
               "color": "rgba(255,0,0,1)",
@@ -135,7 +155,7 @@
               "qty_est": "",
               "qty_real": "",
               "price_unit": "",
-              "total_price": "",
+              "total_price": 0,
               "date": "",
               "who": ""
             },
@@ -146,7 +166,7 @@
               "qty_est": "",
               "qty_real": "",
               "price_unit": "",
-              "total_price": "",
+              "total_price": 0,
               "date": "",
               "who": ""
             },
@@ -157,7 +177,7 @@
               "qty_est": "",
               "qty_real": "",
               "price_unit": "",
-              "total_price": "",
+              "total_price": 0,
               "date": "",
               "who": ""
             }
@@ -170,7 +190,7 @@
           "qty_est": "",
           "qty_real": "",
           "price_unit": "",
-          "total_price": "",
+          "total_price": 0,
           "date": "",
           "who": "",
           "children": [
@@ -181,7 +201,7 @@
               "qty_est": "",
               "qty_real": "",
               "price_unit": "",
-              "total_price": "",
+              "total_price": 0,
               "date": "",
               "who": ""
             },
@@ -192,7 +212,7 @@
               "qty_est": "",
               "qty_real": "",
               "price_unit": "",
-              "total_price": "",
+              "total_price": 0,
               "date": "",
               "who": ""
             }
@@ -207,7 +227,7 @@
       "qty_est": "",
       "qty_real": "",
       "price_unit": "",
-      "total_price": "",
+      "total_price": 0,
       "date": "",
       "who": "Johan",
       "children": [
@@ -218,7 +238,7 @@
           "qty_est": "",
           "qty_real": "",
           "price_unit": "",
-          "total_price": "",
+          "total_price": 0,
           "date": "",
           "who": "",
           "children": []
@@ -230,29 +250,29 @@
           "qty_est": "",
           "qty_real": "",
           "price_unit": "",
-          "total_price": "",
+          "total_price": 0,
           "date": "",
           "who": "",
           "children": [
             {
-              "label": "1 × M6 tapped hole (for flat on drive shaft)",
+              "label": "1 Ã M6 tapped hole (for flat on drive shaft)",
               "done": false,
               "unit": "",
               "qty_est": "",
               "qty_real": "",
               "price_unit": "",
-              "total_price": "",
+              "total_price": 0,
               "date": "",
               "who": ""
             },
             {
-              "label": "2 × Ø5 mm through holes (for spring steel - arriving tomorrow)",
+              "label": "2 Ã Ã5 mm through holes (for spring steel - arriving tomorrow)",
               "done": true,
               "unit": "",
               "qty_est": "",
               "qty_real": "",
               "price_unit": "",
-              "total_price": "",
+              "total_price": 0,
               "date": "",
               "who": ""
             }
@@ -265,7 +285,7 @@
           "qty_est": "",
           "qty_real": "",
           "price_unit": "",
-          "total_price": "",
+          "total_price": 0,
           "date": "",
           "who": "",
           "children": [
@@ -276,7 +296,7 @@
               "qty_est": "",
               "qty_real": "",
               "price_unit": "",
-              "total_price": "",
+              "total_price": 0,
               "date": "",
               "who": ""
             },
@@ -287,7 +307,7 @@
               "qty_est": "",
               "qty_real": "",
               "price_unit": "",
-              "total_price": "",
+              "total_price": 0,
               "date": "",
               "who": ""
             },
@@ -298,7 +318,7 @@
               "qty_est": "",
               "qty_real": "",
               "price_unit": "",
-              "total_price": "",
+              "total_price": 0,
               "date": "",
               "who": ""
             }
@@ -311,7 +331,7 @@
           "qty_est": "",
           "qty_real": "",
           "price_unit": "",
-          "total_price": "",
+          "total_price": 0,
           "date": "",
           "who": "",
           "children": [
@@ -322,7 +342,7 @@
               "qty_est": "",
               "qty_real": "",
               "price_unit": "",
-              "total_price": "",
+              "total_price": 0,
               "date": "",
               "who": ""
             },
@@ -333,7 +353,7 @@
               "qty_est": "",
               "qty_real": "",
               "price_unit": "",
-              "total_price": "",
+              "total_price": 0,
               "date": "",
               "who": ""
             },
@@ -344,7 +364,7 @@
               "qty_est": "",
               "qty_real": "",
               "price_unit": "",
-              "total_price": "",
+              "total_price": 0,
               "date": "",
               "who": ""
             },
@@ -355,7 +375,7 @@
               "qty_est": "",
               "qty_real": "",
               "price_unit": "",
-              "total_price": "",
+              "total_price": 0,
               "date": "",
               "who": ""
             },
@@ -366,7 +386,7 @@
               "qty_est": "",
               "qty_real": "",
               "price_unit": "",
-              "total_price": "",
+              "total_price": 0,
               "date": "",
               "who": ""
             },
@@ -377,7 +397,7 @@
               "qty_est": "",
               "qty_real": "",
               "price_unit": "",
-              "total_price": "",
+              "total_price": 0,
               "date": "",
               "who": ""
             },
@@ -388,7 +408,7 @@
               "qty_est": "",
               "qty_real": "",
               "price_unit": "",
-              "total_price": "",
+              "total_price": 0,
               "date": "",
               "who": ""
             }
@@ -401,7 +421,7 @@
           "qty_est": "",
           "qty_real": "",
           "price_unit": "",
-          "total_price": "",
+          "total_price": 0,
           "date": "",
           "who": ""
         },
@@ -412,7 +432,7 @@
           "qty_est": "",
           "qty_real": "",
           "price_unit": "",
-          "total_price": "",
+          "total_price": 0,
           "date": "",
           "who": ""
         },
@@ -423,7 +443,7 @@
           "qty_est": "",
           "qty_real": "",
           "price_unit": "",
-          "total_price": "",
+          "total_price": 0,
           "date": "",
           "who": ""
         },
@@ -434,20 +454,20 @@
           "qty_est": "",
           "qty_real": "",
           "price_unit": "",
-          "total_price": "",
+          "total_price": 0,
           "date": "",
           "who": ""
         }
       ]
     },
     {
-      "label": "Total length: 355 mm – likely too long- needs robust support (TBD week of April 21)",
+      "label": "Total length: 355 mm â likely too long- needs robust support (TBD week of April 21)",
       "done": false,
       "unit": "",
       "qty_est": "",
       "qty_real": "",
       "price_unit": "",
-      "total_price": "",
+      "total_price": 0,
       "date": "",
       "who": "Hung"
     },
@@ -458,7 +478,7 @@
       "qty_est": "",
       "qty_real": "",
       "price_unit": "",
-      "total_price": "",
+      "total_price": 0,
       "date": "",
       "who": "",
       "children": [
@@ -469,7 +489,7 @@
           "qty_est": "",
           "qty_real": "",
           "price_unit": "",
-          "total_price": "",
+          "total_price": 0,
           "date": "",
           "who": ""
         },
@@ -480,7 +500,7 @@
           "qty_est": "",
           "qty_real": "",
           "price_unit": "",
-          "total_price": "",
+          "total_price": 0,
           "date": "",
           "who": ""
         },
@@ -491,18 +511,18 @@
           "qty_est": "",
           "qty_real": "",
           "price_unit": "",
-          "total_price": "",
+          "total_price": 0,
           "date": "",
           "who": ""
         },
         {
-          "label": "Door is 2 mm; shaft Ø12 mm",
+          "label": "Door is 2 mm; shaft Ã12 mm",
           "done": false,
           "unit": "",
           "qty_est": "",
           "qty_real": "",
           "price_unit": "",
-          "total_price": "",
+          "total_price": 0,
           "date": "",
           "who": ""
         }
@@ -515,7 +535,7 @@
       "qty_est": "",
       "qty_real": "",
       "price_unit": "",
-      "total_price": "",
+      "total_price": 0,
       "date": "",
       "who": "",
       "children": [
@@ -526,7 +546,7 @@
           "qty_est": "",
           "qty_real": "",
           "price_unit": "",
-          "total_price": "",
+          "total_price": 0,
           "date": "",
           "who": ""
         }
@@ -539,7 +559,7 @@
       "qty_est": "",
       "qty_real": "",
       "price_unit": "",
-      "total_price": "",
+      "total_price": 0,
       "date": "",
       "who": "",
       "children": [
@@ -550,7 +570,7 @@
           "qty_est": "",
           "qty_real": "",
           "price_unit": "",
-          "total_price": "",
+          "total_price": 0,
           "date": "",
           "who": ""
         },
@@ -561,7 +581,7 @@
           "qty_est": "",
           "qty_real": "",
           "price_unit": "",
-          "total_price": "",
+          "total_price": 0,
           "date": "",
           "who": ""
         }
@@ -574,7 +594,7 @@
       "qty_est": "",
       "qty_real": "",
       "price_unit": "",
-      "total_price": "",
+      "total_price": 0,
       "date": "",
       "who": "",
       "children": [
@@ -585,7 +605,7 @@
           "qty_est": "",
           "qty_real": "",
           "price_unit": "",
-          "total_price": "",
+          "total_price": 0,
           "date": "",
           "who": ""
         },
@@ -596,7 +616,7 @@
           "qty_est": "",
           "qty_real": "",
           "price_unit": "",
-          "total_price": "",
+          "total_price": 0,
           "date": "",
           "who": ""
         },
@@ -607,7 +627,7 @@
           "qty_est": "",
           "qty_real": "",
           "price_unit": "",
-          "total_price": "",
+          "total_price": 0,
           "date": "",
           "who": ""
         }
@@ -620,7 +640,7 @@
       "qty_est": "",
       "qty_real": "",
       "price_unit": "",
-      "total_price": "",
+      "total_price": 0,
       "date": "",
       "who": "",
       "children": [
@@ -631,7 +651,7 @@
           "qty_est": "",
           "qty_real": "",
           "price_unit": "",
-          "total_price": "",
+          "total_price": 0,
           "date": "",
           "who": ""
         },
@@ -642,7 +662,7 @@
           "qty_est": "",
           "qty_real": "",
           "price_unit": "",
-          "total_price": "",
+          "total_price": 0,
           "date": "",
           "who": ""
         },
@@ -653,7 +673,7 @@
           "qty_est": "",
           "qty_real": "",
           "price_unit": "",
-          "total_price": "",
+          "total_price": 0,
           "date": "",
           "who": ""
         }
