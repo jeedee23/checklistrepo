@@ -14,21 +14,13 @@
     "hr",
     "sec",
     "m",
-    "mÃÂÃÂ²",
-    "mÃÂÃÂ³",
+    "mÃÂÃÂÃÂÃÂ²",
+    "mÃÂÃÂÃÂÃÂ³",
     "l",
     "pc"
   ],
   "columns": {
-    "label": 65,
-    "unit": 291,
-    "qty_est": 69,
-    "qty_real": 78,
-    "price_unit": 91,
-    "total_price": 105,
-    "date": 112,
-    "who": 15,
-    "undefined": 79
+    "undefined": 295
   },
   "items": [
     {
@@ -66,7 +58,7 @@
           "who": ""
         },
         {
-          "label": "8 ÃÂÃÂ ÃÂÃÂ7.5 mm holes",
+          "label": "8 ÃÂÃÂÃÂÃÂ ÃÂÃÂÃÂÃÂ7.5 mm holes",
           "done": true,
           "unit": "",
           "qty_est": "",
@@ -77,7 +69,7 @@
           "who": ""
         },
         {
-          "label": "12 ÃÂÃÂ ÃÂÃÂ5 mm holes",
+          "label": "12 ÃÂÃÂÃÂÃÂ ÃÂÃÂÃÂÃÂ5 mm holes",
           "done": true,
           "unit": "",
           "qty_est": "",
@@ -147,7 +139,7 @@
           "who": "",
           "children": [
             {
-              "label": "Both use ÃÂÃÂ12 mm shaft. We considered not to add grinding protection",
+              "label": "Both use ÃÂÃÂÃÂÃÂ12 mm shaft. We considered not to add grinding protection",
               "done": true,
               "bold": true,
               "color": "rgba(255,0,0,1)",
@@ -255,7 +247,7 @@
           "who": "",
           "children": [
             {
-              "label": "1 ÃÂÃÂ M6 tapped hole (for flat on drive shaft)",
+              "label": "1 ÃÂÃÂÃÂÃÂ M6 tapped hole (for flat on drive shaft)",
               "done": false,
               "unit": "",
               "qty_est": "",
@@ -266,7 +258,7 @@
               "who": ""
             },
             {
-              "label": "2 ÃÂÃÂ ÃÂÃÂ5 mm through holes (for spring steel - arriving tomorrow)",
+              "label": "2 ÃÂÃÂÃÂÃÂ ÃÂÃÂÃÂÃÂ5 mm through holes (for spring steel - arriving tomorrow)",
               "done": true,
               "unit": "",
               "qty_est": "",
@@ -461,7 +453,7 @@
       ]
     },
     {
-      "label": "Total length: 355 mm ÃÂ¢ÃÂÃÂ likely too long- needs robust support (TBD week of April 21)",
+      "label": "Total length: 355 mm ÃÂÃÂ¢ÃÂÃÂÃÂÃÂ likely too long- needs robust support (TBD week of April 21)",
       "done": false,
       "unit": "",
       "qty_est": "",
@@ -516,7 +508,7 @@
           "who": ""
         },
         {
-          "label": "Door is 2 mm; shaft ÃÂÃÂ12 mm",
+          "label": "Door is 2 mm; shaft ÃÂÃÂÃÂÃÂ12 mm",
           "done": false,
           "unit": "",
           "qty_est": "",
