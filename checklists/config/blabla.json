@@ -1,6 +1,6 @@
 {
-   "columns": {
-      "no": 20,
+  "columns": {
+    "no": 20,
     "label": 65,
     "unit": 480,
     "qty_est": 69,
@@ -10,6 +10,7 @@
     "date": 112,
     "who": 15
   },
-  "rows":{
+  "rows": {
     "height": 10
   }
+}
