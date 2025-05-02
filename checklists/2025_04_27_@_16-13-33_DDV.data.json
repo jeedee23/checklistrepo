@@ -30,7 +30,7 @@
         "visible": true
       },
       "label": {
-        "width": 200,
+        "width": 425,
         "visible": true
       },
       "unit": {
@@ -38,7 +38,7 @@
         "visible": true
       },
       "qty_est": {
-        "width": 60,
+        "width": 133,
         "visible": true
       },
       "qty_real": {
@@ -50,7 +50,7 @@
         "visible": true
       },
       "total_price": {
-        "width": 80,
+        "width": 47,
         "visible": true
       },
       "date": {
@@ -72,7 +72,7 @@
       "label": "Body DDV",
       "done": false,
       "unit": "",
-      "qty_est": "",
+      "qty_est": 0,
       "qty_real": "",
       "price_unit": "",
       "total_price": 0,
