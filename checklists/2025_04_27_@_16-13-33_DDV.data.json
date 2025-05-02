@@ -30,23 +30,23 @@
         "visible": true
       },
       "label": {
-        "width": 425,
+        "width": 697,
         "visible": true
       },
       "unit": {
-        "width": 80,
+        "width": 23,
         "visible": true
       },
       "qty_est": {
-        "width": 133,
+        "width": 53,
         "visible": true
       },
       "qty_real": {
-        "width": 60,
+        "width": 51,
         "visible": true
       },
       "price_unit": {
-        "width": 80,
+        "width": 48,
         "visible": true
       },
       "total_price": {
@@ -71,7 +71,7 @@
       "no": "1",
       "label": "Body DDV",
       "done": false,
-      "unit": "",
+      "unit": "ton",
       "qty_est": 0,
       "qty_real": "",
       "price_unit": "",
@@ -147,7 +147,9 @@
           "who": "",
           "collapsed": true
         }
-      ]
+      ],
+      "bold": true,
+      "color": "rgba(255,0,0,1)"
     },
     {
       "no": "2",
