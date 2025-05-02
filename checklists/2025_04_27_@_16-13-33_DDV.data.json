@@ -4,10 +4,10 @@
 "unitChoices": [ "kg", "ton", "hr", "sec", "m", "m²", "m³", "l", "pc" ],
   "layout": {
     "columns": {
+      "done": { "width": 40, "visible": true },  
       "no": { "width": 40, "visible": true },
       "label": { "width": 200, "visible": true },
-     "done": { "width": 40, "visible": true },  
-      "unit": { "width": 80, "visible": true },
+          "unit": { "width": 80, "visible": true },
       "qty_est": { "width": 60, "visible": true },
       "qty_real": { "width": 60, "visible": true },
       "price_unit": { "width": 80, "visible": true },
