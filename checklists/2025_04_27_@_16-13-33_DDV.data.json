@@ -96,7 +96,7 @@
         },
         {
           "no": "1.2",
-          "label": "Drilling",
+          "label": "Drilling:",
           "done": true,
           "bold": true,
           "unit": "",
