@@ -54,5 +54,42 @@
       "height": 30
     }
   },
-  "items": []
+  "items": [
+    {
+      "no": "1",
+      "label": "Chapter1",
+      "done": false,
+      "unit": "",
+      "qty_est": 0,
+      "qty_real": 0,
+      "price_unit": 0,
+      "date": "2025-05-03",
+      "who": "",
+      "children": [
+        {
+          "no": "1.1",
+          "label": "Sublevel1",
+          "done": false,
+          "unit": "",
+          "qty_est": 0,
+          "qty_real": 0,
+          "price_unit": 0,
+          "date": "2025-05-03",
+          "who": ""
+        }
+      ]
+    },
+    {
+      "label": "New item",
+      "done": false,
+      "unit": "",
+      "qty_est": 0,
+      "qty_real": 0,
+      "price_unit": 0,
+      "date": "2025-05-03",
+      "who": "",
+      "children": [],
+      "no": "2"
+    }
+  ]
 }
