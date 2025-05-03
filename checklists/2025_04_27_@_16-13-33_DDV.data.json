@@ -70,7 +70,7 @@
     {
       "no": "1",
       "label": "Body DDV",
-      "done": false,
+      "done": true,
       "unit": "ton",
       "qty_est": 0,
       "qty_real": "",
