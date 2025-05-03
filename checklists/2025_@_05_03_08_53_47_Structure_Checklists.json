@@ -1,0 +1,13 @@
+{
+  "title": "Structure Checklists",
+  "items": [
+    {
+      "label": "HTML",
+      "done": false
+    },
+    {
+      "label": "Jscript",
+      "done": false
+    }
+  ]
+}
