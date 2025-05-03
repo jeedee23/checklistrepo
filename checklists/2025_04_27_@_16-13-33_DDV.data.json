@@ -88,8 +88,33 @@
       "price_unit": 0,
       "date": "2025-05-03",
       "who": "",
-      "children": [],
+      "children": [
+        {
+          "label": "New Sub-item",
+          "done": false,
+          "unit": "",
+          "qty_est": 0,
+          "qty_real": 0,
+          "price_unit": 0,
+          "date": "2025-05-03",
+          "who": "",
+          "children": [],
+          "no": "2.1"
+        }
+      ],
       "no": "2"
+    },
+    {
+      "label": "New item",
+      "done": false,
+      "unit": "",
+      "qty_est": 0,
+      "qty_real": 0,
+      "price_unit": 0,
+      "date": "2025-05-03",
+      "who": "",
+      "children": [],
+      "no": "3"
     }
   ]
 }
