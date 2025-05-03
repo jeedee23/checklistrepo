@@ -78,7 +78,7 @@
       "total_price": 0,
       "date": "2025-04-22",
       "who": "Hung",
-      "collapsed": true,
+      "collapsed": false,
       "rowHeight": 45,
       "children": [
         {
@@ -148,7 +148,7 @@
           "collapsed": true
         }
       ],
-      "bold": true,
+      "bold": false,
       "color": "rgba(255,0,0,1)"
     },
     {
@@ -243,7 +243,7 @@
               "collapsed": true
             }
           ],
-          "collapsed": true
+          "collapsed": false
         },
         {
           "no": "2.4",
@@ -284,10 +284,10 @@
               "collapsed": true
             }
           ],
-          "collapsed": true
+          "collapsed": false
         }
       ],
-      "collapsed": true
+      "collapsed": false
     },
     {
       "no": "3",
@@ -353,7 +353,7 @@
               "collapsed": true
             }
           ],
-          "collapsed": true
+          "collapsed": false
         }
       ],
       "collapsed": false
@@ -436,7 +436,7 @@
           "collapsed": true
         }
       ],
-      "collapsed": true
+      "collapsed": false
     },
     {
       "no": "6",
@@ -464,7 +464,7 @@
           "collapsed": true
         }
       ],
-      "collapsed": true
+      "collapsed": false
     },
     {
       "no": "7",
@@ -505,7 +505,7 @@
           "collapsed": true
         }
       ],
-      "collapsed": true
+      "collapsed": false
     },
     {
       "no": "8",
@@ -559,7 +559,7 @@
           "collapsed": true
         }
       ],
-      "collapsed": true
+      "collapsed": false
     },
     {
       "no": "9",
@@ -613,7 +613,7 @@
           "collapsed": true
         }
       ],
-      "collapsed": true
+      "collapsed": false
     }
   ]
 }
