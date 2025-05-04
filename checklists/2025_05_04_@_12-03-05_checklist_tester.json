@@ -1,0 +1,84 @@
+{
+  "title": "checklist_tester",
+  "collaborators": [
+    "Johan",
+    "Hung",
+    "Cuong",
+    "Robert",
+    "Mohamed",
+    "Jeamichel"
+  ],
+  "layout": {
+    "columns": {
+      "done": {
+        "width": 40,
+        "visible": true
+      },
+      "no": {
+        "width": 40,
+        "visible": true
+      },
+      "label": {
+        "width": 697,
+        "visible": true
+      },
+      "unit": {
+        "width": 23,
+        "visible": true
+      },
+      "qty_est": {
+        "width": 53,
+        "visible": true
+      },
+      "qty_real": {
+        "width": 51,
+        "visible": true
+      },
+      "price_unit": {
+        "width": 48,
+        "visible": true
+      },
+      "total_price": {
+        "width": 47,
+        "visible": true
+      },
+      "date": {
+        "width": 100,
+        "visible": true
+      },
+      "who": {
+        "width": 100,
+        "visible": true
+      }
+    },
+    "rows": {
+      "height": 30
+    }
+  },
+  "items": [
+    {
+      "no": "1",
+      "label": "Chapter1",
+      "done": false,
+      "unit": "",
+      "qty_est": 0,
+      "qty_real": 0,
+      "price_unit": 0,
+      "date": "2025-05-04",
+      "who": "",
+      "children": [
+        {
+          "no": "1.1",
+          "label": "Sublevel1",
+          "done": false,
+          "unit": "",
+          "qty_est": 0,
+          "qty_real": 0,
+          "price_unit": 0,
+          "date": "2025-05-04",
+          "who": ""
+        }
+      ]
+    }
+  ]
+}
