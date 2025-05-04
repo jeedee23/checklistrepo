@@ -31,7 +31,7 @@
         "visible": true
       },
       "label": {
-        "width": 429,
+        "width": 506,
         "visible": true
       },
       "unit": {
@@ -79,8 +79,8 @@
       "total_price": 0,
       "date": "2025-04-22",
       "who": "Hung",
-      "collapsed": false,
-      "rowHeight": 45,
+      "collapsed": true,
+      "rowHeight": 140,
       "children": [
         {
           "no": "1.1",
@@ -93,7 +93,8 @@
           "total_price": 0,
           "date": "",
           "who": "",
-          "collapsed": true
+          "collapsed": true,
+          "rowHeight": 20
         },
         {
           "no": "1.2",
