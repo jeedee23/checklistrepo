@@ -31,7 +31,7 @@
         "visible": true
       },
       "label": {
-        "width": 506,
+        "width": 697,
         "visible": true
       },
       "unit": {
@@ -39,11 +39,11 @@
         "visible": true
       },
       "qty_est": {
-        "width": 46,
+        "width": 53,
         "visible": true
       },
       "qty_real": {
-        "width": 61,
+        "width": 51,
         "visible": true
       },
       "price_unit": {
@@ -51,7 +51,7 @@
         "visible": true
       },
       "total_price": {
-        "width": 53,
+        "width": 47,
         "visible": true
       },
       "date": {
@@ -79,8 +79,8 @@
       "total_price": 0,
       "date": "2025-04-22",
       "who": "Hung",
-      "collapsed": true,
-      "rowHeight": 140,
+      "collapsed": false,
+      "rowHeight": 589,
       "children": [
         {
           "no": "1.1",
@@ -93,8 +93,7 @@
           "total_price": 0,
           "date": "",
           "who": "",
-          "collapsed": true,
-          "rowHeight": 20
+          "collapsed": true
         },
         {
           "no": "1.2",
@@ -245,7 +244,7 @@
               "collapsed": true
             }
           ],
-          "collapsed": true
+          "collapsed": false
         },
         {
           "no": "2.4",
@@ -286,10 +285,10 @@
               "collapsed": true
             }
           ],
-          "collapsed": true
+          "collapsed": false
         }
       ],
-      "collapsed": true
+      "collapsed": false
     },
     {
       "no": "3",
@@ -355,10 +354,10 @@
               "collapsed": true
             }
           ],
-          "collapsed": true
+          "collapsed": false
         }
       ],
-      "collapsed": true
+      "collapsed": false
     },
     {
       "no": "4",
@@ -438,7 +437,7 @@
           "collapsed": true
         }
       ],
-      "collapsed": true
+      "collapsed": false
     },
     {
       "no": "6",
@@ -466,7 +465,7 @@
           "collapsed": true
         }
       ],
-      "collapsed": true
+      "collapsed": false
     },
     {
       "no": "7",
@@ -507,7 +506,7 @@
           "collapsed": true
         }
       ],
-      "collapsed": true
+      "collapsed": false
     },
     {
       "no": "8",
@@ -561,7 +560,7 @@
           "collapsed": true
         }
       ],
-      "collapsed": true
+      "collapsed": false
     },
     {
       "no": "9",
@@ -615,7 +614,7 @@
           "collapsed": true
         }
       ],
-      "collapsed": true
+      "collapsed": false
     }
   ]
 }
