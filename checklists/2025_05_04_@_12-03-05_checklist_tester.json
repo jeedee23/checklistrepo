@@ -11,15 +11,15 @@
   "layout": {
     "columns": {
       "done": {
-        "width": 40,
+        "width": 10,
         "visible": true
       },
       "no": {
-        "width": 40,
+        "width": 46,
         "visible": true
       },
       "label": {
-        "width": 697,
+        "width": 219,
         "visible": true
       },
       "unit": {
@@ -27,7 +27,7 @@
         "visible": true
       },
       "qty_est": {
-        "width": 53,
+        "width": 34,
         "visible": true
       },
       "qty_real": {
