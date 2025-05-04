@@ -1,0 +1,4 @@
+{
+  "collaborators": ["Carlo", "Frédéric", "Cuong", "Hung", "Jeamichel", "Robert", "Johan"],
+  "unitChoices": ["kg", "ton", "hr", "sec", "m", "m²", "m³", "l", "pc"]
+}
