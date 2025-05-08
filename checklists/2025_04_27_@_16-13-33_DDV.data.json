@@ -147,6 +147,18 @@
           "date": "",
           "who": "",
           "collapsed": true
+        },
+        {
+          "label": "New item",
+          "done": false,
+          "unit": "",
+          "qty_est": 0,
+          "qty_real": 0,
+          "price_unit": 0,
+          "date": "2025-05-08",
+          "who": "",
+          "children": [],
+          "no": "1.6"
         }
       ],
       "bold": false,
@@ -178,7 +190,19 @@
           "collapsed": true
         },
         {
-          "no": "2.2",
+          "label": "New item",
+          "done": false,
+          "unit": "",
+          "qty_est": 0,
+          "qty_real": 0,
+          "price_unit": 0,
+          "date": "2025-05-08",
+          "who": "",
+          "children": [],
+          "no": "2.2"
+        },
+        {
+          "no": "2.3",
           "label": "Upper door needs slight clearance adjustment.",
           "done": true,
           "unit": "",
@@ -191,7 +215,7 @@
           "collapsed": true
         },
         {
-          "no": "2.3",
+          "no": "2.4",
           "label": "Hinges:",
           "done": true,
           "unit": "",
@@ -203,7 +227,7 @@
           "who": "",
           "children": [
             {
-              "no": "2.3.1",
+              "no": "2.4.1",
               "label": "Both use Ø12 mm shaft. We considered not to add grinding protection",
               "done": true,
               "bold": true,
@@ -218,7 +242,7 @@
               "collapsed": true
             },
             {
-              "no": "2.3.2",
+              "no": "2.4.2",
               "label": "Hinge Shaft & End Plates:",
               "done": true,
               "unit": "",
@@ -231,7 +255,7 @@
               "collapsed": true
             },
             {
-              "no": "2.3.3",
+              "no": "2.4.3",
               "label": "Shaft cut and fits into end plates milled out slot",
               "done": true,
               "unit": "",
@@ -247,7 +271,7 @@
           "collapsed": false
         },
         {
-          "no": "2.4",
+          "no": "2.5",
           "label": "End plates:",
           "done": false,
           "unit": "",
@@ -259,7 +283,7 @@
           "who": "",
           "children": [
             {
-              "no": "2.4.1",
+              "no": "2.5.1",
               "label": "Slot for shaft (through seal)",
               "done": true,
               "unit": "",
@@ -272,7 +296,7 @@
               "collapsed": true
             },
             {
-              "no": "2.4.2",
+              "no": "2.5.2",
               "label": "Weld-on hang-up arms (weld while mounted)",
               "done": false,
               "unit": "",
