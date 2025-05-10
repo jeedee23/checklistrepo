@@ -1,0 +1,104 @@
+{
+  "fields": {
+    "1": {
+      "key": "done",
+      "label": "✔ Done",
+      "type": "checkbox",
+      "fixed": true
+    },
+    "2": {
+      "key": "no",
+      "label": "No",
+      "type": "number"
+    },
+    "3": {
+      "key": "label",
+      "label": "Label",
+      "type": "tree",
+      "fixed": true
+    },
+    "4": {
+      "key": "unit",
+      "label": "Unit",
+      "type": "text"
+    },
+    "5": {
+      "key": "qty_est",
+      "label": "Est. Qty",
+      "type": "number"
+    },
+    "6": {
+      "key": "qty_real",
+      "label": "Real Qty",
+      "type": "number"
+    },
+    "7": {
+      "key": "price_unit",
+      "label": "Unit Price",
+      "type": "number"
+    },
+    "8": {
+      "key": "total_price",
+      "label": "Total Price",
+      "type": "computed",
+      "formula": "qty_real * price_unit"
+    },
+    "9": {
+      "key": "date",
+      "label": "Date",
+      "type": "date"
+    },
+    "10": {
+      "key": "who",
+      "label": "Who",
+      "type": "select",
+      "source": "collaborators"
+    },
+    "11": {
+      "key": "status",
+      "label": "Status",
+      "type": "select",
+      "options": ["Planned", "In Progress", "Completed", "Blocked"]
+    },
+    "12": {
+      "key": "priority",
+      "label": "Priority",
+      "type": "select",
+      "options": ["Low", "Normal", "High"]
+    },
+    "13": {
+      "key": "progress",
+      "label": "Progress (%)",
+      "type": "number"
+    },
+    "14": {
+      "key": "need",
+      "label": "Need",
+      "type": "select",
+      "options": ["Low", "Normal", "High"]
+    },
+    "15": {
+      "key": "type",
+      "label": "Type",
+      "type": "select",
+      "options": [
+        "Part",
+        "Component",
+        "Manhours",
+        "Assembly",
+        "Target",
+        "Userdefined",
+        "Code",
+        "Electronics",
+        "Process",
+        "PLC"
+      ]
+    },
+    "16": {
+      "key": "approved_by",
+      "label": "Approved By",
+      "type": "select",
+      "source": "collaborators"
+    }
+  }
+}
