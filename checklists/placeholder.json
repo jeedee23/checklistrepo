@@ -75,7 +75,7 @@
       "children": [
         {
           "no": "1.1",
-          "label": "Install 200 Ah 24V LiFePO₄ battery"
+          "label": "Install 200 Ah 24V LiFePO₄ battery???"
         },
         {
           "no": "1.2",
@@ -85,7 +85,7 @@
     },
     {
       "no": "2",
-      "label": "Drive System???????????????",
+      "label": "Drive System",
       "who": "Johan",
       "date": "2025-05-12",
       "children": [
