@@ -75,14 +75,13 @@
       "children": [
         {
           "no": "1.1",
-          "label": "Install 200 Ah 24V LiFePO₄ battery"
+          "label": "Install 200 Ah 24V LiFePO₄ battery."
         },
         {
           "no": "1.2",
           "label": "Add automatic charging antenna system"
         }
-      ],
-      "collapsed": true
+      ]
     },
     {
       "no": "2",
@@ -98,8 +97,7 @@
           "no": "2.2",
           "label": "Test forward/backward drive control"
         }
-      ],
-      "collapsed": true
+      ]
     },
     {
       "no": "3",
@@ -123,8 +121,7 @@
           "no": "3.4",
           "label": "Setup camera (optional Visual SLAM)"
         }
-      ],
-      "collapsed": true
+      ]
     },
     {
       "no": "4",
@@ -144,8 +141,7 @@
           "no": "4.3",
           "label": "Install flow and pressure sensors"
         }
-      ],
-      "collapsed": true
+      ]
     },
     {
       "no": "5",
@@ -161,8 +157,7 @@
           "no": "5.2",
           "label": "Add visual/IR or tag-based alignment system"
         }
-      ],
-      "collapsed": true
+      ]
     },
     {
       "no": "6",
@@ -182,8 +177,7 @@
           "no": "6.3",
           "label": "Set up safety buzzer and lights"
         }
-      ],
-      "collapsed": true
+      ]
     },
     {
       "no": "7",
@@ -203,8 +197,7 @@
           "no": "7.3",
           "label": "Add remote monitoring interface"
         }
-      ],
-      "collapsed": true
+      ]
     }
   ]
 }
