@@ -69,13 +69,13 @@
   "items": [
     {
       "no": "1",
-      "label": "Power System",
+      "label": "Power System------",
       "who": "Johan",
       "date": "2025-05-12",
       "children": [
         {
           "no": "1.1",
-          "label": "Install 200 Ah 24V LiFePO₄ battery???"
+          "label": "Install 200 Ah 24V LiFePO₄ battery"
         },
         {
           "no": "1.2",
