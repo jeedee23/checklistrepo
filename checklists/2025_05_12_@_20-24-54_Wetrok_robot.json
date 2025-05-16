@@ -14,8 +14,8 @@
     "hr",
     "sec",
     "m",
-    "m\u00b2",
-    "m\u00b3",
+    "m²",
+    "m³",
     "l",
     "pc"
   ],
@@ -69,13 +69,13 @@
   "items": [
     {
       "no": "1",
-      "label": "Power System",
+      "label": "Power System---",
       "who": "Johan",
       "date": "2025-05-12",
       "children": [
         {
           "no": "1.1",
-          "label": "Install 200 Ah 24V LiFePO\u2084 battery"
+          "label": "Install 200 Ah 24V LiFePO₄ battery"
         },
         {
           "no": "1.2",
