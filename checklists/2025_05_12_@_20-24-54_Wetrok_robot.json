@@ -75,12 +75,14 @@
       "children": [
         {
           "no": "1.1",
-          "label": "Install 200 Ah 24V LiFePO₄ battery"
+          "label": "Install 200 Ah 24V LiFePO₄ battery",
+          "who": "Johan"
         },
         {
           "no": "1.2",
           "label": "Add automatic charging antenna system",
-          "done": false
+          "done": false,
+          "who": "Johan"
         }
       ]
     },
@@ -92,7 +94,8 @@
       "children": [
         {
           "no": "2.1",
-          "label": "Integrate electronic brake for turning"
+          "label": "Integrate electronic brake for turning",
+          "done": true
         },
         {
           "no": "2.2",
@@ -113,7 +116,7 @@
       "children": [
         {
           "label": "New Sub-item",
-          "done": false,
+          "done": true,
           "unit": "",
           "qty_est": 0,
           "qty_real": 0,
