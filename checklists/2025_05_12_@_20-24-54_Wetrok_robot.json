@@ -102,101 +102,126 @@
       ]
     },
     {
-      "no": "3",
+      "label": "New item",
+      "done": false,
+      "unit": "",
+      "qty_est": 0,
+      "qty_real": 0,
+      "price_unit": 0,
+      "date": "2025-05-17",
+      "who": "",
+      "children": [
+        {
+          "label": "New Sub-item",
+          "done": false,
+          "unit": "",
+          "qty_est": 0,
+          "qty_real": 0,
+          "price_unit": 0,
+          "date": "2025-05-17",
+          "who": "",
+          "children": [],
+          "no": "3.1"
+        }
+      ],
+      "no": "3"
+    },
+    {
+      "no": "4",
       "label": "Sensors & Navigation",
       "who": "Johan",
       "date": "2025-05-12",
       "children": [
         {
-          "no": "3.1",
+          "no": "4.1",
           "label": "Install RTK GPS"
         },
         {
-          "no": "3.2",
+          "no": "4.2",
           "label": "Add IMU and wheel encoders"
         },
         {
-          "no": "3.3",
+          "no": "4.3",
           "label": "Mount LIDAR and ultrasonic sensors"
         },
         {
-          "no": "3.4",
+          "no": "4.4",
           "label": "Setup camera (optional Visual SLAM)"
         }
       ]
     },
     {
-      "no": "4",
+      "no": "5",
       "label": "Cleaning System Automation",
       "who": "Johan",
       "date": "2025-05-12",
       "children": [
         {
-          "no": "4.1",
+          "no": "5.1",
           "label": "Connect brush motors to control unit"
         },
         {
-          "no": "4.2",
+          "no": "5.2",
           "label": "Wire suction motor"
         },
         {
-          "no": "4.3",
+          "no": "5.3",
           "label": "Install flow and pressure sensors"
         }
       ]
     },
     {
-      "no": "5",
+      "no": "6",
       "label": "Docking & Charging",
       "who": "Johan",
       "date": "2025-05-12",
       "children": [
         {
-          "no": "5.1",
+          "no": "6.1",
           "label": "Align antenna system for auto-docking"
         },
         {
-          "no": "5.2",
+          "no": "6.2",
           "label": "Add visual/IR or tag-based alignment system"
         }
       ]
     },
     {
-      "no": "6",
+      "no": "7",
       "label": "Control & Compute System",
       "who": "Johan",
       "date": "2025-05-12",
       "children": [
         {
-          "no": "6.1",
+          "no": "7.1",
           "label": "Install Jetson/Raspberry Pi"
         },
         {
-          "no": "6.2",
+          "no": "7.2",
           "label": "Add microcontroller for I/O"
         },
         {
-          "no": "6.3",
+          "no": "7.3",
           "label": "Set up safety buzzer and lights"
         }
       ]
     },
     {
-      "no": "7",
+      "no": "8",
       "label": "Software",
       "who": "Johan",
       "date": "2025-05-12",
       "children": [
         {
-          "no": "7.1",
+          "no": "8.1",
           "label": "Develop navigation stack"
         },
         {
-          "no": "7.2",
+          "no": "8.2",
           "label": "Program cleaning logic and conditions"
         },
         {
-          "no": "7.3",
+          "no": "8.3",
           "label": "Add remote monitoring interface"
         }
       ]
