@@ -80,7 +80,7 @@
         {
           "no": "1.2",
           "label": "Add automatic charging antenna system",
-          "done": true
+          "done": false
         }
       ]
     },
@@ -97,7 +97,7 @@
         {
           "no": "2.2",
           "label": "Test forward/backward drive control",
-          "done": true
+          "done": false
         }
       ]
     },
