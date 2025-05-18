@@ -17,7 +17,7 @@
   "layout": {
     "columns": {
       "done": {
-        "width": 40,
+        "width": 37,
         "visible": true
       },
       "no": {
@@ -153,7 +153,9 @@
                       "date": "2025-05-18",
                       "who": "Johan",
                       "children": [],
-                      "no": "1.1.1.2.1"
+                      "no": "1.1.1.2.1",
+                      "imageFile": "2025_05_18_@_15-41-22_2024-11-16_14-19-19.png",
+                      "image": "2025_05_18_@_15-41-22_2024-11-16_14-19-19.png"
                     },
                     {
                       "label": "show mine button",
@@ -205,6 +207,20 @@
               "date": "",
               "who": "Johan",
               "collapsed": false
+            },
+            {
+              "label": "https://github.com/jeedee23/checklistrepo/blob/main/checklists/2025_05_18_%40_10-05-52%20Checklist%20Project.json",
+              "done": false,
+              "unit": "",
+              "qty_est": "",
+              "qty_real": "",
+              "price_unit": "",
+              "total_price": 0,
+              "date": "2025-05-18",
+              "who": "Johan",
+              "children": [],
+              "collapsed": false,
+              "no": "1.1.5"
             }
           ]
         }
