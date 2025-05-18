@@ -73,7 +73,7 @@
       "total_price": 0,
       "date": "",
       "who": "Johan",
-      "collapsed": false,
+      "collapsed": true,
       "children": [
         {
           "no": "1.1",
@@ -219,7 +219,7 @@
       "total_price": 0,
       "date": "",
       "who": "Johan",
-      "collapsed": false,
+      "collapsed": true,
       "children": [
         {
           "no": "2.1",
@@ -286,7 +286,7 @@
       "total_price": 0,
       "date": "",
       "who": "Johan",
-      "collapsed": false,
+      "collapsed": true,
       "children": [
         {
           "no": "3.1",
@@ -379,7 +379,7 @@
       "total_price": 0,
       "date": "",
       "who": "Johan",
-      "collapsed": false,
+      "collapsed": true,
       "children": [
         {
           "no": "4.1",
@@ -504,7 +504,7 @@
     },
     {
       "no": "6",
-      "label": "Security",
+      "label": "Settings (not yet developed)",
       "done": false,
       "unit": "",
       "qty_est": "",
@@ -517,7 +517,7 @@
       "children": [
         {
           "no": "6.1",
-          "label": "Remove hardcoded GitHub token",
+          "label": "User preferences",
           "done": false,
           "unit": "",
           "qty_est": "",
@@ -530,7 +530,7 @@
         },
         {
           "no": "6.2",
-          "label": "Access control for collaborators",
+          "label": "Theme toggles",
           "done": false,
           "unit": "",
           "qty_est": "",
@@ -543,7 +543,7 @@
         },
         {
           "no": "6.3",
-          "label": "Read-only public view",
+          "label": "Column visibility",
           "done": false,
           "unit": "",
           "qty_est": "",
@@ -553,6 +553,88 @@
           "date": "",
           "who": "Johan",
           "collapsed": false
+        }
+      ]
+    },
+    {
+      "no": "7",
+      "label": "shortcuts",
+      "done": false,
+      "unit": "",
+      "qty_est": "",
+      "qty_real": "",
+      "price_unit": "",
+      "total_price": 0,
+      "date": "",
+      "who": "Johan",
+      "collapsed": false,
+      "children": [
+        {
+          "no": "7.1",
+          "label": "dblclick in label -> add one below if it is last",
+          "done": false,
+          "unit": "",
+          "qty_est": "",
+          "qty_real": "",
+          "price_unit": "",
+          "total_price": 0,
+          "date": "",
+          "who": "Johan",
+          "collapsed": false
+        },
+        {
+          "no": "7.2",
+          "label": "ctrl-b = bold",
+          "done": false,
+          "unit": "",
+          "qty_est": "",
+          "qty_real": "",
+          "price_unit": "",
+          "total_price": 0,
+          "date": "",
+          "who": "Johan",
+          "collapsed": false,
+          "bold": true
+        },
+        {
+          "no": "7.3",
+          "label": "ctrl-d = duplicate complete below structure before other parent",
+          "done": false,
+          "unit": "",
+          "qty_est": "",
+          "qty_real": "",
+          "price_unit": "",
+          "total_price": 0,
+          "date": "",
+          "who": "Johan",
+          "collapsed": false,
+          "children": []
+        },
+        {
+          "no": "7.4",
+          "label": "ctrl-up = move up one level",
+          "done": false,
+          "unit": "",
+          "qty_est": "",
+          "qty_real": "",
+          "price_unit": "",
+          "total_price": 0,
+          "date": "",
+          "who": "Johan",
+          "collapsed": false,
+          "children": []
+        },
+        {
+          "label": "if duplicate 7.3 it should make 7.4 with below",
+          "done": false,
+          "unit": "",
+          "qty_est": 0,
+          "qty_real": 0,
+          "price_unit": 0,
+          "date": "2025-05-18",
+          "who": "Johan",
+          "children": [],
+          "no": "7.5"
         }
       ]
     }
