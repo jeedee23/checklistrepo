@@ -30,19 +30,19 @@
       },
       "unit": {
         "width": 23,
-        "visible": false
+        "visible": true
       },
       "qty_est": {
         "width": 53,
-        "visible": false
+        "visible": true
       },
       "qty_real": {
         "width": 51,
-        "visible": false
+        "visible": true
       },
       "price_unit": {
         "width": 48,
-        "visible": false
+        "visible": true
       },
       "total_price": {
         "width": 47,
@@ -220,7 +220,7 @@
       "total_price": 0,
       "date": "",
       "who": "Johan",
-      "collapsed": true,
+      "collapsed": false,
       "children": [
         {
           "no": "2.1",
