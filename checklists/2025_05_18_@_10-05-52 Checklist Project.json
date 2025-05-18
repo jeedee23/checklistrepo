@@ -209,7 +209,7 @@
               "collapsed": false
             },
             {
-              "label": "https://github.com/jeedee23/checklistrepo/blob/main/checklists/2025_05_18_%40_10-05-52%20Checklist%20Project.json",
+              "label": "click for link",
               "done": false,
               "unit": "",
               "qty_est": "",
@@ -220,7 +220,8 @@
               "who": "Johan",
               "children": [],
               "collapsed": false,
-              "no": "1.1.5"
+              "no": "1.1.5",
+              "link": "https://github.com/jeedee23/checklistrepo/blob/main/checklists/2025_05_18_%40_10-05-52%20Checklist%20Project.json"
             }
           ]
         }
