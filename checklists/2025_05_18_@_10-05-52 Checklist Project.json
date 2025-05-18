@@ -25,24 +25,24 @@
         "visible": true
       },
       "label": {
-        "width": 776,
+        "width": 918,
         "visible": true
       },
       "unit": {
         "width": 23,
-        "visible": true
+        "visible": false
       },
       "qty_est": {
         "width": 53,
-        "visible": true
+        "visible": false
       },
       "qty_real": {
         "width": 51,
-        "visible": true
+        "visible": false
       },
       "price_unit": {
         "width": 48,
-        "visible": true
+        "visible": false
       },
       "total_price": {
         "width": 47,
@@ -50,7 +50,7 @@
       },
       "date": {
         "width": 174,
-        "visible": true
+        "visible": false
       },
       "who": {
         "width": 100,
