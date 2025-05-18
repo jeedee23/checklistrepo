@@ -9,8 +9,8 @@
     "hr",
     "sec",
     "m",
-    "m\u00b2",
-    "m\u00b3",
+    "m²",
+    "m³",
     "l",
     "pc"
   ],
@@ -104,7 +104,7 @@
                 {
                   "no": "1.1.1.1",
                   "label": "Left cell",
-                  "done": false,
+                  "done": true,
                   "unit": "",
                   "qty_est": "",
                   "qty_real": "",
@@ -117,7 +117,7 @@
                     {
                       "no": "1.1.1.1.1",
                       "label": "title/logo",
-                      "done": false,
+                      "done": true,
                       "unit": "",
                       "qty_est": "",
                       "qty_real": "",
@@ -125,7 +125,8 @@
                       "total_price": 0,
                       "date": "",
                       "who": "Johan",
-                      "collapsed": false
+                      "collapsed": false,
+                      "children": []
                     }
                   ]
                 },
