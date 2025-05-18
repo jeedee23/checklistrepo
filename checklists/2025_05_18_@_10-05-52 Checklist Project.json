@@ -141,7 +141,27 @@
                   "total_price": 0,
                   "date": "",
                   "who": "Johan",
-                  "collapsed": false
+                  "collapsed": false,
+                  "children": [
+                    {
+                      "label": "filter button",
+                      "done": false,
+                      "unit": "",
+                      "qty_est": 0,
+                      "qty_real": 0,
+                      "price_unit": 0,
+                      "date": "2025-05-18",
+                      "who": "Johan",
+                      "children": [],
+                      "no": "1.1.1.2.1"
+                    },
+                    {
+                      "label": "show mine button",
+                      "done": false,
+                      "no": "1.1.1.2.2",
+                      "children": []
+                    }
+                  ]
                 }
               ]
             },
