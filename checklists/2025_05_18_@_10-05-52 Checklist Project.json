@@ -206,7 +206,9 @@
             }
           ]
         }
-      ]
+      ],
+      "noteFile": "checklists/notes/2025_05_18_@_12-24-17.html",
+      "_pendingNoteContent": "<html><body><p>test</p><p style=\"font-size:0.8em; color:#888;\">edited by Johan on 2025_05_18_@_12-24-35</p></body></html>"
     },
     {
       "no": "2",
@@ -528,8 +530,7 @@
           "total_price": 0,
           "date": "",
           "who": "Johan",
-          "collapsed": false,
-          "noteFile": "notes/2025_05_18_@_11-22-02.html"
+          "collapsed": false
         },
         {
           "no": "6.2",
