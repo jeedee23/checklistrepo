@@ -541,7 +541,8 @@
           "total_price": 0,
           "date": "",
           "who": "Johan",
-          "collapsed": false
+          "collapsed": false,
+          "children": []
         },
         {
           "no": "6.3",
@@ -554,7 +555,8 @@
           "total_price": 0,
           "date": "",
           "who": "Johan",
-          "collapsed": false
+          "collapsed": false,
+          "noteFile": "notes/2025_05_18_@_11-34-35.html"
         }
       ]
     },
@@ -637,6 +639,20 @@
           "who": "Johan",
           "children": [],
           "no": "7.5"
+        },
+        {
+          "label": "Type content here (ctrl-del to delete row)",
+          "done": false,
+          "unit": "",
+          "qty_est": "",
+          "qty_real": "",
+          "price_unit": "",
+          "total_price": 0,
+          "date": "2025-05-18",
+          "who": "Johan",
+          "children": [],
+          "collapsed": false,
+          "no": "7.6"
         }
       ]
     }
