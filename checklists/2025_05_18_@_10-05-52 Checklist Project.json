@@ -126,9 +126,12 @@
                       "date": "",
                       "who": "Johan",
                       "collapsed": false,
-                      "children": []
+                      "children": [],
+                      "color": "rgba(0,0,255,1)",
+                      "bold": true
                     }
-                  ]
+                  ],
+                  "color": "rgba(255,0,0,1)"
                 },
                 {
                   "no": "1.1.1.2",
