@@ -10,8 +10,8 @@
     "hr",
     "sec",
     "m",
-    "m\u00b2",
-    "m\u00b3",
+    "m²",
+    "m³",
     "l",
     "pc"
   ],
@@ -74,7 +74,7 @@
       "total_price": 0,
       "date": "2025-06-05",
       "who": "Johan",
-      "collapsed": false,
+      "collapsed": true,
       "children": [
         {
           "no": "1.1",
@@ -141,7 +141,7 @@
       "total_price": 0,
       "date": "2025-06-05",
       "who": "Jeamichel",
-      "collapsed": false,
+      "collapsed": true,
       "children": [
         {
           "no": "2.1",
@@ -171,7 +171,7 @@
         },
         {
           "no": "2.3",
-          "label": "Snubber: 47\u202f\u03a9 + 0.15\u202f\u00b5F Nichicon PPA2253150KN (triple or single?)",
+          "label": "Snubber: 47 Ω + 0.15 µF Nichicon PPA2253150KN (triple or single?)",
           "done": false,
           "unit": "",
           "qty_est": "",
@@ -208,11 +208,11 @@
       "total_price": 0,
       "date": "2025-06-05",
       "who": "Johan",
-      "collapsed": false,
+      "collapsed": true,
       "children": [
         {
           "no": "3.1",
-          "label": "47\u202f\u03a9 10W flameproof resistor",
+          "label": "47 Ω 10W flameproof resistor",
           "done": false,
           "unit": "",
           "qty_est": "",
@@ -249,7 +249,7 @@
       "total_price": 0,
       "date": "2025-06-05",
       "who": "Johan",
-      "collapsed": false,
+      "collapsed": true,
       "children": [
         {
           "no": "4.1",
@@ -266,7 +266,7 @@
         },
         {
           "no": "4.2",
-          "label": "output to voltage divider\u00a0 (10k/5.6k)",
+          "label": "output to voltage divider  (10k/5.6k)",
           "done": false,
           "unit": "",
           "qty_est": "",
@@ -294,19 +294,6 @@
     },
     {
       "no": "5",
-      "label": "New item",
-      "done": false,
-      "unit": "",
-      "qty_est": "",
-      "qty_real": "",
-      "price_unit": "",
-      "total_price": 0,
-      "date": "2025-06-05",
-      "who": "Johan",
-      "collapsed": false
-    },
-    {
-      "no": "6",
       "label": "Voltage Detection secondary(AC Monitoring)",
       "done": false,
       "unit": "",
@@ -316,7 +303,7 @@
       "total_price": 0,
       "date": "2025-06-05",
       "who": "Jeamichel",
-      "collapsed": false,
+      "collapsed": true,
       "children": [
         {
           "no": "6.1",
@@ -372,7 +359,7 @@
         },
         {
           "no": "6.5",
-          "label": "Test scaling up to 1200\u202fV spikes",
+          "label": "Test scaling up to 1200 V spikes",
           "done": false,
           "unit": "",
           "qty_est": "",
@@ -386,7 +373,7 @@
       ]
     },
     {
-      "no": "7",
+      "no": "6",
       "label": "Current Sensing on line, primary and secondary",
       "done": false,
       "unit": "",
@@ -396,10 +383,10 @@
       "total_price": 0,
       "date": "2025-06-05",
       "who": "Johan",
-      "collapsed": false,
+      "collapsed": true,
       "children": [
         {
-          "no": "7.1",
+          "no": "6.1",
           "label": "3 times ACS711ELCTR-25AB-T wired to ADC",
           "done": false,
           "unit": "",
@@ -412,7 +399,7 @@
           "collapsed": false
         },
         {
-          "no": "7.2",
+          "no": "6.2",
           "label": "Verified real-time current feedback",
           "done": false,
           "unit": "",
@@ -427,7 +414,7 @@
       ]
     },
     {
-      "no": "8",
+      "no": "7",
       "label": "Temperature Feedback",
       "done": false,
       "unit": "",
@@ -437,10 +424,10 @@
       "total_price": 0,
       "date": "2025-06-05",
       "who": "Jeamichel",
-      "collapsed": false,
+      "collapsed": true,
       "children": [
         {
-          "no": "8.1",
+          "no": "7.1",
           "label": "LM35DZ mounted, on triacs",
           "done": false,
           "unit": "",
@@ -453,7 +440,7 @@
           "collapsed": false
         },
         {
-          "no": "8.2",
+          "no": "7.2",
           "label": "ADC input verified",
           "done": false,
           "unit": "",
@@ -468,7 +455,7 @@
       ]
     },
     {
-      "no": "9",
+      "no": "8",
       "label": "Control Logic (MCU)",
       "done": false,
       "unit": "",
@@ -478,10 +465,10 @@
       "total_price": 0,
       "date": "2025-06-05",
       "who": "Johan",
-      "collapsed": false,
+      "collapsed": true,
       "children": [
         {
-          "no": "9.1",
+          "no": "8.1",
           "label": "STM32G431 installed",
           "done": false,
           "unit": "",
@@ -494,7 +481,7 @@
           "collapsed": false
         },
         {
-          "no": "9.2",
+          "no": "8.2",
           "label": "GPIO triggers opto",
           "done": false,
           "unit": "",
@@ -507,7 +494,7 @@
           "collapsed": false
         },
         {
-          "no": "9.3",
+          "no": "8.3",
           "label": "ADC channels wired (V/I/T)",
           "done": false,
           "unit": "",
@@ -520,7 +507,7 @@
           "collapsed": false
         },
         {
-          "no": "9.4",
+          "no": "8.4",
           "label": "Burst/phase firmware hybrid",
           "done": false,
           "unit": "",
@@ -535,7 +522,7 @@
       ]
     },
     {
-      "no": "10",
+      "no": "9",
       "label": "RS-485 Communication",
       "done": false,
       "unit": "",
@@ -545,10 +532,10 @@
       "total_price": 0,
       "date": "2025-06-05",
       "who": "Jeamichel",
-      "collapsed": false,
+      "collapsed": true,
       "children": [
         {
-          "no": "10.1",
+          "no": "9.1",
           "label": "MAX3087EESA mounted",
           "done": false,
           "unit": "",
@@ -561,7 +548,7 @@
           "collapsed": false
         },
         {
-          "no": "10.2",
+          "no": "9.2",
           "label": "SM712 ESD diode + TVS protection",
           "done": false,
           "unit": "",
@@ -574,7 +561,7 @@
           "collapsed": false
         },
         {
-          "no": "10.3",
+          "no": "9.3",
           "label": "RJ45 ports + terminator setup",
           "done": false,
           "unit": "",
@@ -587,7 +574,7 @@
           "collapsed": false
         },
         {
-          "no": "10.4",
+          "no": "9.4",
           "label": "DIP switch tested",
           "done": false,
           "unit": "",
@@ -602,7 +589,7 @@
       ]
     },
     {
-      "no": "11",
+      "no": "10",
       "label": "Zero-Cross Detection",
       "done": false,
       "unit": "",
@@ -612,10 +599,10 @@
       "total_price": 0,
       "date": "2025-06-05",
       "who": "Johan",
-      "collapsed": false,
+      "collapsed": true,
       "children": [
         {
-          "no": "11.1",
+          "no": "10.1",
           "label": "Zero-cross detection implemented in firmware",
           "done": false,
           "unit": "",
@@ -628,7 +615,7 @@
           "collapsed": false
         },
         {
-          "no": "11.2",
+          "no": "10.2",
           "label": "Verified zero sync vs power phase",
           "done": false,
           "unit": "",
@@ -643,7 +630,7 @@
       ]
     },
     {
-      "no": "12",
+      "no": "11",
       "label": "Firmware",
       "done": false,
       "unit": "",
@@ -653,10 +640,10 @@
       "total_price": 0,
       "date": "2025-06-05",
       "who": "Jeamichel",
-      "collapsed": false,
+      "collapsed": true,
       "children": [
         {
-          "no": "12.1",
+          "no": "11.1",
           "label": "PID regulation verified",
           "done": false,
           "unit": "",
@@ -669,7 +656,7 @@
           "collapsed": false
         },
         {
-          "no": "12.2",
+          "no": "11.2",
           "label": "Modbus-like RS485 support",
           "done": false,
           "unit": "",
@@ -682,7 +669,7 @@
           "collapsed": false
         },
         {
-          "no": "12.3",
+          "no": "11.3",
           "label": "EEPROM config save working",
           "done": false,
           "unit": "",
@@ -697,7 +684,7 @@
       ]
     },
     {
-      "no": "13",
+      "no": "12",
       "label": "GUI & Debug",
       "done": false,
       "unit": "",
@@ -707,10 +694,10 @@
       "total_price": 0,
       "date": "2025-06-05",
       "who": "Johan",
-      "collapsed": false,
+      "collapsed": true,
       "children": [
         {
-          "no": "13.1",
+          "no": "12.1",
           "label": "Python GUI debug hooks",
           "done": false,
           "unit": "",
@@ -723,7 +710,7 @@
           "collapsed": false
         },
         {
-          "no": "13.2",
+          "no": "12.2",
           "label": "RS485 & UART monitoring",
           "done": false,
           "unit": "",
@@ -738,7 +725,7 @@
       ]
     },
     {
-      "no": "14",
+      "no": "13",
       "label": "Enclosure",
       "done": false,
       "unit": "",
@@ -748,10 +735,10 @@
       "total_price": 0,
       "date": "2025-06-05",
       "who": "Jeamichel",
-      "collapsed": false,
+      "collapsed": true,
       "children": [
         {
-          "no": "14.1",
+          "no": "13.1",
           "label": "Aluminum box installed",
           "done": false,
           "unit": "",
@@ -764,7 +751,7 @@
           "collapsed": false
         },
         {
-          "no": "14.2",
+          "no": "13.2",
           "label": "Cable glands mounted",
           "done": false,
           "unit": "",
@@ -777,7 +764,7 @@
           "collapsed": false
         },
         {
-          "no": "14.3",
+          "no": "13.3",
           "label": "CNC labeling ready",
           "done": false,
           "unit": "",
@@ -792,7 +779,7 @@
       ]
     },
     {
-      "no": "15",
+      "no": "14",
       "label": "Bill of Materials (BOM)",
       "done": false,
       "unit": "",
@@ -803,203 +790,7 @@
       "date": "2025-06-05",
       "who": "Johan",
       "collapsed": false,
-      "children": [
-  {
-    "no": "15.1",
-    "label": "EMI filter (X2 cap + MOV)",
-    "done": false,
-    "unit": "pcs",
-    "qty_est": "1",
-    "qty_real": "",
-    "price_unit": "€2.00",
-    "total_price": 0,
-    "date": "2025-06-05",
-    "who": "Johan",
-    "collapsed": false
-  },
-  {
-    "no": "15.2",
-    "label": "Fast-blow fuse (Eaton 25A KLKE-25)",
-    "done": false,
-    "unit": "pcs",
-    "qty_est": "1",
-    "qty_real": "",
-    "price_unit": "€1.50",
-    "total_price": 0,
-    "date": "2025-06-05",
-    "who": "Johan",
-    "collapsed": false
-  },
-  {
-    "no": "15.3",
-    "label": "TRIAC TPDV1240RG (40 A, 1200 V)",
-    "done": false,
-    "unit": "pcs",
-    "qty_est": "2",
-    "qty_real": "",
-    "price_unit": "€5.00",
-    "total_price": 0,
-    "date": "2025-06-05",
-    "who": "Jeamichel",
-    "collapsed": false
-  },
-  {
-    "no": "15.4",
-    "label": "Opto-triac driver (MOC3052)",
-    "done": false,
-    "unit": "pcs",
-    "qty_est": "2",
-    "qty_real": "",
-    "price_unit": "€1.20",
-    "total_price": 0,
-    "date": "2025-06-05",
-    "who": "Jeamichel",
-    "collapsed": false
-  },
-  {
-    "no": "15.5",
-    "label": "Snubber resistor 47 Ω 10 W",
-    "done": false,
-    "unit": "pcs",
-    "qty_est": "2",
-    "qty_real": "",
-    "price_unit": "€0.50",
-    "total_price": 0,
-    "date": "2025-06-05",
-    "who": "Johan",
-    "collapsed": false
-  },
-  {
-    "no": "15.6",
-    "label": "Snubber capacitor 0.15 µF Nichicon PPA2253150KN",
-    "done": false,
-    "unit": "pcs",
-    "qty_est": "2",
-    "qty_real": "",
-    "price_unit": "€1.00",
-    "total_price": 0,
-    "date": "2025-06-05",
-    "who": "Johan",
-    "collapsed": false
-  },
-  {
-    "no": "15.7",
-    "label": "ACS711ELCTR-25AB-T current sensor",
-    "done": false,
-    "unit": "pcs",
-    "qty_est": "1",
-    "qty_real": "",
-    "price_unit": "€2.50",
-    "total_price": 0,
-    "date": "2025-06-05",
-    "who": "Johan",
-    "collapsed": false
-  },
-  {
-    "no": "15.8",
-    "label": "LM35DZ temperature sensor",
-    "done": false,
-    "unit": "pcs",
-    "qty_est": "1",
-    "qty_real": "",
-    "price_unit": "€0.50",
-    "total_price": 0,
-    "date": "2025-06-05",
-    "who": "Jeamichel",
-    "collapsed": false
-  },
-  {
-    "no": "15.9",
-    "label": "Voltage transformer (EC35 core, custom winding)",
-    "done": false,
-    "unit": "pcs",
-    "qty_est": "1",
-    "qty_real": "",
-    "price_unit": "€4.00",
-    "total_price": 0,
-    "date": "2025-06-05",
-    "who": "Jeamichel",
-    "collapsed": false
-  },
-  {
-    "no": "15.10",
-    "label": "STM32G431 MCU module (WeAct Long)",
-    "done": false,
-    "unit": "pcs",
-    "qty_est": "1",
-    "qty_real": "",
-    "price_unit": "€12.00",
-    "total_price": 0,
-    "date": "2025-06-05",
-    "who": "Johan",
-    "collapsed": false
-  },
-  {
-    "no": "15.11",
-    "label": "MAX3087EESA RS-485 transceiver",
-    "done": false,
-    "unit": "pcs",
-    "qty_est": "1",
-    "qty_real": "",
-    "price_unit": "€1.20",
-    "total_price": 0,
-    "date": "2025-06-05",
-    "who": "Jeamichel",
-    "collapsed": false
-  },
-  {
-    "no": "15.12",
-    "label": "SM712 ESD diode",
-    "done": false,
-    "unit": "pcs",
-    "qty_est": "1",
-    "qty_real": "",
-    "price_unit": "€0.30",
-    "total_price": 0,
-    "date": "2025-06-05",
-    "who": "Jeamichel",
-    "collapsed": false
-  },
-  {
-    "no": "15.13",
-    "label": "RJ45 connector (2 ports)",
-    "done": false,
-    "unit": "pcs",
-    "qty_est": "1",
-    "qty_real": "",
-    "price_unit": "€2.00",
-    "total_price": 0,
-    "date": "2025-06-05",
-    "who": "Jeamichel",
-    "collapsed": false
-  },
-  {
-    "no": "15.14",
-    "label": "Aluminum enclosure (Telituny box)",
-    "done": false,
-    "unit": "pcs",
-    "qty_est": "1",
-    "qty_real": "",
-    "price_unit": "€15.00",
-    "total_price": 0,
-    "date": "2025-06-05",
-    "who": "Johan",
-    "collapsed": false
-  },
-  {
-    "no": "15.15",
-    "label": "M20 cable glands (set of 4)",
-    "done": false,
-    "unit": "set",
-    "qty_est": "1",
-    "qty_real": "",
-    "price_unit": "€2.00",
-    "total_price": 0,
-    "date": "2025-06-05",
-    "who": "Johan",
-    "collapsed": false
-  }
-]
+      "children": []
     }
   ]
 }
