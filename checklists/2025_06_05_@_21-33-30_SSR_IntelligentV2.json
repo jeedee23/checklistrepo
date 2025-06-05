@@ -781,7 +781,7 @@
     {
       "no": "14",
       "label": "Bill of Materials (BOM)",
-      "done": false,
+      "done": true,
       "unit": "",
       "qty_est": "",
       "qty_real": "",
