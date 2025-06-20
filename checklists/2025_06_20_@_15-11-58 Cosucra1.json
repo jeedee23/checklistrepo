@@ -74,7 +74,7 @@
       "total_price": 0,
       "date": "",
       "who": "Johan",
-      "collapsed": false,
+      "collapsed": true,
       "children": [
         {
           "no": "1.1",
@@ -1572,7 +1572,7 @@
       "total_price": 0,
       "date": "",
       "who": "Johan",
-      "collapsed": true,
+      "collapsed": false,
       "children": [
         {
           "no": "2.1",
@@ -1615,11 +1615,11 @@
       "total_price": 0,
       "date": "",
       "who": "Johan",
-      "collapsed": true,
+      "collapsed": false,
       "children": [
         {
           "no": "3.1",
-          "label": "30-AR.001 - Architectural",
+          "label": "Architectural",
           "done": false,
           "unit": "",
           "qty_est": "",
@@ -1648,7 +1648,7 @@
         },
         {
           "no": "3.2",
-          "label": "35-CI.001 - Civil Polytek",
+          "label": "Civil",
           "done": false,
           "unit": "",
           "qty_est": "",
@@ -1657,7 +1657,7 @@
           "total_price": 0,
           "date": "",
           "who": "Johan",
-          "collapsed": false,
+          "collapsed": true,
           "children": [
             {
               "no": "3.2.1",
@@ -1932,7 +1932,7 @@
         },
         {
           "no": "3.3",
-          "label": "40-PR.001 - Process Polytek",
+          "label": "Process",
           "done": false,
           "unit": "",
           "qty_est": "",
@@ -1941,7 +1941,7 @@
           "total_price": 0,
           "date": "",
           "who": "Johan",
-          "collapsed": false,
+          "collapsed": true,
           "children": [
             {
               "no": "3.3.1",
@@ -2425,11 +2425,12 @@
                 }
               ]
             }
-          ]
+          ],
+          "bold": true
         },
         {
           "no": "3.4",
-          "label": "45-PI.001 - Piping Polytek",
+          "label": "Piping",
           "done": false,
           "unit": "",
           "qty_est": "",
@@ -2438,7 +2439,7 @@
           "total_price": 0,
           "date": "",
           "who": "Johan",
-          "collapsed": false,
+          "collapsed": true,
           "children": [
             {
               "no": "3.4.1",
@@ -2672,7 +2673,7 @@
         },
         {
           "no": "3.5",
-          "label": "50-ST.001 - Structural Polytek",
+          "label": "Structural",
           "done": false,
           "unit": "",
           "qty_est": "",
