@@ -26,6 +26,11 @@
       "checklists": [
         "2025_04_27_@_16-13-33_DDV.data.json"
       ]
+    },
+    {
+      "name": "Frédéric",
+      "passwordHash": "",
+      "token": "988bb5e2ddc351d2e56b9cf67512eceb"
     }
   ]
 }
