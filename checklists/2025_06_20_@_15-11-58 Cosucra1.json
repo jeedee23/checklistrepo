@@ -3,6 +3,64 @@
   "collaborators": [
     "Johan"
   ],
+  "unitChoices": [
+    "kg",
+    "ton",
+    "hr",
+    "sec",
+    "m",
+    "m\u00b2",
+    "m\u00b3",
+    "l",
+    "pc"
+  ],
+  "layout": {
+    "columns": {
+      "done": {
+        "width": 37,
+        "visible": true
+      },
+      "no": {
+        "width": 40,
+        "visible": true
+      },
+      "label": {
+        "width": 715,
+        "visible": true
+      },
+      "unit": {
+        "width": 23,
+        "visible": false
+      },
+      "qty_est": {
+        "width": 53,
+        "visible": false
+      },
+      "qty_real": {
+        "width": 51,
+        "visible": false
+      },
+      "price_unit": {
+        "width": 48,
+        "visible": false
+      },
+      "total_price": {
+        "width": 47,
+        "visible": false
+      },
+      "date": {
+        "width": 174,
+        "visible": false
+      },
+      "who": {
+        "width": 100,
+        "visible": true
+      }
+    },
+    "rows": {
+      "height": 30
+    }
+  },
   "items": [
     {
       "no": "1",
