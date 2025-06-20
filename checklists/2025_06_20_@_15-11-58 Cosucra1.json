@@ -91,7 +91,7 @@
           "children": [
             {
               "no": "1.1.1",
-              "label": "01. Project Description (PRN)",
+              "label": "Project Description (PRN)",
               "done": false,
               "unit": "",
               "qty_est": "",
@@ -105,7 +105,7 @@
             },
             {
               "no": "1.1.2",
-              "label": "02. RACI (RAC)",
+              "label": "RACI (RAC)",
               "done": false,
               "unit": "",
               "qty_est": "",
@@ -119,7 +119,7 @@
             },
             {
               "no": "1.1.3",
-              "label": "03. Project organization (POR)",
+              "label": "Project organization (POR)",
               "done": false,
               "unit": "",
               "qty_est": "",
@@ -133,7 +133,7 @@
             },
             {
               "no": "1.1.4",
-              "label": "04. Basis of design",
+              "label": "Basis of design",
               "done": false,
               "unit": "",
               "qty_est": "",
