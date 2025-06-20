@@ -162,7 +162,7 @@
           "children": [
             {
               "no": "1.2.1",
-              "label": "01. Scope limits (SLI)",
+              "label": "Scope limits (SLI)",
               "done": false,
               "unit": "",
               "qty_est": "",
@@ -176,7 +176,7 @@
             },
             {
               "no": "1.2.2",
-              "label": "02. List of deliverables (LOD)",
+              "label": "List of deliverables (LOD)",
               "done": false,
               "unit": "",
               "qty_est": "",
@@ -190,7 +190,7 @@
             },
             {
               "no": "1.2.3",
-              "label": "03. Process Description Sheet (PDS)",
+              "label": "Process Description Sheet (PDS)",
               "done": false,
               "unit": "",
               "qty_est": "",
@@ -204,7 +204,7 @@
             },
             {
               "no": "1.2.4",
-              "label": "04. Scope change control (SCC)",
+              "label": "Scope change control (SCC)",
               "done": false,
               "unit": "",
               "qty_est": "",
@@ -216,11 +216,15 @@
               "collapsed": false,
               "children": []
             }
-          ]
+          ],
+          "imageFile": "2025_06_20_@_20-22-29_cosucra_project_scope_V04JUN2025.pdf",
+          "image": "2025_06_20_@_20-22-29_cosucra_project_scope_V04JUN2025.pdf",
+          "bold": true,
+          "color": "rgba(0,0,255,1)"
         },
         {
           "no": "1.3",
-          "label": "200. Schedule",
+          "label": "Schedule",
           "done": false,
           "unit": "",
           "qty_est": "",
@@ -233,7 +237,7 @@
           "children": [
             {
               "no": "1.3.1",
-              "label": "01. Overall schedule (OVS)",
+              "label": "Overall schedule (OVS)",
               "done": false,
               "unit": "",
               "qty_est": "",
