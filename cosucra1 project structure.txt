@@ -1,0 +1,317 @@
+Title = Cosucra Project structure
+1	10-PM.001 - PM
+1.1	100. Integration
+1.1.1	01. Project Description (PRN)
+1.1.2	02. RACI (RAC)
+1.1.3	03. Project organization (POR)
+1.1.4	04. Basis of design
+1.2	150. Scope
+1.2.1	01. Scope limits (SLI)
+1.2.2	02. List of deliverables (LOD)
+1.2.3	03. Process Description Sheet (PDS)
+1.2.4	04. Scope change control (SCC)
+1.3	200. Schedule
+1.3.1	01. Overall schedule (OVS)
+1.3.2	Detailed schedule (DES)
+1.3.3	Resource planning (REP)
+1.4	Cost
+1.4.1	Budget
+1.4.1.1	Budget estimate overview (BEO)
+1.4.1.2	BE comparisson (BCO)
+1.4.1.3	BE-xx - Description (BES)
+1.4.2	Cost control (CCO)
+1.5	Quality
+1.5.1	Quality plan (QPL)
+1.5.2	NDA management (NDM)
+1.5.3	BIM execution plan (BEP)
+1.5.4	Decision making model (DMM)
+1.5.5	Specifications
+1.5.6	Material certificates
+1.5.7	Insulation certificates
+1.5.8	Painting certificates
+1.5.9	Welding certificates
+1.6	Resources
+1.6.1	Resource tracker (RET)
+1.6.2	LIMOSA
+1.6.3	Request contractor badges (RCB)
+1.7	Communications
+1.7.1	Meetings
+1.7.2	Issues (ISS)
+1.8	Risk
+1.8.1	Project risk analysis (PRA)
+1.9	Procurement
+1.9.1	Procurementplan (PRP)
+1.9.2	General project specifications (GPS)
+1.9.3	Package overview (PAO)
+1.9.4	PA.xx - Description
+1.9.4.1	Technical specifications (TSP)
+1.9.4.1	Price breakdown (PBR)
+1.9.4.3	RFI
+1.9.4.4	RFQ
+1.9.4.5	Quotations
+1.9.4.6	Clarification (CLA)
+1.9.4.7	Comparisson (CMP)
+1.9.4.8	Negotiation report (NER)
+1.9.4.9	Letter of intent (LOI)
+1.9.4.10	Contract (CON)
+1.10	Stakeholder
+1.10.1	Stakeholderslist (SHL)
+1.11	Human Safety Environment
+1.11.1	Health and safety plan (HSP)
+1.11.2	Specific safety introduction (SAI)
+1.11.3	Specific site information (SII)
+1.11.4	Construction site indication (CSI)
+1.11.5	Coordination registry (COR)
+1.11.6	Permitting
+1.11.6.1	Templates
+1.11.6.2	Contractor x
+1.11.6.3	Week x
+1.11.7	CE Certification
+1.11.8	Hazard and operability analysis (HAZ)
+1.11.9	Inventory hazardous materials (IHM)
+1.11.9.1	Radio active source overview (RSO)
+1.11.9.2	Asbestos inventory (ASI)
+1.11.10	Method statements (MES)
+1.12	Construction
+1.12.1	Construction tracker (CTR)
+1.12.2	Site preperation
+1.12.2.1	Picture book (PIB)
+1.12.2.2	Follow-up list (FUL)
+1.12.2.3	Contractorpark
+1.12.3	Progress follow-up
+1.12.3.1	Supplier xx
+1.12.3.1.1	2020xxxx
+1.13	Commissioning
+1.13.1	Commissioningplan (COP)
+1.13.2	Test package overview (TPO)
+1.13.3	General punch list (GPL)
+1.13.3.1	Supplier xx
+1.13.4	TP-xxx - Description
+1.13.4.1	Punch list report
+1.13.4.2	Mechanical walkdown
+1.13.4.3	Leak and pressure test (LAP)
+1.13.4.4	Chemical cleaning (CHC)
+1.13.4.5	IO testing (IOT)
+1.14	Closing
+1.14.1	Closingplan (CLP)
+1.14.2	P&ID
+1.14.3	As-built drawings
+1.14.4	CE certification
+1.14.5	Contractual certificates
+1.14.6	Equipment certificates
+1.14.7	Material certificates
+1.14.8	Maintenance plan
+1.14.9	Operation manual
+1.14.10	Training
+1.15	Docs for closing
+2	BIM Coordination
+2.1	Coordination model (COM)
+2.1	Coordination layout (COL)
+3	Disciplines
+3.1	30-AR.001 - Architectural
+3.1.1	3D Model (3AR)
+3.2	35-CI.001 - Civil Polytek
+3.2.1	3D Model (3CI)
+3.2.2	Calculation (CAL)
+3.2.3	Civil layout (CIL)
+3.2.4	Reinforcement layout (REL)
+3.2.5	Bar bending schedule (BBS)
+3.2.6	Stability analysis (STA)
+3.2.7	DWG files
+3.2.8	DXF files
+3.2.9	STEP files
+3.2.10	IGES files
+3.2.11	SAT files
+3.2.12	Docs for information
+3.2.12	38xxxx-CI.xxx-DFI-Rxx
+3.2.13	Docs for quotation
+3.2.13.1	38xxxx-CI.xxx-DFQ-Rxx
+3.2.14	Docs for production
+3.2.14.1	38xxxx-CI.xxx-DFP-Rxx
+3.2.15	Docs for closing
+3.2.15.1	38xxxx-CI.xxx-DFC-Rxx
+3.3	40-PR.001 - Process Polytek
+3.3.1	Process flow diagram (PFD)
+3.3.2	Fluid list (FLL)
+3.3.3	User point list (UPI)
+3.3.4	User point layout (UPA)
+3.3.5	P&ID (PID)
+3.3.6	Functional description (FDE)
+3.3.7	Process calculations (PCA)
+3.3.8	Equipment list (EQL)
+3.3.9	Datasheets
+3.3.9.1	Type xxx. Supplier - Type
+3.3.10	Tie-in list (TIL)
+3.3.11	Line list (LIL)
+3.3.12	Block diagram (BLD)
+3.3.13	Stream table (SST)
+3.3.14	Docs for information
+3.3.14.1	38xxxx-PR.xxx-DFI-Rxx
+3.3.15	Docs for quotation
+3.3.15.1	38xxxx-PR.xxx-DFQ-Rxx
+3.3.15.1.1	Process flow diagram
+3.3.15.1.2	Fluid list
+3.3.15.1.3	User point list
+3.3.15.1.4	User point layout
+3.3.15.1.5	P&ID
+3.3.15.1.6	Functional description
+3.3.15.1.7	Process calculations
+3.3.15.1.8	Equipment list
+3.3.15.1.9	Equipment data
+3.3.15.1.10	Equipment data
+3.3.15.1.11	Type xxx. Supplier - Type
+3.3.15.1.12	Tie-in list
+3.3.16	Docs for production
+3.3.16.1	38xxxx-PR.xxx-DFP-Rxx
+3.3.17	Docs for closing
+3.3.17.1	38xxxx-PR.xxx-DFC-Rxx
+3.4	45-PI.001 - Piping Polytek
+3.4.1	3D Model (3PI)
+3.4.2	Stress calculations (SCA)
+3.4.3	Bill of material (BOM)
+3.4.4	Equipment layout (EQL)
+3.4.5	Piping layout (PIL)
+3.4.6	Overall isometrics (OIS)
+3.4.7	Isometrics (ISO)
+3.4.8	Supporting (SUP)
+3.4.9	Docs for information
+3.4.9.1	38xxxx-PI.xxx-DFI-Rxx
+3.4.10	Docs for quotation
+3.4.10.1	38xxxx-PI.xxx-DFQ-Rxx
+3.4.11	Docs for production
+3.4.11.1	38xxxx-PI.xxx-DFP-Rxx
+3.4.12	Docs for closing
+3.4.12.1	38xxxx-PI.xxx - Description
+3.5	50-ST.001 - Structural Polytek
+3.5.1	3D Model (3ST)
+3.5.2	Stability analysis
+3.5.2.1	Frame analysis (FAN)
+3.5.2.2	Connection check (CCH)
+3.5.2.3	Flange check (FCH)
+3.5.2.4	Stability report (SRE)
+3.5.3	Frame analysis (FAN)
+3.5.4	Connection check (CCH)
+3.5.5	Flange check (FCH)
+3.5.6	Stability report (SRE)
+3.5.6.1	Frame analysis (FAN)
+3.5.6.2	Connection check (CCH)
+3.5.6.3	Flange check (FCH)
+3.5.6.4	Stability report (SRE)
+3.5.7	Single part drawing (PRD)
+3.5.8	Weld assembly drawing (WAS)
+3.5.9	Bolt assembly drawing (BAS)
+3.5.10	General arrangement drawing (GAD)
+3.5.11	Checkerplate layout (CHL)
+3.5.12	Structural layout (SLA)
+3.5.13	Anchor drawing (AND)
+3.5.14	Beam take off list (BTL)
+3.5.15	Assembly list (ALI)
+3.5.16	Saw list (SLI)
+3.5.17	Bolt list (BLI)
+3.5.18	Grating layout (GRL)
+3.5.19	Bill of material (BOM)
+3.5.20	DWG files
+3.5.21	DXF files
+3.5.22	STEP files
+3.5.23	IGES files
+3.5.24	SAT files
+3.5.25	Declaration of performance
+3.5.26	Docs for information
+3.5.26.1	38xxxx-ST.xxx-DFI-Rxx
+3.5.27	Docs for quotation
+3.5.27.1	38xxxx-ST.xxx-DFQ-Rxx
+3.5.28	Docs for production
+3.5.28.1	38xxxx-ST.xxx-DFP-Rxx
+3.5.29	Docs for closing
+3.5.29.1	38xxxx-ST.xxx-DFC-Rxx
+3.6	65-EQ.001 - Equipment MEAM
+3.7	65-EQ.002 - Equipment Polytek
+3.7.1	3D Model (3EQ)
+3.7.2	Crop scan (CRS)
+3.7.3	3D file
+3.7.4	Manual
+3.7.5	Certificates
+3.7.6	Datasheet
+3.7.7	Data loads
+3.7.8	Data supporting
+3.7.9	Data transportation
+3.7.10	Mechanical layout (MEL)
+3.7.11	Introduction layout (INL)
+3.7.12	Part list
+3.7.13	Packing list
+3.7.14	Bill of material
+3.7.15	Commissioning reports
+3.7.16	Docs for information
+3.7.16.1	38xxxx-EQ.xxx-DFI-Rxx
+3.7.17	Docs for quotation
+3.7.17.2	38xxxx-EQ.xxx-DFQ-Rxx
+3.7.18	Docs for production
+3.7.18.1	38xxxx-EQ.xxx-DFP-Rxx
+3.7.19.1	Docs for closing
+3.7.19.2	38xxxx-EQ.xxx-DFC-Rxx
+3.8	65-EQ.003 - Equipment C-Ground
+3.9	70-EL.001 - Electrical Eleantis
+3.10	70-EL.002 - Electrical Polytek
+3.10.1	3D Model
+3.10.2	Single line diagram
+3.10.3	Bill of material
+3.10.4	Calculation
+3.10.5	Docs for information
+3.10.5.1	38xxxx-EL.xxx-DFI-Rxx
+3.10.6	Docs for quotation
+3.10.6.1	38xxxx-EL.xxx-DFQ-Rxx
+3.10.7	Docs for production
+3.10.7.1	38xxxx-EL.xxx-DFP-Rxx
+3.10.8	Docs for closing
+3.10.8.1	38xxxx-EL.xxx-DFC-Rxx
+4	Exchange
+4.1	Budget estimation
+4.1	Engineering
+4.1	Meeting reports
+4.1	Microwave technology by MEAM
+4.1	PA.1002 Tanks
+4.1	PA.1004 Air filters
+4.1	Datasheets
+4.1	PA.1005 Nitrogen unit
+4.1	Datasheet
+4.1	PA.2001 Belt conveyors
+4.1	Datasheets
+4.1	PA.2002 End product Heat recuperation screw
+4.1	Datasheets
+4.1	PA.2300 Air compressor
+4.1	Datasheet
+4.1	PA.2400 Fan
+4.1	PA.2500 Vacuum pump
+4.1	On-off valves
+4.1	Others
+4.1	Transmitters
+4.1	PA.8000 Varia
+4.2	S-By C-Ground
+4.2.1	Layout building
+4.2.2	MER
+4.2.3	Soil analysis
+4.2.4	Zeefinstallatie
+4.3	S-By Eleantis
+4.3.1	Border
+4.3.2	Control Philosophy
+4.4	S-By MEAM
+4.4.1	230403 meeting preparations
+4.4.2	230404 attachments meeting report
+4.4.3	230405 DRAWINGS & Models
+4.4.4	ARCHIVE 2023_04_18_@_12-28-01
+4.4.5	230421 Engery balance and streamtable
+4.4.6	230424 Equipment datasheets
+4.4.7	230424 updated blockdiagram
+4.4.8	230428 Drawing templates
+4.4.9	230702 Calculations
+4.5	S-By Polytek
+4.5.1	Ducting
+4.5.2	Information weigh belt conveyor
+4.5.3	Instrumentation documents
+4.5.4	Naming procedure
+4.5.5	Painting specification
+4.5.6	Procurement package overview
+4.5.7	Support
+4.5.8	Test
+4.6.9	Schedule tool files
+4.6.1	381216-10-PM.000-200-01-OVS-001 
