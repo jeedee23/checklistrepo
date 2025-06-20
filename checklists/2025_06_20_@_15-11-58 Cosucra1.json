@@ -121,7 +121,7 @@
             },
             {
               "no": "1.1.3",
-              "label": "03. Project organization (POR)",
+              "label": "Project organization (POR)",
               "done": false,
               "unit": "",
               "qty_est": "",
@@ -135,7 +135,7 @@
             },
             {
               "no": "1.1.4",
-              "label": "04. Basis of design",
+              "label": "Basis of design (BOD)",
               "done": false,
               "unit": "",
               "qty_est": "",
