@@ -73,8 +73,8 @@
       "price_unit": "",
       "total_price": 0,
       "date": "",
-      "who": "Johan",
-      "collapsed": true,
+      "who": "Frédéric",
+      "collapsed": false,
       "children": [
         {
           "no": "1.1",
@@ -87,11 +87,11 @@
           "total_price": 0,
           "date": "",
           "who": "Johan",
-          "collapsed": true,
+          "collapsed": false,
           "children": [
             {
               "no": "1.1.1",
-              "label": "Project Description (PRN)",
+              "label": "01. Project Description (PRN)",
               "done": false,
               "unit": "",
               "qty_est": "",
@@ -100,12 +100,12 @@
               "total_price": 0,
               "date": "",
               "who": "Johan",
-              "collapsed": true,
+              "collapsed": false,
               "children": []
             },
             {
               "no": "1.1.2",
-              "label": "RACI (RAC)",
+              "label": "02. RACI (RAC)",
               "done": false,
               "unit": "",
               "qty_est": "",
@@ -114,14 +114,12 @@
               "total_price": 0,
               "date": "",
               "who": "Johan",
-              "collapsed": true,
-              "children": [],
-              "imageFile": "2025_06_20_@_20-40-47_RACI-SIGN.jpg",
-              "image": "2025_06_20_@_20-40-47_RACI-SIGN.jpg"
+              "collapsed": false,
+              "children": []
             },
             {
               "no": "1.1.3",
-              "label": "Project organization (POR)",
+              "label": "03. Project organization (POR)",
               "done": false,
               "unit": "",
               "qty_est": "",
@@ -130,12 +128,12 @@
               "total_price": 0,
               "date": "",
               "who": "Johan",
-              "collapsed": true,
+              "collapsed": false,
               "children": []
             },
             {
               "no": "1.1.4",
-              "label": "Basis of design (BOD)",
+              "label": "04. Basis of design",
               "done": false,
               "unit": "",
               "qty_est": "",
@@ -144,7 +142,7 @@
               "total_price": 0,
               "date": "",
               "who": "Johan",
-              "collapsed": true,
+              "collapsed": false,
               "children": []
             }
           ]
@@ -160,7 +158,7 @@
           "total_price": 0,
           "date": "",
           "who": "Frédéric",
-          "collapsed": false,
+          "collapsed": true,
           "children": [
             {
               "no": "1.2.1",
@@ -173,7 +171,7 @@
               "total_price": 0,
               "date": "",
               "who": "Johan",
-              "collapsed": true,
+              "collapsed": false,
               "children": []
             },
             {
@@ -187,7 +185,7 @@
               "total_price": 0,
               "date": "",
               "who": "Johan",
-              "collapsed": true,
+              "collapsed": false,
               "children": []
             },
             {
@@ -201,7 +199,7 @@
               "total_price": 0,
               "date": "",
               "who": "Johan",
-              "collapsed": true,
+              "collapsed": false,
               "children": []
             },
             {
@@ -215,7 +213,7 @@
               "total_price": 0,
               "date": "",
               "who": "Johan",
-              "collapsed": true,
+              "collapsed": false,
               "children": []
             }
           ],
@@ -234,8 +232,8 @@
           "price_unit": "",
           "total_price": 0,
           "date": "",
-          "who": "Johan",
-          "collapsed": false,
+          "who": "Frédéric",
+          "collapsed": true,
           "children": [
             {
               "no": "1.3.1",
@@ -248,7 +246,7 @@
               "total_price": 0,
               "date": "",
               "who": "Johan",
-              "collapsed": true,
+              "collapsed": false,
               "children": []
             },
             {
@@ -262,7 +260,7 @@
               "total_price": 0,
               "date": "",
               "who": "Johan",
-              "collapsed": true,
+              "collapsed": false,
               "children": []
             },
             {
@@ -276,7 +274,7 @@
               "total_price": 0,
               "date": "",
               "who": "Johan",
-              "collapsed": true,
+              "collapsed": false,
               "children": []
             }
           ]
@@ -291,8 +289,8 @@
           "price_unit": "",
           "total_price": 0,
           "date": "",
-          "who": "Johan",
-          "collapsed": false,
+          "who": "Frédéric",
+          "collapsed": true,
           "children": [
             {
               "no": "1.4.1",
@@ -318,7 +316,7 @@
                   "total_price": 0,
                   "date": "",
                   "who": "Johan",
-                  "collapsed": true,
+                  "collapsed": false,
                   "children": []
                 },
                 {
@@ -332,7 +330,7 @@
                   "total_price": 0,
                   "date": "",
                   "who": "Johan",
-                  "collapsed": true,
+                  "collapsed": false,
                   "children": []
                 },
                 {
@@ -346,7 +344,7 @@
                   "total_price": 0,
                   "date": "",
                   "who": "Johan",
-                  "collapsed": true,
+                  "collapsed": false,
                   "children": []
                 }
               ]
@@ -362,7 +360,7 @@
               "total_price": 0,
               "date": "",
               "who": "Johan",
-              "collapsed": true,
+              "collapsed": false,
               "children": []
             }
           ]
@@ -377,7 +375,7 @@
           "price_unit": "",
           "total_price": 0,
           "date": "",
-          "who": "Johan",
+          "who": "Frédéric",
           "collapsed": true,
           "children": [
             {
@@ -391,7 +389,7 @@
               "total_price": 0,
               "date": "",
               "who": "Johan",
-              "collapsed": true,
+              "collapsed": false,
               "children": []
             },
             {
@@ -405,7 +403,7 @@
               "total_price": 0,
               "date": "",
               "who": "Johan",
-              "collapsed": true,
+              "collapsed": false,
               "children": []
             },
             {
@@ -419,7 +417,7 @@
               "total_price": 0,
               "date": "",
               "who": "Johan",
-              "collapsed": true,
+              "collapsed": false,
               "children": []
             },
             {
@@ -433,12 +431,12 @@
               "total_price": 0,
               "date": "",
               "who": "Johan",
-              "collapsed": true,
+              "collapsed": false,
               "children": []
             },
             {
               "no": "1.5.5",
-              "label": "Specs and certificates",
+              "label": "Specifications",
               "done": false,
               "unit": "",
               "qty_est": "",
@@ -447,65 +445,64 @@
               "total_price": 0,
               "date": "",
               "who": "Johan",
-              "collapsed": true,
-              "children": [
-                {
-                  "no": "1.5.5.1",
-                  "label": "Material certificates",
-                  "done": false,
-                  "unit": "",
-                  "qty_est": "",
-                  "qty_real": "",
-                  "price_unit": "",
-                  "total_price": 0,
-                  "date": "",
-                  "who": "Johan",
-                  "collapsed": true,
-                  "children": []
-                },
-                {
-                  "no": "1.5.5.2",
-                  "label": "Insulation certificates",
-                  "done": false,
-                  "unit": "",
-                  "qty_est": "",
-                  "qty_real": "",
-                  "price_unit": "",
-                  "total_price": 0,
-                  "date": "",
-                  "who": "Johan",
-                  "collapsed": true,
-                  "children": []
-                },
-                {
-                  "no": "1.5.5.3",
-                  "label": "Painting certificates",
-                  "done": false,
-                  "unit": "",
-                  "qty_est": "",
-                  "qty_real": "",
-                  "price_unit": "",
-                  "total_price": 0,
-                  "date": "",
-                  "who": "Johan",
-                  "collapsed": true,
-                  "children": []
-                },
-                {
-                  "no": "1.5.5.4",
-                  "label": "Welding certificates",
-                  "done": false,
-                  "unit": "",
-                  "qty_est": "",
-                  "qty_real": "",
-                  "price_unit": "",
-                  "total_price": 0,
-                  "date": "",
-                  "who": "Johan",
-                  "collapsed": true,
-                  "children": []
-                }
-              ]
+              "collapsed": false,
+              "children": []
+            },
+            {
+              "no": "1.5.6",
+              "label": "Material certificates",
+              "done": false,
+              "unit": "",
+              "qty_est": "",
+              "qty_real": "",
+              "price_unit": "",
+              "total_price": 0,
+              "date": "",
+              "who": "Johan",
+              "collapsed": false,
+              "children": []
+            },
+            {
+              "no": "1.5.7",
+              "label": "Insulation certificates",
+              "done": false,
+              "unit": "",
+              "qty_est": "",
+              "qty_real": "",
+              "price_unit": "",
+              "total_price": 0,
+              "date": "",
+              "who": "Johan",
+              "collapsed": false,
+              "children": []
+            },
+            {
+              "no": "1.5.8",
+              "label": "Painting certificates",
+              "done": false,
+              "unit": "",
+              "qty_est": "",
+              "qty_real": "",
+              "price_unit": "",
+              "total_price": 0,
+              "date": "",
+              "who": "Johan",
+              "collapsed": false,
+              "children": []
+            },
+            {
+              "no": "1.5.9",
+              "label": "Welding certificates",
+              "done": false,
+              "unit": "",
+              "qty_est": "",
+              "qty_real": "",
+              "price_unit": "",
+              "total_price": 0,
+              "date": "",
+              "who": "Johan",
+              "collapsed": false,
+              "children": []
             }
           ]
         },
@@ -519,7 +516,7 @@
           "price_unit": "",
           "total_price": 0,
           "date": "",
-          "who": "Johan",
+          "who": "Frédéric",
           "collapsed": true,
           "children": [
             {
@@ -533,7 +530,7 @@
               "total_price": 0,
               "date": "",
               "who": "Johan",
-              "collapsed": true,
+              "collapsed": false,
               "children": []
             },
             {
@@ -547,7 +544,7 @@
               "total_price": 0,
               "date": "",
               "who": "Johan",
-              "collapsed": true,
+              "collapsed": false,
               "children": []
             },
             {
@@ -561,7 +558,7 @@
               "total_price": 0,
               "date": "",
               "who": "Johan",
-              "collapsed": true,
+              "collapsed": false,
               "children": []
             }
           ]
@@ -576,7 +573,7 @@
           "price_unit": "",
           "total_price": 0,
           "date": "",
-          "who": "Johan",
+          "who": "Frédéric",
           "collapsed": true,
           "children": [
             {
@@ -590,7 +587,7 @@
               "total_price": 0,
               "date": "",
               "who": "Johan",
-              "collapsed": true,
+              "collapsed": false,
               "children": []
             },
             {
@@ -604,7 +601,7 @@
               "total_price": 0,
               "date": "",
               "who": "Johan",
-              "collapsed": true,
+              "collapsed": false,
               "children": []
             }
           ]
@@ -619,7 +616,7 @@
           "price_unit": "",
           "total_price": 0,
           "date": "",
-          "who": "Johan",
+          "who": "Frédéric",
           "collapsed": true,
           "children": [
             {
@@ -633,7 +630,7 @@
               "total_price": 0,
               "date": "",
               "who": "Johan",
-              "collapsed": true,
+              "collapsed": false,
               "children": []
             }
           ]
@@ -648,7 +645,7 @@
           "price_unit": "",
           "total_price": 0,
           "date": "",
-          "who": "Johan",
+          "who": "Frédéric",
           "collapsed": true,
           "children": [
             {
@@ -662,7 +659,7 @@
               "total_price": 0,
               "date": "",
               "who": "Johan",
-              "collapsed": true,
+              "collapsed": false,
               "children": []
             },
             {
@@ -676,7 +673,7 @@
               "total_price": 0,
               "date": "",
               "who": "Johan",
-              "collapsed": true,
+              "collapsed": false,
               "children": []
             },
             {
@@ -690,7 +687,7 @@
               "total_price": 0,
               "date": "",
               "who": "Johan",
-              "collapsed": true,
+              "collapsed": false,
               "children": []
             },
             {
@@ -704,7 +701,7 @@
               "total_price": 0,
               "date": "",
               "who": "Johan",
-              "collapsed": true,
+              "collapsed": false,
               "children": [
                 {
                   "no": "1.9.4.1",
@@ -717,7 +714,7 @@
                   "total_price": 0,
                   "date": "",
                   "who": "Johan",
-                  "collapsed": true,
+                  "collapsed": false,
                   "children": []
                 },
                 {
@@ -731,7 +728,7 @@
                   "total_price": 0,
                   "date": "",
                   "who": "Johan",
-                  "collapsed": true,
+                  "collapsed": false,
                   "children": []
                 },
                 {
@@ -745,7 +742,7 @@
                   "total_price": 0,
                   "date": "",
                   "who": "Johan",
-                  "collapsed": true,
+                  "collapsed": false,
                   "children": []
                 },
                 {
@@ -759,7 +756,7 @@
                   "total_price": 0,
                   "date": "",
                   "who": "Johan",
-                  "collapsed": true,
+                  "collapsed": false,
                   "children": []
                 },
                 {
@@ -773,7 +770,7 @@
                   "total_price": 0,
                   "date": "",
                   "who": "Johan",
-                  "collapsed": true,
+                  "collapsed": false,
                   "children": []
                 },
                 {
@@ -787,7 +784,7 @@
                   "total_price": 0,
                   "date": "",
                   "who": "Johan",
-                  "collapsed": true,
+                  "collapsed": false,
                   "children": []
                 },
                 {
@@ -801,7 +798,7 @@
                   "total_price": 0,
                   "date": "",
                   "who": "Johan",
-                  "collapsed": true,
+                  "collapsed": false,
                   "children": []
                 },
                 {
@@ -815,7 +812,7 @@
                   "total_price": 0,
                   "date": "",
                   "who": "Johan",
-                  "collapsed": true,
+                  "collapsed": false,
                   "children": []
                 },
                 {
@@ -829,7 +826,7 @@
                   "total_price": 0,
                   "date": "",
                   "who": "Johan",
-                  "collapsed": true,
+                  "collapsed": false,
                   "children": []
                 },
                 {
@@ -843,7 +840,7 @@
                   "total_price": 0,
                   "date": "",
                   "who": "Johan",
-                  "collapsed": true,
+                  "collapsed": false,
                   "children": []
                 }
               ]
@@ -860,7 +857,7 @@
           "price_unit": "",
           "total_price": 0,
           "date": "",
-          "who": "Johan",
+          "who": "Frédéric",
           "collapsed": true,
           "children": [
             {
@@ -874,7 +871,7 @@
               "total_price": 0,
               "date": "",
               "who": "Johan",
-              "collapsed": true,
+              "collapsed": false,
               "children": []
             }
           ]
@@ -903,7 +900,7 @@
               "total_price": 0,
               "date": "",
               "who": "Johan",
-              "collapsed": true,
+              "collapsed": false,
               "children": []
             },
             {
@@ -917,7 +914,7 @@
               "total_price": 0,
               "date": "",
               "who": "Johan",
-              "collapsed": true,
+              "collapsed": false,
               "children": []
             },
             {
@@ -931,7 +928,7 @@
               "total_price": 0,
               "date": "",
               "who": "Johan",
-              "collapsed": true,
+              "collapsed": false,
               "children": []
             },
             {
@@ -945,7 +942,7 @@
               "total_price": 0,
               "date": "",
               "who": "Johan",
-              "collapsed": true,
+              "collapsed": false,
               "children": []
             },
             {
@@ -959,7 +956,7 @@
               "total_price": 0,
               "date": "",
               "who": "Johan",
-              "collapsed": true,
+              "collapsed": false,
               "children": []
             },
             {
@@ -973,7 +970,7 @@
               "total_price": 0,
               "date": "",
               "who": "Johan",
-              "collapsed": true,
+              "collapsed": false,
               "children": [
                 {
                   "no": "1.11.6.1",
@@ -986,7 +983,7 @@
                   "total_price": 0,
                   "date": "",
                   "who": "Johan",
-                  "collapsed": true,
+                  "collapsed": false,
                   "children": []
                 },
                 {
@@ -1000,7 +997,7 @@
                   "total_price": 0,
                   "date": "",
                   "who": "Johan",
-                  "collapsed": true,
+                  "collapsed": false,
                   "children": []
                 },
                 {
@@ -1014,7 +1011,7 @@
                   "total_price": 0,
                   "date": "",
                   "who": "Johan",
-                  "collapsed": true,
+                  "collapsed": false,
                   "children": []
                 }
               ]
@@ -1030,7 +1027,7 @@
               "total_price": 0,
               "date": "",
               "who": "Johan",
-              "collapsed": true,
+              "collapsed": false,
               "children": []
             },
             {
@@ -1044,7 +1041,7 @@
               "total_price": 0,
               "date": "",
               "who": "Johan",
-              "collapsed": true,
+              "collapsed": false,
               "children": []
             },
             {
@@ -1058,7 +1055,7 @@
               "total_price": 0,
               "date": "",
               "who": "Johan",
-              "collapsed": true,
+              "collapsed": false,
               "children": [
                 {
                   "no": "1.11.9.1",
@@ -1071,7 +1068,7 @@
                   "total_price": 0,
                   "date": "",
                   "who": "Johan",
-                  "collapsed": true,
+                  "collapsed": false,
                   "children": []
                 },
                 {
@@ -1085,7 +1082,7 @@
                   "total_price": 0,
                   "date": "",
                   "who": "Johan",
-                  "collapsed": true,
+                  "collapsed": false,
                   "children": []
                 }
               ]
@@ -1101,7 +1098,7 @@
               "total_price": 0,
               "date": "",
               "who": "Johan",
-              "collapsed": true,
+              "collapsed": false,
               "children": []
             }
           ]
@@ -1130,7 +1127,7 @@
               "total_price": 0,
               "date": "",
               "who": "Johan",
-              "collapsed": true,
+              "collapsed": false,
               "children": []
             },
             {
@@ -1144,7 +1141,7 @@
               "total_price": 0,
               "date": "",
               "who": "Johan",
-              "collapsed": true,
+              "collapsed": false,
               "children": [
                 {
                   "no": "1.12.2.1",
@@ -1157,7 +1154,7 @@
                   "total_price": 0,
                   "date": "",
                   "who": "Johan",
-                  "collapsed": true,
+                  "collapsed": false,
                   "children": []
                 },
                 {
@@ -1171,7 +1168,7 @@
                   "total_price": 0,
                   "date": "",
                   "who": "Johan",
-                  "collapsed": true,
+                  "collapsed": false,
                   "children": []
                 },
                 {
@@ -1185,7 +1182,7 @@
                   "total_price": 0,
                   "date": "",
                   "who": "Johan",
-                  "collapsed": true,
+                  "collapsed": false,
                   "children": []
                 }
               ]
@@ -1201,7 +1198,7 @@
               "total_price": 0,
               "date": "",
               "who": "Johan",
-              "collapsed": true,
+              "collapsed": false,
               "children": [
                 {
                   "no": "1.12.3.1",
@@ -1214,7 +1211,7 @@
                   "total_price": 0,
                   "date": "",
                   "who": "Johan",
-                  "collapsed": true,
+                  "collapsed": false,
                   "children": [
                     {
                       "no": "1.12.3.1.1",
@@ -1227,7 +1224,7 @@
                       "total_price": 0,
                       "date": "",
                       "who": "Johan",
-                      "collapsed": true,
+                      "collapsed": false,
                       "children": []
                     }
                   ]
@@ -1246,7 +1243,7 @@
           "price_unit": "",
           "total_price": 0,
           "date": "",
-          "who": "Johan",
+          "who": "Frédéric",
           "collapsed": true,
           "children": [
             {
@@ -1260,7 +1257,7 @@
               "total_price": 0,
               "date": "",
               "who": "Johan",
-              "collapsed": true,
+              "collapsed": false,
               "children": []
             },
             {
@@ -1274,7 +1271,7 @@
               "total_price": 0,
               "date": "",
               "who": "Johan",
-              "collapsed": true,
+              "collapsed": false,
               "children": []
             },
             {
@@ -1288,7 +1285,7 @@
               "total_price": 0,
               "date": "",
               "who": "Johan",
-              "collapsed": true,
+              "collapsed": false,
               "children": [
                 {
                   "no": "1.13.3.1",
@@ -1301,7 +1298,7 @@
                   "total_price": 0,
                   "date": "",
                   "who": "Johan",
-                  "collapsed": true,
+                  "collapsed": false,
                   "children": []
                 }
               ]
@@ -1317,7 +1314,7 @@
               "total_price": 0,
               "date": "",
               "who": "Johan",
-              "collapsed": true,
+              "collapsed": false,
               "children": [
                 {
                   "no": "1.13.4.1",
@@ -1330,7 +1327,7 @@
                   "total_price": 0,
                   "date": "",
                   "who": "Johan",
-                  "collapsed": true,
+                  "collapsed": false,
                   "children": []
                 },
                 {
@@ -1344,7 +1341,7 @@
                   "total_price": 0,
                   "date": "",
                   "who": "Johan",
-                  "collapsed": true,
+                  "collapsed": false,
                   "children": []
                 },
                 {
@@ -1358,7 +1355,7 @@
                   "total_price": 0,
                   "date": "",
                   "who": "Johan",
-                  "collapsed": true,
+                  "collapsed": false,
                   "children": []
                 },
                 {
@@ -1372,7 +1369,7 @@
                   "total_price": 0,
                   "date": "",
                   "who": "Johan",
-                  "collapsed": true,
+                  "collapsed": false,
                   "children": []
                 },
                 {
@@ -1386,7 +1383,7 @@
                   "total_price": 0,
                   "date": "",
                   "who": "Johan",
-                  "collapsed": true,
+                  "collapsed": false,
                   "children": []
                 }
               ]
@@ -1403,7 +1400,7 @@
           "price_unit": "",
           "total_price": 0,
           "date": "",
-          "who": "Johan",
+          "who": "Frédéric",
           "collapsed": true,
           "children": [
             {
@@ -1417,7 +1414,7 @@
               "total_price": 0,
               "date": "",
               "who": "Johan",
-              "collapsed": true,
+              "collapsed": false,
               "children": []
             },
             {
@@ -1431,7 +1428,7 @@
               "total_price": 0,
               "date": "",
               "who": "Johan",
-              "collapsed": true,
+              "collapsed": false,
               "children": []
             },
             {
@@ -1445,7 +1442,7 @@
               "total_price": 0,
               "date": "",
               "who": "Johan",
-              "collapsed": true,
+              "collapsed": false,
               "children": []
             },
             {
@@ -1459,7 +1456,7 @@
               "total_price": 0,
               "date": "",
               "who": "Johan",
-              "collapsed": true,
+              "collapsed": false,
               "children": []
             },
             {
@@ -1473,7 +1470,7 @@
               "total_price": 0,
               "date": "",
               "who": "Johan",
-              "collapsed": true,
+              "collapsed": false,
               "children": []
             },
             {
@@ -1487,7 +1484,7 @@
               "total_price": 0,
               "date": "",
               "who": "Johan",
-              "collapsed": true,
+              "collapsed": false,
               "children": []
             },
             {
@@ -1501,7 +1498,7 @@
               "total_price": 0,
               "date": "",
               "who": "Johan",
-              "collapsed": true,
+              "collapsed": false,
               "children": []
             },
             {
@@ -1515,7 +1512,7 @@
               "total_price": 0,
               "date": "",
               "who": "Johan",
-              "collapsed": true,
+              "collapsed": false,
               "children": []
             },
             {
@@ -1529,7 +1526,7 @@
               "total_price": 0,
               "date": "",
               "who": "Johan",
-              "collapsed": true,
+              "collapsed": false,
               "children": []
             },
             {
@@ -1543,7 +1540,7 @@
               "total_price": 0,
               "date": "",
               "who": "Johan",
-              "collapsed": true,
+              "collapsed": false,
               "children": []
             }
           ]
@@ -1558,8 +1555,8 @@
           "price_unit": "",
           "total_price": 0,
           "date": "",
-          "who": "Johan",
-          "collapsed": true,
+          "who": "Frédéric",
+          "collapsed": false,
           "children": []
         }
       ]
@@ -1588,7 +1585,7 @@
           "total_price": 0,
           "date": "",
           "who": "Johan",
-          "collapsed": true,
+          "collapsed": false,
           "children": []
         },
         {
@@ -1602,7 +1599,7 @@
           "total_price": 0,
           "date": "",
           "who": "Johan",
-          "collapsed": true,
+          "collapsed": false,
           "children": []
         }
       ]
@@ -1644,7 +1641,7 @@
               "total_price": 0,
               "date": "",
               "who": "Johan",
-              "collapsed": true,
+              "collapsed": false,
               "children": []
             }
           ]
@@ -1673,7 +1670,7 @@
               "total_price": 0,
               "date": "",
               "who": "Johan",
-              "collapsed": true,
+              "collapsed": false,
               "children": []
             },
             {
@@ -1687,7 +1684,7 @@
               "total_price": 0,
               "date": "",
               "who": "Johan",
-              "collapsed": true,
+              "collapsed": false,
               "children": []
             },
             {
@@ -1701,7 +1698,7 @@
               "total_price": 0,
               "date": "",
               "who": "Johan",
-              "collapsed": true,
+              "collapsed": false,
               "children": []
             },
             {
@@ -1715,7 +1712,7 @@
               "total_price": 0,
               "date": "",
               "who": "Johan",
-              "collapsed": true,
+              "collapsed": false,
               "children": []
             },
             {
@@ -1729,7 +1726,7 @@
               "total_price": 0,
               "date": "",
               "who": "Johan",
-              "collapsed": true,
+              "collapsed": false,
               "children": []
             },
             {
@@ -1743,7 +1740,7 @@
               "total_price": 0,
               "date": "",
               "who": "Johan",
-              "collapsed": true,
+              "collapsed": false,
               "children": []
             },
             {
@@ -1757,7 +1754,7 @@
               "total_price": 0,
               "date": "",
               "who": "Johan",
-              "collapsed": true,
+              "collapsed": false,
               "children": []
             },
             {
@@ -1771,7 +1768,7 @@
               "total_price": 0,
               "date": "",
               "who": "Johan",
-              "collapsed": true,
+              "collapsed": false,
               "children": []
             },
             {
@@ -1785,7 +1782,7 @@
               "total_price": 0,
               "date": "",
               "who": "Johan",
-              "collapsed": true,
+              "collapsed": false,
               "children": []
             },
             {
@@ -1799,7 +1796,7 @@
               "total_price": 0,
               "date": "",
               "who": "Johan",
-              "collapsed": true,
+              "collapsed": false,
               "children": []
             },
             {
@@ -1813,7 +1810,7 @@
               "total_price": 0,
               "date": "",
               "who": "Johan",
-              "collapsed": true,
+              "collapsed": false,
               "children": []
             },
             {
@@ -1827,7 +1824,7 @@
               "total_price": 0,
               "date": "",
               "who": "Johan",
-              "collapsed": true,
+              "collapsed": false,
               "children": []
             },
             {
@@ -1841,7 +1838,7 @@
               "total_price": 0,
               "date": "",
               "who": "Johan",
-              "collapsed": true,
+              "collapsed": false,
               "children": []
             },
             {
@@ -1855,7 +1852,7 @@
               "total_price": 0,
               "date": "",
               "who": "Johan",
-              "collapsed": true,
+              "collapsed": false,
               "children": [
                 {
                   "no": "3.2.14.1",
@@ -1868,7 +1865,7 @@
                   "total_price": 0,
                   "date": "",
                   "who": "Johan",
-                  "collapsed": true,
+                  "collapsed": false,
                   "children": []
                 }
               ]
@@ -1884,7 +1881,7 @@
               "total_price": 0,
               "date": "",
               "who": "Johan",
-              "collapsed": true,
+              "collapsed": false,
               "children": [
                 {
                   "no": "3.2.15.1",
@@ -1897,7 +1894,7 @@
                   "total_price": 0,
                   "date": "",
                   "who": "Johan",
-                  "collapsed": true,
+                  "collapsed": false,
                   "children": []
                 }
               ]
@@ -1913,7 +1910,7 @@
               "total_price": 0,
               "date": "",
               "who": "Johan",
-              "collapsed": true,
+              "collapsed": false,
               "children": [
                 {
                   "no": "3.2.16.1",
@@ -1926,7 +1923,7 @@
                   "total_price": 0,
                   "date": "",
                   "who": "Johan",
-                  "collapsed": true,
+                  "collapsed": false,
                   "children": []
                 }
               ]
@@ -1957,7 +1954,7 @@
               "total_price": 0,
               "date": "",
               "who": "Johan",
-              "collapsed": true,
+              "collapsed": false,
               "children": []
             },
             {
@@ -1971,7 +1968,7 @@
               "total_price": 0,
               "date": "",
               "who": "Johan",
-              "collapsed": true,
+              "collapsed": false,
               "children": []
             },
             {
@@ -1985,7 +1982,7 @@
               "total_price": 0,
               "date": "",
               "who": "Johan",
-              "collapsed": true,
+              "collapsed": false,
               "children": []
             },
             {
@@ -1999,7 +1996,7 @@
               "total_price": 0,
               "date": "",
               "who": "Johan",
-              "collapsed": true,
+              "collapsed": false,
               "children": []
             },
             {
@@ -2013,7 +2010,7 @@
               "total_price": 0,
               "date": "",
               "who": "Johan",
-              "collapsed": true,
+              "collapsed": false,
               "children": []
             },
             {
@@ -2027,7 +2024,7 @@
               "total_price": 0,
               "date": "",
               "who": "Johan",
-              "collapsed": true,
+              "collapsed": false,
               "children": []
             },
             {
@@ -2041,7 +2038,7 @@
               "total_price": 0,
               "date": "",
               "who": "Johan",
-              "collapsed": true,
+              "collapsed": false,
               "children": []
             },
             {
@@ -2055,7 +2052,7 @@
               "total_price": 0,
               "date": "",
               "who": "Johan",
-              "collapsed": true,
+              "collapsed": false,
               "children": []
             },
             {
@@ -2069,7 +2066,7 @@
               "total_price": 0,
               "date": "",
               "who": "Johan",
-              "collapsed": true,
+              "collapsed": false,
               "children": [
                 {
                   "no": "3.3.9.1",
@@ -2082,7 +2079,7 @@
                   "total_price": 0,
                   "date": "",
                   "who": "Johan",
-                  "collapsed": true,
+                  "collapsed": false,
                   "children": []
                 }
               ]
@@ -2098,7 +2095,7 @@
               "total_price": 0,
               "date": "",
               "who": "Johan",
-              "collapsed": true,
+              "collapsed": false,
               "children": []
             },
             {
@@ -2112,7 +2109,7 @@
               "total_price": 0,
               "date": "",
               "who": "Johan",
-              "collapsed": true,
+              "collapsed": false,
               "children": []
             },
             {
@@ -2126,7 +2123,7 @@
               "total_price": 0,
               "date": "",
               "who": "Johan",
-              "collapsed": true,
+              "collapsed": false,
               "children": []
             },
             {
@@ -2140,7 +2137,7 @@
               "total_price": 0,
               "date": "",
               "who": "Johan",
-              "collapsed": true,
+              "collapsed": false,
               "children": []
             },
             {
@@ -2154,7 +2151,7 @@
               "total_price": 0,
               "date": "",
               "who": "Johan",
-              "collapsed": true,
+              "collapsed": false,
               "children": [
                 {
                   "no": "3.3.14.1",
@@ -2167,7 +2164,7 @@
                   "total_price": 0,
                   "date": "",
                   "who": "Johan",
-                  "collapsed": true,
+                  "collapsed": false,
                   "children": []
                 }
               ]
@@ -2183,7 +2180,7 @@
               "total_price": 0,
               "date": "",
               "who": "Johan",
-              "collapsed": true,
+              "collapsed": false,
               "children": [
                 {
                   "no": "3.3.15.1",
@@ -2196,7 +2193,7 @@
                   "total_price": 0,
                   "date": "",
                   "who": "Johan",
-                  "collapsed": true,
+                  "collapsed": false,
                   "children": [
                     {
                       "no": "3.3.15.1.1",
@@ -2209,7 +2206,7 @@
                       "total_price": 0,
                       "date": "",
                       "who": "Johan",
-                      "collapsed": true,
+                      "collapsed": false,
                       "children": []
                     },
                     {
@@ -2223,7 +2220,7 @@
                       "total_price": 0,
                       "date": "",
                       "who": "Johan",
-                      "collapsed": true,
+                      "collapsed": false,
                       "children": []
                     },
                     {
@@ -2237,7 +2234,7 @@
                       "total_price": 0,
                       "date": "",
                       "who": "Johan",
-                      "collapsed": true,
+                      "collapsed": false,
                       "children": []
                     },
                     {
@@ -2251,7 +2248,7 @@
                       "total_price": 0,
                       "date": "",
                       "who": "Johan",
-                      "collapsed": true,
+                      "collapsed": false,
                       "children": []
                     },
                     {
@@ -2265,7 +2262,7 @@
                       "total_price": 0,
                       "date": "",
                       "who": "Johan",
-                      "collapsed": true,
+                      "collapsed": false,
                       "children": []
                     },
                     {
@@ -2279,7 +2276,7 @@
                       "total_price": 0,
                       "date": "",
                       "who": "Johan",
-                      "collapsed": true,
+                      "collapsed": false,
                       "children": []
                     },
                     {
@@ -2293,7 +2290,7 @@
                       "total_price": 0,
                       "date": "",
                       "who": "Johan",
-                      "collapsed": true,
+                      "collapsed": false,
                       "children": []
                     },
                     {
@@ -2307,7 +2304,7 @@
                       "total_price": 0,
                       "date": "",
                       "who": "Johan",
-                      "collapsed": true,
+                      "collapsed": false,
                       "children": []
                     },
                     {
@@ -2321,7 +2318,7 @@
                       "total_price": 0,
                       "date": "",
                       "who": "Johan",
-                      "collapsed": true,
+                      "collapsed": false,
                       "children": []
                     },
                     {
@@ -2335,7 +2332,7 @@
                       "total_price": 0,
                       "date": "",
                       "who": "Johan",
-                      "collapsed": true,
+                      "collapsed": false,
                       "children": []
                     },
                     {
@@ -2349,7 +2346,7 @@
                       "total_price": 0,
                       "date": "",
                       "who": "Johan",
-                      "collapsed": true,
+                      "collapsed": false,
                       "children": []
                     },
                     {
@@ -2363,7 +2360,7 @@
                       "total_price": 0,
                       "date": "",
                       "who": "Johan",
-                      "collapsed": true,
+                      "collapsed": false,
                       "children": []
                     }
                   ]
@@ -2381,7 +2378,7 @@
               "total_price": 0,
               "date": "",
               "who": "Johan",
-              "collapsed": true,
+              "collapsed": false,
               "children": [
                 {
                   "no": "3.3.16.1",
@@ -2394,7 +2391,7 @@
                   "total_price": 0,
                   "date": "",
                   "who": "Johan",
-                  "collapsed": true,
+                  "collapsed": false,
                   "children": []
                 }
               ]
@@ -2410,7 +2407,7 @@
               "total_price": 0,
               "date": "",
               "who": "Johan",
-              "collapsed": true,
+              "collapsed": false,
               "children": [
                 {
                   "no": "3.3.17.1",
@@ -2423,7 +2420,7 @@
                   "total_price": 0,
                   "date": "",
                   "who": "Johan",
-                  "collapsed": true,
+                  "collapsed": false,
                   "children": []
                 }
               ]
@@ -2455,7 +2452,7 @@
               "total_price": 0,
               "date": "",
               "who": "Johan",
-              "collapsed": true,
+              "collapsed": false,
               "children": []
             },
             {
@@ -2469,7 +2466,7 @@
               "total_price": 0,
               "date": "",
               "who": "Johan",
-              "collapsed": true,
+              "collapsed": false,
               "children": []
             },
             {
@@ -2483,7 +2480,7 @@
               "total_price": 0,
               "date": "",
               "who": "Johan",
-              "collapsed": true,
+              "collapsed": false,
               "children": []
             },
             {
@@ -2497,7 +2494,7 @@
               "total_price": 0,
               "date": "",
               "who": "Johan",
-              "collapsed": true,
+              "collapsed": false,
               "children": []
             },
             {
@@ -2511,7 +2508,7 @@
               "total_price": 0,
               "date": "",
               "who": "Johan",
-              "collapsed": true,
+              "collapsed": false,
               "children": []
             },
             {
@@ -2525,7 +2522,7 @@
               "total_price": 0,
               "date": "",
               "who": "Johan",
-              "collapsed": true,
+              "collapsed": false,
               "children": []
             },
             {
@@ -2539,7 +2536,7 @@
               "total_price": 0,
               "date": "",
               "who": "Johan",
-              "collapsed": true,
+              "collapsed": false,
               "children": []
             },
             {
@@ -2553,7 +2550,7 @@
               "total_price": 0,
               "date": "",
               "who": "Johan",
-              "collapsed": true,
+              "collapsed": false,
               "children": []
             },
             {
@@ -2567,7 +2564,7 @@
               "total_price": 0,
               "date": "",
               "who": "Johan",
-              "collapsed": true,
+              "collapsed": false,
               "children": [
                 {
                   "no": "3.4.9.1",
@@ -2580,7 +2577,7 @@
                   "total_price": 0,
                   "date": "",
                   "who": "Johan",
-                  "collapsed": true,
+                  "collapsed": false,
                   "children": []
                 }
               ]
@@ -2596,7 +2593,7 @@
               "total_price": 0,
               "date": "",
               "who": "Johan",
-              "collapsed": true,
+              "collapsed": false,
               "children": [
                 {
                   "no": "3.4.10.1",
@@ -2609,7 +2606,7 @@
                   "total_price": 0,
                   "date": "",
                   "who": "Johan",
-                  "collapsed": true,
+                  "collapsed": false,
                   "children": []
                 }
               ]
@@ -2625,7 +2622,7 @@
               "total_price": 0,
               "date": "",
               "who": "Johan",
-              "collapsed": true,
+              "collapsed": false,
               "children": [
                 {
                   "no": "3.4.11.1",
@@ -2638,7 +2635,7 @@
                   "total_price": 0,
                   "date": "",
                   "who": "Johan",
-                  "collapsed": true,
+                  "collapsed": false,
                   "children": []
                 }
               ]
@@ -2654,7 +2651,7 @@
               "total_price": 0,
               "date": "",
               "who": "Johan",
-              "collapsed": true,
+              "collapsed": false,
               "children": [
                 {
                   "no": "3.4.12.1",
@@ -2667,7 +2664,7 @@
                   "total_price": 0,
                   "date": "",
                   "who": "Johan",
-                  "collapsed": true,
+                  "collapsed": false,
                   "children": []
                 }
               ]
@@ -2698,7 +2695,7 @@
               "total_price": 0,
               "date": "",
               "who": "Johan",
-              "collapsed": true,
+              "collapsed": false,
               "children": []
             },
             {
@@ -2725,7 +2722,7 @@
                   "total_price": 0,
                   "date": "",
                   "who": "Johan",
-                  "collapsed": true,
+                  "collapsed": false,
                   "children": []
                 },
                 {
@@ -2739,7 +2736,7 @@
                   "total_price": 0,
                   "date": "",
                   "who": "Johan",
-                  "collapsed": true,
+                  "collapsed": false,
                   "children": []
                 },
                 {
@@ -2753,7 +2750,7 @@
                   "total_price": 0,
                   "date": "",
                   "who": "Johan",
-                  "collapsed": true,
+                  "collapsed": false,
                   "children": []
                 },
                 {
@@ -2767,7 +2764,7 @@
                   "total_price": 0,
                   "date": "",
                   "who": "Johan",
-                  "collapsed": true,
+                  "collapsed": false,
                   "children": []
                 }
               ]
@@ -2783,7 +2780,7 @@
               "total_price": 0,
               "date": "",
               "who": "Johan",
-              "collapsed": true,
+              "collapsed": false,
               "children": []
             },
             {
@@ -2797,7 +2794,7 @@
               "total_price": 0,
               "date": "",
               "who": "Johan",
-              "collapsed": true,
+              "collapsed": false,
               "children": []
             },
             {
@@ -2811,7 +2808,7 @@
               "total_price": 0,
               "date": "",
               "who": "Johan",
-              "collapsed": true,
+              "collapsed": false,
               "children": []
             },
             {
@@ -2838,7 +2835,7 @@
                   "total_price": 0,
                   "date": "",
                   "who": "Johan",
-                  "collapsed": true,
+                  "collapsed": false,
                   "children": []
                 },
                 {
@@ -2852,7 +2849,7 @@
                   "total_price": 0,
                   "date": "",
                   "who": "Johan",
-                  "collapsed": true,
+                  "collapsed": false,
                   "children": []
                 },
                 {
@@ -2866,7 +2863,7 @@
                   "total_price": 0,
                   "date": "",
                   "who": "Johan",
-                  "collapsed": true,
+                  "collapsed": false,
                   "children": []
                 },
                 {
@@ -2880,7 +2877,7 @@
                   "total_price": 0,
                   "date": "",
                   "who": "Johan",
-                  "collapsed": true,
+                  "collapsed": false,
                   "children": []
                 }
               ]
@@ -2896,7 +2893,7 @@
               "total_price": 0,
               "date": "",
               "who": "Johan",
-              "collapsed": true,
+              "collapsed": false,
               "children": []
             },
             {
@@ -2910,7 +2907,7 @@
               "total_price": 0,
               "date": "",
               "who": "Johan",
-              "collapsed": true,
+              "collapsed": false,
               "children": []
             },
             {
@@ -2924,7 +2921,7 @@
               "total_price": 0,
               "date": "",
               "who": "Johan",
-              "collapsed": true,
+              "collapsed": false,
               "children": []
             },
             {
@@ -2938,7 +2935,7 @@
               "total_price": 0,
               "date": "",
               "who": "Johan",
-              "collapsed": true,
+              "collapsed": false,
               "children": []
             },
             {
@@ -2952,7 +2949,7 @@
               "total_price": 0,
               "date": "",
               "who": "Johan",
-              "collapsed": true,
+              "collapsed": false,
               "children": []
             },
             {
@@ -2966,7 +2963,7 @@
               "total_price": 0,
               "date": "",
               "who": "Johan",
-              "collapsed": true,
+              "collapsed": false,
               "children": []
             },
             {
@@ -2980,7 +2977,7 @@
               "total_price": 0,
               "date": "",
               "who": "Johan",
-              "collapsed": true,
+              "collapsed": false,
               "children": []
             },
             {
@@ -2994,7 +2991,7 @@
               "total_price": 0,
               "date": "",
               "who": "Johan",
-              "collapsed": true,
+              "collapsed": false,
               "children": []
             },
             {
@@ -3008,7 +3005,7 @@
               "total_price": 0,
               "date": "",
               "who": "Johan",
-              "collapsed": true,
+              "collapsed": false,
               "children": []
             },
             {
@@ -3022,7 +3019,7 @@
               "total_price": 0,
               "date": "",
               "who": "Johan",
-              "collapsed": true,
+              "collapsed": false,
               "children": []
             },
             {
@@ -3036,7 +3033,7 @@
               "total_price": 0,
               "date": "",
               "who": "Johan",
-              "collapsed": true,
+              "collapsed": false,
               "children": []
             },
             {
@@ -3050,7 +3047,7 @@
               "total_price": 0,
               "date": "",
               "who": "Johan",
-              "collapsed": true,
+              "collapsed": false,
               "children": []
             },
             {
@@ -3064,7 +3061,7 @@
               "total_price": 0,
               "date": "",
               "who": "Johan",
-              "collapsed": true,
+              "collapsed": false,
               "children": []
             },
             {
@@ -3078,7 +3075,7 @@
               "total_price": 0,
               "date": "",
               "who": "Johan",
-              "collapsed": true,
+              "collapsed": false,
               "children": []
             },
             {
@@ -3092,7 +3089,7 @@
               "total_price": 0,
               "date": "",
               "who": "Johan",
-              "collapsed": true,
+              "collapsed": false,
               "children": []
             },
             {
@@ -3106,7 +3103,7 @@
               "total_price": 0,
               "date": "",
               "who": "Johan",
-              "collapsed": true,
+              "collapsed": false,
               "children": []
             },
             {
@@ -3120,7 +3117,7 @@
               "total_price": 0,
               "date": "",
               "who": "Johan",
-              "collapsed": true,
+              "collapsed": false,
               "children": []
             },
             {
@@ -3134,7 +3131,7 @@
               "total_price": 0,
               "date": "",
               "who": "Johan",
-              "collapsed": true,
+              "collapsed": false,
               "children": []
             },
             {
@@ -3148,7 +3145,7 @@
               "total_price": 0,
               "date": "",
               "who": "Johan",
-              "collapsed": true,
+              "collapsed": false,
               "children": []
             },
             {
@@ -3162,7 +3159,7 @@
               "total_price": 0,
               "date": "",
               "who": "Johan",
-              "collapsed": true,
+              "collapsed": false,
               "children": [
                 {
                   "no": "3.5.26.1",
@@ -3175,7 +3172,7 @@
                   "total_price": 0,
                   "date": "",
                   "who": "Johan",
-                  "collapsed": true,
+                  "collapsed": false,
                   "children": []
                 }
               ]
@@ -3191,7 +3188,7 @@
               "total_price": 0,
               "date": "",
               "who": "Johan",
-              "collapsed": true,
+              "collapsed": false,
               "children": [
                 {
                   "no": "3.5.27.1",
@@ -3204,7 +3201,7 @@
                   "total_price": 0,
                   "date": "",
                   "who": "Johan",
-                  "collapsed": true,
+                  "collapsed": false,
                   "children": []
                 }
               ]
@@ -3220,7 +3217,7 @@
               "total_price": 0,
               "date": "",
               "who": "Johan",
-              "collapsed": true,
+              "collapsed": false,
               "children": [
                 {
                   "no": "3.5.28.1",
@@ -3233,7 +3230,7 @@
                   "total_price": 0,
                   "date": "",
                   "who": "Johan",
-                  "collapsed": true,
+                  "collapsed": false,
                   "children": []
                 }
               ]
@@ -3249,7 +3246,7 @@
               "total_price": 0,
               "date": "",
               "who": "Johan",
-              "collapsed": true,
+              "collapsed": false,
               "children": [
                 {
                   "no": "3.5.29.1",
@@ -3262,7 +3259,7 @@
                   "total_price": 0,
                   "date": "",
                   "who": "Johan",
-                  "collapsed": true,
+                  "collapsed": false,
                   "children": []
                 }
               ]
@@ -3280,7 +3277,7 @@
           "total_price": 0,
           "date": "",
           "who": "Johan",
-          "collapsed": true,
+          "collapsed": false,
           "children": [
             {
               "no": "3.6.1",
@@ -3306,7 +3303,7 @@
                   "total_price": 0,
                   "date": "",
                   "who": "Johan",
-                  "collapsed": true,
+                  "collapsed": false,
                   "children": []
                 },
                 {
@@ -3320,7 +3317,7 @@
                   "total_price": 0,
                   "date": "",
                   "who": "Johan",
-                  "collapsed": true,
+                  "collapsed": false,
                   "children": []
                 },
                 {
@@ -3334,7 +3331,7 @@
                   "total_price": 0,
                   "date": "",
                   "who": "Johan",
-                  "collapsed": true,
+                  "collapsed": false,
                   "children": []
                 },
                 {
@@ -3348,7 +3345,7 @@
                   "total_price": 0,
                   "date": "",
                   "who": "Johan",
-                  "collapsed": true,
+                  "collapsed": false,
                   "children": []
                 },
                 {
@@ -3362,7 +3359,7 @@
                   "total_price": 0,
                   "date": "",
                   "who": "Johan",
-                  "collapsed": true,
+                  "collapsed": false,
                   "children": []
                 },
                 {
@@ -3376,7 +3373,7 @@
                   "total_price": 0,
                   "date": "",
                   "who": "Johan",
-                  "collapsed": true,
+                  "collapsed": false,
                   "children": []
                 },
                 {
@@ -3390,7 +3387,7 @@
                   "total_price": 0,
                   "date": "",
                   "who": "Johan",
-                  "collapsed": true,
+                  "collapsed": false,
                   "children": []
                 },
                 {
@@ -3404,7 +3401,7 @@
                   "total_price": 0,
                   "date": "",
                   "who": "Johan",
-                  "collapsed": true,
+                  "collapsed": false,
                   "children": []
                 },
                 {
@@ -3418,7 +3415,7 @@
                   "total_price": 0,
                   "date": "",
                   "who": "Johan",
-                  "collapsed": true,
+                  "collapsed": false,
                   "children": []
                 },
                 {
@@ -3432,7 +3429,7 @@
                   "total_price": 0,
                   "date": "",
                   "who": "Johan",
-                  "collapsed": true,
+                  "collapsed": false,
                   "children": []
                 },
                 {
@@ -3446,7 +3443,7 @@
                   "total_price": 0,
                   "date": "",
                   "who": "Johan",
-                  "collapsed": true,
+                  "collapsed": false,
                   "children": []
                 },
                 {
@@ -3460,7 +3457,7 @@
                   "total_price": 0,
                   "date": "",
                   "who": "Johan",
-                  "collapsed": true,
+                  "collapsed": false,
                   "children": []
                 },
                 {
@@ -3474,7 +3471,7 @@
                   "total_price": 0,
                   "date": "",
                   "who": "Johan",
-                  "collapsed": true,
+                  "collapsed": false,
                   "children": []
                 },
                 {
@@ -3488,7 +3485,7 @@
                   "total_price": 0,
                   "date": "",
                   "who": "Johan",
-                  "collapsed": true,
+                  "collapsed": false,
                   "children": []
                 },
                 {
@@ -3502,7 +3499,7 @@
                   "total_price": 0,
                   "date": "",
                   "who": "Johan",
-                  "collapsed": true,
+                  "collapsed": false,
                   "children": []
                 },
                 {
@@ -3516,7 +3513,7 @@
                   "total_price": 0,
                   "date": "",
                   "who": "Johan",
-                  "collapsed": true,
+                  "collapsed": false,
                   "children": [
                     {
                       "no": "3.6.1.16.1",
@@ -3529,7 +3526,7 @@
                       "total_price": 0,
                       "date": "",
                       "who": "Johan",
-                      "collapsed": true,
+                      "collapsed": false,
                       "children": []
                     }
                   ]
@@ -3545,7 +3542,7 @@
                   "total_price": 0,
                   "date": "",
                   "who": "Johan",
-                  "collapsed": true,
+                  "collapsed": false,
                   "children": [
                     {
                       "no": "3.6.1.17.1",
@@ -3558,7 +3555,7 @@
                       "total_price": 0,
                       "date": "",
                       "who": "Johan",
-                      "collapsed": true,
+                      "collapsed": false,
                       "children": []
                     }
                   ]
@@ -3574,7 +3571,7 @@
                   "total_price": 0,
                   "date": "",
                   "who": "Johan",
-                  "collapsed": true,
+                  "collapsed": false,
                   "children": [
                     {
                       "no": "3.6.1.18.1",
@@ -3587,7 +3584,7 @@
                       "total_price": 0,
                       "date": "",
                       "who": "Johan",
-                      "collapsed": true,
+                      "collapsed": false,
                       "children": []
                     },
                     {
@@ -3601,7 +3598,7 @@
                       "total_price": 0,
                       "date": "",
                       "who": "Johan",
-                      "collapsed": true,
+                      "collapsed": false,
                       "children": []
                     },
                     {
@@ -3615,7 +3612,7 @@
                       "total_price": 0,
                       "date": "",
                       "who": "Johan",
-                      "collapsed": true,
+                      "collapsed": false,
                       "children": []
                     }
                   ]
@@ -3633,7 +3630,7 @@
               "total_price": 0,
               "date": "",
               "who": "Johan",
-              "collapsed": true,
+              "collapsed": false,
               "children": []
             },
             {
@@ -3647,7 +3644,7 @@
               "total_price": 0,
               "date": "",
               "who": "Johan",
-              "collapsed": true,
+              "collapsed": false,
               "children": []
             },
             {
@@ -3674,7 +3671,7 @@
                   "total_price": 0,
                   "date": "",
                   "who": "Johan",
-                  "collapsed": true,
+                  "collapsed": false,
                   "children": []
                 },
                 {
@@ -3688,7 +3685,7 @@
                   "total_price": 0,
                   "date": "",
                   "who": "Johan",
-                  "collapsed": true,
+                  "collapsed": false,
                   "children": []
                 },
                 {
@@ -3702,7 +3699,7 @@
                   "total_price": 0,
                   "date": "",
                   "who": "Johan",
-                  "collapsed": true,
+                  "collapsed": false,
                   "children": []
                 },
                 {
@@ -3716,7 +3713,7 @@
                   "total_price": 0,
                   "date": "",
                   "who": "Johan",
-                  "collapsed": true,
+                  "collapsed": false,
                   "children": []
                 },
                 {
@@ -3730,7 +3727,7 @@
                   "total_price": 0,
                   "date": "",
                   "who": "Johan",
-                  "collapsed": true,
+                  "collapsed": false,
                   "children": [
                     {
                       "no": "3.6.4.5.1",
@@ -3743,7 +3740,7 @@
                       "total_price": 0,
                       "date": "",
                       "who": "Johan",
-                      "collapsed": true,
+                      "collapsed": false,
                       "children": []
                     }
                   ]
@@ -3759,7 +3756,7 @@
                   "total_price": 0,
                   "date": "",
                   "who": "Johan",
-                  "collapsed": true,
+                  "collapsed": false,
                   "children": [
                     {
                       "no": "3.6.4.6.1",
@@ -3772,7 +3769,7 @@
                       "total_price": 0,
                       "date": "",
                       "who": "Johan",
-                      "collapsed": true,
+                      "collapsed": false,
                       "children": []
                     }
                   ]
@@ -3788,7 +3785,7 @@
                   "total_price": 0,
                   "date": "",
                   "who": "Johan",
-                  "collapsed": true,
+                  "collapsed": false,
                   "children": [
                     {
                       "no": "3.6.4.7.1",
@@ -3801,7 +3798,7 @@
                       "total_price": 0,
                       "date": "",
                       "who": "Johan",
-                      "collapsed": true,
+                      "collapsed": false,
                       "children": []
                     }
                   ]
@@ -3817,7 +3814,7 @@
                   "total_price": 0,
                   "date": "",
                   "who": "Johan",
-                  "collapsed": true,
+                  "collapsed": false,
                   "children": [
                     {
                       "no": "3.6.4.8.1",
@@ -3830,7 +3827,7 @@
                       "total_price": 0,
                       "date": "",
                       "who": "Johan",
-                      "collapsed": true,
+                      "collapsed": false,
                       "children": []
                     }
                   ]
@@ -3865,7 +3862,7 @@
           "total_price": 0,
           "date": "",
           "who": "Johan",
-          "collapsed": true,
+          "collapsed": false,
           "children": []
         },
         {
@@ -3879,7 +3876,7 @@
           "total_price": 0,
           "date": "",
           "who": "Johan",
-          "collapsed": true,
+          "collapsed": false,
           "children": []
         },
         {
@@ -3893,7 +3890,7 @@
           "total_price": 0,
           "date": "",
           "who": "Johan",
-          "collapsed": true,
+          "collapsed": false,
           "children": []
         },
         {
@@ -3907,7 +3904,7 @@
           "total_price": 0,
           "date": "",
           "who": "Johan",
-          "collapsed": true,
+          "collapsed": false,
           "children": []
         },
         {
@@ -3921,7 +3918,7 @@
           "total_price": 0,
           "date": "",
           "who": "Johan",
-          "collapsed": true,
+          "collapsed": false,
           "children": []
         },
         {
@@ -3935,7 +3932,7 @@
           "total_price": 0,
           "date": "",
           "who": "Johan",
-          "collapsed": true,
+          "collapsed": false,
           "children": []
         },
         {
@@ -3949,7 +3946,7 @@
           "total_price": 0,
           "date": "",
           "who": "Johan",
-          "collapsed": true,
+          "collapsed": false,
           "children": []
         },
         {
@@ -3963,7 +3960,7 @@
           "total_price": 0,
           "date": "",
           "who": "Johan",
-          "collapsed": true,
+          "collapsed": false,
           "children": []
         },
         {
@@ -3977,7 +3974,7 @@
           "total_price": 0,
           "date": "",
           "who": "Johan",
-          "collapsed": true,
+          "collapsed": false,
           "children": []
         },
         {
@@ -3991,7 +3988,7 @@
           "total_price": 0,
           "date": "",
           "who": "Johan",
-          "collapsed": true,
+          "collapsed": false,
           "children": []
         },
         {
@@ -4005,7 +4002,7 @@
           "total_price": 0,
           "date": "",
           "who": "Johan",
-          "collapsed": true,
+          "collapsed": false,
           "children": []
         },
         {
@@ -4019,7 +4016,7 @@
           "total_price": 0,
           "date": "",
           "who": "Johan",
-          "collapsed": true,
+          "collapsed": false,
           "children": []
         },
         {
@@ -4033,7 +4030,7 @@
           "total_price": 0,
           "date": "",
           "who": "Johan",
-          "collapsed": true,
+          "collapsed": false,
           "children": []
         },
         {
@@ -4047,7 +4044,7 @@
           "total_price": 0,
           "date": "",
           "who": "Johan",
-          "collapsed": true,
+          "collapsed": false,
           "children": []
         },
         {
@@ -4061,7 +4058,7 @@
           "total_price": 0,
           "date": "",
           "who": "Johan",
-          "collapsed": true,
+          "collapsed": false,
           "children": []
         },
         {
@@ -4075,7 +4072,7 @@
           "total_price": 0,
           "date": "",
           "who": "Johan",
-          "collapsed": true,
+          "collapsed": false,
           "children": []
         },
         {
@@ -4089,7 +4086,7 @@
           "total_price": 0,
           "date": "",
           "who": "Johan",
-          "collapsed": true,
+          "collapsed": false,
           "children": []
         },
         {
@@ -4103,7 +4100,7 @@
           "total_price": 0,
           "date": "",
           "who": "Johan",
-          "collapsed": true,
+          "collapsed": false,
           "children": []
         },
         {
@@ -4117,7 +4114,7 @@
           "total_price": 0,
           "date": "",
           "who": "Johan",
-          "collapsed": true,
+          "collapsed": false,
           "children": []
         },
         {
@@ -4131,7 +4128,7 @@
           "total_price": 0,
           "date": "",
           "who": "Johan",
-          "collapsed": true,
+          "collapsed": false,
           "children": []
         },
         {
@@ -4145,7 +4142,7 @@
           "total_price": 0,
           "date": "",
           "who": "Johan",
-          "collapsed": true,
+          "collapsed": false,
           "children": []
         },
         {
@@ -4159,7 +4156,7 @@
           "total_price": 0,
           "date": "",
           "who": "Johan",
-          "collapsed": true,
+          "collapsed": false,
           "children": [
             {
               "no": "4.22.1",
@@ -4172,7 +4169,7 @@
               "total_price": 0,
               "date": "",
               "who": "Johan",
-              "collapsed": true,
+              "collapsed": false,
               "children": []
             },
             {
@@ -4186,7 +4183,7 @@
               "total_price": 0,
               "date": "",
               "who": "Johan",
-              "collapsed": true,
+              "collapsed": false,
               "children": []
             },
             {
@@ -4200,7 +4197,7 @@
               "total_price": 0,
               "date": "",
               "who": "Johan",
-              "collapsed": true,
+              "collapsed": false,
               "children": []
             },
             {
@@ -4214,7 +4211,7 @@
               "total_price": 0,
               "date": "",
               "who": "Johan",
-              "collapsed": true,
+              "collapsed": false,
               "children": []
             }
           ]
@@ -4230,7 +4227,7 @@
           "total_price": 0,
           "date": "",
           "who": "Johan",
-          "collapsed": true,
+          "collapsed": false,
           "children": [
             {
               "no": "4.23.1",
@@ -4243,7 +4240,7 @@
               "total_price": 0,
               "date": "",
               "who": "Johan",
-              "collapsed": true,
+              "collapsed": false,
               "children": []
             },
             {
@@ -4257,7 +4254,7 @@
               "total_price": 0,
               "date": "",
               "who": "Johan",
-              "collapsed": true,
+              "collapsed": false,
               "children": []
             }
           ]
@@ -4273,7 +4270,7 @@
           "total_price": 0,
           "date": "",
           "who": "Johan",
-          "collapsed": true,
+          "collapsed": false,
           "children": [
             {
               "no": "4.24.1",
@@ -4286,7 +4283,7 @@
               "total_price": 0,
               "date": "",
               "who": "Johan",
-              "collapsed": true,
+              "collapsed": false,
               "children": []
             },
             {
@@ -4300,7 +4297,7 @@
               "total_price": 0,
               "date": "",
               "who": "Johan",
-              "collapsed": true,
+              "collapsed": false,
               "children": []
             },
             {
@@ -4314,7 +4311,7 @@
               "total_price": 0,
               "date": "",
               "who": "Johan",
-              "collapsed": true,
+              "collapsed": false,
               "children": []
             },
             {
@@ -4328,7 +4325,7 @@
               "total_price": 0,
               "date": "",
               "who": "Johan",
-              "collapsed": true,
+              "collapsed": false,
               "children": []
             },
             {
@@ -4342,7 +4339,7 @@
               "total_price": 0,
               "date": "",
               "who": "Johan",
-              "collapsed": true,
+              "collapsed": false,
               "children": []
             },
             {
@@ -4356,7 +4353,7 @@
               "total_price": 0,
               "date": "",
               "who": "Johan",
-              "collapsed": true,
+              "collapsed": false,
               "children": []
             },
             {
@@ -4370,7 +4367,7 @@
               "total_price": 0,
               "date": "",
               "who": "Johan",
-              "collapsed": true,
+              "collapsed": false,
               "children": []
             },
             {
@@ -4384,7 +4381,7 @@
               "total_price": 0,
               "date": "",
               "who": "Johan",
-              "collapsed": true,
+              "collapsed": false,
               "children": []
             },
             {
@@ -4398,7 +4395,7 @@
               "total_price": 0,
               "date": "",
               "who": "Johan",
-              "collapsed": true,
+              "collapsed": false,
               "children": []
             }
           ]
@@ -4414,7 +4411,7 @@
           "total_price": 0,
           "date": "",
           "who": "Johan",
-          "collapsed": true,
+          "collapsed": false,
           "children": [
             {
               "no": "4.25.1",
@@ -4427,7 +4424,7 @@
               "total_price": 0,
               "date": "",
               "who": "Johan",
-              "collapsed": true,
+              "collapsed": false,
               "children": []
             },
             {
@@ -4441,7 +4438,7 @@
               "total_price": 0,
               "date": "",
               "who": "Johan",
-              "collapsed": true,
+              "collapsed": false,
               "children": []
             },
             {
@@ -4455,7 +4452,7 @@
               "total_price": 0,
               "date": "",
               "who": "Johan",
-              "collapsed": true,
+              "collapsed": false,
               "children": []
             },
             {
@@ -4469,7 +4466,7 @@
               "total_price": 0,
               "date": "",
               "who": "Johan",
-              "collapsed": true,
+              "collapsed": false,
               "children": []
             },
             {
@@ -4483,7 +4480,7 @@
               "total_price": 0,
               "date": "",
               "who": "Johan",
-              "collapsed": true,
+              "collapsed": false,
               "children": []
             },
             {
@@ -4497,7 +4494,7 @@
               "total_price": 0,
               "date": "",
               "who": "Johan",
-              "collapsed": true,
+              "collapsed": false,
               "children": []
             },
             {
@@ -4511,7 +4508,7 @@
               "total_price": 0,
               "date": "",
               "who": "Johan",
-              "collapsed": true,
+              "collapsed": false,
               "children": []
             },
             {
@@ -4525,7 +4522,7 @@
               "total_price": 0,
               "date": "",
               "who": "Johan",
-              "collapsed": true,
+              "collapsed": false,
               "children": []
             },
             {
@@ -4539,7 +4536,7 @@
               "total_price": 0,
               "date": "",
               "who": "Johan",
-              "collapsed": true,
+              "collapsed": false,
               "children": []
             },
             {
@@ -4553,7 +4550,7 @@
               "total_price": 0,
               "date": "",
               "who": "Johan",
-              "collapsed": true,
+              "collapsed": false,
               "children": []
             }
           ]
