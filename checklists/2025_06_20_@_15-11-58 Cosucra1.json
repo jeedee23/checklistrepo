@@ -74,7 +74,7 @@
       "total_price": 0,
       "date": "",
       "who": "Johan",
-      "collapsed": true,
+      "collapsed": false,
       "children": [
         {
           "no": "1.1",
@@ -87,11 +87,11 @@
           "total_price": 0,
           "date": "",
           "who": "Johan",
-          "collapsed": true,
+          "collapsed": false,
           "children": [
             {
               "no": "1.1.1",
-              "label": "01. Project Description (PRN)",
+              "label": "Project Description (PRN)",
               "done": false,
               "unit": "",
               "qty_est": "",
@@ -105,7 +105,7 @@
             },
             {
               "no": "1.1.2",
-              "label": "02. RACI (RAC)",
+              "label": "RACI (RAC)",
               "done": false,
               "unit": "",
               "qty_est": "",
@@ -115,7 +115,9 @@
               "date": "",
               "who": "Johan",
               "collapsed": false,
-              "children": []
+              "children": [],
+              "imageFile": "2025_06_20_@_20-40-47_RACI-SIGN.jpg",
+              "image": "2025_06_20_@_20-40-47_RACI-SIGN.jpg"
             },
             {
               "no": "1.1.3",
