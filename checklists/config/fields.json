@@ -95,24 +95,30 @@
       ]
     },
     "16": {
+      "key": "Resp",
+      "label": "Responsable",
+      "type": "select",
+      "source": "collaborators"
+    },
+    "17": {
       "key": "Acc",
       "label": "Accountable",
       "type": "select",
       "source": "collaborators"
     },
-    "17": {
+    "18": {
       "key": "Support",
       "label": "Support",
       "type": "select",
       "source": "collaborators"
     },
-    "18": {
+    "19": {
       "key": "Consult",
       "label": "Consult",
       "type": "select",
       "source": "collaborators"
     },    
-    "19": {
+    "20": {
       "key": "Informed",
       "label": "Informed",
       "type": "select",
