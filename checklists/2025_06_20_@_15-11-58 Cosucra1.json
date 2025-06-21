@@ -160,7 +160,7 @@
           "total_price": 0,
           "date": "",
           "who": "Johan",
-          "collapsed": true,
+          "collapsed": false,
           "children": [
             {
               "no": "1.2.1",
@@ -217,6 +217,20 @@
               "who": "Johan",
               "collapsed": false,
               "children": []
+            },
+            {
+              "label": "Out of Scope (OOS)",
+              "done": false,
+              "unit": "",
+              "qty_est": "",
+              "qty_real": "",
+              "price_unit": "",
+              "total_price": 0,
+              "date": "2025-06-21",
+              "who": "Johan",
+              "children": [],
+              "collapsed": false,
+              "no": "1.2.5"
             }
           ]
         },
@@ -515,7 +529,7 @@
           "total_price": 0,
           "date": "",
           "who": "Johan",
-          "collapsed": true,
+          "collapsed": false,
           "children": [
             {
               "no": "1.6.1",
@@ -572,7 +586,7 @@
           "total_price": 0,
           "date": "",
           "who": "Johan",
-          "collapsed": true,
+          "collapsed": false,
           "children": [
             {
               "no": "1.7.1",
@@ -615,7 +629,7 @@
           "total_price": 0,
           "date": "",
           "who": "Johan",
-          "collapsed": true,
+          "collapsed": false,
           "children": [
             {
               "no": "1.8.1",
@@ -644,7 +658,7 @@
           "total_price": 0,
           "date": "",
           "who": "Johan",
-          "collapsed": true,
+          "collapsed": false,
           "children": [
             {
               "no": "1.9.1",
@@ -856,11 +870,11 @@
           "total_price": 0,
           "date": "",
           "who": "Johan",
-          "collapsed": true,
+          "collapsed": false,
           "children": [
             {
               "no": "1.10.1",
-              "label": "Stakeholderslist (SHL)",
+              "label": "Principal Stakeholders",
               "done": false,
               "unit": "",
               "qty_est": "",
@@ -870,7 +884,171 @@
               "date": "",
               "who": "Johan",
               "collapsed": false,
-              "children": []
+              "children": [
+                {
+                  "label": "COSUCRA = client",
+                  "done": false,
+                  "unit": "",
+                  "qty_est": 0,
+                  "qty_real": 0,
+                  "price_unit": 0,
+                  "date": "2025-06-21",
+                  "who": "Johan",
+                  "children": [],
+                  "no": "1.10.1.1"
+                },
+                {
+                  "label": "MEAM-Carlo",
+                  "done": false,
+                  "unit": "",
+                  "qty_est": 0,
+                  "qty_real": 0,
+                  "price_unit": 0,
+                  "date": "2025-06-21",
+                  "who": "Johan",
+                  "children": [],
+                  "no": "1.10.1.2"
+                },
+                {
+                  "label": "KAMETAL",
+                  "done": false,
+                  "unit": "",
+                  "qty_est": "",
+                  "qty_real": "",
+                  "price_unit": "",
+                  "total_price": 0,
+                  "date": "2025-06-21",
+                  "who": "Johan",
+                  "children": [],
+                  "collapsed": false,
+                  "no": "1.10.1.3"
+                },
+                {
+                  "label": "ELEANTIS",
+                  "done": false,
+                  "unit": "",
+                  "qty_est": "",
+                  "qty_real": "",
+                  "price_unit": "",
+                  "total_price": 0,
+                  "date": "2025-06-21",
+                  "who": "Johan",
+                  "children": [],
+                  "collapsed": false,
+                  "no": "1.10.1.4"
+                }
+              ]
+            },
+            {
+              "label": "Non Principle Stakeholders",
+              "done": false,
+              "unit": "",
+              "qty_est": "",
+              "qty_real": "",
+              "price_unit": "",
+              "total_price": 0,
+              "date": "2025-06-21",
+              "who": "Johan",
+              "children": [
+                {
+                  "label": "Cosucra- name of the project engineer",
+                  "done": false,
+                  "unit": "",
+                  "qty_est": "",
+                  "qty_real": "",
+                  "price_unit": "",
+                  "total_price": 0,
+                  "date": "2025-06-21",
+                  "who": "Johan",
+                  "children": [],
+                  "collapsed": false,
+                  "no": "1.10.2.1"
+                },
+                {
+                  "label": "Meam-Frédéric",
+                  "done": false,
+                  "unit": "",
+                  "qty_est": 0,
+                  "qty_real": 0,
+                  "price_unit": 0,
+                  "date": "2025-06-21",
+                  "who": "Johan",
+                  "children": [],
+                  "no": "1.10.2.2"
+                },
+                {
+                  "label": "Meam-Cuong",
+                  "done": false,
+                  "unit": "",
+                  "qty_est": "",
+                  "qty_real": "",
+                  "price_unit": "",
+                  "total_price": 0,
+                  "date": "2025-06-21",
+                  "who": "Johan",
+                  "children": [],
+                  "collapsed": false,
+                  "no": "1.10.2.3"
+                },
+                {
+                  "label": "Meam-Johan",
+                  "done": false,
+                  "unit": "",
+                  "qty_est": "",
+                  "qty_real": "",
+                  "price_unit": "",
+                  "total_price": 0,
+                  "date": "2025-06-21",
+                  "who": "Johan",
+                  "children": [],
+                  "collapsed": false,
+                  "no": "1.10.2.4"
+                },
+                {
+                  "label": "Type content here (ctrl-del to delete row)",
+                  "done": false,
+                  "unit": "",
+                  "qty_est": "",
+                  "qty_real": "",
+                  "price_unit": "",
+                  "total_price": 0,
+                  "date": "2025-06-21",
+                  "who": "Johan",
+                  "children": [],
+                  "collapsed": false,
+                  "no": "1.10.2.5"
+                },
+                {
+                  "label": "Type content here (ctrl-del to delete row)",
+                  "done": false,
+                  "unit": "",
+                  "qty_est": "",
+                  "qty_real": "",
+                  "price_unit": "",
+                  "total_price": 0,
+                  "date": "2025-06-21",
+                  "who": "Johan",
+                  "children": [],
+                  "collapsed": false,
+                  "no": "1.10.2.6"
+                },
+                {
+                  "label": "Type content here (ctrl-del to delete row)",
+                  "done": false,
+                  "unit": "",
+                  "qty_est": "",
+                  "qty_real": "",
+                  "price_unit": "",
+                  "total_price": 0,
+                  "date": "2025-06-21",
+                  "who": "Johan",
+                  "children": [],
+                  "collapsed": false,
+                  "no": "1.10.2.7"
+                }
+              ],
+              "collapsed": false,
+              "no": "1.10.2"
             }
           ]
         },
