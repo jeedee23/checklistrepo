@@ -75,26 +75,26 @@
       },
       "who": {
         "width": 100,
-        "visible": false
+        "visible": true
       },
       "Resp": {
-        "width": 100,
+        "width": 74,
         "visible": true
       },
       "Acc": {
-        "width": 100,
+        "width": 70,
         "visible": true
       },
       "Support": {
-        "width": 100,
+        "width": 69,
         "visible": true
       },
       "Consult": {
-        "width": 100,
+        "width": 74,
         "visible": true
       },
       "Informed": {
-        "width": 100,
+        "width": 80,
         "visible": true
       }
     },
