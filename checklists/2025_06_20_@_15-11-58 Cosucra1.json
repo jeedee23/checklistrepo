@@ -75,7 +75,7 @@
       },
       "who": {
         "width": 100,
-        "visible": true
+        "visible": false
       },
       "Resp": {
         "width": 74,
@@ -127,7 +127,7 @@
           "total_price": 0,
           "date": "",
           "who": "Frédéric",
-          "collapsed": false,
+          "collapsed": true,
           "children": [
             {
               "no": "1.1.1",
@@ -397,7 +397,7 @@
           "total_price": 0,
           "date": "",
           "who": "Johan",
-          "collapsed": false,
+          "collapsed": true,
           "children": [
             {
               "no": "1.4.1",
@@ -483,7 +483,7 @@
           "total_price": 0,
           "date": "",
           "who": "Johan",
-          "collapsed": false,
+          "collapsed": true,
           "children": [
             {
               "no": "1.5.1",
@@ -543,7 +543,7 @@
             },
             {
               "no": "1.5.5",
-              "label": "Specifications",
+              "label": "Specifications (SPECS)",
               "done": false,
               "unit": "",
               "qty_est": "",
@@ -624,7 +624,7 @@
           "total_price": 0,
           "date": "",
           "who": "Johan",
-          "collapsed": false,
+          "collapsed": true,
           "children": [
             {
               "no": "1.6.1",
@@ -681,7 +681,7 @@
           "total_price": 0,
           "date": "",
           "who": "Johan",
-          "collapsed": false,
+          "collapsed": true,
           "children": [
             {
               "no": "1.7.1",
@@ -724,7 +724,7 @@
           "total_price": 0,
           "date": "",
           "who": "Johan",
-          "collapsed": false,
+          "collapsed": true,
           "children": [
             {
               "no": "1.8.1",
@@ -753,7 +753,7 @@
           "total_price": 0,
           "date": "",
           "who": "Johan",
-          "collapsed": false,
+          "collapsed": true,
           "children": [
             {
               "no": "1.9.1",
