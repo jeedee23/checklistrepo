@@ -4,6 +4,7 @@
       "name": "Johan",
       "role": "admin",
       "access": "all",
+      "password": "0519",
       "passwordHash": "$2a$10$Hji6EkMcLOMSrfM2eyDeuuwtGkRPktNcYTSkGIP0zoVCBq8FbHjVu",
       "token": "8ed21f347a8b49b6bdf6d73ca62e0cb2",
       "email": "johan@example.com",
