@@ -1140,6 +1140,20 @@
                   "children": [],
                   "collapsed": false,
                   "no": "1.10.2.7"
+                },
+                {
+                  "label": "Type content here (ctrl-del to delete row)",
+                  "done": false,
+                  "unit": "",
+                  "qty_est": "",
+                  "qty_real": "",
+                  "price_unit": "",
+                  "total_price": 0,
+                  "date": "2025-06-21",
+                  "who": "Johan",
+                  "children": [],
+                  "collapsed": false,
+                  "no": "1.10.2.8"
                 }
               ],
               "collapsed": false,
@@ -1830,7 +1844,8 @@
           "collapsed": false,
           "children": []
         }
-      ]
+      ],
+      "important": true
     },
     {
       "no": "2",
