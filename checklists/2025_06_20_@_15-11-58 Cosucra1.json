@@ -104,7 +104,7 @@
               "children": []
             },
             {
-              "label": "RASCI)",
+              "label": "RASCI",
               "done": false,
               "unit": "",
               "qty_est": "",
@@ -115,7 +115,9 @@
               "who": "Johan",
               "children": [],
               "collapsed": false,
-              "no": "1.1.2"
+              "no": "1.1.2",
+              "imageFile": "2025_06_21_@_14-30-23_RASCI.png",
+              "image": "2025_06_21_@_14-30-23_RASCI.png"
             },
             {
               "no": "1.1.3",
