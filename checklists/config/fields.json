@@ -95,10 +95,28 @@
       ]
     },
     "16": {
-      "key": "approved_by",
-      "label": "Approved By",
+      "key": "Acc",
+      "label": "Accountable",
       "type": "select",
       "source": "collaborators"
-    }
+    },
+    "17": {
+      "key": "Support",
+      "label": "Support",
+      "type": "select",
+      "source": "collaborators"
+    },
+    "18": {
+      "key": "Consult",
+      "label": "Consult",
+      "type": "select",
+      "source": "collaborators"
+    },    
+    "19": {
+      "key": "Informed",
+      "label": "Informed",
+      "type": "select",
+      "source": "collaborators"
+    }  
   }
 }
