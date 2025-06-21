@@ -17,6 +17,82 @@
   ],
   "layout": {
     "columns": {
+      "1": {
+        "width": 100,
+        "visible": true
+      },
+      "2": {
+        "width": 100,
+        "visible": true
+      },
+      "3": {
+        "width": 100,
+        "visible": true
+      },
+      "4": {
+        "width": 100,
+        "visible": true
+      },
+      "5": {
+        "width": 100,
+        "visible": true
+      },
+      "6": {
+        "width": 100,
+        "visible": true
+      },
+      "7": {
+        "width": 100,
+        "visible": true
+      },
+      "8": {
+        "width": 100,
+        "visible": true
+      },
+      "9": {
+        "width": 100,
+        "visible": true
+      },
+      "10": {
+        "width": 100,
+        "visible": true
+      },
+      "11": {
+        "width": 100,
+        "visible": true
+      },
+      "12": {
+        "width": 100,
+        "visible": true
+      },
+      "13": {
+        "width": 100,
+        "visible": true
+      },
+      "14": {
+        "width": 100,
+        "visible": true
+      },
+      "15": {
+        "width": 100,
+        "visible": true
+      },
+      "16": {
+        "width": 100,
+        "visible": true
+      },
+      "17": {
+        "width": 100,
+        "visible": true
+      },
+      "18": {
+        "width": 100,
+        "visible": true
+      },
+      "19": {
+        "width": 100,
+        "visible": true
+      },
       "done": {
         "width": 37,
         "visible": true
