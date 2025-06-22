@@ -338,7 +338,7 @@
         },
         {
           "no": "1.3",
-          "label": "Stakeholder",
+          "label": "Stakeholders",
           "done": false,
           "unit": "",
           "qty_est": "",
@@ -541,7 +541,8 @@
               "collapsed": true,
               "no": "1.3.2"
             }
-          ]
+          ],
+          "noteFile": "checklists/notes/2025_06_22_@_21-40-14.html"
         },
         {
           "no": "1.4",
