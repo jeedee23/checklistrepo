@@ -74,7 +74,7 @@
       "total_price": 0,
       "date": "",
       "who": "Johan",
-      "collapsed": false,
+      "collapsed": true,
       "children": [
         {
           "no": "1.1",
@@ -522,7 +522,21 @@
           "total_price": 0,
           "date": "",
           "who": "Johan",
-          "collapsed": false
+          "collapsed": false,
+          "children": [
+            {
+              "label": "columns can be dragged",
+              "done": false,
+              "unit": "",
+              "qty_est": 0,
+              "qty_real": 0,
+              "price_unit": 0,
+              "date": "2025-06-22",
+              "who": "Johan",
+              "children": [],
+              "no": "3.1.1"
+            }
+          ]
         },
         {
           "no": "3.2",
