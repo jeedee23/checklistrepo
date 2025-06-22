@@ -46,12 +46,12 @@
         "width": 37,
         "visible": true
       },
-      "no": {
-        "width": 73,
-        "visible": true
-      },
       "label": {
         "width": 466,
+        "visible": true
+      },
+      "no": {
+        "width": 73,
         "visible": true
       },
       "unit": {
