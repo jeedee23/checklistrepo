@@ -260,7 +260,7 @@
           "total_price": 0,
           "date": "",
           "who": "Johan",
-          "collapsed": false,
+          "collapsed": true,
           "children": [
             {
               "no": "1.2.1",
@@ -372,7 +372,7 @@
               "total_price": 0,
               "date": "",
               "who": "Johan",
-              "collapsed": false,
+              "collapsed": true,
               "children": [
                 {
                   "label": "COSUCRA = client",
@@ -550,7 +550,7 @@
                   "no": "1.3.2.8"
                 }
               ],
-              "collapsed": false,
+              "collapsed": true,
               "no": "1.3.2"
             }
           ]
