@@ -260,7 +260,7 @@
           "total_price": 0,
           "date": "",
           "who": "Johan",
-          "collapsed": true,
+          "collapsed": false,
           "children": [
             {
               "no": "1.2.1",
@@ -277,21 +277,7 @@
               "children": []
             },
             {
-              "label": "Type content here (ctrl-del to delete row)",
-              "done": false,
-              "unit": "",
-              "qty_est": "",
-              "qty_real": "",
-              "price_unit": "",
-              "total_price": 0,
-              "date": "2025-06-22",
-              "who": "Johan",
-              "children": [],
-              "collapsed": false,
-              "no": "1.2.2"
-            },
-            {
-              "no": "1.2.3",
+              "no": "1.2.2",
               "label": "List of deliverables (LOD)",
               "done": false,
               "unit": "",
@@ -305,7 +291,7 @@
               "children": []
             },
             {
-              "no": "1.2.4",
+              "no": "1.2.3",
               "label": "Process Description Sheet (PDS)",
               "done": false,
               "unit": "",
@@ -319,7 +305,7 @@
               "children": []
             },
             {
-              "no": "1.2.5",
+              "no": "1.2.4",
               "label": "Scope change control (SCC)",
               "done": false,
               "unit": "",
@@ -344,7 +330,7 @@
               "who": "Johan",
               "children": [],
               "collapsed": false,
-              "no": "1.2.6"
+              "no": "1.2.5"
             }
           ]
         },
