@@ -112,7 +112,7 @@
           "total_price": 0,
           "date": "",
           "who": "Frédéric",
-          "collapsed": true,
+          "collapsed": false,
           "children": [
             {
               "no": "1.1.1",
@@ -243,7 +243,7 @@
           "total_price": 0,
           "date": "",
           "who": "Johan",
-          "collapsed": true,
+          "collapsed": false,
           "children": [
             {
               "no": "1.2.1",
@@ -328,7 +328,7 @@
           "total_price": 0,
           "date": "",
           "who": "Johan",
-          "collapsed": true,
+          "collapsed": false,
           "children": [
             {
               "no": "1.3.1",
@@ -344,7 +344,7 @@
               "collapsed": false,
               "children": [
                 {
-                  "label": "COSUCRA = client",
+                  "label": "MEAM-Carlo",
                   "done": false,
                   "unit": "",
                   "qty_est": 0,
@@ -356,7 +356,7 @@
                   "no": "1.3.1.1"
                 },
                 {
-                  "label": "MEAM-Carlo",
+                  "label": "COSUCRA = client",
                   "done": false,
                   "unit": "",
                   "qty_est": 0,
@@ -538,7 +538,7 @@
           "collapsed": true,
           "children": [
             {
-              "no": "1.3.1",
+              "no": "1.4.1",
               "label": "Overall schedule (OVS)",
               "done": false,
               "unit": "",
@@ -552,7 +552,7 @@
               "children": []
             },
             {
-              "no": "1.3.2",
+              "no": "1.4.2",
               "label": "Detailed schedule (DES)",
               "done": false,
               "unit": "",
@@ -566,7 +566,7 @@
               "children": []
             },
             {
-              "no": "1.3.3",
+              "no": "1.4.3",
               "label": "Resource planning (REP)",
               "done": false,
               "unit": "",
@@ -595,7 +595,7 @@
           "collapsed": true,
           "children": [
             {
-              "no": "1.4.1",
+              "no": "1.5.1",
               "label": "Budget",
               "done": false,
               "unit": "",
@@ -608,7 +608,7 @@
               "collapsed": false,
               "children": [
                 {
-                  "no": "1.4.1.1",
+                  "no": "1.5.1.1",
                   "label": "Budget estimate overview (BEO)",
                   "done": false,
                   "unit": "",
@@ -622,7 +622,7 @@
                   "children": []
                 },
                 {
-                  "no": "1.4.1.2",
+                  "no": "1.5.1.2",
                   "label": "BE comparisson (BCO)",
                   "done": false,
                   "unit": "",
@@ -636,7 +636,7 @@
                   "children": []
                 },
                 {
-                  "no": "1.4.1.3",
+                  "no": "1.5.1.3",
                   "label": "BE-xx - Description (BES)",
                   "done": false,
                   "unit": "",
@@ -652,7 +652,7 @@
               ]
             },
             {
-              "no": "1.4.2",
+              "no": "1.5.2",
               "label": "Cost control (CCO)",
               "done": false,
               "unit": "",
@@ -681,7 +681,7 @@
           "collapsed": true,
           "children": [
             {
-              "no": "1.5.1",
+              "no": "1.6.1",
               "label": "Quality plan (QPL)",
               "done": false,
               "unit": "",
@@ -695,7 +695,7 @@
               "children": []
             },
             {
-              "no": "1.5.2",
+              "no": "1.6.2",
               "label": "NDA management (NDM)",
               "done": false,
               "unit": "",
@@ -709,7 +709,7 @@
               "children": []
             },
             {
-              "no": "1.5.3",
+              "no": "1.6.3",
               "label": "BIM execution plan (BEP)",
               "done": false,
               "unit": "",
@@ -723,7 +723,7 @@
               "children": []
             },
             {
-              "no": "1.5.4",
+              "no": "1.6.4",
               "label": "Decision making model (DMM)",
               "done": false,
               "unit": "",
@@ -737,7 +737,7 @@
               "children": []
             },
             {
-              "no": "1.5.5",
+              "no": "1.6.5",
               "label": "Specifications (SPECS)",
               "done": false,
               "unit": "",
@@ -751,7 +751,7 @@
               "children": []
             },
             {
-              "no": "1.5.6",
+              "no": "1.6.6",
               "label": "Material certificates",
               "done": false,
               "unit": "",
@@ -765,7 +765,7 @@
               "children": []
             },
             {
-              "no": "1.5.7",
+              "no": "1.6.7",
               "label": "Insulation certificates",
               "done": false,
               "unit": "",
@@ -779,7 +779,7 @@
               "children": []
             },
             {
-              "no": "1.5.8",
+              "no": "1.6.8",
               "label": "Painting certificates",
               "done": false,
               "unit": "",
@@ -793,7 +793,7 @@
               "children": []
             },
             {
-              "no": "1.5.9",
+              "no": "1.6.9",
               "label": "Welding certificates",
               "done": false,
               "unit": "",
@@ -822,7 +822,7 @@
           "collapsed": true,
           "children": [
             {
-              "no": "1.6.1",
+              "no": "1.7.1",
               "label": "Resource tracker (RET)",
               "done": false,
               "unit": "",
@@ -836,7 +836,7 @@
               "children": []
             },
             {
-              "no": "1.6.2",
+              "no": "1.7.2",
               "label": "LIMOSA",
               "done": false,
               "unit": "",
@@ -850,7 +850,7 @@
               "children": []
             },
             {
-              "no": "1.6.3",
+              "no": "1.7.3",
               "label": "Request contractor badges (RCB)",
               "done": false,
               "unit": "",
@@ -879,7 +879,7 @@
           "collapsed": true,
           "children": [
             {
-              "no": "1.7.1",
+              "no": "1.8.1",
               "label": "Meetings",
               "done": false,
               "unit": "",
@@ -893,7 +893,7 @@
               "children": []
             },
             {
-              "no": "1.7.2",
+              "no": "1.8.2",
               "label": "Issues (ISS)",
               "done": false,
               "unit": "",
@@ -922,7 +922,7 @@
           "collapsed": true,
           "children": [
             {
-              "no": "1.8.1",
+              "no": "1.9.1",
               "label": "Project risk analysis (PRA)",
               "done": false,
               "unit": "",
@@ -951,7 +951,7 @@
           "collapsed": true,
           "children": [
             {
-              "no": "1.9.1",
+              "no": "1.10.1",
               "label": "Procurementplan (PRP)",
               "done": false,
               "unit": "",
@@ -965,7 +965,7 @@
               "children": []
             },
             {
-              "no": "1.9.2",
+              "no": "1.10.2",
               "label": "General project specifications (GPS)",
               "done": false,
               "unit": "",
@@ -979,7 +979,7 @@
               "children": []
             },
             {
-              "no": "1.9.3",
+              "no": "1.10.3",
               "label": "Package overview (PAO)",
               "done": false,
               "unit": "",
@@ -993,7 +993,7 @@
               "children": []
             },
             {
-              "no": "1.9.4",
+              "no": "1.10.4",
               "label": "PA.xx - Description",
               "done": false,
               "unit": "",
@@ -1006,7 +1006,7 @@
               "collapsed": false,
               "children": [
                 {
-                  "no": "1.9.4.1",
+                  "no": "1.10.4.1",
                   "label": "Technical specifications (TSP)",
                   "done": false,
                   "unit": "",
@@ -1020,7 +1020,7 @@
                   "children": []
                 },
                 {
-                  "no": "1.9.4.2",
+                  "no": "1.10.4.2",
                   "label": "Price breakdown (PBR)",
                   "done": false,
                   "unit": "",
@@ -1034,7 +1034,7 @@
                   "children": []
                 },
                 {
-                  "no": "1.9.4.3",
+                  "no": "1.10.4.3",
                   "label": "RFI",
                   "done": false,
                   "unit": "",
@@ -1048,7 +1048,7 @@
                   "children": []
                 },
                 {
-                  "no": "1.9.4.4",
+                  "no": "1.10.4.4",
                   "label": "RFQ",
                   "done": false,
                   "unit": "",
@@ -1062,7 +1062,7 @@
                   "children": []
                 },
                 {
-                  "no": "1.9.4.5",
+                  "no": "1.10.4.5",
                   "label": "Quotations",
                   "done": false,
                   "unit": "",
@@ -1076,7 +1076,7 @@
                   "children": []
                 },
                 {
-                  "no": "1.9.4.6",
+                  "no": "1.10.4.6",
                   "label": "Clarification (CLA)",
                   "done": false,
                   "unit": "",
@@ -1090,7 +1090,7 @@
                   "children": []
                 },
                 {
-                  "no": "1.9.4.7",
+                  "no": "1.10.4.7",
                   "label": "Comparisson (CMP)",
                   "done": false,
                   "unit": "",
@@ -1104,7 +1104,7 @@
                   "children": []
                 },
                 {
-                  "no": "1.9.4.8",
+                  "no": "1.10.4.8",
                   "label": "Negotiation report (NER)",
                   "done": false,
                   "unit": "",
@@ -1118,7 +1118,7 @@
                   "children": []
                 },
                 {
-                  "no": "1.9.4.9",
+                  "no": "1.10.4.9",
                   "label": "Letter of intent (LOI)",
                   "done": false,
                   "unit": "",
@@ -1132,7 +1132,7 @@
                   "children": []
                 },
                 {
-                  "no": "1.9.4.10",
+                  "no": "1.10.4.10",
                   "label": "Contract (CON)",
                   "done": false,
                   "unit": "",
@@ -1817,7 +1817,7 @@
               "children": []
             },
             {
-              "no": "1.15",
+              "no": "1.14.11",
               "label": "Docs for closing",
               "done": false,
               "unit": "",
