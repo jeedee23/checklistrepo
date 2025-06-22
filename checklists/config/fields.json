@@ -107,35 +107,35 @@
       "label": "Responsable",
       "type": "select",
       "source": "collaborators",
-      "default_value": "currentuser"
+      "default_value": ""
     },
     "17": {
       "key": "Acc",
       "label": "Accountable",
       "type": "select",
       "source": "collaborators",
-      "default_value": "currentuser"
+      "default_value": ""
     },
     "18": {
       "key": "Support",
       "label": "Support",
       "type": "select",
       "source": "collaborators",
-      "default_value": "currentuser"
+      "default_value": ""
     },
     "19": {
       "key": "Consult",
       "label": "Consult",
       "type": "select",
       "source": "collaborators",
-      "default_value": "currentuser"
+      "default_value": ""
     },
     "20": {
       "key": "Informed",
       "label": "Informed",
       "type": "select",
       "source": "collaborators",
-      "default_value": "currentuser"
+      "default_value": ""
     }
   }
 }
