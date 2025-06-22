@@ -46,10 +46,6 @@
         "width": 37,
         "visible": true
       },
-      "label": {
-        "width": 466,
-        "visible": true
-      },
       "no": {
         "width": 73,
         "visible": true
@@ -81,6 +77,10 @@
       "who": {
         "width": 100,
         "visible": false
+      },
+      "label": {
+        "width": 466,
+        "visible": true
       },
       "Resp": {
         "width": 74,
