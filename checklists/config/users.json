@@ -37,6 +37,22 @@
       "name": "?",
       "passwordHash": "",
       "token": "none"
+    },
+       {
+      "name": "Cuong",
+      "role": "admin",
+      "access": "all",
+      "password": "0519",
+      "passwordHash": "$2a$10$Hji6EkMcLOMSrfM2eyDeuuwtGkRPktNcYTSkGIP0zoVCBq8FbHjVu",
+      "token": "8ed21f347a8b49b6bdf6d73ca62e0cb2",
+      "email": "johan@example.com",
+      "created": "2025-05-09T08:00:00Z",
+      "checklists": [
+        "2025_04_20_@_23-34-52 MEAM Intelligent SSR.json",
+        "2025_04_27_@_16-13-33_DDV.data.json",
+        "2025_05_03_@_12-49-45_DDV_LATEST.json",
+        "2025_05_04_@_12-03-05_checklist_tester.json"
+      ]
     }
   ]
 }
