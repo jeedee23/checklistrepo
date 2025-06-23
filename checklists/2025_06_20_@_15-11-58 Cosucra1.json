@@ -3,8 +3,9 @@
   "collaborators": [
     "∅",
     "Johan",
-    "Frédéric"
-     ],
+    "Frédéric",
+    "Cuong"
+  ],
   "unitChoices": [
     "kg",
     "ton",
@@ -115,7 +116,7 @@
       "total_price": 0,
       "date": "",
       "who": "Frédéric",
-      "collapsed": true,
+      "collapsed": false,
       "children": [
         {
           "no": "1.1",
