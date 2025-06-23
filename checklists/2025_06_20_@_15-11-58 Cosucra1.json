@@ -142,7 +142,9 @@
           "who": "Johan",
           "children": [],
           "collapsed": false,
-          "no": "1.2"
+          "no": "1.2",
+          "imageFile": "2025_06_23_@_22-19-16_conventions.pdf",
+          "image": "2025_06_23_@_22-19-16_conventions.pdf"
         },
         {
           "label": "Hierarchical consent",
@@ -2253,7 +2255,7 @@
       "total_price": 0,
       "date": "",
       "who": "Johan",
-      "collapsed": false,
+      "collapsed": true,
       "children": [
         {
           "no": "3.1",
