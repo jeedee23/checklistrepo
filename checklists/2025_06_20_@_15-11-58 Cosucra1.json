@@ -2253,7 +2253,7 @@
       "total_price": 0,
       "date": "",
       "who": "Johan",
-      "collapsed": true,
+      "collapsed": false,
       "children": [
         {
           "no": "3.1",
@@ -2283,7 +2283,8 @@
           "collapsed": false,
           "children": []
         }
-      ]
+      ],
+      "noteFile": "checklists/notes/2025_06_23_@_22-08-33.html"
     },
     {
       "no": "4",
