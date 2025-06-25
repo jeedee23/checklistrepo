@@ -131,20 +131,6 @@
           "image": "2025_06_23_@_21-44-48_glossary.pdf"
         },
         {
-          "label": "Projectnumber = P019007",
-          "done": false,
-          "unit": "",
-          "qty_est": "",
-          "qty_real": "",
-          "price_unit": "",
-          "total_price": 0,
-          "date": "2025-06-25",
-          "who": "Johan",
-          "children": [],
-          "collapsed": false,
-          "no": "1.2"
-        },
-        {
           "label": "Conventions",
           "done": false,
           "unit": "",
@@ -154,77 +140,9 @@
           "total_price": 0,
           "date": "2025-06-23",
           "who": "Johan",
-          "children": [
-            {
-              "label": "Templates",
-              "done": false,
-              "unit": "",
-              "qty_est": 0,
-              "qty_real": 0,
-              "price_unit": 0,
-              "date": "2025-06-24",
-              "who": "Johan",
-              "children": [],
-              "no": "1.3.1"
-            },
-            {
-              "label": "File formats",
-              "done": false,
-              "unit": "",
-              "qty_est": "",
-              "qty_real": "",
-              "price_unit": "",
-              "total_price": 0,
-              "date": "2025-06-24",
-              "who": "Johan",
-              "children": [
-                {
-                  "label": "Naming = P019007-1.3.2.1-filename",
-                  "done": false,
-                  "unit": "",
-                  "qty_est": 0,
-                  "qty_real": 0,
-                  "price_unit": 0,
-                  "date": "2025-06-25",
-                  "who": "Johan",
-                  "children": [],
-                  "no": "1.3.2.1"
-                }
-              ],
-              "collapsed": false,
-              "no": "1.3.2"
-            },
-            {
-              "label": "Color codes",
-              "done": false,
-              "unit": "",
-              "qty_est": "",
-              "qty_real": "",
-              "price_unit": "",
-              "total_price": 0,
-              "date": "2025-06-24",
-              "who": "Johan",
-              "children": [],
-              "collapsed": false,
-              "no": "1.3.3"
-            },
-            {
-              "label": "Type content here (ctrl-del to delete row)",
-              "done": false,
-              "unit": "",
-              "qty_est": "",
-              "qty_real": "",
-              "price_unit": "",
-              "total_price": 0,
-              "date": "2025-06-24",
-              "who": "Johan",
-              "children": [],
-              "collapsed": false,
-              "no": "1.3.4"
-            }
-          ],
+          "children": [],
           "collapsed": false,
-          "no": "1.3",
+          "no": "1.2",
           "imageFile": "2025_06_23_@_22-19-16_conventions.pdf",
           "image": "2025_06_23_@_22-19-16_conventions.pdf"
         },
@@ -240,7 +158,7 @@
           "who": "Johan",
           "children": [],
           "collapsed": false,
-          "no": "1.4",
+          "no": "1.3",
           "noteFile": "checklists/notes/2025_06_23_@_22-22-14.html"
         },
         {
@@ -274,34 +192,34 @@
                   "date": "2025-06-24",
                   "who": "Johan",
                   "children": [],
-                  "no": "1.5.1.1",
+                  "no": "1.4.1.1",
                   "noteFile": "checklists/notes/2025_06_24_@_11-03-07.html",
-                  "bold": false
-                },
-                {
-                  "label": "Final meeting minutes refined",
-                  "done": false,
-                  "unit": "",
-                  "qty_est": "",
-                  "qty_real": "",
-                  "price_unit": "",
-                  "total_price": 0,
-                  "date": "2025-06-24",
-                  "who": "Johan",
-                  "children": [],
-                  "collapsed": false,
-                  "no": "1.5.1.2"
+                  "bold": true
                 }
               ],
-              "no": "1.5.1",
-              "collapsed": true
+              "no": "1.4.1",
+              "collapsed": false
             }
           ],
-          "collapsed": true,
+          "collapsed": false,
+          "no": "1.4"
+        },
+        {
+          "label": "Type content here (ctrl-del to delete row)",
+          "done": false,
+          "unit": "",
+          "qty_est": "",
+          "qty_real": "",
+          "price_unit": "",
+          "total_price": 0,
+          "date": "2025-06-24",
+          "who": "Johan",
+          "children": [],
+          "collapsed": false,
           "no": "1.5"
         }
       ],
-      "collapsed": true,
+      "collapsed": false,
       "no": "1"
     },
     {
@@ -342,9 +260,7 @@
               "date": "",
               "who": "Johan",
               "collapsed": false,
-              "children": [],
-              "important": true,
-              "Resp": "Frédéric"
+              "children": []
             },
             {
               "no": "2.1.2",
@@ -358,9 +274,7 @@
               "date": "",
               "who": "Johan",
               "collapsed": false,
-              "children": [],
-              "important": true,
-              "Resp": "Frédéric"
+              "children": []
             },
             {
               "label": "RASCI",
@@ -429,13 +343,10 @@
                   "no": "2.1.3.4"
                 }
               ],
-              "collapsed": true,
+              "collapsed": false,
               "no": "2.1.3",
               "imageFile": "2025_06_21_@_14-30-23_RASCI.png",
-              "image": "2025_06_21_@_14-30-23_RASCI.png",
-              "important": true,
-              "Resp": "Johan",
-              "Acc": "Frédéric"
+              "image": "2025_06_21_@_14-30-23_RASCI.png"
             },
             {
               "no": "2.1.4",
@@ -449,10 +360,7 @@
               "date": "",
               "who": "Johan",
               "collapsed": false,
-              "children": [],
-              "important": true,
-              "Resp": "Cuong",
-              "Acc": "Frédéric"
+              "children": []
             }
           ],
           "noteFile": "checklists/notes/2025_06_22_@_21-38-31.html"
@@ -482,9 +390,7 @@
               "date": "",
               "who": "Johan",
               "collapsed": false,
-              "children": [],
-              "important": true,
-              "Resp": "Frédéric"
+              "children": []
             },
             {
               "no": "2.2.2",
@@ -498,36 +404,7 @@
               "date": "",
               "who": "Johan",
               "collapsed": false,
-              "children": [
-                {
-                  "label": "Frame",
-                  "done": false,
-                  "unit": "",
-                  "qty_est": 0,
-                  "qty_real": 0,
-                  "price_unit": 0,
-                  "date": "2025-06-25",
-                  "who": "Johan",
-                  "children": [],
-                  "no": "2.2.2.1"
-                },
-                {
-                  "label": "Electricity",
-                  "done": false,
-                  "unit": "",
-                  "qty_est": "",
-                  "qty_real": "",
-                  "price_unit": "",
-                  "total_price": 0,
-                  "date": "2025-06-25",
-                  "who": "Johan",
-                  "children": [],
-                  "collapsed": false,
-                  "no": "2.2.2.2"
-                }
-              ],
-              "important": true,
-              "Resp": "Frédéric"
+              "children": []
             },
             {
               "no": "2.2.3",
@@ -569,15 +446,10 @@
               "who": "Johan",
               "children": [],
               "collapsed": false,
-              "no": "2.2.5",
-              "important": true,
-              "Resp": "Frédéric",
-              "Acc": "Johan"
+              "no": "2.2.5"
             }
           ],
-          "noteFile": "checklists/notes/2025_06_22_@_21-39-06.html",
-          "important": true,
-          "Resp": "Frédéric"
+          "noteFile": "checklists/notes/2025_06_22_@_21-39-06.html"
         },
         {
           "no": "2.3",
@@ -606,7 +478,7 @@
               "collapsed": false,
               "children": [
                 {
-                  "label": "MEAM-Carlo Groffils",
+                  "label": "MEAM-Carlo",
                   "done": false,
                   "unit": "",
                   "qty_est": 0,
@@ -619,7 +491,7 @@
                   "collapsed": false
                 },
                 {
-                  "label": "COSUCRA-Julien Bosly",
+                  "label": "COSUCRA = client",
                   "done": false,
                   "unit": "",
                   "qty_est": 0,
@@ -632,7 +504,7 @@
                   "collapsed": false
                 },
                 {
-                  "label": "KAMETAL-Geert Gijsens",
+                  "label": "KAMETAL",
                   "done": false,
                   "unit": "",
                   "qty_est": "",
@@ -646,7 +518,7 @@
                   "no": "2.3.1.3"
                 },
                 {
-                  "label": "ELEANTIS-Yves Gijbels",
+                  "label": "ELEANTIS",
                   "done": false,
                   "unit": "",
                   "qty_est": "",
@@ -658,39 +530,11 @@
                   "children": [],
                   "collapsed": false,
                   "no": "2.3.1.4"
-                },
-                {
-                  "label": "MEAM-Frédéric de Meulemeester",
-                  "done": false,
-                  "unit": "",
-                  "qty_est": "",
-                  "qty_real": "",
-                  "price_unit": "",
-                  "total_price": 0,
-                  "date": "2025-06-25",
-                  "who": "Johan",
-                  "children": [],
-                  "collapsed": false,
-                  "no": "2.3.1.5"
-                },
-                {
-                  "label": "MEAM-Cuong Minh Tran",
-                  "done": false,
-                  "unit": "",
-                  "qty_est": "",
-                  "qty_real": "",
-                  "price_unit": "",
-                  "total_price": 0,
-                  "date": "2025-06-25",
-                  "who": "Johan",
-                  "children": [],
-                  "collapsed": false,
-                  "no": "2.3.1.6"
                 }
               ]
             },
             {
-              "label": "Non Principal Stakeholders",
+              "label": "Non Principle Stakeholders",
               "done": false,
               "unit": "",
               "qty_est": "",
@@ -701,7 +545,7 @@
               "who": "Johan",
               "children": [
                 {
-                  "label": "Eleantis-Jurgen",
+                  "label": "Cosucra- name of the project engineer",
                   "done": false,
                   "unit": "",
                   "qty_est": "",
@@ -715,21 +559,20 @@
                   "no": "2.3.2.1"
                 },
                 {
-                  "label": "MEAM-Johan",
+                  "label": "Meam-Frédéric",
                   "done": false,
                   "unit": "",
-                  "qty_est": "",
-                  "qty_real": "",
-                  "price_unit": "",
-                  "total_price": 0,
+                  "qty_est": 0,
+                  "qty_real": 0,
+                  "price_unit": 0,
                   "date": "2025-06-21",
                   "who": "Johan",
                   "children": [],
-                  "collapsed": false,
-                  "no": "2.3.2.2"
+                  "no": "2.3.2.2",
+                  "collapsed": false
                 },
                 {
-                  "label": "MEAM-Jeamichel",
+                  "label": "Meam-Cuong",
                   "done": false,
                   "unit": "",
                   "qty_est": "",
@@ -743,7 +586,7 @@
                   "no": "2.3.2.3"
                 },
                 {
-                  "label": "MEAM-Hung",
+                  "label": "Meam-Johan",
                   "done": false,
                   "unit": "",
                   "qty_est": "",
@@ -757,7 +600,7 @@
                   "no": "2.3.2.4"
                 },
                 {
-                  "label": "MEAM-Javad",
+                  "label": "Type content here (ctrl-del to delete row)",
                   "done": false,
                   "unit": "",
                   "qty_est": "",
@@ -771,7 +614,7 @@
                   "no": "2.3.2.5"
                 },
                 {
-                  "label": "MEAM-Thomas",
+                  "label": "Type content here (ctrl-del to delete row)",
                   "done": false,
                   "unit": "",
                   "qty_est": "",
@@ -785,28 +628,28 @@
                   "no": "2.3.2.6"
                 },
                 {
-                  "label": "MEAM-Vincent",
+                  "label": "Type content here (ctrl-del to delete row)",
                   "done": false,
                   "unit": "",
                   "qty_est": "",
                   "qty_real": "",
                   "price_unit": "",
                   "total_price": 0,
-                  "date": "2025-06-25",
+                  "date": "2025-06-21",
                   "who": "Johan",
                   "children": [],
                   "collapsed": false,
                   "no": "2.3.2.7"
                 },
                 {
-                  "label": "MEAM-Jules",
+                  "label": "Type content here (ctrl-del to delete row)",
                   "done": false,
                   "unit": "",
                   "qty_est": "",
                   "qty_real": "",
                   "price_unit": "",
                   "total_price": 0,
-                  "date": "2025-06-25",
+                  "date": "2025-06-21",
                   "who": "Johan",
                   "children": [],
                   "collapsed": false,
@@ -817,9 +660,7 @@
               "no": "2.3.2"
             }
           ],
-          "noteFile": "checklists/notes/2025_06_22_@_21-40-14.html",
-          "Resp": "Johan",
-          "Acc": "Frédéric"
+          "noteFile": "checklists/notes/2025_06_22_@_21-40-14.html"
         },
         {
           "no": "2.4",
@@ -832,7 +673,7 @@
           "total_price": 0,
           "date": "",
           "who": "Johan",
-          "collapsed": true,
+          "collapsed": false,
           "children": [
             {
               "no": "2.4.1",
@@ -875,21 +716,6 @@
               "who": "Johan",
               "collapsed": false,
               "children": []
-            },
-            {
-              "label": "Type content here (ctrl-del to delete row)",
-              "done": false,
-              "unit": "",
-              "qty_est": "",
-              "qty_real": "",
-              "price_unit": "",
-              "total_price": 0,
-              "date": "2025-06-24",
-              "who": "Johan",
-              "children": [],
-              "collapsed": false,
-              "no": "2.4.4",
-              "noteFile": "checklists/notes/2025_06_24_@_20-03-46.html"
             }
           ]
         },
@@ -904,7 +730,7 @@
           "total_price": 0,
           "date": "",
           "who": "Johan",
-          "collapsed": true,
+          "collapsed": false,
           "children": [
             {
               "no": "2.5.1",
@@ -2474,8 +2300,7 @@
         }
       ],
       "important": true,
-      "noteFile": "checklists/notes/2025_06_22_@_21-35-48.html",
-      "Resp": "Frédéric"
+      "noteFile": "checklists/notes/2025_06_22_@_21-35-48.html"
     },
     {
       "no": "3",
@@ -2488,7 +2313,7 @@
       "total_price": 0,
       "date": "",
       "who": "Johan",
-      "collapsed": true,
+      "collapsed": false,
       "children": [
         {
           "no": "3.1",
@@ -2534,11 +2359,11 @@
       "total_price": 0,
       "date": "",
       "who": "Johan",
-      "collapsed": false,
+      "collapsed": true,
       "children": [
         {
           "no": "4.1",
-          "label": "Architectural: OOS",
+          "label": "Architectural",
           "done": false,
           "unit": "",
           "qty_est": "",
@@ -2863,21 +2688,7 @@
           "collapsed": true,
           "children": [
             {
-              "label": "Basis of Design (BOD)",
-              "done": false,
-              "unit": "",
-              "qty_est": "",
-              "qty_real": "",
-              "price_unit": "",
-              "total_price": 0,
-              "date": "2025-06-25",
-              "who": "Johan",
-              "children": [],
-              "collapsed": false,
-              "no": "4.2.1"
-            },
-            {
-              "no": "4.2.2",
+              "no": "4.2.1",
               "label": "Process flow diagram (PFD)",
               "done": false,
               "unit": "",
@@ -2891,8 +2702,22 @@
               "children": []
             },
             {
+              "no": "4.2.2",
+              "label": "Fluid list (FLL)",
+              "done": false,
+              "unit": "",
+              "qty_est": "",
+              "qty_real": "",
+              "price_unit": "",
+              "total_price": 0,
+              "date": "",
+              "who": "Johan",
+              "collapsed": false,
+              "children": []
+            },
+            {
               "no": "4.2.3",
-              "label": "Block diagram (BLD)",
+              "label": "User point list (UPI)",
               "done": false,
               "unit": "",
               "qty_est": "",
@@ -2906,7 +2731,7 @@
             },
             {
               "no": "4.2.4",
-              "label": "Stream table (SST)",
+              "label": "User point layout (UPA)",
               "done": false,
               "unit": "",
               "qty_est": "",
@@ -2920,7 +2745,7 @@
             },
             {
               "no": "4.2.5",
-              "label": "Functional description (FDE)",
+              "label": "P&ID (PID)",
               "done": false,
               "unit": "",
               "qty_est": "",
@@ -2934,7 +2759,7 @@
             },
             {
               "no": "4.2.6",
-              "label": "Fluid list (FLL)",
+              "label": "Functional description (FDE)",
               "done": false,
               "unit": "",
               "qty_est": "",
@@ -2962,7 +2787,7 @@
             },
             {
               "no": "4.2.8",
-              "label": "Line list (LIL)",
+              "label": "Equipment list (EQL)",
               "done": false,
               "unit": "",
               "qty_est": "",
@@ -2975,7 +2800,50 @@
               "children": []
             },
             {
-              "no": "4.2.9",
+              "label": "Type content here (ctrl-del to delete row)",
+              "done": false,
+              "unit": "",
+              "qty_est": "",
+              "qty_real": "",
+              "price_unit": "",
+              "total_price": 0,
+              "date": "2025-06-22",
+              "who": "Johan",
+              "children": [],
+              "collapsed": false,
+              "no": "4.2.9"
+            },
+            {
+              "no": "4.2.10",
+              "label": "Datasheets",
+              "done": false,
+              "unit": "",
+              "qty_est": "",
+              "qty_real": "",
+              "price_unit": "",
+              "total_price": 0,
+              "date": "",
+              "who": "Johan",
+              "collapsed": false,
+              "children": [
+                {
+                  "no": "4.2.10.1",
+                  "label": "Type xxx. Supplier - Type",
+                  "done": false,
+                  "unit": "",
+                  "qty_est": "",
+                  "qty_real": "",
+                  "price_unit": "",
+                  "total_price": 0,
+                  "date": "",
+                  "who": "Johan",
+                  "collapsed": false,
+                  "children": []
+                }
+              ]
+            },
+            {
+              "no": "4.2.11",
               "label": "Tie-in list (TIL)",
               "done": false,
               "unit": "",
@@ -2989,8 +2857,8 @@
               "children": []
             },
             {
-              "no": "4.2.10",
-              "label": "P&ID (PID)",
+              "no": "4.2.12",
+              "label": "Line list (LIL)",
               "done": false,
               "unit": "",
               "qty_est": "",
@@ -3003,8 +2871,8 @@
               "children": []
             },
             {
-              "no": "4.2.11",
-              "label": "Equipment list (EQL)",
+              "no": "4.2.13",
+              "label": "Block diagram (BLD)",
               "done": false,
               "unit": "",
               "qty_est": "",
@@ -3013,11 +2881,39 @@
               "total_price": 0,
               "date": "",
               "who": "Johan",
-              "collapsed": true,
+              "collapsed": false,
+              "children": []
+            },
+            {
+              "no": "4.2.14",
+              "label": "Stream table (SST)",
+              "done": false,
+              "unit": "",
+              "qty_est": "",
+              "qty_real": "",
+              "price_unit": "",
+              "total_price": 0,
+              "date": "",
+              "who": "Johan",
+              "collapsed": false,
+              "children": []
+            },
+            {
+              "no": "4.2.15",
+              "label": "Docs for information",
+              "done": false,
+              "unit": "",
+              "qty_est": "",
+              "qty_real": "",
+              "price_unit": "",
+              "total_price": 0,
+              "date": "",
+              "who": "Johan",
+              "collapsed": false,
               "children": [
                 {
-                  "no": "4.2.11.1",
-                  "label": "Datasheets",
+                  "no": "4.2.15.1",
+                  "label": "38xxxx-PR.xxx-DFI-Rxx",
                   "done": false,
                   "unit": "",
                   "qty_est": "",
@@ -3026,10 +2922,67 @@
                   "total_price": 0,
                   "date": "",
                   "who": "Johan",
-                  "collapsed": true,
+                  "collapsed": false,
+                  "children": []
+                }
+              ]
+            },
+            {
+              "no": "4.2.16",
+              "label": "Docs for quotation",
+              "done": false,
+              "unit": "",
+              "qty_est": "",
+              "qty_real": "",
+              "price_unit": "",
+              "total_price": 0,
+              "date": "",
+              "who": "Johan",
+              "collapsed": false,
+              "children": [
+                {
+                  "no": "4.2.16.1",
+                  "label": "38xxxx-PR.xxx-DFQ-Rxx",
+                  "done": false,
+                  "unit": "",
+                  "qty_est": "",
+                  "qty_real": "",
+                  "price_unit": "",
+                  "total_price": 0,
+                  "date": "",
+                  "who": "Johan",
+                  "collapsed": false,
                   "children": [
                     {
-                      "no": "4.2.11.1.1",
+                      "no": "4.2.16.1.1",
+                      "label": "Equipment data",
+                      "done": false,
+                      "unit": "",
+                      "qty_est": "",
+                      "qty_real": "",
+                      "price_unit": "",
+                      "total_price": 0,
+                      "date": "",
+                      "who": "Johan",
+                      "collapsed": false,
+                      "children": []
+                    },
+                    {
+                      "no": "4.2.16.1.2",
+                      "label": "Equipment data",
+                      "done": false,
+                      "unit": "",
+                      "qty_est": "",
+                      "qty_real": "",
+                      "price_unit": "",
+                      "total_price": 0,
+                      "date": "",
+                      "who": "Johan",
+                      "collapsed": false,
+                      "children": []
+                    },
+                    {
+                      "no": "4.2.16.1.3",
                       "label": "Type xxx. Supplier - Type",
                       "done": false,
                       "unit": "",
@@ -3041,140 +2994,10 @@
                       "who": "Johan",
                       "collapsed": false,
                       "children": []
-                    }
-                  ]
-                },
-                {
-                  "no": "4.2.11.2",
-                  "label": "Docs for quotation",
-                  "done": false,
-                  "unit": "",
-                  "qty_est": "",
-                  "qty_real": "",
-                  "price_unit": "",
-                  "total_price": 0,
-                  "date": "",
-                  "who": "Johan",
-                  "collapsed": true,
-                  "children": [
+                    },
                     {
-                      "no": "4.2.12.1",
-                      "label": "38xxxx-PR.xxx-DFQ-Rxx",
-                      "done": false,
-                      "unit": "",
-                      "qty_est": "",
-                      "qty_real": "",
-                      "price_unit": "",
-                      "total_price": 0,
-                      "date": "",
-                      "who": "Johan",
-                      "collapsed": false,
-                      "children": [
-                        {
-                          "no": "4.2.12.1.1",
-                          "label": "Equipment data",
-                          "done": false,
-                          "unit": "",
-                          "qty_est": "",
-                          "qty_real": "",
-                          "price_unit": "",
-                          "total_price": 0,
-                          "date": "",
-                          "who": "Johan",
-                          "collapsed": false,
-                          "children": []
-                        },
-                        {
-                          "no": "4.2.12.1.2",
-                          "label": "Equipment data",
-                          "done": false,
-                          "unit": "",
-                          "qty_est": "",
-                          "qty_real": "",
-                          "price_unit": "",
-                          "total_price": 0,
-                          "date": "",
-                          "who": "Johan",
-                          "collapsed": false,
-                          "children": []
-                        },
-                        {
-                          "no": "4.2.12.1.3",
-                          "label": "Type xxx. Supplier - Type",
-                          "done": false,
-                          "unit": "",
-                          "qty_est": "",
-                          "qty_real": "",
-                          "price_unit": "",
-                          "total_price": 0,
-                          "date": "",
-                          "who": "Johan",
-                          "collapsed": false,
-                          "children": []
-                        },
-                        {
-                          "no": "4.2.12.1.4",
-                          "label": "Tie-in list",
-                          "done": false,
-                          "unit": "",
-                          "qty_est": "",
-                          "qty_real": "",
-                          "price_unit": "",
-                          "total_price": 0,
-                          "date": "",
-                          "who": "Johan",
-                          "collapsed": false,
-                          "children": []
-                        }
-                      ]
-                    }
-                  ]
-                },
-                {
-                  "no": "4.2.11.3",
-                  "label": "Docs for information only usefull",
-                  "done": false,
-                  "unit": "",
-                  "qty_est": "",
-                  "qty_real": "",
-                  "price_unit": "",
-                  "total_price": 0,
-                  "date": "",
-                  "who": "Johan",
-                  "collapsed": true,
-                  "children": [
-                    {
-                      "no": "4.2.13.1",
-                      "label": "38xxxx-PR.xxx-DFI-Rxx",
-                      "done": false,
-                      "unit": "",
-                      "qty_est": "",
-                      "qty_real": "",
-                      "price_unit": "",
-                      "total_price": 0,
-                      "date": "",
-                      "who": "Johan",
-                      "collapsed": false,
-                      "children": []
-                    }
-                  ]
-                },
-                {
-                  "no": "4.2.11.4",
-                  "label": "Docs for production",
-                  "done": false,
-                  "unit": "",
-                  "qty_est": "",
-                  "qty_real": "",
-                  "price_unit": "",
-                  "total_price": 0,
-                  "date": "",
-                  "who": "Johan",
-                  "collapsed": true,
-                  "children": [
-                    {
-                      "no": "4.2.14.1",
-                      "label": "38xxxx-PR.xxx-DFP-Rxx",
+                      "no": "4.2.16.1.4",
+                      "label": "Tie-in list",
                       "done": false,
                       "unit": "",
                       "qty_est": "",
@@ -3191,7 +3014,36 @@
               ]
             },
             {
-              "no": "4.2.12",
+              "no": "4.2.17",
+              "label": "Docs for production",
+              "done": false,
+              "unit": "",
+              "qty_est": "",
+              "qty_real": "",
+              "price_unit": "",
+              "total_price": 0,
+              "date": "",
+              "who": "Johan",
+              "collapsed": false,
+              "children": [
+                {
+                  "no": "4.2.17.1",
+                  "label": "38xxxx-PR.xxx-DFP-Rxx",
+                  "done": false,
+                  "unit": "",
+                  "qty_est": "",
+                  "qty_real": "",
+                  "price_unit": "",
+                  "total_price": 0,
+                  "date": "",
+                  "who": "Johan",
+                  "collapsed": false,
+                  "children": []
+                }
+              ]
+            },
+            {
+              "no": "4.2.18",
               "label": "Docs for closing",
               "done": false,
               "unit": "",
@@ -3201,11 +3053,11 @@
               "total_price": 0,
               "date": "",
               "who": "Johan",
-              "collapsed": true,
+              "collapsed": false,
               "children": [
                 {
-                  "no": "4.2.15.1",
-                  "label": "4215",
+                  "no": "4.2.18.1",
+                  "label": "38xxxx-PR.xxx-DFC-Rxx",
                   "done": false,
                   "unit": "",
                   "qty_est": "",
@@ -3357,7 +3209,7 @@
               "total_price": 0,
               "date": "",
               "who": "Johan",
-              "collapsed": true,
+              "collapsed": false,
               "children": [
                 {
                   "no": "4.3.9.1",
@@ -3386,7 +3238,7 @@
               "total_price": 0,
               "date": "",
               "who": "Johan",
-              "collapsed": true,
+              "collapsed": false,
               "children": [
                 {
                   "no": "4.3.10.1",
@@ -3415,7 +3267,7 @@
               "total_price": 0,
               "date": "",
               "who": "Johan",
-              "collapsed": true,
+              "collapsed": false,
               "children": [
                 {
                   "no": "4.3.11.1",
@@ -3444,7 +3296,7 @@
               "total_price": 0,
               "date": "",
               "who": "Johan",
-              "collapsed": true,
+              "collapsed": false,
               "children": [
                 {
                   "no": "4.3.12.1",
@@ -3493,6 +3345,77 @@
             },
             {
               "no": "4.4.2",
+              "label": "Stability analysis",
+              "done": false,
+              "unit": "",
+              "qty_est": "",
+              "qty_real": "",
+              "price_unit": "",
+              "total_price": 0,
+              "date": "",
+              "who": "Johan",
+              "collapsed": false,
+              "children": [
+                {
+                  "no": "4.4.2.1",
+                  "label": "Frame analysis (FAN)",
+                  "done": false,
+                  "unit": "",
+                  "qty_est": "",
+                  "qty_real": "",
+                  "price_unit": "",
+                  "total_price": 0,
+                  "date": "",
+                  "who": "Johan",
+                  "collapsed": false,
+                  "children": []
+                },
+                {
+                  "no": "4.4.2.2",
+                  "label": "Connection check (CCH)",
+                  "done": false,
+                  "unit": "",
+                  "qty_est": "",
+                  "qty_real": "",
+                  "price_unit": "",
+                  "total_price": 0,
+                  "date": "",
+                  "who": "Johan",
+                  "collapsed": false,
+                  "children": []
+                },
+                {
+                  "no": "4.4.2.3",
+                  "label": "Flange check (FCH)",
+                  "done": false,
+                  "unit": "",
+                  "qty_est": "",
+                  "qty_real": "",
+                  "price_unit": "",
+                  "total_price": 0,
+                  "date": "",
+                  "who": "Johan",
+                  "collapsed": false,
+                  "children": []
+                },
+                {
+                  "no": "4.4.2.4",
+                  "label": "Stability report (SRE)",
+                  "done": false,
+                  "unit": "",
+                  "qty_est": "",
+                  "qty_real": "",
+                  "price_unit": "",
+                  "total_price": 0,
+                  "date": "",
+                  "who": "Johan",
+                  "collapsed": false,
+                  "children": []
+                }
+              ]
+            },
+            {
+              "no": "4.4.3",
               "label": "Frame analysis (FAN)",
               "done": false,
               "unit": "",
@@ -3506,7 +3429,7 @@
               "children": []
             },
             {
-              "no": "4.4.3",
+              "no": "4.4.4",
               "label": "Connection check (CCH)",
               "done": false,
               "unit": "",
@@ -3520,7 +3443,7 @@
               "children": []
             },
             {
-              "no": "4.4.4",
+              "no": "4.4.5",
               "label": "Flange check (FCH)",
               "done": false,
               "unit": "",
@@ -3534,7 +3457,78 @@
               "children": []
             },
             {
-              "no": "4.4.5",
+              "no": "4.4.6",
+              "label": "Stability report (SRE)",
+              "done": false,
+              "unit": "",
+              "qty_est": "",
+              "qty_real": "",
+              "price_unit": "",
+              "total_price": 0,
+              "date": "",
+              "who": "Johan",
+              "collapsed": false,
+              "children": [
+                {
+                  "no": "4.4.6.1",
+                  "label": "Frame analysis (FAN)",
+                  "done": false,
+                  "unit": "",
+                  "qty_est": "",
+                  "qty_real": "",
+                  "price_unit": "",
+                  "total_price": 0,
+                  "date": "",
+                  "who": "Johan",
+                  "collapsed": false,
+                  "children": []
+                },
+                {
+                  "no": "4.4.6.2",
+                  "label": "Connection check (CCH)",
+                  "done": false,
+                  "unit": "",
+                  "qty_est": "",
+                  "qty_real": "",
+                  "price_unit": "",
+                  "total_price": 0,
+                  "date": "",
+                  "who": "Johan",
+                  "collapsed": false,
+                  "children": []
+                },
+                {
+                  "no": "4.4.6.3",
+                  "label": "Flange check (FCH)",
+                  "done": false,
+                  "unit": "",
+                  "qty_est": "",
+                  "qty_real": "",
+                  "price_unit": "",
+                  "total_price": 0,
+                  "date": "",
+                  "who": "Johan",
+                  "collapsed": false,
+                  "children": []
+                },
+                {
+                  "no": "4.4.6.4",
+                  "label": "Stability report (SRE)",
+                  "done": false,
+                  "unit": "",
+                  "qty_est": "",
+                  "qty_real": "",
+                  "price_unit": "",
+                  "total_price": 0,
+                  "date": "",
+                  "who": "Johan",
+                  "collapsed": false,
+                  "children": []
+                }
+              ]
+            },
+            {
+              "no": "4.4.7",
               "label": "Single part drawing (PRD)",
               "done": false,
               "unit": "",
@@ -3548,36 +3542,8 @@
               "children": []
             },
             {
-              "no": "4.4.6",
-              "label": "General arrangement drawing (GAD)",
-              "done": false,
-              "unit": "",
-              "qty_est": "",
-              "qty_real": "",
-              "price_unit": "",
-              "total_price": 0,
-              "date": "",
-              "who": "Johan",
-              "collapsed": false,
-              "children": []
-            },
-            {
-              "no": "4.4.7",
-              "label": "Structural layout (SLA)",
-              "done": false,
-              "unit": "",
-              "qty_est": "",
-              "qty_real": "",
-              "price_unit": "",
-              "total_price": 0,
-              "date": "",
-              "who": "Johan",
-              "collapsed": false,
-              "children": []
-            },
-            {
               "no": "4.4.8",
-              "label": "Assembly list (ALI)",
+              "label": "Weld assembly drawing (WAS)",
               "done": false,
               "unit": "",
               "qty_est": "",
@@ -3591,7 +3557,7 @@
             },
             {
               "no": "4.4.9",
-              "label": "Bill of material (BOM)",
+              "label": "Bolt assembly drawing (BAS)",
               "done": false,
               "unit": "",
               "qty_est": "",
@@ -3605,7 +3571,7 @@
             },
             {
               "no": "4.4.10",
-              "label": "DWG files",
+              "label": "General arrangement drawing (GAD)",
               "done": false,
               "unit": "",
               "qty_est": "",
@@ -3619,7 +3585,7 @@
             },
             {
               "no": "4.4.11",
-              "label": "DXF files",
+              "label": "Checkerplate layout (CHL)",
               "done": false,
               "unit": "",
               "qty_est": "",
@@ -3633,7 +3599,7 @@
             },
             {
               "no": "4.4.12",
-              "label": "STEP files",
+              "label": "Structural layout (SLA)",
               "done": false,
               "unit": "",
               "qty_est": "",
@@ -3647,6 +3613,174 @@
             },
             {
               "no": "4.4.13",
+              "label": "Anchor drawing (AND)",
+              "done": false,
+              "unit": "",
+              "qty_est": "",
+              "qty_real": "",
+              "price_unit": "",
+              "total_price": 0,
+              "date": "",
+              "who": "Johan",
+              "collapsed": false,
+              "children": []
+            },
+            {
+              "no": "4.4.14",
+              "label": "Beam take off list (BTL)",
+              "done": false,
+              "unit": "",
+              "qty_est": "",
+              "qty_real": "",
+              "price_unit": "",
+              "total_price": 0,
+              "date": "",
+              "who": "Johan",
+              "collapsed": false,
+              "children": []
+            },
+            {
+              "no": "4.4.15",
+              "label": "Assembly list (ALI)",
+              "done": false,
+              "unit": "",
+              "qty_est": "",
+              "qty_real": "",
+              "price_unit": "",
+              "total_price": 0,
+              "date": "",
+              "who": "Johan",
+              "collapsed": false,
+              "children": []
+            },
+            {
+              "no": "4.4.16",
+              "label": "Saw list (SLI)",
+              "done": false,
+              "unit": "",
+              "qty_est": "",
+              "qty_real": "",
+              "price_unit": "",
+              "total_price": 0,
+              "date": "",
+              "who": "Johan",
+              "collapsed": false,
+              "children": []
+            },
+            {
+              "no": "4.4.17",
+              "label": "Bolt list (BLI)",
+              "done": false,
+              "unit": "",
+              "qty_est": "",
+              "qty_real": "",
+              "price_unit": "",
+              "total_price": 0,
+              "date": "",
+              "who": "Johan",
+              "collapsed": false,
+              "children": []
+            },
+            {
+              "no": "4.4.18",
+              "label": "Grating layout (GRL)",
+              "done": false,
+              "unit": "",
+              "qty_est": "",
+              "qty_real": "",
+              "price_unit": "",
+              "total_price": 0,
+              "date": "",
+              "who": "Johan",
+              "collapsed": false,
+              "children": []
+            },
+            {
+              "no": "4.4.19",
+              "label": "Bill of material (BOM)",
+              "done": false,
+              "unit": "",
+              "qty_est": "",
+              "qty_real": "",
+              "price_unit": "",
+              "total_price": 0,
+              "date": "",
+              "who": "Johan",
+              "collapsed": false,
+              "children": []
+            },
+            {
+              "no": "4.4.20",
+              "label": "DWG files",
+              "done": false,
+              "unit": "",
+              "qty_est": "",
+              "qty_real": "",
+              "price_unit": "",
+              "total_price": 0,
+              "date": "",
+              "who": "Johan",
+              "collapsed": false,
+              "children": []
+            },
+            {
+              "no": "4.4.21",
+              "label": "DXF files",
+              "done": false,
+              "unit": "",
+              "qty_est": "",
+              "qty_real": "",
+              "price_unit": "",
+              "total_price": 0,
+              "date": "",
+              "who": "Johan",
+              "collapsed": false,
+              "children": []
+            },
+            {
+              "no": "4.4.22",
+              "label": "STEP files",
+              "done": false,
+              "unit": "",
+              "qty_est": "",
+              "qty_real": "",
+              "price_unit": "",
+              "total_price": 0,
+              "date": "",
+              "who": "Johan",
+              "collapsed": false,
+              "children": []
+            },
+            {
+              "no": "4.4.23",
+              "label": "IGES files",
+              "done": false,
+              "unit": "",
+              "qty_est": "",
+              "qty_real": "",
+              "price_unit": "",
+              "total_price": 0,
+              "date": "",
+              "who": "Johan",
+              "collapsed": false,
+              "children": []
+            },
+            {
+              "no": "4.4.24",
+              "label": "SAT files",
+              "done": false,
+              "unit": "",
+              "qty_est": "",
+              "qty_real": "",
+              "price_unit": "",
+              "total_price": 0,
+              "date": "",
+              "who": "Johan",
+              "collapsed": false,
+              "children": []
+            },
+            {
+              "no": "4.4.25",
               "label": "Declaration of performance",
               "done": false,
               "unit": "",
@@ -3660,6 +3794,7 @@
               "children": []
             },
             {
+              "no": "4.4.26",
               "label": "Docs for information",
               "done": false,
               "unit": "",
@@ -3667,26 +3802,28 @@
               "qty_real": "",
               "price_unit": "",
               "total_price": 0,
-              "date": "2025-06-25",
+              "date": "",
               "who": "Johan",
+              "collapsed": false,
               "children": [
                 {
-                  "label": "placeholder",
+                  "no": "4.4.26.1",
+                  "label": "38xxxx-ST.xxx-DFI-Rxx",
                   "done": false,
                   "unit": "",
-                  "qty_est": 0,
-                  "qty_real": 0,
-                  "price_unit": 0,
-                  "date": "2025-06-25",
+                  "qty_est": "",
+                  "qty_real": "",
+                  "price_unit": "",
+                  "total_price": 0,
+                  "date": "",
                   "who": "Johan",
-                  "children": [],
-                  "no": "4.4.14.1"
+                  "collapsed": false,
+                  "children": []
                 }
-              ],
-              "collapsed": false,
-              "no": "4.4.14"
+              ]
             },
             {
+              "no": "4.4.27",
               "label": "Docs for quotation",
               "done": false,
               "unit": "",
@@ -3694,27 +3831,28 @@
               "qty_real": "",
               "price_unit": "",
               "total_price": 0,
-              "date": "2025-06-25",
+              "date": "",
               "who": "Johan",
+              "collapsed": false,
               "children": [
                 {
-                  "label": "placeholder",
+                  "no": "4.4.27.1",
+                  "label": "38xxxx-ST.xxx-DFQ-Rxx",
                   "done": false,
                   "unit": "",
-                  "qty_est": 0,
-                  "qty_real": 0,
-                  "price_unit": 0,
-                  "date": "2025-06-25",
+                  "qty_est": "",
+                  "qty_real": "",
+                  "price_unit": "",
+                  "total_price": 0,
+                  "date": "",
                   "who": "Johan",
-                  "children": [],
-                  "no": "4.4.15.1"
+                  "collapsed": false,
+                  "children": []
                 }
-              ],
-              "collapsed": false,
-              "no": "4.4.15"
+              ]
             },
             {
-              "no": "4.4.16",
+              "no": "4.4.28",
               "label": "Docs for production",
               "done": false,
               "unit": "",
@@ -3724,10 +3862,10 @@
               "total_price": 0,
               "date": "",
               "who": "Johan",
-              "collapsed": true,
+              "collapsed": false,
               "children": [
                 {
-                  "no": "4.4.16.1",
+                  "no": "4.4.28.1",
                   "label": "38xxxx-ST.xxx-DFP-Rxx",
                   "done": false,
                   "unit": "",
@@ -3743,7 +3881,7 @@
               ]
             },
             {
-              "no": "4.4.17",
+              "no": "4.4.29",
               "label": "Docs for closing",
               "done": false,
               "unit": "",
@@ -3753,10 +3891,10 @@
               "total_price": 0,
               "date": "",
               "who": "Johan",
-              "collapsed": true,
+              "collapsed": false,
               "children": [
                 {
-                  "no": "4.4.17.1",
+                  "no": "4.4.29.1",
                   "label": "38xxxx-ST.xxx-DFC-Rxx",
                   "done": false,
                   "unit": "",
@@ -3796,20 +3934,7 @@
               "date": "",
               "who": "Johan",
               "collapsed": false,
-              "children": [
-                {
-                  "label": "placeholder",
-                  "done": false,
-                  "unit": "",
-                  "qty_est": 0,
-                  "qty_real": 0,
-                  "price_unit": 0,
-                  "date": "2025-06-25",
-                  "who": "Johan",
-                  "children": [],
-                  "no": "4.5.1.1"
-                }
-              ]
+              "children": []
             },
             {
               "no": "4.5.2",
@@ -3825,7 +3950,7 @@
               "collapsed": true,
               "children": [
                 {
-                  "no": "4.5.2.1",
+                  "no": "4.7.1",
                   "label": "3D Model (3EQ)",
                   "done": false,
                   "unit": "",
@@ -3839,7 +3964,7 @@
                   "children": []
                 },
                 {
-                  "no": "4.5.2.2",
+                  "no": "4.7.2",
                   "label": "Crop scan (CRS)",
                   "done": false,
                   "unit": "",
@@ -3853,7 +3978,7 @@
                   "children": []
                 },
                 {
-                  "no": "4.5.2.3",
+                  "no": "4.7.3",
                   "label": "3D file",
                   "done": false,
                   "unit": "",
@@ -3867,7 +3992,7 @@
                   "children": []
                 },
                 {
-                  "no": "4.5.2.4",
+                  "no": "4.7.4",
                   "label": "Manual",
                   "done": false,
                   "unit": "",
@@ -3881,7 +4006,7 @@
                   "children": []
                 },
                 {
-                  "no": "4.5.2.5",
+                  "no": "4.7.5",
                   "label": "Certificates",
                   "done": false,
                   "unit": "",
@@ -3895,7 +4020,7 @@
                   "children": []
                 },
                 {
-                  "no": "4.5.2.6",
+                  "no": "4.7.6",
                   "label": "Datasheet",
                   "done": false,
                   "unit": "",
@@ -3909,7 +4034,7 @@
                   "children": []
                 },
                 {
-                  "no": "4.5.2.7",
+                  "no": "4.7.7",
                   "label": "Data loads",
                   "done": false,
                   "unit": "",
@@ -3923,7 +4048,7 @@
                   "children": []
                 },
                 {
-                  "no": "4.5.2.8",
+                  "no": "4.7.8",
                   "label": "Data supporting",
                   "done": false,
                   "unit": "",
@@ -3937,7 +4062,7 @@
                   "children": []
                 },
                 {
-                  "no": "4.5.2.9",
+                  "no": "4.7.9",
                   "label": "Data transportation",
                   "done": false,
                   "unit": "",
@@ -3951,7 +4076,7 @@
                   "children": []
                 },
                 {
-                  "no": "4.5.2.10",
+                  "no": "4.7.10",
                   "label": "Mechanical layout (MEL)",
                   "done": false,
                   "unit": "",
@@ -3965,7 +4090,7 @@
                   "children": []
                 },
                 {
-                  "no": "4.5.2.11",
+                  "no": "4.7.11",
                   "label": "Introduction layout (INL)",
                   "done": false,
                   "unit": "",
@@ -3979,7 +4104,7 @@
                   "children": []
                 },
                 {
-                  "no": "4.5.2.12",
+                  "no": "4.7.12",
                   "label": "Part list",
                   "done": false,
                   "unit": "",
@@ -3993,7 +4118,7 @@
                   "children": []
                 },
                 {
-                  "no": "4.5.2.13",
+                  "no": "4.7.13",
                   "label": "Packing list",
                   "done": false,
                   "unit": "",
@@ -4007,7 +4132,7 @@
                   "children": []
                 },
                 {
-                  "no": "4.5.2.14",
+                  "no": "4.7.14",
                   "label": "Bill of material",
                   "done": false,
                   "unit": "",
@@ -4021,7 +4146,7 @@
                   "children": []
                 },
                 {
-                  "no": "4.5.2.15",
+                  "no": "4.7.15",
                   "label": "Commissioning reports",
                   "done": false,
                   "unit": "",
@@ -4035,7 +4160,7 @@
                   "children": []
                 },
                 {
-                  "no": "4.5.2.16",
+                  "no": "4.7.16",
                   "label": "Docs for information",
                   "done": false,
                   "unit": "",
@@ -4048,7 +4173,7 @@
                   "collapsed": false,
                   "children": [
                     {
-                      "no": "4.5.2.16.1",
+                      "no": "4.7.16.1",
                       "label": "38xxxx-EQ.xxx-DFI-Rxx",
                       "done": false,
                       "unit": "",
@@ -4064,7 +4189,7 @@
                   ]
                 },
                 {
-                  "no": "4.5.2.17",
+                  "no": "4.7.17",
                   "label": "Docs for quotation",
                   "done": false,
                   "unit": "",
@@ -4077,7 +4202,7 @@
                   "collapsed": false,
                   "children": [
                     {
-                      "no": "4.5.2.17.1",
+                      "no": "4.7.17.1",
                       "label": "38xxxx-EQ.xxx-DFQ-Rxx",
                       "done": false,
                       "unit": "",
@@ -4093,7 +4218,7 @@
                   ]
                 },
                 {
-                  "no": "4.5.2.18",
+                  "no": "4.7.18",
                   "label": "Docs for production",
                   "done": false,
                   "unit": "",
@@ -4106,7 +4231,7 @@
                   "collapsed": false,
                   "children": [
                     {
-                      "no": "4.5.2.18.1",
+                      "no": "4.7.18.1",
                       "label": "38xxxx-EQ.xxx-DFP-Rxx",
                       "done": false,
                       "unit": "",
@@ -4120,7 +4245,7 @@
                       "children": []
                     },
                     {
-                      "no": "4.5.2.18.2",
+                      "no": "4.7.18.2",
                       "label": "Docs for closing",
                       "done": false,
                       "unit": "",
@@ -4134,7 +4259,7 @@
                       "children": []
                     },
                     {
-                      "no": "4.5.2.18.3",
+                      "no": "4.7.18.3",
                       "label": "38xxxx-EQ.xxx-DFC-Rxx",
                       "done": false,
                       "unit": "",
@@ -4167,7 +4292,7 @@
             },
             {
               "no": "4.5.4",
-              "label": "Equipment Eleantis",
+              "label": "Electrical Eleantis",
               "done": false,
               "unit": "",
               "qty_est": "",
@@ -4181,7 +4306,7 @@
             },
             {
               "no": "4.5.5",
-              "label": "Equipment Electrical Other",
+              "label": "Electrical Other",
               "done": false,
               "unit": "",
               "qty_est": "",
@@ -4193,7 +4318,7 @@
               "collapsed": true,
               "children": [
                 {
-                  "no": "4.5.5.1",
+                  "no": "4.10.1",
                   "label": "3D Model",
                   "done": false,
                   "unit": "",
@@ -4207,7 +4332,7 @@
                   "children": []
                 },
                 {
-                  "no": "4.5.5.2",
+                  "no": "4.10.2",
                   "label": "Single line diagram",
                   "done": false,
                   "unit": "",
@@ -4221,7 +4346,7 @@
                   "children": []
                 },
                 {
-                  "no": "4.5.5.3",
+                  "no": "4.10.3",
                   "label": "Bill of material",
                   "done": false,
                   "unit": "",
@@ -4235,7 +4360,7 @@
                   "children": []
                 },
                 {
-                  "no": "4.5.5.4",
+                  "no": "4.10.4",
                   "label": "Calculation",
                   "done": false,
                   "unit": "",
@@ -4249,7 +4374,7 @@
                   "children": []
                 },
                 {
-                  "no": "4.5.5.5",
+                  "no": "4.10.5",
                   "label": "Docs for information",
                   "done": false,
                   "unit": "",
@@ -4262,7 +4387,7 @@
                   "collapsed": false,
                   "children": [
                     {
-                      "no": "4.5.5.5.1",
+                      "no": "4.10.5.1",
                       "label": "38xxxx-EL.xxx-DFI-Rxx",
                       "done": false,
                       "unit": "",
@@ -4278,7 +4403,7 @@
                   ]
                 },
                 {
-                  "no": "4.5.5.6",
+                  "no": "4.10.6",
                   "label": "Docs for quotation",
                   "done": false,
                   "unit": "",
@@ -4291,7 +4416,7 @@
                   "collapsed": false,
                   "children": [
                     {
-                      "no": "4.5.5.6.1",
+                      "no": "4.10.6.1",
                       "label": "38xxxx-EL.xxx-DFQ-Rxx",
                       "done": false,
                       "unit": "",
@@ -4307,7 +4432,7 @@
                   ]
                 },
                 {
-                  "no": "4.5.5.7",
+                  "no": "4.10.7",
                   "label": "Docs for production",
                   "done": false,
                   "unit": "",
@@ -4320,7 +4445,7 @@
                   "collapsed": false,
                   "children": [
                     {
-                      "no": "4.5.5.7.1",
+                      "no": "4.10.7.1",
                       "label": "38xxxx-EL.xxx-DFP-Rxx",
                       "done": false,
                       "unit": "",
@@ -4336,7 +4461,7 @@
                   ]
                 },
                 {
-                  "no": "4.5.5.8",
+                  "no": "4.10.8",
                   "label": "Docs for closing",
                   "done": false,
                   "unit": "",
@@ -4349,7 +4474,7 @@
                   "collapsed": false,
                   "children": [
                     {
-                      "no": "4.5.5.8.1",
+                      "no": "4.10.8.1",
                       "label": "38xxxx-EL.xxx-DFC-Rxx",
                       "done": false,
                       "unit": "",
@@ -4369,120 +4494,6 @@
           ],
           "collapsed": false,
           "no": "4.5"
-        },
-        {
-          "label": "Plant electricals",
-          "done": false,
-          "unit": "",
-          "qty_est": "",
-          "qty_real": "",
-          "price_unit": "",
-          "total_price": 0,
-          "date": "2025-06-25",
-          "who": "Johan",
-          "children": [
-            {
-              "label": "Electrical supply for the plant",
-              "done": false,
-              "unit": "",
-              "qty_est": 0,
-              "qty_real": 0,
-              "price_unit": 0,
-              "date": "2025-06-25",
-              "who": "Johan",
-              "children": [],
-              "no": "4.6.1"
-            },
-            {
-              "label": "Electrical supply for the installations",
-              "done": false,
-              "unit": "",
-              "qty_est": "",
-              "qty_real": "",
-              "price_unit": "",
-              "total_price": 0,
-              "date": "2025-06-25",
-              "who": "Johan",
-              "children": [],
-              "collapsed": false,
-              "no": "4.6.2"
-            },
-            {
-              "label": "Electrical wiring/connections etc on installation",
-              "done": false,
-              "unit": "",
-              "qty_est": "",
-              "qty_real": "",
-              "price_unit": "",
-              "total_price": 0,
-              "date": "2025-06-25",
-              "who": "Johan",
-              "children": [],
-              "collapsed": false,
-              "no": "4.6.3"
-            }
-          ],
-          "collapsed": false,
-          "no": "4.6"
-        },
-        {
-          "label": "Automation",
-          "done": false,
-          "unit": "",
-          "qty_est": "",
-          "qty_real": "",
-          "price_unit": "",
-          "total_price": 0,
-          "date": "2025-06-25",
-          "who": "Johan",
-          "children": [
-            {
-              "label": "The automation Philosophy",
-              "done": false,
-              "unit": "",
-              "qty_est": 0,
-              "qty_real": 0,
-              "price_unit": 0,
-              "date": "2025-06-25",
-              "who": "Johan",
-              "children": [],
-              "no": "4.7.1",
-              "important": true,
-              "Resp": "Cuong",
-              "Support": "Johan"
-            },
-            {
-              "label": "Machine automation",
-              "done": false,
-              "unit": "",
-              "qty_est": "",
-              "qty_real": "",
-              "price_unit": "",
-              "total_price": 0,
-              "date": "2025-06-25",
-              "who": "Johan",
-              "children": [],
-              "collapsed": false,
-              "no": "4.7.2",
-              "important": false
-            },
-            {
-              "label": "Link to client's scada",
-              "done": false,
-              "unit": "",
-              "qty_est": "",
-              "qty_real": "",
-              "price_unit": "",
-              "total_price": 0,
-              "date": "2025-06-25",
-              "who": "Johan",
-              "children": [],
-              "collapsed": false,
-              "no": "4.7.3"
-            }
-          ],
-          "collapsed": false,
-          "no": "4.7"
         }
       ]
     },
@@ -4804,7 +4815,7 @@
           "total_price": 0,
           "date": "",
           "who": "Johan",
-          "collapsed": true,
+          "collapsed": false,
           "children": [
             {
               "no": "5.22.1",
@@ -4875,7 +4886,7 @@
           "total_price": 0,
           "date": "",
           "who": "Johan",
-          "collapsed": true,
+          "collapsed": false,
           "children": [
             {
               "no": "5.23.1",
@@ -4918,7 +4929,7 @@
           "total_price": 0,
           "date": "",
           "who": "Johan",
-          "collapsed": true,
+          "collapsed": false,
           "children": [
             {
               "no": "5.24.1",
@@ -5059,7 +5070,7 @@
           "total_price": 0,
           "date": "",
           "who": "Johan",
-          "collapsed": true,
+          "collapsed": false,
           "children": [
             {
               "no": "5.25.1",
