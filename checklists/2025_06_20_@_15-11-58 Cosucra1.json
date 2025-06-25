@@ -288,7 +288,7 @@
       "total_price": 0,
       "date": "",
       "who": "Frédéric",
-      "collapsed": false,
+      "collapsed": true,
       "children": [
         {
           "no": "2.1",
@@ -2489,7 +2489,7 @@
       "children": [
         {
           "no": "4.1",
-          "label": "Architectural",
+          "label": "Architectural: OOS",
           "done": false,
           "unit": "",
           "qty_est": "",
