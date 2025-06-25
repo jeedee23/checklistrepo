@@ -2843,34 +2843,6 @@
             },
             {
               "no": "4.2.3",
-              "label": "User point list (UPI)",
-              "done": false,
-              "unit": "",
-              "qty_est": "",
-              "qty_real": "",
-              "price_unit": "",
-              "total_price": 0,
-              "date": "",
-              "who": "Johan",
-              "collapsed": false,
-              "children": []
-            },
-            {
-              "no": "4.2.4",
-              "label": "User point layout (UPA)",
-              "done": false,
-              "unit": "",
-              "qty_est": "",
-              "qty_real": "",
-              "price_unit": "",
-              "total_price": 0,
-              "date": "",
-              "who": "Johan",
-              "collapsed": false,
-              "children": []
-            },
-            {
-              "no": "4.2.5",
               "label": "P&ID (PID)",
               "done": false,
               "unit": "",
@@ -2884,7 +2856,7 @@
               "children": []
             },
             {
-              "no": "4.2.6",
+              "no": "4.2.4",
               "label": "Functional description (FDE)",
               "done": false,
               "unit": "",
@@ -2898,7 +2870,7 @@
               "children": []
             },
             {
-              "no": "4.2.7",
+              "no": "4.2.5",
               "label": "Process calculations (PCA)",
               "done": false,
               "unit": "",
@@ -2912,7 +2884,7 @@
               "children": []
             },
             {
-              "no": "4.2.8",
+              "no": "4.2.6",
               "label": "Equipment list (EQL)",
               "done": false,
               "unit": "",
@@ -2937,10 +2909,10 @@
               "who": "Johan",
               "children": [],
               "collapsed": false,
-              "no": "4.2.9"
+              "no": "4.2.7"
             },
             {
-              "no": "4.2.10",
+              "no": "4.2.8",
               "label": "Datasheets",
               "done": false,
               "unit": "",
@@ -2953,7 +2925,7 @@
               "collapsed": false,
               "children": [
                 {
-                  "no": "4.2.10.1",
+                  "no": "4.2.8.1",
                   "label": "Type xxx. Supplier - Type",
                   "done": false,
                   "unit": "",
@@ -2969,7 +2941,7 @@
               ]
             },
             {
-              "no": "4.2.11",
+              "no": "4.2.9",
               "label": "Tie-in list (TIL)",
               "done": false,
               "unit": "",
@@ -2983,7 +2955,7 @@
               "children": []
             },
             {
-              "no": "4.2.12",
+              "no": "4.2.10",
               "label": "Line list (LIL)",
               "done": false,
               "unit": "",
@@ -2997,7 +2969,7 @@
               "children": []
             },
             {
-              "no": "4.2.13",
+              "no": "4.2.11",
               "label": "Block diagram (BLD)",
               "done": false,
               "unit": "",
@@ -3011,7 +2983,7 @@
               "children": []
             },
             {
-              "no": "4.2.14",
+              "no": "4.2.12",
               "label": "Stream table (SST)",
               "done": false,
               "unit": "",
@@ -3025,7 +2997,7 @@
               "children": []
             },
             {
-              "no": "4.2.15",
+              "no": "4.2.13",
               "label": "Docs for information",
               "done": false,
               "unit": "",
@@ -3038,7 +3010,7 @@
               "collapsed": false,
               "children": [
                 {
-                  "no": "4.2.15.1",
+                  "no": "4.2.13.1",
                   "label": "38xxxx-PR.xxx-DFI-Rxx",
                   "done": false,
                   "unit": "",
@@ -3054,7 +3026,7 @@
               ]
             },
             {
-              "no": "4.2.16",
+              "no": "4.2.14",
               "label": "Docs for quotation",
               "done": false,
               "unit": "",
@@ -3067,7 +3039,7 @@
               "collapsed": false,
               "children": [
                 {
-                  "no": "4.2.16.1",
+                  "no": "4.2.14.1",
                   "label": "38xxxx-PR.xxx-DFQ-Rxx",
                   "done": false,
                   "unit": "",
@@ -3080,7 +3052,7 @@
                   "collapsed": false,
                   "children": [
                     {
-                      "no": "4.2.16.1.1",
+                      "no": "4.2.14.1.1",
                       "label": "Equipment data",
                       "done": false,
                       "unit": "",
@@ -3094,7 +3066,7 @@
                       "children": []
                     },
                     {
-                      "no": "4.2.16.1.2",
+                      "no": "4.2.14.1.2",
                       "label": "Equipment data",
                       "done": false,
                       "unit": "",
@@ -3108,7 +3080,7 @@
                       "children": []
                     },
                     {
-                      "no": "4.2.16.1.3",
+                      "no": "4.2.14.1.3",
                       "label": "Type xxx. Supplier - Type",
                       "done": false,
                       "unit": "",
@@ -3122,7 +3094,7 @@
                       "children": []
                     },
                     {
-                      "no": "4.2.16.1.4",
+                      "no": "4.2.14.1.4",
                       "label": "Tie-in list",
                       "done": false,
                       "unit": "",
@@ -3140,7 +3112,7 @@
               ]
             },
             {
-              "no": "4.2.17",
+              "no": "4.2.15",
               "label": "Docs for production",
               "done": false,
               "unit": "",
@@ -3153,7 +3125,7 @@
               "collapsed": false,
               "children": [
                 {
-                  "no": "4.2.17.1",
+                  "no": "4.2.15.1",
                   "label": "38xxxx-PR.xxx-DFP-Rxx",
                   "done": false,
                   "unit": "",
@@ -3169,7 +3141,7 @@
               ]
             },
             {
-              "no": "4.2.18",
+              "no": "4.2.16",
               "label": "Docs for closing",
               "done": false,
               "unit": "",
@@ -3182,7 +3154,7 @@
               "collapsed": false,
               "children": [
                 {
-                  "no": "4.2.18.1",
+                  "no": "4.2.16.1",
                   "label": "38xxxx-PR.xxx-DFC-Rxx",
                   "done": false,
                   "unit": "",
