@@ -270,25 +270,11 @@
               "collapsed": true
             }
           ],
-          "collapsed": false,
+          "collapsed": true,
           "no": "1.4"
-        },
-        {
-          "label": "Type content here (ctrl-del to delete row)",
-          "done": false,
-          "unit": "",
-          "qty_est": "",
-          "qty_real": "",
-          "price_unit": "",
-          "total_price": 0,
-          "date": "2025-06-24",
-          "who": "Johan",
-          "children": [],
-          "collapsed": false,
-          "no": "1.5"
         }
       ],
-      "collapsed": true,
+      "collapsed": false,
       "no": "1"
     },
     {
@@ -1127,7 +1113,7 @@
           "total_price": 0,
           "date": "",
           "who": "Johan",
-          "collapsed": true,
+          "collapsed": false,
           "children": [
             {
               "no": "2.8.1",
