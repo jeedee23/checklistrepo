@@ -3453,7 +3453,7 @@
           "total_price": 0,
           "date": "",
           "who": "Johan",
-          "collapsed": false,
+          "collapsed": true,
           "children": [
             {
               "no": "4.4.1",
@@ -3638,7 +3638,61 @@
               "children": []
             },
             {
-              "no": "4.4.14",
+              "label": "Docs for information",
+              "done": false,
+              "unit": "",
+              "qty_est": "",
+              "qty_real": "",
+              "price_unit": "",
+              "total_price": 0,
+              "date": "2025-06-25",
+              "who": "Johan",
+              "children": [
+                {
+                  "label": "placeholder",
+                  "done": false,
+                  "unit": "",
+                  "qty_est": 0,
+                  "qty_real": 0,
+                  "price_unit": 0,
+                  "date": "2025-06-25",
+                  "who": "Johan",
+                  "children": [],
+                  "no": "4.4.14.1"
+                }
+              ],
+              "collapsed": false,
+              "no": "4.4.14"
+            },
+            {
+              "label": "Docs for quotation",
+              "done": false,
+              "unit": "",
+              "qty_est": "",
+              "qty_real": "",
+              "price_unit": "",
+              "total_price": 0,
+              "date": "2025-06-25",
+              "who": "Johan",
+              "children": [
+                {
+                  "label": "placeholder",
+                  "done": false,
+                  "unit": "",
+                  "qty_est": 0,
+                  "qty_real": 0,
+                  "price_unit": 0,
+                  "date": "2025-06-25",
+                  "who": "Johan",
+                  "children": [],
+                  "no": "4.4.15.1"
+                }
+              ],
+              "collapsed": false,
+              "no": "4.4.15"
+            },
+            {
+              "no": "4.4.16",
               "label": "Docs for production",
               "done": false,
               "unit": "",
@@ -3648,10 +3702,10 @@
               "total_price": 0,
               "date": "",
               "who": "Johan",
-              "collapsed": false,
+              "collapsed": true,
               "children": [
                 {
-                  "no": "4.4.14.1",
+                  "no": "4.4.16.1",
                   "label": "38xxxx-ST.xxx-DFP-Rxx",
                   "done": false,
                   "unit": "",
@@ -3667,7 +3721,7 @@
               ]
             },
             {
-              "no": "4.4.15",
+              "no": "4.4.17",
               "label": "Docs for closing",
               "done": false,
               "unit": "",
@@ -3720,7 +3774,20 @@
               "date": "",
               "who": "Johan",
               "collapsed": false,
-              "children": []
+              "children": [
+                {
+                  "label": "placeholder",
+                  "done": false,
+                  "unit": "",
+                  "qty_est": 0,
+                  "qty_real": 0,
+                  "price_unit": 0,
+                  "date": "2025-06-25",
+                  "who": "Johan",
+                  "children": [],
+                  "no": "4.5.1.1"
+                }
+              ]
             },
             {
               "no": "4.5.2",
@@ -4278,7 +4345,7 @@
               ]
             }
           ],
-          "collapsed": true,
+          "collapsed": false,
           "no": "4.5"
         },
         {
@@ -4291,7 +4358,61 @@
           "total_price": 0,
           "date": "2025-06-25",
           "who": "Johan",
-          "children": [],
+          "children": [
+            {
+              "label": "Electrical supply for the plant",
+              "done": false,
+              "unit": "",
+              "qty_est": 0,
+              "qty_real": 0,
+              "price_unit": 0,
+              "date": "2025-06-25",
+              "who": "Johan",
+              "children": [],
+              "no": "4.6.1"
+            },
+            {
+              "label": "Electrical supply for the installations",
+              "done": false,
+              "unit": "",
+              "qty_est": "",
+              "qty_real": "",
+              "price_unit": "",
+              "total_price": 0,
+              "date": "2025-06-25",
+              "who": "Johan",
+              "children": [],
+              "collapsed": false,
+              "no": "4.6.2"
+            },
+            {
+              "label": "Electrical wiring/connections etc on installation",
+              "done": false,
+              "unit": "",
+              "qty_est": "",
+              "qty_real": "",
+              "price_unit": "",
+              "total_price": 0,
+              "date": "2025-06-25",
+              "who": "Johan",
+              "children": [
+                {
+                  "label": "Electrical sub-contractor",
+                  "done": false,
+                  "unit": "",
+                  "qty_est": 0,
+                  "qty_real": 0,
+                  "price_unit": 0,
+                  "date": "2025-06-25",
+                  "who": "Johan",
+                  "children": [],
+                  "no": "4.6.3.1"
+                }
+              ],
+              "collapsed": false,
+              "no": "4.6.3"
+            }
+          ],
           "collapsed": false,
           "no": "4.6"
         },
