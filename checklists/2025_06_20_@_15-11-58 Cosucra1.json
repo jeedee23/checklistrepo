@@ -642,7 +642,7 @@
               "who": "Johan",
               "children": [
                 {
-                  "label": "Cosucra- name of the project engineer",
+                  "label": "Eleantis-Jurgen",
                   "done": false,
                   "unit": "",
                   "qty_est": "",
@@ -656,7 +656,7 @@
                   "no": "2.3.2.1"
                 },
                 {
-                  "label": "Eleantis-Jurgen",
+                  "label": "MEAM-Johan",
                   "done": false,
                   "unit": "",
                   "qty_est": "",
@@ -670,7 +670,7 @@
                   "no": "2.3.2.2"
                 },
                 {
-                  "label": "MEAM-Johan",
+                  "label": "MEAM-Jeamichel",
                   "done": false,
                   "unit": "",
                   "qty_est": "",
@@ -684,7 +684,7 @@
                   "no": "2.3.2.3"
                 },
                 {
-                  "label": "MEAM-Jeamichel",
+                  "label": "MEAM-Hung",
                   "done": false,
                   "unit": "",
                   "qty_est": "",
@@ -698,7 +698,7 @@
                   "no": "2.3.2.4"
                 },
                 {
-                  "label": "MEAM-Hung",
+                  "label": "MEAM-Javad",
                   "done": false,
                   "unit": "",
                   "qty_est": "",
@@ -712,7 +712,7 @@
                   "no": "2.3.2.5"
                 },
                 {
-                  "label": "MEAM-Javad",
+                  "label": "MEAM-Thomas",
                   "done": false,
                   "unit": "",
                   "qty_est": "",
@@ -726,20 +726,6 @@
                   "no": "2.3.2.6"
                 },
                 {
-                  "label": "MEAM-Thomas",
-                  "done": false,
-                  "unit": "",
-                  "qty_est": "",
-                  "qty_real": "",
-                  "price_unit": "",
-                  "total_price": 0,
-                  "date": "2025-06-21",
-                  "who": "Johan",
-                  "children": [],
-                  "collapsed": false,
-                  "no": "2.3.2.7"
-                },
-                {
                   "label": "MEAM-Vincent",
                   "done": false,
                   "unit": "",
@@ -751,7 +737,7 @@
                   "who": "Johan",
                   "children": [],
                   "collapsed": false,
-                  "no": "2.3.2.8"
+                  "no": "2.3.2.7"
                 },
                 {
                   "label": "MEAM-Jules",
@@ -765,7 +751,7 @@
                   "who": "Johan",
                   "children": [],
                   "collapsed": false,
-                  "no": "2.3.2.9"
+                  "no": "2.3.2.8"
                 }
               ],
               "collapsed": false,
