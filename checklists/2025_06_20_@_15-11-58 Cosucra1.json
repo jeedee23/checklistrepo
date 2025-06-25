@@ -4413,7 +4413,20 @@
           "total_price": 0,
           "date": "2025-06-25",
           "who": "Johan",
-          "children": [],
+          "children": [
+            {
+              "label": "The automation Philosophy",
+              "done": false,
+              "unit": "",
+              "qty_est": 0,
+              "qty_real": 0,
+              "price_unit": 0,
+              "date": "2025-06-25",
+              "who": "Johan",
+              "children": [],
+              "no": "4.7.1"
+            }
+          ],
           "collapsed": false,
           "no": "4.7"
         }
