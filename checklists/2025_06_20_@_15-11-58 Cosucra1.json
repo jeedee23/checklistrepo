@@ -434,7 +434,8 @@
               "imageFile": "2025_06_21_@_14-30-23_RASCI.png",
               "image": "2025_06_21_@_14-30-23_RASCI.png",
               "important": true,
-              "Resp": "Johan"
+              "Resp": "Johan",
+              "Acc": "Frédéric"
             },
             {
               "no": "2.1.4",
@@ -450,7 +451,8 @@
               "collapsed": false,
               "children": [],
               "important": true,
-              "Resp": "Cuong"
+              "Resp": "Cuong",
+              "Acc": "Frédéric"
             }
           ],
           "noteFile": "checklists/notes/2025_06_22_@_21-38-31.html"
@@ -569,7 +571,8 @@
               "collapsed": false,
               "no": "2.2.5",
               "important": true,
-              "Resp": "Frédéric"
+              "Resp": "Frédéric",
+              "Acc": "Johan"
             }
           ],
           "noteFile": "checklists/notes/2025_06_22_@_21-39-06.html",
@@ -600,7 +603,7 @@
               "total_price": 0,
               "date": "",
               "who": "Johan",
-              "collapsed": true,
+              "collapsed": false,
               "children": [
                 {
                   "label": "MEAM-Carlo Groffils",
@@ -810,11 +813,13 @@
                   "no": "2.3.2.8"
                 }
               ],
-              "collapsed": true,
+              "collapsed": false,
               "no": "2.3.2"
             }
           ],
-          "noteFile": "checklists/notes/2025_06_22_@_21-40-14.html"
+          "noteFile": "checklists/notes/2025_06_22_@_21-40-14.html",
+          "Resp": "Johan",
+          "Acc": "Frédéric"
         },
         {
           "no": "2.4",
