@@ -2838,7 +2838,7 @@
           "total_price": 0,
           "date": "",
           "who": "Johan",
-          "collapsed": false,
+          "collapsed": true,
           "children": [
             {
               "label": "Basis of Design (BOD)",
@@ -3335,7 +3335,7 @@
               "total_price": 0,
               "date": "",
               "who": "Johan",
-              "collapsed": false,
+              "collapsed": true,
               "children": [
                 {
                   "no": "4.3.9.1",
@@ -3364,7 +3364,7 @@
               "total_price": 0,
               "date": "",
               "who": "Johan",
-              "collapsed": false,
+              "collapsed": true,
               "children": [
                 {
                   "no": "4.3.10.1",
@@ -3393,7 +3393,7 @@
               "total_price": 0,
               "date": "",
               "who": "Johan",
-              "collapsed": false,
+              "collapsed": true,
               "children": [
                 {
                   "no": "4.3.11.1",
@@ -3422,7 +3422,7 @@
               "total_price": 0,
               "date": "",
               "who": "Johan",
-              "collapsed": false,
+              "collapsed": true,
               "children": [
                 {
                   "no": "4.3.12.1",
@@ -3453,7 +3453,7 @@
           "total_price": 0,
           "date": "",
           "who": "Johan",
-          "collapsed": true,
+          "collapsed": false,
           "children": [
             {
               "no": "4.4.1",
@@ -3471,77 +3471,6 @@
             },
             {
               "no": "4.4.2",
-              "label": "Stability analysis",
-              "done": false,
-              "unit": "",
-              "qty_est": "",
-              "qty_real": "",
-              "price_unit": "",
-              "total_price": 0,
-              "date": "",
-              "who": "Johan",
-              "collapsed": false,
-              "children": [
-                {
-                  "no": "4.4.2.1",
-                  "label": "Frame analysis (FAN)",
-                  "done": false,
-                  "unit": "",
-                  "qty_est": "",
-                  "qty_real": "",
-                  "price_unit": "",
-                  "total_price": 0,
-                  "date": "",
-                  "who": "Johan",
-                  "collapsed": false,
-                  "children": []
-                },
-                {
-                  "no": "4.4.2.2",
-                  "label": "Connection check (CCH)",
-                  "done": false,
-                  "unit": "",
-                  "qty_est": "",
-                  "qty_real": "",
-                  "price_unit": "",
-                  "total_price": 0,
-                  "date": "",
-                  "who": "Johan",
-                  "collapsed": false,
-                  "children": []
-                },
-                {
-                  "no": "4.4.2.3",
-                  "label": "Flange check (FCH)",
-                  "done": false,
-                  "unit": "",
-                  "qty_est": "",
-                  "qty_real": "",
-                  "price_unit": "",
-                  "total_price": 0,
-                  "date": "",
-                  "who": "Johan",
-                  "collapsed": false,
-                  "children": []
-                },
-                {
-                  "no": "4.4.2.4",
-                  "label": "Stability report (SRE)",
-                  "done": false,
-                  "unit": "",
-                  "qty_est": "",
-                  "qty_real": "",
-                  "price_unit": "",
-                  "total_price": 0,
-                  "date": "",
-                  "who": "Johan",
-                  "collapsed": false,
-                  "children": []
-                }
-              ]
-            },
-            {
-              "no": "4.4.3",
               "label": "Frame analysis (FAN)",
               "done": false,
               "unit": "",
@@ -3555,7 +3484,7 @@
               "children": []
             },
             {
-              "no": "4.4.4",
+              "no": "4.4.3",
               "label": "Connection check (CCH)",
               "done": false,
               "unit": "",
@@ -3569,7 +3498,7 @@
               "children": []
             },
             {
-              "no": "4.4.5",
+              "no": "4.4.4",
               "label": "Flange check (FCH)",
               "done": false,
               "unit": "",
@@ -3583,7 +3512,7 @@
               "children": []
             },
             {
-              "no": "4.4.6",
+              "no": "4.4.5",
               "label": "Stability report (SRE)",
               "done": false,
               "unit": "",
@@ -3596,7 +3525,7 @@
               "collapsed": false,
               "children": [
                 {
-                  "no": "4.4.6.1",
+                  "no": "4.4.5.1",
                   "label": "Frame analysis (FAN)",
                   "done": false,
                   "unit": "",
@@ -3610,7 +3539,7 @@
                   "children": []
                 },
                 {
-                  "no": "4.4.6.2",
+                  "no": "4.4.5.2",
                   "label": "Connection check (CCH)",
                   "done": false,
                   "unit": "",
@@ -3624,7 +3553,7 @@
                   "children": []
                 },
                 {
-                  "no": "4.4.6.3",
+                  "no": "4.4.5.3",
                   "label": "Flange check (FCH)",
                   "done": false,
                   "unit": "",
@@ -3638,7 +3567,7 @@
                   "children": []
                 },
                 {
-                  "no": "4.4.6.4",
+                  "no": "4.4.5.4",
                   "label": "Stability report (SRE)",
                   "done": false,
                   "unit": "",
@@ -3654,7 +3583,7 @@
               ]
             },
             {
-              "no": "4.4.7",
+              "no": "4.4.6",
               "label": "Single part drawing (PRD)",
               "done": false,
               "unit": "",
@@ -3668,7 +3597,7 @@
               "children": []
             },
             {
-              "no": "4.4.8",
+              "no": "4.4.7",
               "label": "Weld assembly drawing (WAS)",
               "done": false,
               "unit": "",
@@ -3682,7 +3611,7 @@
               "children": []
             },
             {
-              "no": "4.4.9",
+              "no": "4.4.8",
               "label": "Bolt assembly drawing (BAS)",
               "done": false,
               "unit": "",
@@ -3696,7 +3625,7 @@
               "children": []
             },
             {
-              "no": "4.4.10",
+              "no": "4.4.9",
               "label": "General arrangement drawing (GAD)",
               "done": false,
               "unit": "",
@@ -3710,7 +3639,7 @@
               "children": []
             },
             {
-              "no": "4.4.11",
+              "no": "4.4.10",
               "label": "Checkerplate layout (CHL)",
               "done": false,
               "unit": "",
@@ -3724,7 +3653,7 @@
               "children": []
             },
             {
-              "no": "4.4.12",
+              "no": "4.4.11",
               "label": "Structural layout (SLA)",
               "done": false,
               "unit": "",
@@ -3738,7 +3667,7 @@
               "children": []
             },
             {
-              "no": "4.4.13",
+              "no": "4.4.12",
               "label": "Anchor drawing (AND)",
               "done": false,
               "unit": "",
@@ -3752,7 +3681,7 @@
               "children": []
             },
             {
-              "no": "4.4.14",
+              "no": "4.4.13",
               "label": "Beam take off list (BTL)",
               "done": false,
               "unit": "",
@@ -3766,7 +3695,7 @@
               "children": []
             },
             {
-              "no": "4.4.15",
+              "no": "4.4.14",
               "label": "Assembly list (ALI)",
               "done": false,
               "unit": "",
@@ -3780,7 +3709,7 @@
               "children": []
             },
             {
-              "no": "4.4.16",
+              "no": "4.4.15",
               "label": "Saw list (SLI)",
               "done": false,
               "unit": "",
@@ -3794,7 +3723,7 @@
               "children": []
             },
             {
-              "no": "4.4.17",
+              "no": "4.4.16",
               "label": "Bolt list (BLI)",
               "done": false,
               "unit": "",
@@ -3808,7 +3737,7 @@
               "children": []
             },
             {
-              "no": "4.4.18",
+              "no": "4.4.17",
               "label": "Grating layout (GRL)",
               "done": false,
               "unit": "",
@@ -3822,7 +3751,7 @@
               "children": []
             },
             {
-              "no": "4.4.19",
+              "no": "4.4.18",
               "label": "Bill of material (BOM)",
               "done": false,
               "unit": "",
@@ -3836,7 +3765,7 @@
               "children": []
             },
             {
-              "no": "4.4.20",
+              "no": "4.4.19",
               "label": "DWG files",
               "done": false,
               "unit": "",
@@ -3850,7 +3779,7 @@
               "children": []
             },
             {
-              "no": "4.4.21",
+              "no": "4.4.20",
               "label": "DXF files",
               "done": false,
               "unit": "",
@@ -3864,7 +3793,7 @@
               "children": []
             },
             {
-              "no": "4.4.22",
+              "no": "4.4.21",
               "label": "STEP files",
               "done": false,
               "unit": "",
@@ -3878,7 +3807,7 @@
               "children": []
             },
             {
-              "no": "4.4.23",
+              "no": "4.4.22",
               "label": "IGES files",
               "done": false,
               "unit": "",
@@ -3892,7 +3821,7 @@
               "children": []
             },
             {
-              "no": "4.4.24",
+              "no": "4.4.23",
               "label": "SAT files",
               "done": false,
               "unit": "",
@@ -3906,7 +3835,7 @@
               "children": []
             },
             {
-              "no": "4.4.25",
+              "no": "4.4.24",
               "label": "Declaration of performance",
               "done": false,
               "unit": "",
@@ -3920,7 +3849,7 @@
               "children": []
             },
             {
-              "no": "4.4.26",
+              "no": "4.4.25",
               "label": "Docs for information",
               "done": false,
               "unit": "",
@@ -3933,7 +3862,7 @@
               "collapsed": false,
               "children": [
                 {
-                  "no": "4.4.26.1",
+                  "no": "4.4.25.1",
                   "label": "38xxxx-ST.xxx-DFI-Rxx",
                   "done": false,
                   "unit": "",
@@ -3949,7 +3878,7 @@
               ]
             },
             {
-              "no": "4.4.27",
+              "no": "4.4.26",
               "label": "Docs for quotation",
               "done": false,
               "unit": "",
@@ -3962,7 +3891,7 @@
               "collapsed": false,
               "children": [
                 {
-                  "no": "4.4.27.1",
+                  "no": "4.4.26.1",
                   "label": "38xxxx-ST.xxx-DFQ-Rxx",
                   "done": false,
                   "unit": "",
@@ -3978,7 +3907,7 @@
               ]
             },
             {
-              "no": "4.4.28",
+              "no": "4.4.27",
               "label": "Docs for production",
               "done": false,
               "unit": "",
@@ -3991,7 +3920,7 @@
               "collapsed": false,
               "children": [
                 {
-                  "no": "4.4.28.1",
+                  "no": "4.4.27.1",
                   "label": "38xxxx-ST.xxx-DFP-Rxx",
                   "done": false,
                   "unit": "",
@@ -4007,7 +3936,7 @@
               ]
             },
             {
-              "no": "4.4.29",
+              "no": "4.4.28",
               "label": "Docs for closing",
               "done": false,
               "unit": "",
@@ -4020,7 +3949,7 @@
               "collapsed": false,
               "children": [
                 {
-                  "no": "4.4.29.1",
+                  "no": "4.4.28.1",
                   "label": "38xxxx-ST.xxx-DFC-Rxx",
                   "done": false,
                   "unit": "",
