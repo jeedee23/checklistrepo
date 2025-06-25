@@ -4395,20 +4395,7 @@
               "total_price": 0,
               "date": "2025-06-25",
               "who": "Johan",
-              "children": [
-                {
-                  "label": "Electrical sub-contractor",
-                  "done": false,
-                  "unit": "",
-                  "qty_est": 0,
-                  "qty_real": 0,
-                  "price_unit": 0,
-                  "date": "2025-06-25",
-                  "who": "Johan",
-                  "children": [],
-                  "no": "4.6.3.1"
-                }
-              ],
+              "children": [],
               "collapsed": false,
               "no": "4.6.3"
             }
