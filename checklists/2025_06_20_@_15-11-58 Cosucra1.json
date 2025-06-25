@@ -631,7 +631,7 @@
               ]
             },
             {
-              "label": "Non Principle Stakeholders",
+              "label": "Non Principal Stakeholders",
               "done": false,
               "unit": "",
               "qty_est": "",
@@ -656,7 +656,7 @@
                   "no": "2.3.2.1"
                 },
                 {
-                  "label": "Eleantis",
+                  "label": "Eleantis-Jurgen",
                   "done": false,
                   "unit": "",
                   "qty_est": "",
