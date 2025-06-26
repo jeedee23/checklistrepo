@@ -207,7 +207,34 @@
               "total_price": 0,
               "date": "2025-06-24",
               "who": "Johan",
-              "children": [],
+              "children": [
+                {
+                  "label": "Colors in PFD",
+                  "done": false,
+                  "unit": "",
+                  "qty_est": 0,
+                  "qty_real": 0,
+                  "price_unit": 0,
+                  "date": "2025-06-26",
+                  "who": "Cuong",
+                  "children": [],
+                  "no": "1.3.3.1"
+                },
+                {
+                  "label": "colors in BOD",
+                  "done": false,
+                  "unit": "",
+                  "qty_est": "",
+                  "qty_real": "",
+                  "price_unit": "",
+                  "total_price": 0,
+                  "date": "2025-06-26",
+                  "who": "Cuong",
+                  "children": [],
+                  "collapsed": false,
+                  "no": "1.3.3.2"
+                }
+              ],
               "collapsed": false,
               "no": "1.3.3"
             },
