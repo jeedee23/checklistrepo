@@ -1,57 +1,86 @@
 {
+  "version": "2.2",
+  "updatedAt": "2025-06-26T20:45:00Z",
+  "updatedBy": "Johan",
+
   "users": [
     {
-      "name": "Johan",
+      "id": "uuid-1234-5678",
+      "username": "Johan",
+      "fullName": "Johan Degraeve",
+      "email": "johan@aanscharius.com",
+      "phoneNumber": "+32 489 947 935",
+      "company": "AAVDS",
+      "companyAddress": {
+        "street": "Veenstraat 28",
+        "postalCode": "8470",
+        "city": "Gistel",
+        "country": "Belgium"
+      },
       "role": "admin",
-      "access": "all",
-      "password": "0519",
-      "passwordHash": "$2a$10$Hji6EkMcLOMSrfM2eyDeuuwtGkRPktNcYTSkGIP0zoVCBq8FbHjVu",
+      "jobFunction": "Specialist",
+
+      "defaultAccessLevel": 0,
+
+      "passwordHash": "$2b$10$XXXXXXXXXXXXXXXXXXXXXXXXXXXXX",
       "token": "8ed21f347a8b49b6bdf6d73ca62e0cb2",
-      "email": "johan@example.com",
-      "created": "2025-05-09T08:00:00Z",
+      "twoFactorMethod": "email",
+
       "checklists": [
-        "2025_04_20_@_23-34-52 MEAM Intelligent SSR.json",
-        "2025_04_27_@_16-13-33_DDV.data.json",
-        "2025_05_03_@_12-49-45_DDV_LATEST.json",
-        "2025_05_04_@_12-03-05_checklist_tester.json"
-      ]
-    },
-    {
-      "name": "Hung",
-      "role": "editor",
-      "access": "limited",
-      "password": "M3AMHung",
-      "email": "Hung.Bui@meam.be",
-      "token": "placeholder_hung_token",
-      "created": "2025-05-10T08:00:00Z",
-      "checklists": [
-        "2025_04_27_@_16-13-33_DDV.data.json"
-      ]
-    },
-    {
-      "name": "Frédéric",
-      "passwordHash": "",
-      "token": "988bb5e2ddc351d2e56b9cf67512eceb"
-    },
-    {
-      "name": "?",
-      "passwordHash": "",
-      "token": "none"
-    },
-       {
-      "name": "Cuong",
-      "role": "admin",
-      "access": "all",
-      "password": "0519",
-      "passwordHash": "$2a$10$Hji6EkMcLOMSrfM2eyDeuuwtGkRPktNcYTSkGIP0zoVCBq8FbHjVu",
-      "token": "8ed21f347a8b49b6bdf6d73ca62e0cb2",
-      "email": "johan@example.com",
-      "created": "2025-05-09T08:00:00Z",
-      "checklists": [
-        "2025_04_20_@_23-34-52 MEAM Intelligent SSR.json",
-        "2025_04_27_@_16-13-33_DDV.data.json",
-        "2025_05_03_@_12-49-45_DDV_LATEST.json",
-        "2025_05_04_@_12-03-05_checklist_tester.json"
+        {
+          "id": "2025_04_27_@_16-13-33_DDV.data.json",
+          "displayName": "DDV.data",
+          "accessLevel": 0,
+          "lastAccessed": null
+        },
+        {
+          "id": "2025_05_03_@_21-30-01_newtester.json",
+          "displayName": "newtester",
+          "accessLevel": 0,
+          "lastAccessed": null
+        },
+        {
+          "id": "2025_05_04_@_12-03-05_checklist_tester.json",
+          "displayName": "checklist tester",
+          "accessLevel": 0,
+          "lastAccessed": null
+        },
+        {
+          "id": "2025_05_12_@_20-24-54_Wetrok_robot.json",
+          "displayName": "Wetrok robot",
+          "accessLevel": 0,
+          "lastAccessed": null
+        },
+        {
+          "id": "2025_05_18_@_10-05-52 Checklist Project.json",
+          "displayName": "Checklist Project",
+          "accessLevel": 0,
+          "lastAccessed": null
+        },
+        {
+          "id": "2025_06_05_@_21-33-30_SSR_IntelligentV2.json",
+          "displayName": "SSR IntelligentV2",
+          "accessLevel": 0,
+          "lastAccessed": null
+        },
+        {
+          "id": "2025_06_20_@_15-11-58 Cosucra1.json",
+          "displayName": "Cosucra1",
+          "accessLevel": 0,
+          "lastAccessed": null
+        },
+        {
+          "id": "2025_06_21_@_22-18-04_testlist.json",
+          "displayName": "testlist",
+          "accessLevel": 0,
+          "lastAccessed": null
+        },
+        {
+          "id": "2025_06_21_@_22-22-34_test.json",
+          "displayName": "test",
+          "accessLevel": 0,
+          "lastAccessed": null
+        }
       ]
     }
   ]
