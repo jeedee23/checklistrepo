@@ -1,8 +1,7 @@
 {
   "version": "2.2",
-  "updatedAt": "2025-06-26T20:45:00Z",
+  "updatedAt": "2025-06-26T20:02:44.713Z",
   "updatedBy": "Johan",
-
   "users": [
     {
       "id": "uuid-1234-5678",
@@ -19,13 +18,10 @@
       },
       "role": "admin",
       "jobFunction": "Specialist",
-
       "defaultAccessLevel": 0,
-
       "passwordHash": "$2b$10$XXXXXXXXXXXXXXXXXXXXXXXXXXXXX",
       "token": "8ed21f347a8b49b6bdf6d73ca62e0cb2",
       "twoFactorMethod": "email",
-
       "checklists": [
         {
           "id": "2025_04_27_@_16-13-33_DDV.data.json",
@@ -67,7 +63,7 @@
           "id": "2025_06_20_@_15-11-58 Cosucra1.json",
           "displayName": "Cosucra1",
           "accessLevel": 0,
-          "lastAccessed": null
+          "lastAccessed": "2025-06-26T20:02:44.713Z"
         },
         {
           "id": "2025_06_21_@_22-18-04_testlist.json",
