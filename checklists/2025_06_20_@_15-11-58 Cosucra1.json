@@ -1,4 +1,3 @@
-
 {
   "title": "Cosucra Project structure",
   "collaborators": [
@@ -320,7 +319,7 @@
       "children": [
         {
           "no": "2.1",
-          "label": "Integration",
+          "label": "Integration.",
           "done": false,
           "unit": "",
           "qty_est": "",
