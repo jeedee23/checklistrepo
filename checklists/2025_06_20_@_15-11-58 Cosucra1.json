@@ -5242,5 +5242,13 @@
         }
       ]
     }
+  ],
+  "files": [
+    {
+      "name": "RASCI.png",
+      "path": "checklists/files/RASCI.png",
+      "uploadedBy": "Johan",
+      "uploadedAt": "2025-06-26T20:31:58.481Z"
+    }
   ]
 }
