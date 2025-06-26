@@ -1,0 +1,83 @@
+{
+  "version": "2.2",
+  "updatedAt": "2025-06-26T19:53:59.956Z",
+  "updatedBy": "Johan",
+  "users": [
+    {
+      "id": "uuid-1234-5678",
+      "username": "Johan",
+      "fullName": "Johan Degraeve",
+      "email": "johan@aanscharius.com",
+      "phoneNumber": "+32 489 947 935",
+      "company": "AAVDS",
+      "companyAddress": {
+        "street": "Veenstraat 28",
+        "postalCode": "8470",
+        "city": "Gistel",
+        "country": "Belgium"
+      },
+      "role": "admin",
+      "jobFunction": "Specialist",
+      "defaultAccessLevel": 0,
+      "passwordHash": "$2b$10$XXXXXXXXXXXXXXXXXXXXXXXXXXXXX",
+      "token": "8ed21f347a8b49b6bdf6d73ca62e0cb2",
+      "twoFactorMethod": "email",
+      "checklists": [
+        {
+          "id": "2025_04_27_@_16-13-33_DDV.data.json",
+          "displayName": "DDV.data",
+          "accessLevel": 0,
+          "lastAccessed": null
+        },
+        {
+          "id": "2025_05_03_@_21-30-01_newtester.json",
+          "displayName": "newtester",
+          "accessLevel": 0,
+          "lastAccessed": null
+        },
+        {
+          "id": "2025_05_04_@_12-03-05_checklist_tester.json",
+          "displayName": "checklist tester",
+          "accessLevel": 0,
+          "lastAccessed": null
+        },
+        {
+          "id": "2025_05_12_@_20-24-54_Wetrok_robot.json",
+          "displayName": "Wetrok robot",
+          "accessLevel": 0,
+          "lastAccessed": null
+        },
+        {
+          "id": "2025_05_18_@_10-05-52 Checklist Project.json",
+          "displayName": "Checklist Project",
+          "accessLevel": 0,
+          "lastAccessed": null
+        },
+        {
+          "id": "2025_06_05_@_21-33-30_SSR_IntelligentV2.json",
+          "displayName": "SSR IntelligentV2",
+          "accessLevel": 0,
+          "lastAccessed": null
+        },
+        {
+          "id": "2025_06_20_@_15-11-58 Cosucra1.json",
+          "displayName": "Cosucra1",
+          "accessLevel": 0,
+          "lastAccessed": null
+        },
+        {
+          "id": "2025_06_21_@_22-18-04_testlist.json",
+          "displayName": "testlist",
+          "accessLevel": 0,
+          "lastAccessed": null
+        },
+        {
+          "id": "2025_06_21_@_22-22-34_test.json",
+          "displayName": "test",
+          "accessLevel": 0,
+          "lastAccessed": null
+        }
+      ]
+    }
+  ]
+}
