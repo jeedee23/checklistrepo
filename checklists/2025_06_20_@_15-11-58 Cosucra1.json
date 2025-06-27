@@ -231,7 +231,15 @@
                   "date": "2025-06-26",
                   "who": "Cuong",
                   "children": [],
-                  "no": "1.3.3.1"
+                  "no": "1.3.3.1",
+                  "files": [
+                    {
+                      "name": "IMG_20240523_201628_837.jpg",
+                      "path": "checklists/files/IMG_20240523_201628_837.jpg",
+                      "uploadedBy": "Johan",
+                      "uploadedAt": "2025-06-27T06:18:50.902Z"
+                    }
+                  ]
                 },
                 {
                   "label": "colors in BOD",
