@@ -318,7 +318,15 @@
                 }
               ],
               "no": "1.5.1",
-              "collapsed": false
+              "collapsed": false,
+              "files": [
+                {
+                  "name": "P019007-1.5.1-kick-off-meeting.pdf",
+                  "path": "checklists/files/P019007-1.5.1-kick-off-meeting.pdf",
+                  "uploadedBy": "Johan",
+                  "uploadedAt": "2025-06-27T09:00:50.994Z"
+                }
+              ]
             }
           ],
           "collapsed": false,
