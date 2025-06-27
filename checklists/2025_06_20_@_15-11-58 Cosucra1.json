@@ -373,7 +373,7 @@
               "no": "1.6.2"
             },
             {
-              "label": "Study of influence on the client's electrical network",
+              "label": "Pre-Studies",
               "done": false,
               "unit": "",
               "qty_est": "",
@@ -382,7 +382,20 @@
               "total_price": 0,
               "date": "2025-06-27",
               "who": "Johan",
-              "children": [],
+              "children": [
+                {
+                  "label": "Study of influence on the client's electrical network",
+                  "done": false,
+                  "unit": "",
+                  "qty_est": 0,
+                  "qty_real": 0,
+                  "price_unit": 0,
+                  "date": "2025-06-27",
+                  "who": "Johan",
+                  "children": [],
+                  "no": "1.6.3.1"
+                }
+              ],
               "collapsed": false,
               "no": "1.6.3"
             }
