@@ -176,7 +176,8 @@
                   "date": "2025-06-26",
                   "who": "Johan",
                   "children": [],
-                  "no": "1.3.1.1"
+                  "no": "1.3.1.1",
+                  "collapsed": false
                 }
               ],
               "no": "1.3.1",
@@ -239,7 +240,8 @@
                       "uploadedBy": "Johan",
                       "uploadedAt": "2025-06-27T06:18:50.902Z"
                     }
-                  ]
+                  ],
+                  "collapsed": false
                 },
                 {
                   "label": "colors in BOD",
@@ -329,7 +331,7 @@
               ]
             }
           ],
-          "collapsed": false,
+          "collapsed": true,
           "no": "1.5"
         },
         {
@@ -353,7 +355,8 @@
               "date": "2025-06-27",
               "who": "Johan",
               "children": [],
-              "no": "1.6.1"
+              "no": "1.6.1",
+              "collapsed": false
             },
             {
               "label": "pre-simulations",
@@ -370,7 +373,7 @@
               "no": "1.6.2"
             },
             {
-              "label": "other?",
+              "label": "Study of influence on the client's electrical network",
               "done": false,
               "unit": "",
               "qty_est": "",
