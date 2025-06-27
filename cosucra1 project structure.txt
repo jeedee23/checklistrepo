@@ -1,4 +1,4 @@
-Title = Cosucra Project structure
+Title =Cosucra Project structure
 1	10-PM.001 - PM
 1.1	100. Integration
 1.1.1	01. Project Description (PRN)
