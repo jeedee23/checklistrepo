@@ -2850,7 +2850,8 @@
               ]
             }
           ],
-          "noteFile": "checklists/notes/2025_06_30_@_21-48-00.html"
+          "noteFile": "checklists/notes/2025_06_30_@_21-48-00.html",
+          "_pendingNoteSha": null
         },
         {
           "no": "4.2",
