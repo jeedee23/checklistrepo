@@ -314,7 +314,7 @@
       "total_price": 0,
       "date": "",
       "who": "Frédéric",
-      "collapsed": true,
+      "collapsed": false,
       "children": [
         {
           "no": "2.1",
@@ -327,7 +327,7 @@
           "total_price": 0,
           "date": "",
           "who": "Frédéric",
-          "collapsed": true,
+          "collapsed": false,
           "children": [
             {
               "no": "2.1.1",
@@ -373,7 +373,7 @@
               "who": "Johan",
               "children": [
                 {
-                  "label": "Responsibles (here comes the link to the list)",
+                  "label": "note",
                   "done": false,
                   "unit": "",
                   "qty_est": 0,
@@ -383,7 +383,8 @@
                   "who": "Johan",
                   "children": [],
                   "no": "2.1.3.1",
-                  "collapsed": false
+                  "collapsed": false,
+                  "noteFile": "checklists/notes/2025_06_30_@_22-11-37.html"
                 },
                 {
                   "label": "Accountables (here comes the link to the list)",
@@ -428,7 +429,7 @@
                   "no": "2.1.3.4"
                 }
               ],
-              "collapsed": true,
+              "collapsed": false,
               "no": "2.1.3",
               "imageFile": "2025_06_21_@_14-30-23_RASCI.png",
               "image": "2025_06_21_@_14-30-23_RASCI.png",
