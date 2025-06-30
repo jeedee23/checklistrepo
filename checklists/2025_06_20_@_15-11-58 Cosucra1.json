@@ -2475,7 +2475,8 @@
       ],
       "important": true,
       "noteFile": "checklists/notes/2025_06_22_@_21-35-48.html",
-      "Resp": "Frédéric"
+      "Resp": "Frédéric",
+      "_pendingNoteSha": null
     },
     {
       "no": "3",
@@ -2521,7 +2522,8 @@
           "noteFile": "checklists/notes/2025_06_23_@_22-12-18.html"
         }
       ],
-      "noteFile": "checklists/notes/2025_06_23_@_22-08-33.html"
+      "noteFile": "checklists/notes/2025_06_23_@_22-08-33.html",
+      "_pendingNoteSha": null
     },
     {
       "no": "4",
