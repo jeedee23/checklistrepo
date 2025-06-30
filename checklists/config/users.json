@@ -19,7 +19,7 @@
       "role": "admin",
       "jobFunction": "Specialist",
       "defaultAccessLevel": 0,
-      "passwordHash": "$2b$10$XXXXXXXXXXXXXXXXXXXXXXXXXXXXX",
+      "passwordHash": "",
       "token": "8ed21f347a8b49b6bdf6d73ca62e0cb2",
       "twoFactorMethod": "email",
       "checklists": [
