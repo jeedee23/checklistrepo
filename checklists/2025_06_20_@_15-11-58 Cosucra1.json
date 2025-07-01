@@ -2,7 +2,7 @@
   "items": [
     {
       "no": "1",
-      "label": "Introduction",
+      "label": "Introduction.",
       "done": false,
       "unit": "",
       "qty_est": "",
@@ -5999,7 +5999,7 @@
     "Cuong"
   ],
   "title": "Cosucra Project structure",
-  "lastSave": "2025_07_01_@_22-00-28",
+  "lastSave": "2025_07_01_@_22-25-55",
   "unitChoices": [
     "kg",
     "ton",
