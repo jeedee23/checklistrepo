@@ -858,7 +858,7 @@
       "children": [
         {
           "no": "2.1",
-          "label": "Integration.",
+          "label": "Integration",
           "done": false,
           "unit": "",
           "qty_est": "",
@@ -5999,7 +5999,7 @@
     "Cuong"
   ],
   "title": "Cosucra Project structure",
-  "lastSave": "2025_07_01_@_22-00-00",
+  "lastSave": "2025_07_01_@_22-00-28",
   "unitChoices": [
     "kg",
     "ton",
