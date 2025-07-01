@@ -301,7 +301,6 @@
         }
       ],
       "collapsed": true,
-      "no": "1",
       "important": true
     },
     {
@@ -5302,7 +5301,29 @@
     },
     "rows": {
       "height": 30
-    }
+    },
+    "columnOrder": [
+      "16",
+      "17",
+      "18",
+      "19",
+      "20",
+      "done",
+      "no",
+      "unit",
+      "qty_est",
+      "qty_real",
+      "price_unit",
+      "total_price",
+      "date",
+      "who",
+      "label",
+      "Resp",
+      "Acc",
+      "Support",
+      "Consult",
+      "Informed"
+    ]
   },
   "files": [
     {
@@ -5325,7 +5346,7 @@
     "Cuong"
   ],
   "title": "Cosucra Project structure",
-  "lastSave": "2025_06_30_@_22-11-49",
+  "lastSave": "2025_07_01_@_17-59-41",
   "unitChoices": [
     "kg",
     "ton",
