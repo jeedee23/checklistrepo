@@ -45,28 +45,28 @@
             },
             {
               "no": "1.1.4",
-              "label": "BBS – Bar Bending Schedule - Table listing rebar sizes, lengths, and bending shapes.",
-              "done": false,
-              "who": "Johan",
-              "date": "2025-07-01T21:09:16"
-            },
-            {
-              "no": "1.1.5",
               "label": "BCO – Budget Estimate Comparison - Side-by-side comparison of estimated vs. updated budget.",
               "done": false,
               "who": "Johan",
               "date": "2025-07-01T21:09:16"
             },
             {
-              "no": "1.1.6",
+              "no": "1.1.5",
               "label": "BEO – Budget Estimate Overview - General summary of project cost estimates.",
               "done": false,
               "who": "Johan",
               "date": "2025-07-01T21:09:16"
             },
             {
-              "no": "1.1.7",
+              "no": "1.1.6",
               "label": "BEP – BIM Execution Plan - Strategy for Building Information Modeling use on the project.",
+              "done": false,
+              "who": "Johan",
+              "date": "2025-07-01T21:09:16"
+            },
+            {
+              "no": 0,
+              "label": "BBS – Bar Bending Schedule - Table listing rebar sizes, lengths, and bending shapes.",
               "done": false,
               "who": "Johan",
               "date": "2025-07-01T21:09:16"
@@ -6062,7 +6062,7 @@
     "Cuong"
   ],
   "title": "Cosucra Project structure",
-  "lastSave": "2025_07_02_@_18-23-52",
+  "lastSave": "2025_07_02_@_19-26-47",
   "unitChoices": [
     "kg",
     "ton",
