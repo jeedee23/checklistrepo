@@ -555,8 +555,15 @@
               "date": "2025-07-01T21:09:16"
             },
             {
-              "no": "1.1.78",
+              "no": "1.1.77",
               "label": "s – Supply information (provide data or documentation).",
+              "done": false,
+              "who": "Johan",
+              "date": "2025-07-01T21:09:16"
+            },
+            {
+              "no": "1.1.78",
+              "label": "EPCM - Engineering, Procurement & Construction Management",
               "done": false,
               "who": "Johan",
               "date": "2025-07-01T21:09:16"
@@ -1078,7 +1085,7 @@
                   "who": "Johan",
                   "children": [],
                   "collapsed": false,
-                  "no": "2.2.2.4"
+                  "no": "2.2.2.3"
                 },
                 {
                   "label": "Electricity",
@@ -1092,7 +1099,7 @@
                   "who": "Johan",
                   "children": [],
                   "collapsed": false,
-                  "no": "2.2.2.3"
+                  "no": "2.2.2.4"
                 }
               ],
               "important": true,
@@ -1144,28 +1151,28 @@
               "Acc": "Johan"
             },
             {
-              "no": "1.1.77",
+              "no": "2.2.6",
               "label": "s – Supply information (provide data or documentation).",
               "done": false,
               "who": "Johan",
               "date": "2025-07-01T21:09:16"
             },
             {
-              "no": "1.1.77",
+              "no": "2.2.7",
               "label": "s – Supply information (provide data or documentation).",
               "done": false,
               "who": "Johan",
               "date": "2025-07-01T21:09:16"
             },
             {
-              "no": "1.1.77",
+              "no": "2.2.8",
               "label": "s – Supply information (provide data or documentation).",
               "done": false,
               "who": "Johan",
               "date": "2025-07-01T21:09:16"
             },
             {
-              "no": "1.1.77",
+              "no": "2.2.9",
               "label": "s – Supply information (provide data or documentation).",
               "done": false,
               "who": "Johan",
@@ -6055,7 +6062,7 @@
     "Cuong"
   ],
   "title": "Cosucra Project structure",
-  "lastSave": "2025_07_02_@_17-43-05",
+  "lastSave": "2025_07_02_@_18-23-52",
   "unitChoices": [
     "kg",
     "ton",
