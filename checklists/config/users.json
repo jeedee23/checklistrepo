@@ -30,6 +30,86 @@
           "lastAccessed": "2025_07_01_@_22-25-55"
         }
       ]
-    }
+    },
+      {
+      "id": "uuid-1234-5679",
+      "username": "Carlo",
+      "fullName": "Carlo Groffils",
+      "email": "Carlo.Groffils@meam.be",
+      "phoneNumber": "your phonenumber",
+      "company": "MEAM",
+      "companyAddress": {
+        "street": "Centrum Zuid 3060",
+        "postalCode": "3530",
+        "city": "Houthalen-Helchteren",
+        "country": "Belgium"
+      },
+      "role": "user",
+      "jobFunction": "CEO",
+      "defaultAccessLevel": 0,
+      "passwordHash": "",
+      "token": "8ed21f347a8b49b6bdf6d73ca62e0cb2",
+      "twoFactorMethod": "email",
+      "checklists": [
+               {
+          "id": "2025_06_20_@_15-11-58 Cosucra1.json",
+          "displayName": "Cosucra1",
+          "accessLevel": 0,
+          "lastAccessed": "2025_07_01_@_22-25-55"
+        },
+            {
+      "id": "uuid-1234-5679",
+      "username": "Frédéric",
+      "fullName": "Frédéric de Meulemeester",
+      "email": "Frédéric.demeulemeester@meam.be",
+      "phoneNumber": "your phonenumber",
+      "company": "MEAM",
+      "companyAddress": {
+        "street": "Centrum Zuid 3060",
+        "postalCode": "3530",
+        "city": "Houthalen-Helchteren",
+        "country": "Belgium"
+      },
+      "role": "admin",
+      "jobFunction": "COO",
+      "defaultAccessLevel": 0,
+      "passwordHash": "",
+      "token": "8ed21f347a8b49b6bdf6d73ca62e0cb2",
+      "twoFactorMethod": "email",
+      "checklists": [
+               {
+          "id": "2025_06_20_@_15-11-58 Cosucra1.json",
+          "displayName": "Cosucra1",
+          "accessLevel": 0,
+          "lastAccessed": "2025_07_01_@_22-25-55"
+        }
+      ]
+    },
+            {
+      "id": "uuid-1234-5679",
+      "username": "Cuong",
+      "fullName": "Cuong Minh Tran",
+      "email": "minhcuong.tran@meam.be",
+      "phoneNumber": "your phonenumber",
+      "company": "MEAM",
+      "companyAddress": {
+        "street": "Centrum Zuid 3060",
+        "postalCode": "3530",
+        "city": "Houthalen-Helchteren",
+        "country": "Belgium"
+      },
+      "role": "user",
+      "jobFunction": "",
+      "defaultAccessLevel": 0,
+      "passwordHash": "",
+      "token": "8ed21f347a8b49b6bdf6d73ca62e0cb2",
+      "twoFactorMethod": "email",
+      "checklists": [
+               {
+          "id": "2025_06_20_@_15-11-58 Cosucra1.json",
+          "displayName": "Cosucra1",
+          "accessLevel": 0,
+          "lastAccessed": "2025_07_01_@_22-25-55"
+        }
   ]
 }
