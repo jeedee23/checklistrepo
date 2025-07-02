@@ -1,6 +1,6 @@
 {
   "title": "Ddv Checklist",
-  "lastSave": "2025_06_29_@_17-07-08",
+  "lastSave": "2025_07_02_@_16-11-26",
   "collaborators": [
     "Johan",
     "Hung",
@@ -65,7 +65,82 @@
     },
     "rows": {
       "height": 30
-    }
+    },
+    "columnOrder": [
+      "done",
+      "no",
+      "label",
+      "unit",
+      "qty_est",
+      "qty_real",
+      "price_unit",
+      "total_price",
+      "date",
+      "who"
+    ],
+    "layouts": [
+      {
+        "layoutName": "lastused",
+        "columns": {
+          "done": {
+            "width": 40,
+            "visible": true
+          },
+          "no": {
+            "width": 40,
+            "visible": true
+          },
+          "label": {
+            "width": 776,
+            "visible": true
+          },
+          "unit": {
+            "width": 23,
+            "visible": false
+          },
+          "qty_est": {
+            "width": 53,
+            "visible": false
+          },
+          "qty_real": {
+            "width": 51,
+            "visible": false
+          },
+          "price_unit": {
+            "width": 48,
+            "visible": false
+          },
+          "total_price": {
+            "width": 47,
+            "visible": false
+          },
+          "date": {
+            "width": 174,
+            "visible": true
+          },
+          "who": {
+            "width": 100,
+            "visible": true
+          }
+        },
+        "rows": {
+          "height": 30
+        },
+        "columnOrder": [
+          "done",
+          "no",
+          "label",
+          "unit",
+          "qty_est",
+          "qty_real",
+          "price_unit",
+          "total_price",
+          "date",
+          "who"
+        ]
+      }
+    ],
+    "activeLayoutIndex": 0
   },
   "items": [
     {
