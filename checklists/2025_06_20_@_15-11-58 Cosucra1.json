@@ -1114,6 +1114,20 @@
               "important": true,
               "Resp": "Frédéric",
               "Acc": "Johan"
+            },
+            {
+              "no": "1.1.77",
+              "label": "s – Supply information (provide data or documentation).",
+              "done": false,
+              "who": "Johan",
+              "date": "2025-07-01T21:09:16"
+            },
+            {
+              "no": "1.1.77",
+              "label": "s – Supply information (provide data or documentation).",
+              "done": false,
+              "who": "Johan",
+              "date": "2025-07-01T21:09:16"
             }
           ],
           "noteFile": "checklists/notes/2025_06_22_@_21-39-06.html",
@@ -5999,7 +6013,7 @@
     "Cuong"
   ],
   "title": "Cosucra Project structure",
-  "lastSave": "2025_07_02_@_14-50-22",
+  "lastSave": "2025_07_02_@_16-46-15",
   "unitChoices": [
     "kg",
     "ton",
