@@ -1,6 +1,6 @@
 {
   "title": "Cosucra Project structure",
-  "lastSave": "2025_07_03_@_18-33-59",
+  "lastSave": "2025_07_03_@_18-45-03",
   "unitChoices": [
     "kg",
     "ton",
@@ -122,7 +122,119 @@
       ],
       "rows": {
         "height": 30
-      }
+      },
+      "layouts": [
+        {
+          "layoutName": "lastused",
+          "columns": {
+            "16": {
+              "width": 100,
+              "visible": false
+            },
+            "17": {
+              "width": 100,
+              "visible": false
+            },
+            "18": {
+              "width": 100,
+              "visible": false
+            },
+            "19": {
+              "width": 100,
+              "visible": false
+            },
+            "20": {
+              "width": 100,
+              "visible": false
+            },
+            "done": {
+              "width": 37,
+              "visible": true
+            },
+            "no": {
+              "width": 73,
+              "visible": true
+            },
+            "unit": {
+              "width": 23,
+              "visible": false
+            },
+            "qty_est": {
+              "width": 53,
+              "visible": false
+            },
+            "qty_real": {
+              "width": 51,
+              "visible": false
+            },
+            "price_unit": {
+              "width": 48,
+              "visible": false
+            },
+            "total_price": {
+              "width": 47,
+              "visible": false
+            },
+            "date": {
+              "width": 174,
+              "visible": false
+            },
+            "who": {
+              "width": 100,
+              "visible": false
+            },
+            "label": {
+              "width": 466,
+              "visible": true
+            },
+            "Resp": {
+              "width": 74,
+              "visible": true
+            },
+            "Acc": {
+              "width": 70,
+              "visible": true
+            },
+            "Support": {
+              "width": 69,
+              "visible": true
+            },
+            "Consult": {
+              "width": 74,
+              "visible": true
+            },
+            "Informed": {
+              "width": 80,
+              "visible": true
+            }
+          },
+          "rows": {
+            "height": 30
+          },
+          "columnOrder": [
+            "16",
+            "17",
+            "18",
+            "19",
+            "20",
+            "done",
+            "no",
+            "unit",
+            "qty_est",
+            "qty_real",
+            "price_unit",
+            "total_price",
+            "date",
+            "who",
+            "label",
+            "Resp",
+            "Acc",
+            "Support",
+            "Consult",
+            "Informed"
+          ]
+        }
+      ]
     }
   ],
   "files": [
@@ -6048,18 +6160,227 @@
     }
   ],
   "layout": {
-    "columns": {},
-    "columnOrder": [],
+    "layoutName": "Default",
+    "activeLayoutIndex": 0,
+    "columns": {
+      "16": {
+        "width": 100,
+        "visible": false
+      },
+      "17": {
+        "width": 100,
+        "visible": false
+      },
+      "18": {
+        "width": 100,
+        "visible": false
+      },
+      "19": {
+        "width": 100,
+        "visible": false
+      },
+      "20": {
+        "width": 100,
+        "visible": false
+      },
+      "done": {
+        "width": 37,
+        "visible": true
+      },
+      "no": {
+        "width": 73,
+        "visible": true
+      },
+      "unit": {
+        "width": 23,
+        "visible": false
+      },
+      "qty_est": {
+        "width": 53,
+        "visible": false
+      },
+      "qty_real": {
+        "width": 51,
+        "visible": false
+      },
+      "price_unit": {
+        "width": 48,
+        "visible": false
+      },
+      "total_price": {
+        "width": 47,
+        "visible": false
+      },
+      "date": {
+        "width": 174,
+        "visible": false
+      },
+      "who": {
+        "width": 100,
+        "visible": false
+      },
+      "label": {
+        "width": 466,
+        "visible": true
+      },
+      "Resp": {
+        "width": 74,
+        "visible": true
+      },
+      "Acc": {
+        "width": 70,
+        "visible": true
+      },
+      "Support": {
+        "width": 69,
+        "visible": true
+      },
+      "Consult": {
+        "width": 74,
+        "visible": true
+      },
+      "Informed": {
+        "width": 80,
+        "visible": true
+      }
+    },
+    "columnOrder": [
+      "16",
+      "17",
+      "18",
+      "19",
+      "20",
+      "done",
+      "no",
+      "unit",
+      "qty_est",
+      "qty_real",
+      "price_unit",
+      "total_price",
+      "date",
+      "who",
+      "label",
+      "Resp",
+      "Acc",
+      "Support",
+      "Consult",
+      "Informed"
+    ],
+    "rows": {
+      "height": 30
+    },
     "layouts": [
       {
         "layoutName": "lastused",
-        "columns": {},
+        "columns": {
+          "16": {
+            "width": 100,
+            "visible": false
+          },
+          "17": {
+            "width": 100,
+            "visible": false
+          },
+          "18": {
+            "width": 100,
+            "visible": false
+          },
+          "19": {
+            "width": 100,
+            "visible": false
+          },
+          "20": {
+            "width": 100,
+            "visible": false
+          },
+          "done": {
+            "width": 37,
+            "visible": true
+          },
+          "no": {
+            "width": 73,
+            "visible": true
+          },
+          "unit": {
+            "width": 23,
+            "visible": false
+          },
+          "qty_est": {
+            "width": 53,
+            "visible": false
+          },
+          "qty_real": {
+            "width": 51,
+            "visible": false
+          },
+          "price_unit": {
+            "width": 48,
+            "visible": false
+          },
+          "total_price": {
+            "width": 47,
+            "visible": false
+          },
+          "date": {
+            "width": 174,
+            "visible": false
+          },
+          "who": {
+            "width": 100,
+            "visible": false
+          },
+          "label": {
+            "width": 466,
+            "visible": true
+          },
+          "Resp": {
+            "width": 74,
+            "visible": true
+          },
+          "Acc": {
+            "width": 70,
+            "visible": true
+          },
+          "Support": {
+            "width": 69,
+            "visible": true
+          },
+          "Consult": {
+            "width": 74,
+            "visible": true
+          },
+          "Informed": {
+            "width": 80,
+            "visible": true
+          }
+        },
         "rows": {
           "height": 30
         },
-        "columnOrder": []
+        "columnOrder": [
+          "16",
+          "17",
+          "18",
+          "19",
+          "20",
+          "done",
+          "no",
+          "unit",
+          "qty_est",
+          "qty_real",
+          "price_unit",
+          "total_price",
+          "date",
+          "who",
+          "label",
+          "Resp",
+          "Acc",
+          "Support",
+          "Consult",
+          "Informed"
+        ]
       }
-    ],
-    "activeLayoutIndex": 0
-  }
+    ]
+  },
+  "activeLayoutIndex": 0
 }
