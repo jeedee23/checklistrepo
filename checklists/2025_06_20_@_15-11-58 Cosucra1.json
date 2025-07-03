@@ -1,6 +1,6 @@
 {
   "title": "Cosucra Project structure",
-  "lastSave": "2025_07_03_@_18-45-03",
+  "lastSave": "2025_07_03_@_20-32-18",
   "unitChoices": [
     "kg",
     "ton",
@@ -908,7 +908,7 @@
           "no": "1.1",
           "imageFile": "2025_06_23_@_21-44-48_glossary.pdf",
           "image": "2025_06_23_@_21-44-48_glossary.pdf",
-          "collapsed": false
+          "collapsed": true
         },
         {
           "label": "Projectnumber = P019007",
@@ -1183,7 +1183,7 @@
           "no": "1.6"
         }
       ],
-      "collapsed": false,
+      "collapsed": true,
       "important": true
     },
     {
@@ -1197,7 +1197,7 @@
       "total_price": 0,
       "date": "",
       "who": "Frédéric",
-      "collapsed": false,
+      "collapsed": true,
       "children": [
         {
           "no": "2.1",
@@ -3480,7 +3480,7 @@
       "total_price": 0,
       "date": "",
       "who": "Johan",
-      "collapsed": false,
+      "collapsed": true,
       "children": [
         {
           "no": "4.1",
@@ -5450,7 +5450,7 @@
       "total_price": 0,
       "date": "",
       "who": "Johan",
-      "collapsed": false,
+      "collapsed": true,
       "children": [
         {
           "no": "5.1",
