@@ -522,10 +522,11 @@ function closeUserManagementDialog() {
 }
 
 /**
- * Get current username from shared state
+ * Get current username (placeholder)
  */
 function getCurrentUsername() {
-  return sharedState.currentUser || 'System';
+  // TODO: Get from actual authentication system
+  return 'Johan'; // Placeholder
 }
 
 // Make closeUserManagementDialog available globally for the close button

@@ -54,28 +54,18 @@ export function showUserManagementDialog() {
 }
 
 /**
- * Load users data from config using worker
+ * Load users data from config
  */
 async function loadUsersData() {
   try {
-    // Try to use shared state first (if already loaded)
-    if (sharedState.usersData) {
-      usersData = sharedState.usersData;
-      currentUserIndex = 0;
-      console.log('[User Management] Using cached users data:', usersData);
-      return;
-    }
-    
-    // Load from worker if not cached
-    const response = await fetch(`${WORKER_URL}/?file=${encodeURIComponent(USER_CONFIG_PATH)}`);
+    const response = await fetch('../config/users.json');
     if (!response.ok) {
       throw new Error(`HTTP error! status: ${response.status}`);
     }
     const data = await response.json();
     usersData = data;
-    sharedState.usersData = data; // Cache in shared state
     currentUserIndex = 0;
-    console.log('[User Management] Loaded users data from worker:', usersData);
+    console.log('[User Management] Loaded users data:', usersData);
   } catch (error) {
     console.error('Error loading users data:', error);
     throw error;
@@ -384,7 +374,7 @@ async function saveAndSendEmail() {
 }
 
 /**
- * Save current user data using worker
+ * Save current user data
  */
 async function saveCurrentUser() {
   const currentUser = usersData.users[currentUserIndex];
@@ -416,37 +406,15 @@ async function saveCurrentUser() {
   // Update the user data
   usersData.users[currentUserIndex] = formData;
   usersData.updatedAt = new Date().toISOString();
-  usersData.updatedBy = getCurrentUsername();
+  usersData.updatedBy = getCurrentUsername(); // You'll need to implement this
   
-  // Save to server using worker
-  console.log('[User Management] Saving user data via worker:', formData);
+  // Save to server/storage (placeholder for now)
+  console.log('[User Management] Saving user data:', formData);
   
-  try {
-    const response = await fetch(`${WORKER_URL}/save`, {
-      method: 'POST',
-      headers: { 'Content-Type': 'application/json' },
-      body: JSON.stringify({ 
-        file: USER_CONFIG_PATH, 
-        json: usersData, 
-        message: `Update user: ${formData.username} - ${new Date().toISOString()}` 
-      })
-    });
-    
-    if (!response.ok) {
-      const errorText = await response.text();
-      throw new Error(`Save failed: ${response.status} - ${errorText}`);
-    }
-    
-    // Update shared state
-    sharedState.usersData = usersData;
-    
-    console.log('[User Management] User data saved successfully');
-    isEditing = false;
-    
-  } catch (error) {
-    console.error('Error saving user data:', error);
-    throw error;
-  }
+  // TODO: Implement actual save to server
+  // For now, just update the local data
+  
+  isEditing = false;
 }
 
 /**
@@ -522,10 +490,11 @@ function closeUserManagementDialog() {
 }
 
 /**
- * Get current username from shared state
+ * Get current username (placeholder)
  */
 function getCurrentUsername() {
-  return sharedState.currentUser || 'System';
+  // TODO: Get from actual authentication system
+  return 'Johan'; // Placeholder
 }
 
 // Make closeUserManagementDialog available globally for the close button
