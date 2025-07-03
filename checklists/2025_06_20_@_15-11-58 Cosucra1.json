@@ -48,7 +48,7 @@
             },
             {
               "no": "1.1.4",
-              "label": "BCO – Budget Estimate Comparison - Side-by-side comparison of estimated vs. updated budget.",
+              "label": "BEO – Budget Estimate Overview - General summary of project cost estimates.",
               "done": false,
               "who": "Johan",
               "date": "2025-07-01T21:09:16",
@@ -56,7 +56,7 @@
             },
             {
               "no": "1.1.5",
-              "label": "BES – Budget Estimate Description - Detailed breakdown of cost-estimate components.",
+              "label": "BCO – Budget Estimate Comparison - Side-by-side comparison of estimated vs. updated budget.",
               "done": false,
               "who": "Johan",
               "date": "2025-07-01T21:09:16",
@@ -64,14 +64,6 @@
             },
             {
               "no": "1.1.6",
-              "label": "BEP – BIM Execution Plan - Strategy for Building Information Modeling use on the project.",
-              "done": false,
-              "who": "Johan",
-              "date": "2025-07-01T21:09:16",
-              "children": []
-            },
-            {
-              "no": "1.1.7",
               "label": "BLD – Block Diagram - High-level schematic showing systems or process flow.",
               "done": false,
               "who": "Johan",
@@ -79,8 +71,16 @@
               "children": []
             },
             {
+              "no": "1.1.7",
+              "label": "BES – Budget Estimate Description - Detailed breakdown of cost-estimate components.",
+              "done": false,
+              "who": "Johan",
+              "date": "2025-07-01T21:09:16",
+              "children": []
+            },
+            {
               "no": "1.1.8",
-              "label": "BEO – Budget Estimate Overview - General summary of project cost estimates.",
+              "label": "BEP – BIM Execution Plan - Strategy for Building Information Modeling use on the project.",
               "done": false,
               "who": "Johan",
               "date": "2025-07-01T21:09:16",
@@ -6144,7 +6144,7 @@
     "Cuong"
   ],
   "title": "Cosucra Project structure",
-  "lastSave": "2025_07_03_@_17-42-29",
+  "lastSave": "2025_07_03_@_17-56-09",
   "unitChoices": [
     "kg",
     "ton",
