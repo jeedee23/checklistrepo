@@ -1,0 +1,161 @@
+{
+  "fields": {
+    "1": {
+      "key": "done",
+      "label": "✔ Done",
+      "type": "checkbox",
+      "fixed": true,
+      "default_value": false,
+      "accesslevel": 10
+    },
+    "2": {
+      "key": "no",
+      "label": "No",
+      "type": "number",
+      "default_value": 0,
+      "accesslevel": 10
+    },
+    "3": {
+      "key": "label",
+      "label": "Label",
+      "type": "tree",
+      "fixed": true,
+      "default_value": "please fill in value",
+      "accesslevel": 10
+    },
+    "4": {
+      "key": "unit",
+      "label": "Unit",
+      "type": "text",
+      "default_value": "",
+      "accesslevel": 10
+    },
+    "5": {
+      "key": "qty_est",
+      "label": "Est. Qty",
+      "type": "number",
+      "default_value": 0,
+      "accesslevel": 10
+    },
+    "6": {
+      "key": "qty_real",
+      "label": "Real Qty",
+      "type": "number",
+      "default_value": 0,
+      "accesslevel": 10
+    },
+    "7": {
+      "key": "price_unit",
+      "label": "Unit Price",
+      "type": "number",
+      "default_value": 0,
+      "accesslevel": 10
+    },
+    "8": {
+      "key": "total_price",
+      "label": "Total Price",
+      "type": "computed",
+      "formula": "qty_real * price_unit",
+      "default_value": 0,
+      "accesslevel": 10
+    },
+    "9": {
+      "key": "date",
+      "label": "Date",
+      "type": "date",
+      "default_value": "now",
+      "accesslevel": 10
+    },
+    "10": {
+      "key": "who",
+      "label": "Who",
+      "type": "select",
+      "source": "collaborators",
+      "default_value": "currentuser",
+      "accesslevel": 10
+    },
+    "11": {
+      "key": "status",
+      "label": "Status",
+      "type": "select",
+      "options": ["Planned", "In Progress", "Completed", "Blocked"],
+      "default_value": "",
+      "accesslevel": 10
+    },
+    "12": {
+      "key": "priority",
+      "label": "Priority",
+      "type": "select",
+      "options": ["Low", "Normal", "High"],
+      "default_value": "",
+      "accesslevel": 10
+    },
+    "13": {
+      "key": "progress",
+      "label": "Progress (%)",
+      "type": "number",
+      "default_value": 0,
+      "accesslevel": 10
+    },
+    "14": {
+      "key": "need",
+      "label": "Need",
+      "type": "select",
+      "options": ["Low", "Normal", "High"],
+      "default_value": "",
+      "accesslevel": 10
+    },
+    "15": {
+      "key": "type",
+      "label": "Type",
+      "type": "select",
+      "options": [
+        "Part", "Component", "Manhours", "Assembly",
+        "Target", "Userdefined", "Code", "Electronics",
+        "Process", "PLC"
+      ],
+      "default_value": "",
+      "accesslevel": 10
+    },
+    "16": {
+      "key": "Resp",
+      "label": "Responsable",
+      "type": "select",
+      "source": "collaborators",
+      "default_value": "∅",
+      "accesslevel": 10
+    },
+    "17": {
+      "key": "Acc",
+      "label": "Accountable",
+      "type": "select",
+      "source": "collaborators",
+      "default_value": "∅",
+      "accesslevel": 10
+    },
+    "18": {
+      "key": "Support",
+      "label": "Support",
+      "type": "select",
+      "source": "collaborators",
+      "default_value": "∅",
+      "accesslevel": 10
+    },
+    "19": {
+      "key": "Consult",
+      "label": "Consult",
+      "type": "select",
+      "source": "collaborators",
+      "default_value": "∅",
+      "accesslevel": 10
+    },
+    "20": {
+      "key": "Informed",
+      "label": "Informed",
+      "type": "select",
+      "source": "collaborators",
+      "default_value": "∅",
+      "accesslevel": 10
+    }
+  }
+}

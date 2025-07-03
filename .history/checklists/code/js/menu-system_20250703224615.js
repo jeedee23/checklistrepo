@@ -10,7 +10,6 @@ import { addNote as openNoteEditor } from './data-notes.js';
 import { triggerFileUpload } from './data-files.js';
 import { renderChecklist } from './renderchecklist.js';
 import { showVersionHistory } from './data-versions.js';
-import { showUserManagementDialog } from './user-management.js';
 // Keep track of list types data
 let listTypesData = null;
 
@@ -219,7 +218,6 @@ function attachMenuHandlers() {
   
   // Account menu
   attachHandler('menu-account-edit', 'click', () => window.open('config/edit-user.html', '_blank'));
-  attachHandler('menu-account-edit-users', 'click', showUserManagementDialog);
   // Note: Collaborators are managed via checklist.json and admin selection from users list
   // attachHandler('menu-account-collaborators', 'click', showCollaboratorsDialog); // Removed - obsolete
   attachHandler('menu-account-logout', 'click', logout);
@@ -1568,4 +1566,6 @@ export function populateLayoutSubmenu() {
     submenu.appendChild(manageLi);
   }
 }
+
+// ...existing code...
 

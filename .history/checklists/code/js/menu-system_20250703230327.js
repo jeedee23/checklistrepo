@@ -10,7 +10,6 @@ import { addNote as openNoteEditor } from './data-notes.js';
 import { triggerFileUpload } from './data-files.js';
 import { renderChecklist } from './renderchecklist.js';
 import { showVersionHistory } from './data-versions.js';
-import { showUserManagementDialog } from './user-management.js';
 // Keep track of list types data
 let listTypesData = null;
 
@@ -1568,4 +1567,6 @@ export function populateLayoutSubmenu() {
     submenu.appendChild(manageLi);
   }
 }
+
+// ...existing code...
 
