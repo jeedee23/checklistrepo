@@ -121,7 +121,7 @@ function buildUserManagementDialog(dialog) {
       <button class="close-button" onclick="closeUserManagementDialog()">×</button>
     </div>
     
-    <div class="modal-body" style="padding: 20px; max-height: 70vh; overflow-y: auto;">
+    <div class="modal-body" style="padding: 20px; max-height: 70vh; overflow-y: auto; background: #f5f5f5;">
       <form id="user-form">
         <!-- User Navigation -->
         <div class="user-navigation" style="margin-bottom: 20px; padding: 15px; background: #e9ecef; border-radius: 4px; border: 1px solid #dee2e6;">
