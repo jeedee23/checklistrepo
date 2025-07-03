@@ -1,6 +1,6 @@
 {
   "title": "Cosucra Project structure",
-  "lastSave": "2025_07_03_@_21-15-24",
+  "lastSave": "2025_07_03_@_21-47-39",
   "unitChoices": [
     "kg",
     "ton",
@@ -14,86 +14,161 @@
   ],
   "layouts": [
     {
-      "layoutName": "Default",
-      "activeLayoutIndex": 0,
+      "layoutName": "lastused",
       "columns": {
-          "done": {
-          "width": 37,
+        "done": {
+          "width": 50,
           "visible": true
         },
         "no": {
-          "width": "87px",
-          "visible": true
-        },
-        "unit": {
-          "width": 23,
-          "visible": false
-        },
-        "qty_est": {
-          "width": 53,
-          "visible": false
-        },
-        "qty_real": {
-          "width": 51,
-          "visible": false
-        },
-        "price_unit": {
-          "width": 48,
-          "visible": false
-        },
-        "total_price": {
-          "width": 47,
-          "visible": false
-        },
-        "date": {
-          "width": 174,
-          "visible": true
-        },
-        "who": {
-          "width": 100,
+          "width": 80,
           "visible": true
         },
         "label": {
-          "width": "214px",
+          "width": 250,
+          "visible": true
+        },
+        "unit": {
+          "width": 120,
+          "visible": false
+        },
+        "qty_est": {
+          "width": 80,
+          "visible": false
+        },
+        "qty_real": {
+          "width": 80,
+          "visible": false
+        },
+        "price_unit": {
+          "width": 80,
+          "visible": false
+        },
+        "total_price": {
+          "width": 100,
+          "visible": false
+        },
+        "date": {
+          "width": 120,
+          "visible": true
+        },
+        "who": {
+          "width": 120,
+          "visible": true
+        },
+        "progress": {
+          "width": 80,
           "visible": true
         },
         "Resp": {
-          "width": "84px",
+          "width": 120,
           "visible": false
         },
         "Acc": {
-          "width": "92px",
+          "width": 120,
           "visible": false
         },
         "Support": {
-          "width": 69,
+          "width": 120,
           "visible": false
         },
         "Consult": {
-          "width": "103px",
+          "width": 120,
           "visible": false
         },
         "Informed": {
-          "width": "120px",
+          "width": 120,
+          "visible": false
+        }
+      },
+      "rows": {
+        "height": 30
+      },
+      "columnOrder": [
+        "done",
+        "no",
+        "label",
+        "date",
+        "who",
+        "progress"
+      ]
+    },
+    {
+      "layoutName": "Default",
+      "activeLayoutIndex": 0,
+      "columns": {
+        "done": {
+          "width": 50,
+          "visible": true
+        },
+        "no": {
+          "width": 80,
+          "visible": true
+        },
+        "label": {
+          "width": 250,
+          "visible": true
+        },
+        "unit": {
+          "width": 120,
+          "visible": false
+        },
+        "qty_est": {
+          "width": 80,
+          "visible": false
+        },
+        "qty_real": {
+          "width": 80,
+          "visible": false
+        },
+        "price_unit": {
+          "width": 80,
+          "visible": false
+        },
+        "total_price": {
+          "width": 100,
+          "visible": false
+        },
+        "date": {
+          "width": 120,
+          "visible": true
+        },
+        "who": {
+          "width": 120,
+          "visible": true
+        },
+        "progress": {
+          "width": 80,
+          "visible": true
+        },
+        "Resp": {
+          "width": 120,
+          "visible": false
+        },
+        "Acc": {
+          "width": 120,
+          "visible": false
+        },
+        "Support": {
+          "width": 120,
+          "visible": false
+        },
+        "Consult": {
+          "width": 120,
+          "visible": false
+        },
+        "Informed": {
+          "width": 120,
           "visible": false
         }
       },
       "columnOrder": [
         "done",
         "no",
-        "unit",
-        "qty_est",
-        "qty_real",
-        "price_unit",
-        "total_price",
+        "label",
         "date",
         "who",
-        "label",
-        "Resp",
-        "Acc",
-        "Support",
-        "Consult",
-        "Informed"
+        "progress"
       ],
       "rows": {
         "height": 30
@@ -209,6 +284,87 @@
             "Informed"
           ]
         }
+      ],
+      "rowHeight": 30
+    },
+    {
+      "layoutName": "minilist",
+      "columns": {
+        "done": {
+          "width": 50,
+          "visible": true
+        },
+        "no": {
+          "width": 80,
+          "visible": true
+        },
+        "label": {
+          "width": 250,
+          "visible": true
+        },
+        "unit": {
+          "width": 120,
+          "visible": false
+        },
+        "qty_est": {
+          "width": 80,
+          "visible": false
+        },
+        "qty_real": {
+          "width": 80,
+          "visible": false
+        },
+        "price_unit": {
+          "width": 80,
+          "visible": false
+        },
+        "total_price": {
+          "width": 100,
+          "visible": false
+        },
+        "date": {
+          "width": 120,
+          "visible": true
+        },
+        "who": {
+          "width": 120,
+          "visible": true
+        },
+        "progress": {
+          "width": 80,
+          "visible": true
+        },
+        "Resp": {
+          "width": 120,
+          "visible": false
+        },
+        "Acc": {
+          "width": 120,
+          "visible": false
+        },
+        "Support": {
+          "width": 120,
+          "visible": false
+        },
+        "Consult": {
+          "width": 120,
+          "visible": false
+        },
+        "Informed": {
+          "width": 120,
+          "visible": false
+        }
+      },
+      "rows": {
+        "height": 30
+      },
+      "columnOrder": [
+        "done",
+        "no",
+        "label",
+        "date",
+        "who",
+        "progress"
       ]
     }
   ],
@@ -6138,108 +6294,78 @@
     "layoutName": "Default",
     "activeLayoutIndex": 0,
     "columns": {
-      "16": {
-        "width": 100,
-        "visible": false
-      },
-      "17": {
-        "width": 100,
-        "visible": false
-      },
-      "18": {
-        "width": 100,
-        "visible": false
-      },
-      "19": {
-        "width": 100,
-        "visible": false
-      },
-      "20": {
-        "width": 100,
-        "visible": false
-      },
       "done": {
-        "width": 37,
+        "width": 50,
         "visible": true
       },
       "no": {
-        "width": "87px",
-        "visible": true
-      },
-      "unit": {
-        "width": 23,
-        "visible": false
-      },
-      "qty_est": {
-        "width": 53,
-        "visible": false
-      },
-      "qty_real": {
-        "width": 51,
-        "visible": false
-      },
-      "price_unit": {
-        "width": 48,
-        "visible": false
-      },
-      "total_price": {
-        "width": 47,
-        "visible": false
-      },
-      "date": {
-        "width": 174,
-        "visible": true
-      },
-      "who": {
-        "width": 100,
+        "width": 80,
         "visible": true
       },
       "label": {
-        "width": "214px",
+        "width": 250,
+        "visible": true
+      },
+      "unit": {
+        "width": 120,
+        "visible": false
+      },
+      "qty_est": {
+        "width": 80,
+        "visible": false
+      },
+      "qty_real": {
+        "width": 80,
+        "visible": false
+      },
+      "price_unit": {
+        "width": 80,
+        "visible": false
+      },
+      "total_price": {
+        "width": 100,
+        "visible": false
+      },
+      "date": {
+        "width": 120,
+        "visible": true
+      },
+      "who": {
+        "width": 120,
+        "visible": true
+      },
+      "progress": {
+        "width": 80,
         "visible": true
       },
       "Resp": {
-        "width": "84px",
+        "width": 120,
         "visible": false
       },
       "Acc": {
-        "width": "92px",
+        "width": 120,
         "visible": false
       },
       "Support": {
-        "width": 69,
+        "width": 120,
         "visible": false
       },
       "Consult": {
-        "width": "103px",
+        "width": 120,
         "visible": false
       },
       "Informed": {
-        "width": "120px",
+        "width": 120,
         "visible": false
       }
     },
     "columnOrder": [
-      "16",
-      "17",
-      "18",
-      "19",
-      "20",
       "done",
       "no",
-      "unit",
-      "qty_est",
-      "qty_real",
-      "price_unit",
-      "total_price",
+      "label",
       "date",
       "who",
-      "label",
-      "Resp",
-      "Acc",
-      "Support",
-      "Consult",
-      "Informed"
+      "progress"
     ],
     "rows": {
       "height": 30
@@ -6355,7 +6481,8 @@
           "Informed"
         ]
       }
-    ]
+    ],
+    "rowHeight": 30
   },
   "activeLayoutIndex": 0,
   "fields": {
