@@ -1,6 +1,6 @@
 {
   "title": "Cosucra Project structure",
-  "lastSave": "2025_07_03_@_20-32-18",
+  "lastSave": "2025_07_03_@_20-32-32",
   "unitChoices": [
     "kg",
     "ton",
@@ -1183,7 +1183,7 @@
           "no": "1.6"
         }
       ],
-      "collapsed": true,
+      "collapsed": false,
       "important": true
     },
     {
