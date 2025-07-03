@@ -3,7 +3,7 @@ const REPO = 'checklistrepo';
 const BRANCH = 'main';
 
 const urlParams = new URLSearchParams(window.location.search);
-let FILE_PATH = urlParams.get("file") || "checklists/placeholder.json";
+ FILE_PATH = urlParams.get("file") || "checklists/placeholder.json";
 
 let originalChecklistData = null;
 let inactivityTimer       = null;
@@ -19,6 +19,7 @@ const container = document.getElementById('checklistContainer');
 let changeCount = 0;
 
 let checklistData = { collaborators: [], items: [], layout: {} };
+let usersData = { users: [], version: null, updatedAt: null, updatedBy: null };
 let isDirty = false;
 let layoutDirty = false;
 let readyForEdits = false;
@@ -33,6 +34,16 @@ let filterState = 'all'; // 'all' | 'done' | 'notdone'
 let showOnlyMine = false;
 let fieldDefs = {};
 const WORKER_URL = "https://fields-proxy.johan-351.workers.dev";
+// ——— Hidden file input for generic file uploads ———
+const fileInput = document.createElement('input');
+fileInput.type     = 'file';
+fileInput.accept   = '*/*';        // allow any file type
+fileInput.multiple = false;
+fileInput.style.display = 'none';
+fileInput.id      = 'fileInput';
+fileInput.addEventListener('change', handleFileInputChange);
+document.body.appendChild(fileInput);
+
 const ColumnVisibilityMenu = {
   visible: false,
   x: 0,
@@ -45,6 +56,17 @@ let quillEditor;
 
 let offsetX    = 0;
 let offsetY    = 0;
+//load usersdata
+async function loadUsersData() {
+  try {
+    const res = await fetch(`${WORKER_URL}/load?file=checklists/config/users.json`);
+    if (!res.ok) throw new Error(`Failed to fetch users.json: ${res.status}`);
+    usersData = await res.json();
+  } catch (err) {
+    console.error("Could not load users.json:", err);
+    // Fallback stays with the empty default we declared
+  }
+}
 // Called once on startup to populate fieldDefs from config/fields.json
 async function loadFieldDefinitions() {
   const res = await fetch(`${WORKER_URL}?file=checklists/config/fields.json`);
@@ -60,7 +82,97 @@ document.addEventListener("DOMContentLoaded", () => {
   });
   // …
 });
+function triggerFileUpload() {
+  fileInput.value = null;  // reset in case same file is re-picked
+  fileInput.click();
+}
+async function handleFileInputChange(event) {
+  const file = event.target.files[0];
+  if (!file) return;
 
+  // 1) Read & Base64-encode
+  const dataUrl = await new Promise((resolve, reject) => {
+    const reader = new FileReader();
+    reader.onerror = reject;
+    reader.onload  = () => resolve(reader.result);
+    reader.readAsDataURL(file);
+  });
+  const base64 = dataUrl.split(',')[1];
+
+  // 2) POST to /save with encoding=base64
+  const uploadPath = `checklists/files/${file.name}`;
+  const payload = {
+    file:     uploadPath,
+    content:  base64,
+    encoding: 'base64',
+    message:  `Upload file: ${file.name}`
+  };
+  const res = await fetch(`${WORKER_URL}/save`, {
+    method:  'POST',
+    headers: { 'Content-Type': 'application/json' },
+    body:    JSON.stringify(payload)
+  });
+  if (!res.ok) {
+    const errText = await res.text();
+    return alert(`❌ Upload failed: ${errText || res.statusText}`);
+  }
+
+  // 3) Attach to the selected item
+  if (!selectedItem) {
+    alert("⚠️ No row selected—file saved to global list only.");
+    checklistData.files = checklistData.files || [];
+    checklistData.files.push({
+      name:       file.name,
+      path:       uploadPath,
+      uploadedBy: currentUser,
+      uploadedAt: new Date().toISOString()
+    });
+  } else {
+    selectedItem.files = selectedItem.files || [];
+    selectedItem.files.push({
+      name:       file.name,
+      path:       uploadPath,
+      uploadedBy: currentUser,
+      uploadedAt: new Date().toISOString()
+    });
+  }
+
+  // 4) Persist and redraw
+  markSaveDirty(true);
+  try {
+    await saveChecklist();
+  } catch (err) {
+    console.error("Failed saving checklist after upload:", err);
+    alert("⚠️ Couldn’t save checklist—see console for details.");
+    return;
+  }
+  renderChecklist();
+  alert(`✅ Uploaded and saved ${file.name}`);
+}
+
+
+// And adjust your viewFile to use the '?file=' loader:
+function viewFile(path) {
+  // Opens the file via the Worker’s ?file=… loader
+  const url = `${WORKER_URL}?file=${encodeURIComponent(path)}`;
+  window.open(url, '_blank');
+}
+
+function viewFile(path) {
+  // open in new tab; browser will render if possible
+  const url = `${WORKER_URL}/files/${encodeURIComponent(path)}`;
+  window.open(url, '_blank');
+}
+
+function downloadFile(path) {
+  const url  = `${WORKER_URL}/files/${encodeURIComponent(path)}`;
+  const link = document.createElement('a');
+  link.href    = url;
+  link.download = path.split('/').pop();
+  document.body.appendChild(link);
+  link.click();
+  document.body.removeChild(link);
+}
 
 function getQueryParam(key) {
   const urlParams = new URLSearchParams(window.location.search);
@@ -148,11 +260,7 @@ const MENU_DEF = {
   if (!selectedItem) return alert("⚠ No item selected.");
   addNote();
 },
-    'Image': () => {
-      const input = document.getElementById('imageFileInput');
-      if (!input) return alert("⚠ Image input missing.");
-      input.click();
-    }
+   'File': triggerFileUpload
   },
   'Style': {
     'Color red': () => applyColor('rgba(255,0,0,1)'),
@@ -171,7 +279,7 @@ const MENU_DEF = {
       if (!newName) return;
       const timestamp = FILE_PATH.split('/').pop().split('_')[0];
       const newFilename = `${timestamp}_${newName}.json`;
-      FILE_PATH = `checklists/${newFilename}`;
+      sharedState.sharedState.sharedState.sharedState.sharedState.FILE_PATH = `checklists/${newFilename}`;
       updatemainstatustext(`✅ Renamed to: ${newFilename}`);
       markSaveDirty(true); changeCount++;
     },
@@ -239,11 +347,13 @@ function timestampNow() {
 async function secureLogin() {
   const userInput = (document.getElementById("loginUser")?.value || "").trim();
   const passInput = (document.getElementById("loginPass")?.value || "").trim();
-  if (!userInput || !passInput) return showLoginError("Please enter both username and password");
+  if (!userInput || !passInput) 
+    return showLoginError("Please enter both username and password");
 
   const users = await fetchUserList();
-  const user = users.find(u => u.name.toLowerCase() === userInput.toLowerCase());
-
+  const user = users.find(u =>
+    u.username.toLowerCase() === userInput.toLowerCase()
+  );
   if (!user) return showLoginError("User not found");
 
   const match = bcrypt.compareSync(passInput, user.passwordHash);
@@ -251,65 +361,52 @@ async function secureLogin() {
 
   finishLogin(user);
 }
+// 3) tryAutoLoginFromURL
 async function tryAutoLoginFromURL() {
-  const userParam = getQueryParam("user");
+  const userParam  = getQueryParam("user");
   const tokenParam = getQueryParam("token");
   if (!userParam || !tokenParam) return;
 
   const users = await fetchUserList();
   const user = users.find(u =>
-    u.name.toLowerCase() === userParam.toLowerCase() &&
+    u.username.toLowerCase() === userParam.toLowerCase() &&
     u.token === tokenParam
   );
-
-  if (user) {
-    finishLogin(user);
-  }
+  if (user) finishLogin(user);
 }
+
+// 4) finishLogin
 async function finishLogin(user) {
   currentUser = user.username;
   const userEl = document.getElementById('loggedInUser');
   if (userEl) userEl.textContent = `👤 ${currentUser}`;
-
   document.getElementById("identityOverlay").style.display = "none";
 
-  try {
-    const res = await fetch(`${WORKER_URL}?file=checklists/config/users.json`);
-    if (res.ok) {
-      const usersConfig = await res.json();
-      const loggedUser = usersConfig.users.find(u => u.username.toLowerCase() === currentUser.toLowerCase());
-
-      if (loggedUser && loggedUser.checklists.length > 0) {
-        const recentChecklist = loggedUser.checklists
-          .filter(c => c.lastAccessed)
-          .sort((a, b) => new Date(b.lastAccessed) - new Date(a.lastAccessed))[0];
-
-        if (recentChecklist) {
-          FILE_PATH = `checklists/${recentChecklist.id}`;
-          await loadChecklist(FILE_PATH);
-          updatemainstatustext(`📂 Auto-loaded: ${recentChecklist.displayName}`);
-        } else {
-          FILE_PATH = "checklists/placeholder.json";
-          await loadChecklist(FILE_PATH);
-        }
-      } else {
-        FILE_PATH = "checklists/placeholder.json";
-        await loadChecklist(FILE_PATH);
-      }
+  // Use the already-loaded usersData
+  const loggedUser = usersData.users.find(u =>
+    u.username.toLowerCase() === currentUser.toLowerCase()
+  );
+  if (loggedUser && loggedUser.checklists.length) {
+    const recent = loggedUser.checklists
+      .filter(c => c.lastAccessed)
+      .sort((a,b) => new Date(b.lastAccessed) - new Date(a.lastAccessed))[0];
+    if (recent) {
+      FILE_PATH = `checklists/${recent.id}`;
+      await loadChecklist(FILE_PATH);
+      updatemainstatustext(`📂 Auto-loaded: ${recent.displayName}`);
     } else {
-      console.error("Failed to fetch users.json, loading placeholder");
       FILE_PATH = "checklists/placeholder.json";
       await loadChecklist(FILE_PATH);
     }
-  } catch (err) {
-    console.error("Failed to auto-load last checklist:", err);
+  } else {
     FILE_PATH = "checklists/placeholder.json";
-    await loadChecklist(FILE_PATH);
+    await loadChecklist(sharedState.FILE_PATH);
   }
 
-  // ✅ Load sidebar checklist list AFTER
+  // Finally populate the sidebar
   await fetchChecklists();
 }
+
 
 
 async function checkStaleVersion() {
@@ -497,7 +594,7 @@ async function openPrintView() {
   }
 
   // Derive a clean title from the filename
-  const title = FILE_PATH
+  const title = sharedState.FILE_PATH
     .split('/').pop()
     .replace(/\.json$/, '')
     .replace(/^(\d{4}_\d{2}_\d{2})_@_\d{2}-\d{2}-\d{2}_?/, '')
@@ -563,9 +660,9 @@ async function renameChecklist() {
   if (!newName) return;
 
   // Preserve the original timestamp prefix
-  const timestamp = FILE_PATH.split('/').pop().split('_')[0];
+  const timestamp = sharedState.FILE_PATH.split('/').pop().split('_')[0];
   const newFilename = `${timestamp}_${newName}.json`;
-  FILE_PATH = `checklists/${newFilename}`;
+  sharedState.sharedState.FILE_PATH = `checklists/${newFilename}`;
 
   updatemainstatustext(`✅ Renamed to: ${newFilename}`);
   markSaveDirty(true); changeCount++;
@@ -581,9 +678,9 @@ function markSaveDirty(flag = true) {
 async function openPrintView(){}
 async function copyChecklist(){}
 async function renameChecklist(){}
-async function loadChecklist(path = FILE_PATH) {
+async function loadChecklist(path = sharedState.FILE_PATH) {
   const url = `${WORKER_URL}?file=${path}`;
-  FILE_PATH = path;
+  sharedState.FILE_PATH = path;
 
   try {
     const res = await fetch(url, { method: 'GET', cache: 'no-cache' });
@@ -630,7 +727,7 @@ async function loadChecklist(path = FILE_PATH) {
     markSaveDirty(false);
     readyForEdits = true;
 
-    const displayName = FILE_PATH.split('/').pop().replace(/^(\d{4}_\d{2}_\d{2})_@_\d{2}-\d{2}-\d{2}_?/, '').replace(/\.json$/, '').replace(/_/g, ' ').trim();
+    const displayName = sharedState.FILE_PATH.split('/').pop().replace(/^(\d{4}_\d{2}_\d{2})_@_\d{2}-\d{2}-\d{2}_?/, '').replace(/\.json$/, '').replace(/_/g, ' ').trim();
     document.getElementById('loadedList').textContent = displayName;
 
     if (typeof setupInactivityMonitor === 'function') setupInactivityMonitor();
@@ -651,7 +748,7 @@ async function newChecklist() {
   const timestamp = timestampNow();
   const filename  = `${timestamp}_${name}.json`;
   const path      = `checklists/${filename}`;
-  FILE_PATH       = path;  // make sure FILE_PATH is declared with let at top
+  sharedState.FILE_PATH       = path;  // make sure FILE_PATH is declared with let at top
 
   // stamp today once
   const today = new Date().toISOString().split('T')[0];
@@ -708,37 +805,37 @@ function timestampNow() {
   return `${now.getFullYear()}_${pad(now.getMonth()+1)}_${pad(now.getDate())}_@_${pad(now.getHours())}-${pad(now.getMinutes())}-${pad(now.getSeconds())}`;
 }
 
+// 8) saveChecklist (includes notes, checklist, and users.json updates)
 async function saveChecklist() {
-  // Prevent overlapping saves
   if (!isDirty || saveChecklist.isSaving) return;
   saveChecklist.isSaving = true;
 
-  const timestamp = timestampNow();
-  updatemainstatustext(`saving ${FILE_PATH} please wait…`, { fontWeight: 'bold' });
+  const nowIso = new Date().toISOString();
+  updatemainstatustext(`Saving ${sharedState.FILE_PATH}…`, { fontWeight: 'bold' });
 
-  // 1) Flush any pending notes first
+  // 1) Flush pending notes
   const noteSaves = [];
   traverse(checklistData.items, item => {
     if (
       typeof item._pendingNoteContent === 'string' &&
-      typeof item.noteFile === 'string' &&
-      item.noteFile.startsWith('checklists/notes/') &&
+      item.noteFile?.startsWith('checklists/notes/') &&
       item.noteFile.endsWith('.html')
     ) {
       const payload = {
-        file: item.noteFile,
-        content: item._pendingNoteContent,
+        file:    item.noteFile,
+        sha:     item._pendingNoteSha,
+        json:    item._pendingNoteContent,
         message: `Save note: ${item.noteFile}`
       };
       noteSaves.push(
         fetch(`${WORKER_URL}/save`, {
           method: 'POST',
-          headers: { "Content-Type": "application/json" },
+          headers: { 'Content-Type': 'application/json' },
           body: JSON.stringify(payload)
-        })
-        .then(res => {
+        }).then(res => {
           if (!res.ok) throw new Error(`❌ Failed to save ${item.noteFile}`);
           delete item._pendingNoteContent;
+          delete item._pendingNoteSha;
         })
       );
     }
@@ -747,37 +844,66 @@ async function saveChecklist() {
   try {
     await Promise.all(noteSaves);
 
-    // 2) Save the main checklist
-    const saveRes = await fetch(`${WORKER_URL}/save`, {
-      method: "POST",
-      headers: { "Content-Type": "application/json" },
-      body: JSON.stringify({
-        file: FILE_PATH,
-        json: JSON.stringify(checklistData, null, 2),
-        message: "Save checklist"
-      })
+    // 2) Save main checklist JSON
+    const checklistPayload = {
+      file:    sharedState.FILE_PATH,
+      json:    JSON.stringify(checklistData, null, 2),
+      message: `Save checklist: ${sharedState.FILE_PATH}`
+    };
+    let res = await fetch(`${WORKER_URL}/save`, {
+      method:  'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body:    JSON.stringify(checklistPayload)
     });
-    if (!saveRes.ok) {
-      const errText = await saveRes.text();
-      throw new Error(`Cloudflare save failed: ${errText}`);
+    if (!res.ok) {
+      const errText = await res.text();
+      throw new Error(`❌ Checklist save failed: ${errText}`);
     }
 
-    // 3) Success: clear dirty, update users.json, refresh UI
-    markSaveDirty(false);
-    changeCount = 0;
-    const filename = FILE_PATH.split('/').pop();
-    await updateUsersJson(filename, currentUser, timestamp);
+    // 3) Update usersData in-memory
+    //    - Set this checklist’s lastAccessed
+    //    - Bump global updatedAt and updatedBy
+    const filename = sharedState.FILE_PATH.split('/').pop();
+    usersData.updatedAt = nowIso;
+    usersData.updatedBy = currentUser;
+    const userObj = usersData.users.find(u =>
+      u.username.toLowerCase() === currentUser.toLowerCase()
+    );
+    if (userObj) {
+      const entry = userObj.checklists.find(c => c.id === filename);
+      if (entry) {
+        entry.lastAccessed = nowIso;
+      }
+    }
 
-    await fetchChecklists();
-    updatemainstatustext(`saved on ${timestamp}`, { fontWeight: 'bold', color: 'green' });
+    // 4) Persist users.json
+    const usersPayload = {
+      file:    'checklists/config/users.json',
+      json:    JSON.stringify(usersData, null, 2),
+      message: `Update access for ${filename}`
+    };
+    res = await fetch(`${WORKER_URL}/save`, {
+      method:  'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body:    JSON.stringify(usersPayload)
+    });
+    if (!res.ok) {
+      const errText = await res.text();
+      throw new Error(`❌ users.json save failed: ${errText}`);
+    }
+
+    // 5) All done
+    isDirty = false;
+    saveChecklist.isSaving = false;
+    updatemainstatustext(`Saved ${sharedState.FILE_PATH} ✔`, { fontWeight: 'normal' });
 
   } catch (err) {
-    console.error(err);
-    updatemainstatustext(`❌ <strong>Save failed</strong>: ${err.message}`);
-  } finally {
     saveChecklist.isSaving = false;
+    console.error('Error in saveChecklist:', err);
+    updatemainstatustext(`Error saving: ${err.message}`, { color: 'red' });
   }
 }
+
 
 
 async function updateUsersJson(filename, username, timestamp) {
@@ -832,6 +958,8 @@ async function updateUsersJson(filename, username, timestamp) {
 }
 
 
+
+// ─── renderChecklist (with global file list) ─────────────────────────────────
 function renderChecklist() {
   const container = document.getElementById('checklistContainer');
   container.innerHTML = '';
@@ -847,24 +975,18 @@ function renderChecklist() {
 
   // 1. Build headers dynamically with drag-and-drop
   const columnDefs = checklistData.layout.columns;
-  // Determine ordered keys based on object insertion order
   const orderedKeys = Object.keys(columnDefs);
-
   orderedKeys.forEach(key => {
     const col = columnDefs[key];
     if (!col.visible) return;
-
     const th = document.createElement('th');
     th.textContent = (fieldDefs[key] || {}).label || key;
     th.title = (fieldDefs[key] || {}).tooltip || '';
     th.style.width = col.width + 'px';
     th.style.position = 'relative';
     th.style.fontSize = '0.75rem';
-
-    // Make draggable
     th.draggable = true;
     th.dataset.colKey = key;
-
     th.addEventListener('dragstart', e => {
       e.dataTransfer.setData('text/plain', key);
     });
@@ -874,10 +996,8 @@ function renderChecklist() {
     th.addEventListener('drop', e => {
       e.preventDefault();
       const srcKey = e.dataTransfer.getData('text/plain');
-      const dstKey = key;
-      reorderColumns(srcKey, dstKey);
+      reorderColumns(srcKey, key);
     });
-
     headerRow.appendChild(th);
   });
 
@@ -896,8 +1016,223 @@ function renderChecklist() {
   scrollWrapper.appendChild(table);
   container.appendChild(scrollWrapper);
 
+  // 4. Global file list
+  if (Array.isArray(checklistData.files) && checklistData.files.length) {
+    const filesContainer = document.createElement('div');
+    filesContainer.id = 'filesList';
+    filesContainer.innerHTML = checklistData.files.map(f => `
+      <div class="file-row">
+        <span>${f.name}</span>
+        <button onclick="viewFile('${f.path}')">View</button>
+        <button onclick="downloadFile('${f.path}')">Download</button>
+      </div>
+    `).join('');
+    container.appendChild(filesContainer);
+  }
+
   if (ColumnVisibilityMenu.visible) {
     showColumnVisibilityMenu(ColumnVisibilityMenu.x, ColumnVisibilityMenu.y);
+  }
+}
+
+// ─── renderItem (with per-item file icons) ──────────────────────────────────
+function renderItem(item, tbody, path, columnDefs, rowHeight) {
+  // 1. Visibility & filtering
+  const isVisible = (
+    filterState === 'all' ||
+    (filterState === 'done' && item.done === true) ||
+    (filterState === 'notdone' && item.done !== true)
+  );
+  const matchesWho = !showOnlyMine || item.who === currentUser;
+  if (!isVisible || !matchesWho) {
+    if (item.children && !item.collapsed) {
+      item.children.forEach((child, i) => {
+        renderItem(child, tbody, path.concat(i + 1), columnDefs, rowHeight);
+      });
+    }
+    return;
+  }
+
+  // 2. Row setup
+  const row = document.createElement('tr');
+  row.classList.add('tr-item');
+  row.style.height = (item.rowHeight || rowHeight) + 'px';
+  row.style.verticalAlign = 'middle';
+  row.style.lineHeight = '1';
+  row.style.fontFamily = 'Consolas, monospace';
+  row.dataset.path = JSON.stringify(path);
+  if (item.important) row.classList.add('important');
+  item.no = path.join('.');
+
+  // Events
+  row.addEventListener('click', () => {
+    selectedPath = path.slice();
+    selectedItem = item;
+    highlightSelectedRow(row);
+  });
+  row.addEventListener('contextmenu', e => {
+    e.preventDefault();
+    selectedPath = path.slice();
+    selectedItem = item;
+    showContextMenu(e.pageX, e.pageY);
+  });
+
+  // Helpers
+  const resolveDefault = dv => {
+    if (dv === 'now') return new Date().toISOString().split('T')[0];
+    if (dv === 'currentuser') return currentUser;
+    return dv;
+  };
+  const computeFormula = (formula, ctx) => {
+    try {
+      const fn = new Function(...Object.keys(ctx), `return ${formula}`);
+      return fn(...Object.values(ctx));
+    } catch {
+      return '';
+    }
+  };
+
+  // 3. Render each cell dynamically by field ID or key
+  Object.entries(columnDefs).forEach(([colId, col]) => {
+    if (!col.visible) return;
+    let def = fieldDefs[colId] || {};
+    if (!def.key) {
+      def = Object.values(fieldDefs).find(d => d.key === colId) || {};
+    }
+    const key = def.key || colId;
+    let val = item[key];
+    if (def.type === 'computed' && def.formula) {
+      val = computeFormula(def.formula, item);
+    }
+    if (val === undefined || val === '') {
+      val = resolveDefault(def.default_value);
+    }
+
+    const td = document.createElement('td');
+    td.style.fontFamily = 'Consolas, monospace';
+
+    switch (def.type) {
+      case 'checkbox': {
+        const cb = document.createElement('input');
+        cb.type = 'checkbox';
+        cb.checked = !!val;
+        cb.onchange = () => { item[key] = cb.checked; markSaveDirty(true); changeCount++; renderChecklist(); };
+        td.appendChild(cb);
+        break;
+      }
+      case 'select': {
+        const span = document.createElement('span');
+        span.textContent = val;
+        span.style.cursor = 'pointer';
+        const rawOptions = def.options ? def.options.slice() : (Array.isArray(checklistData[def.source]) ? checklistData[def.source].slice() : []);
+        const options = rawOptions.filter(opt => opt !== def.default_value);
+        span.addEventListener('click', e => {
+          e.stopPropagation();
+          showPopupList(span, options, sel => { item[key] = sel; markSaveDirty(true); changeCount++; renderChecklist(); });
+        });
+        td.appendChild(span);
+        break;
+      }
+      case 'date': {
+        const input = document.createElement('input');
+        input.type = 'date';
+        input.value = val;
+        input.onchange = () => { item[key] = input.value; markSaveDirty(true); changeCount++; };
+        td.appendChild(input);
+        break;
+      }
+      case 'number': {
+        const input = document.createElement('input');
+        input.type = 'text';
+        input.value = val;
+        Object.assign(input.style, { width:'90%', textAlign:'left', fontFamily:'Consolas' });
+        input.onblur = () => {
+          const v = input.value.trim();
+          item[key] = (v === ''||isNaN(v)) ? '' : parseFloat(v);
+          markSaveDirty(true); changeCount++; renderChecklist();
+        };
+        td.appendChild(input);
+        break;
+      }
+      default: {
+        if (key==='label' || def.type==='tree') {
+          const wrapper = document.createElement('div');
+          Object.assign(wrapper.style, { display:'flex', alignItems:'center', gap:'0.4rem', marginLeft:`${(path.length-1)*20}px` });
+          if(item.color) wrapper.style.color=item.color;
+          if(item.bold) wrapper.style.fontWeight='bold';
+
+          // Arrow
+          if(item.children?.length) {
+            const arrow=document.createElement('span');
+            arrow.textContent=item.collapsed?'▶':'▼';
+            arrow.style.cursor='pointer';
+            arrow.onclick=e=>{e.stopPropagation();item.collapsed=!item.collapsed;renderChecklist();};
+            wrapper.appendChild(arrow);
+          }
+          // Note icon
+          if(item.noteFile) {
+            const noteIcon=document.createElement('span');
+            noteIcon.textContent='📝';
+            noteIcon.style.cursor='pointer';
+            noteIcon.title='Open note';
+            noteIcon.onclick=e=>{e.stopPropagation();selectedPath=path.slice();selectedItem=item;highlightSelectedRow(row);editNote(item.noteFile,item);};
+            wrapper.appendChild(noteIcon);
+          }
+          // Image icon
+          if(item.imageFile) {
+            const ext=item.imageFile.split('.').pop().toLowerCase();
+            const imgIcon=document.createElement('span');
+            imgIcon.textContent=ext==='pdf'?'📄':'📷';
+            imgIcon.style.cursor='pointer';
+            imgIcon.title='View image';
+            const imgURL=`${WORKER_URL}?file=checklists/images/${item.imageFile}`;
+            imgIcon.onmouseenter=()=>{const tooltip=document.getElementById('noteTooltip');tooltip.innerHTML=ext==='pdf'?`<div style="font-size:0.9rem;padding:0.5rem;">PDF: ${item.imageFile}</div>`:`<img src="${imgURL}" style="max-width:300px;">`;tooltip.style.left=`${imgIcon.getBoundingClientRect().right+5}px`;tooltip.style.top=`${imgIcon.getBoundingClientRect().top}px`;tooltip.style.display='block';};
+            imgIcon.onmouseleave=()=>document.getElementById('noteTooltip').style.display='none';
+            imgIcon.onclick=e=>{e.stopPropagation();window.open(imgURL,'_blank');};
+            wrapper.appendChild(imgIcon);
+          }
+          // Per-item file icons
+       // Per-item file icons
+if (Array.isArray(item.files)) {
+  item.files.forEach(f => {
+    const fileIcon = document.createElement('span');
+    fileIcon.textContent = '📎';
+    fileIcon.style.cursor = 'pointer';
+    fileIcon.title = f.name;
+    fileIcon.onclick = e => { e.stopPropagation(); viewFile(f.path); };
+    wrapper.appendChild(fileIcon);
+  });
+}
+          // Link icon & input
+          if(item.link) {
+            const linkIcon=document.createElement('span');
+            linkIcon.textContent='🔗';
+            linkIcon.style.cursor='pointer';
+            linkIcon.title=item.link;
+            linkIcon.onclick=e=>{e.stopPropagation();window.open(item.link,'_blank');};
+            wrapper.appendChild(linkIcon);
+          }
+          const input=document.createElement('input');
+          input.type='text';
+          input.value=val;
+          Object.assign(input.style,{width:'100%',fontFamily:'Consolas, monospace',background:'transparent'});
+          if(item.bold) input.style.fontWeight='bold';
+          if(item.color) input.style.color=item.color;
+          input.onblur=e=>{const v=input.value.trim();if(v.startsWith('http://')||v.startsWith('https://')){item.link=v;item[key]='';}else{item[key]=v;}markSaveDirty(true);changeCount++;renderChecklist();};
+          wrapper.appendChild(input);
+          td.appendChild(wrapper);
+        } else {
+          td.textContent=val;
+        }
+      }
+    }
+    row.appendChild(td);
+  });
+
+  // 4. Append and recurse
+  tbody.appendChild(row);
+  if(item.children && !item.collapsed) {
+    item.children.forEach((child,i)=>renderItem(child,tbody,path.concat(i+1),columnDefs,rowHeight));
   }
 }
 
@@ -1016,241 +1351,7 @@ function highlightSelectedRow(row) {
   row.classList.add('selected');
 }
 
-function renderItem(item, tbody, path, columnDefs, rowHeight) {
-  // 1. Visibility & filtering
-  const isVisible = (
-    filterState === 'all' ||
-    (filterState === 'done' && item.done === true) ||
-    (filterState === 'notdone' && item.done !== true)
-  );
-  const matchesWho = !showOnlyMine || item.who === currentUser;
-  if (!isVisible || !matchesWho) {
-    if (item.children && !item.collapsed) {
-      item.children.forEach((child, i) => {
-        renderItem(child, tbody, path.concat(i + 1), columnDefs, rowHeight);
-      });
-    }
-    return;
-  }
 
-  // 2. Row setup
-  const row = document.createElement('tr');
-  row.classList.add('tr-item');
-  row.style.height = (item.rowHeight || rowHeight) + 'px';
-  row.style.verticalAlign = 'middle';
-  row.style.lineHeight = '1';
-  row.style.fontFamily = 'Consolas, monospace';
-  row.dataset.path = JSON.stringify(path);
-  if (item.important) row.classList.add('important');
-
-  // Auto-numbering
-  item.no = path.join('.');
-
-  // Events
-  row.addEventListener('click', () => {
-    selectedPath = path.slice();
-    selectedItem = item;
-    highlightSelectedRow(row);
-  });
-  row.addEventListener('contextmenu', e => {
-    e.preventDefault();
-    selectedPath = path.slice();
-    selectedItem = item;
-    showContextMenu(e.pageX, e.pageY);
-  });
-
-  // Helpers
-  const resolveDefault = dv => {
-    if (dv === 'now') return new Date().toISOString().split('T')[0];
-    if (dv === 'currentuser') return currentUser;
-    return dv;
-  };
-  const computeFormula = (formula, ctx) => {
-    try {
-      const fn = new Function(...Object.keys(ctx), `return ${formula}`);
-      return fn(...Object.values(ctx));
-    } catch {
-      return '';
-    }
-  };
-
-  // 3. Render each cell dynamically by field ID or key
-  Object.entries(columnDefs).forEach(([colId, col]) => {
-    if (!col.visible) return;
-    // Lookup definition by numeric ID first, fall back to matching key
-    let def = fieldDefs[colId];
-    if (!def) {
-      def = Object.values(fieldDefs).find(d => d.key === colId) || {};
-    }
-    // Actual item property name
-    const key = def.key || colId;
-    const td = document.createElement('td');
-    td.style.fontFamily = 'Consolas, monospace';
-
-    // Determine value
-    let val = item[key];
-    if (def.type === 'computed' && def.formula) {
-      val = computeFormula(def.formula, item);
-    }
-    if (val === undefined || val === '') {
-      val = resolveDefault(def.default_value);
-    }
-
-    // Render based on type
-    switch (def.type) {
-      case 'checkbox': {
-        const cb = document.createElement('input');
-        cb.type = 'checkbox';
-        cb.checked = !!val;
-        cb.onchange = () => {
-          item[key] = cb.checked;
-          markSaveDirty(true); changeCount++;
-          renderChecklist();
-        };
-        td.appendChild(cb);
-        break;
-      }
-
-      case 'select': {
-        const span = document.createElement('span');
-        span.textContent = val;
-        span.style.cursor = 'pointer';
-        // Build options list, excluding the default placeholder value
-        const rawOptions = def.options ? def.options.slice() : (Array.isArray(checklistData[def.source]) ? checklistData[def.source].slice() : []);
-        const placeholder = def.default_value;
-        const options = rawOptions.filter(opt => opt !== placeholder);
-        span.addEventListener('click', e => {
-          e.stopPropagation();
-          showPopupList(span, options, selected => {
-            item[key] = selected;
-            markSaveDirty(true); changeCount++;
-            renderChecklist();
-          });
-        });
-        td.appendChild(span);
-        break;
-      }
-
-      case 'date': {
-        const input = document.createElement('input');
-        input.type = 'date';
-        input.value = val;
-        input.onchange = () => {
-          item[key] = input.value;
-          markSaveDirty(true); changeCount++;
-        };
-        td.appendChild(input);
-        break;
-      }
-
-      case 'number': {
-        const input = document.createElement('input');
-        input.type = 'text';
-        input.value = val;
-        input.style.width = '90%';
-        input.style.textAlign = 'left';
-        input.style.fontFamily = 'Consolas';
-        input.onblur = () => {
-          const v = input.value.trim();
-          // On empty or invalid, clear the value without alert
-          if (v === '' || isNaN(v)) {
-            item[key] = '';
-          } else {
-            item[key] = parseFloat(v);
-          }
-          markSaveDirty(true); changeCount++;
-          renderChecklist();
-        };
-        td.style.textAlign = 'left';
-        td.appendChild(input);
-        break;
-      }
-
-      case 'tree':
-      case 'text':
-      default: {
-        // For label or tree fields, render wrappers and icons
-        if (key === 'label' || def.type === 'tree') {
-          const wrapper = document.createElement('div');
-          Object.assign(wrapper.style, {
-            display: 'flex', alignItems: 'center', gap: '0.4rem',
-            marginLeft: `${(path.length - 1) * 20}px`
-          });
-          if (item.color) wrapper.style.color = item.color;
-          if (item.bold) wrapper.style.fontWeight = 'bold';
-
-          // Arrow
-          if (item.children?.length) {
-            const arrow = document.createElement('span');
-            arrow.textContent = item.collapsed ? '▶' : '▼';
-            arrow.style.cursor = 'pointer';
-            arrow.onclick = e => { e.stopPropagation(); item.collapsed = !item.collapsed; renderChecklist(); };
-            wrapper.appendChild(arrow);
-          }
-          // Note icon
-          if (item.noteFile) {
-            const noteIcon = document.createElement('span');
-            noteIcon.textContent = '📝';
-            noteIcon.style.cursor = 'pointer';
-            noteIcon.title = 'Open note';
-            noteIcon.onclick = e => { e.stopPropagation(); selectedPath = path.slice(); selectedItem = item; highlightSelectedRow(row);editNote(item.noteFile, item); };
-            wrapper.appendChild(noteIcon);
-          }
-          // Image icon
-          if (item.imageFile) {
-            const ext = item.imageFile.split('.').pop().toLowerCase();
-            const imgIcon = document.createElement('span');
-            imgIcon.textContent = ext === 'pdf' ? '📄' : '📷';
-            imgIcon.style.cursor = 'pointer';
-            imgIcon.title = 'View image';
-            const imgURL = `https://fields-proxy.johan-351.workers.dev?file=checklists/images/${item.imageFile}`;
-            imgIcon.onmouseenter = () => {
-              const tooltip = document.getElementById('noteTooltip');
-              tooltip.innerHTML = ext === 'pdf' ? `<div style="font-size:0.9rem; padding:0.5rem;">PDF: ${item.imageFile}</div>` : `<img src="${imgURL}" style="max-width:300px;">`;
-              tooltip.style.left = `${imgIcon.getBoundingClientRect().right + 5}px`;
-              tooltip.style.top = `${imgIcon.getBoundingClientRect().top}px`;
-              tooltip.style.display = 'block';
-            };
-            imgIcon.onmouseleave = () => document.getElementById('noteTooltip').style.display = 'none';
-            imgIcon.onclick = e => { e.stopPropagation(); window.open(imgURL, '_blank'); };
-            wrapper.appendChild(imgIcon);
-          }
-          // Link icon
-          if (item.link) {
-            const linkIcon = document.createElement('span');
-            linkIcon.textContent = '🔗';
-            linkIcon.style.cursor = 'pointer';
-            linkIcon.title = item.link;
-            linkIcon.onclick = e => { e.stopPropagation(); window.open(item.link, '_blank'); };
-            wrapper.appendChild(linkIcon);
-          }
-          // Text input
-          const input = document.createElement('input');
-          input.type = 'text';
-          input.value = val;
-          Object.assign(input.style, { width: '100%', fontFamily: 'Consolas, monospace', background: 'transparent'});
-          if (item.bold) input.style.fontWeight = 'bold';
-          if (item.color) input.style.color = item.color;
-          input.onblur = () => { const v = input.value.trim(); if (v.startsWith('http://') || v.startsWith('https://')) { item.link = v; item[key] = ''; } else { item[key] = v; } markSaveDirty(true); changeCount++; renderChecklist(); };
-          wrapper.appendChild(input);
-          td.appendChild(wrapper);
-        } else {
-          // Fallback plain text
-          td.textContent = val;
-        }
-      }
-    }
-    row.appendChild(td);
-  });
-
-  // 4. Append and recurse
-  tbody.appendChild(row);
-  if (item.children && !item.collapsed) {
-    item.children.forEach((child, i) => {
-      renderItem(child, tbody, path.concat(i + 1), columnDefs, rowHeight);
-    });
-  }
-}
 
 
 
@@ -1390,7 +1491,7 @@ async function fetchChecklists() {
       };
 
       btn.onclick = () => {
-        FILE_PATH = file.path;
+        sharedState.FILE_PATH = file.path;
         loadChecklist(FILE_PATH);
         updatemainstatustext(`📂 Loaded: ${file.name}`);
       };
@@ -1514,18 +1615,39 @@ function initNoteModal() {
   });
 }
 
-function openNoteModal(initialContent = '') {
-  const modal = document.getElementById('noteModal');
-  if (!modal || !quillEditor) {
-    return console.error('⚠️ Note modal or editor not initialized');
+async function openNoteModal(path) {
+  // Fetch the note HTML + SHA
+  const res = await fetch(`${WORKER_URL}/load?file=${encodeURIComponent(path)}`);
+  if (!res.ok) {
+    return alert("⚠️ Failed to load note.");
+  }
+  const json = await res.json();
+
+  // Store for later save
+  currentNoteFile                = path;
+  currentNoteTargetItem._pendingNoteSha     = json.sha;
+  currentNoteTargetItem._pendingNoteContent = json.html;
+
+  // Load into Quill
+  if (!quillEditor) {
+    console.error("⚠️ Quill editor not initialized");
+    return;
   }
   quillEditor.setContents(
-    quillEditor.clipboard.convert(initialContent)
+    quillEditor.clipboard.convert(json.html)
   );
+
+  // **Manual positioning & show**
+  const modal = document.getElementById('noteModal');
+  if (!modal) {
+    console.error("⚠️ #noteModal not found");
+    return;
+  }
   modal.style.top     = '10%';
   modal.style.left    = '10%';
   modal.style.display = 'block';
 }
+
 
 function closeNoteModal() {
   const modal = document.getElementById('noteModal');
@@ -2084,57 +2206,45 @@ async function addNote() {
 }
 
 
+// 6) editNote (also captures SHA)
 async function editNote(noteFile, item) {
-  if (!noteFile) return alert("⚠ No note file defined.");
-
-  const WORKER_URL = "https://fields-proxy.johan-351.workers.dev";
-  const url = `${WORKER_URL}?file=${noteFile}`;
-  let content = '';
-
+  const url = `${WORKER_URL}/load?file=${encodeURIComponent(noteFile)}`;
+  let content = "";
   try {
     const res = await fetch(url);
-
-    if (res.ok) {
-      content = await res.text();
-    } else {
-      return alert("⚠ Failed to load note.");
-    }
-  } catch (err) {
-    console.error("❌ Error loading note:", err);
-    return alert("❌ Error loading note.");
+    if (!res.ok) throw new Error();
+    const json = await res.json();
+    content = json.html;
+    item._pendingNoteSha = json.sha;
+  } catch {
+    return alert("⚠ Failed to load note.");
   }
 
-  currentNoteFile = noteFile;
   currentNoteTargetItem = item;
-
-  quillEditor.setContents(quillEditor.clipboard.convert(content));
-  document.getElementById('saveNoteBtn').textContent = '💾 Update Note';
-  document.getElementById('noteModal').style.display = 'block';
+  quillEditor.root.innerHTML = content;
+  showNoteModal();
 }
 
 
+// 7) saveNote (forces dirty + appends footer)
 function saveNote() {
   if (!currentNoteFile || !currentNoteTargetItem) {
     alert("⚠ No note is currently open.");
     return;
   }
- alert("Note is being saved.");
+  alert("Note is being saved.");
+
   const timestamp = timestampNow();
-  const footer = `<p style="font-size:0.8em; color:#888;">edited by ${currentUser || 'unknown'} on ${timestamp}</p>`;
-  const html = `<html><body>${quillEditor.root.innerHTML}${footer}</body></html>`;
+  const footer = `<p style="font-size:0.8em; color:#888;">update by ${currentUser || 'unknown'} @ ${timestamp}</p>`;
+  const html   = `<html><body>${quillEditor.root.innerHTML}${footer}</body></html>`;
 
-  // 📝 Mark note as pending to be saved
   currentNoteTargetItem._pendingNoteContent = html;
+  markSaveDirty(true);
 
-  // 🎯 Remember selection before modal closes
   const path = selectedPath;
-
-  // 🔒 Close the editor modal
   closeNoteModal();
 
-  // 💾 Trigger full save
   saveChecklist().then(() => {
-    // 🔦 Highlight saved row
     setTimeout(() => {
       const selector = `tr[data-path='${JSON.stringify(path)}']`;
       const row = document.querySelector(selector);
@@ -2146,10 +2256,10 @@ function saveNote() {
     }, 100);
   });
 
-  // 🔄 Clear temporary state
   currentNoteFile = null;
   currentNoteTargetItem = null;
 }
+
 
 function duplicate_Structure(path = selectedPath) {
   if (!path || !Array.isArray(path)) return;
@@ -2357,6 +2467,7 @@ function moveAltDown() {
 
 document.addEventListener("DOMContentLoaded", async () => {
   // 1) bootstrap your app
+  await loadUsersData();
   await loadFieldDefinitions();
   await tryAutoLoginFromURL();
   initNoteModal();

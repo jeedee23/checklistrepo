@@ -1,0 +1,477 @@
+// data.js — Module for loading, saving, and listing checklists
+
+import { WORKER_URL, CHECKLISTS_DIR, USER_CONFIG_PATH, sharedState } from './constants.js';
+import { traverse, timestampNow } from './utils.js';
+import { updatemainstatustext } from './ui-mainrender.js';
+import { createCheckpoint, hasChanged, findChanges, logChanges } from './debug-helpers.js';
+import { renderChecklist} from './renderchecklist.js';
+// For version‐conflict monitoring (handled in events.js)
+sharedState.readyForEdits = false;
+
+/**
+ * Fetches the JSON list of available checklist files, renders the sidebar (if exists),
+ * and returns the array of files.
+ */
+export async function fetchChecklists() {
+  const listEl = document.getElementById('checklistList');
+  
+  // Check if the sidebar element exists
+  if (listEl) {
+    listEl.innerHTML = '🔄 Loading...';
+  } else {
+    console.log('Checklist list element not found (sidebar removed), fetching data only');
+  }
+
+  let jsonFiles = [];
+
+  try {
+    // 1. Get raw file listing
+    const res = await fetch(`${WORKER_URL}?list=checklists`);
+    if (!res.ok) throw new Error('Failed to fetch checklist list');
+    const files = await res.json();
+
+    // 2. Keep only our timestamped JSONs
+    jsonFiles = files.filter(f =>
+      f.name.endsWith('.json') &&
+      /^\d{4}_\d{2}_\d{2}_@_\d{2}-\d{2}-\d{2}/.test(f.name) &&
+      !f.path.startsWith('checklists/config/')
+    );
+
+    // 3. Load users.json to see lastAccessed for this user
+    const usersRes = await fetch(
+      `${WORKER_URL}?file=${encodeURIComponent(USER_CONFIG_PATH)}`
+    );
+    const usersConfig = usersRes.ok ? await usersRes.json() : { users: [] };
+    const me = usersConfig.users.find(
+      u => u.username?.toLowerCase() === sharedState.currentUser?.toLowerCase()
+    );
+    const myEntries = me?.checklists || [];
+
+    // 4. Sort: your recent checklists first, then alphabetically
+    jsonFiles.sort((a, b) => {
+      const aEntry = myEntries.find(e => e.id === a.name);
+      const bEntry = myEntries.find(e => e.id === b.name);
+      if (aEntry && bEntry) {
+        return new Date(bEntry.lastAccessed) - new Date(aEntry.lastAccessed);
+      }
+      if (aEntry) return -1;
+      if (bEntry) return 1;
+      return a.name.localeCompare(b.name);
+    });
+
+    // 5. Render the sidebar buttons (only if listEl exists)
+    if (listEl) {
+      listEl.innerHTML = '';
+      jsonFiles.forEach(file => {
+        const li = document.createElement('li');
+        li.style.listStyle = 'none';
+
+        const btn = document.createElement('button');
+        btn.style.display = 'block';
+
+        // Human-friendly label
+        const label = file.name
+          .replace(/^\d{4}_\d{2}_\d{2}_@_/, '')
+          .replace(/\.json$/, '')
+          .replace(/_/g, ' ');
+        btn.textContent = label;
+
+        btn.onclick = () => loadChecklist(file.path);
+
+        li.appendChild(btn);
+        listEl.appendChild(li);
+      });
+    }
+  } catch (err) {
+    console.error('[fetchChecklists]', err);
+    if (listEl) {
+      listEl.innerHTML = '❌ Failed to load list';
+    }
+  }
+
+  console.log('[data.js] fetchChecklists jsonFiles =', jsonFiles);
+  return jsonFiles;
+}
+
+/**
+ * Fetch a single checklist JSON by path.
+ * @param {string} path
+ * @returns {Promise<Object>}
+ */
+export async function fetchRemoteChecklist(path) {
+  const res = await fetch(
+    `${WORKER_URL}?file=${encodeURIComponent(path)}`,
+    { cache: 'no-cache' }
+  );
+  if (!res.ok) throw new Error(`Failed to load checklist: ${path}`);
+  return res.json();
+}
+
+/**
+ * Load and display a checklist, validating lastSave and initializing state.
+ * @param {string} path
+ */
+export async function loadChecklist(path) {
+  console.log(`🔄 Loading checklist from ${path}...`);
+  updatemainstatustext(`🔄 Loading ${path}…`);
+  try {
+    // 1. Fetch the JSON
+    const data = await fetchRemoteChecklist(path);
+
+    // 2. Validate lastSave
+    if (!data.lastSave) {
+      alert('❌ Cannot load this checklist: no lastSave timestamp found.');
+      updatemainstatustext('❌ Load failed: missing lastSave');
+      return;
+    }
+
+    // Create a checkpoint for later comparison
+    const originalCheckpoint = createCheckpoint(data);
+    console.log('Checklist data checkpoint created before loading');
+
+    // 3. Initialize shared state
+    sharedState.FILE_PATH = path;
+    // Make a clean deep copy to avoid accidental mutations
+    sharedState.checklistData = JSON.parse(JSON.stringify(data));
+    sharedState.lastSave = data.lastSave;
+    sharedState.isDirty = false;
+    sharedState.changeCount = 0; // Reset change counter
+    sharedState.layoutDirty = false; // Reset layout dirty flag
+    sharedState.readyForEdits = false; // Prevent markDirty during initial rendering
+    sharedState.filterState = 'all';
+    
+    // 4. Update header UI
+    const loadedListEl = document.getElementById('loadedList');
+    if (loadedListEl) loadedListEl.textContent = data.title || '';
+
+    // 5. Render collaborators
+    const collabListEl = document.getElementById('collaboratorList');
+    if (collabListEl) {
+      collabListEl.innerHTML = '';
+      (data.collaborators || []).forEach(collab => {
+        const li = document.createElement('li');
+        li.textContent = `${collab.name}${collab.role ? ' (' + collab.role + ')' : ''}`;
+        collabListEl.appendChild(li);
+      });
+    }
+
+    // 6. Render the checklist
+    renderChecklist();
+    
+    // Now check if any unintended changes happened during rendering
+    if (hasChanged(originalCheckpoint, sharedState.checklistData)) {
+      console.warn('⚠️ Checklist data was modified during loading/rendering!');
+      const changes = findChanges(originalCheckpoint, sharedState.checklistData);
+      logChanges(changes);
+      
+      // Fix unwanted changes by reverting to original data if only numbering changed
+      if (changes.itemNumberingChanged && !changes.itemPropertiesChanged && !changes.layoutChanged && !changes.metadataChanged) {
+        console.log('Reverting unintended numbering changes to maintain original state');
+        sharedState.checklistData = JSON.parse(originalCheckpoint);
+        sharedState.isDirty = false;
+      }
+    } else {
+      console.log('✅ No unintended modifications occurred during loading');
+    }
+    
+    // Now it's safe to enable editing
+    sharedState.readyForEdits = true;
+
+    // 7. Final status update
+    updatemainstatustext(`✅ Loaded "${data.title || path}" (saved: ${data.lastSave})`);
+  } catch (err) {
+    updatemainstatustext(`❌ Error loading: ${err.message}`, { color: 'red' });
+    console.error('[loadChecklist]', err);
+  }
+}
+
+/**
+ * Create a brand-new checklist template and save immediately.
+ */
+export async function newChecklist() {
+  const name = prompt('New checklist name:', 'My Checklist');
+  if (!name) return;
+
+  const timestamp = timestampNow();
+  const filename = `${timestamp}_${name.replace(/\s+/g, '_')}.json`;
+  const path = `${CHECKLISTS_DIR}/${filename}`;
+  
+  const template = {
+    title: name,
+    lastSave: timestamp,
+    items: [
+      {
+        label: "First item",
+        done: false,
+        children: []
+      }
+    ],
+    layout: {
+      columns: {
+        label: { visible: true, width: 400 },
+        done: { visible: true, width: 50 },
+        who: { visible: true, width: 100 },
+        date: { visible: true, width: 100 }
+      }
+    },
+    collaborators: [sharedState.currentUser],
+    files: []
+  };
+  
+  sharedState.FILE_PATH = path;
+  sharedState.checklistData = template;
+  sharedState.lastSave = timestamp;
+  sharedState.isDirty = true;
+  sharedState.readyForEdits = true;
+  
+  renderChecklist();
+  updatemainstatustext(`✅ Created new checklist "${name}"`);
+  
+  // Save immediately
+  await saveChecklist();
+}
+
+/**
+ * Rename the current checklist file (in-memory).
+ */
+export function renameChecklist() {
+  const curPath = sharedState.FILE_PATH;
+  if (!curPath) return;
+
+  const curName = curPath.split('/').pop().replace(/^\d{4}_\d{2}_\d{2}_@_\d{2}-\d{2}-\d{2}_/, '').replace(/\.json$/, '');
+  const newName = prompt('New checklist name:', curName);
+  if (!newName || newName === curName) return;
+
+  const timestamp = timestampNow();
+  const newFilename = `${timestamp}_${newName.replace(/\s+/g, '_')}.json`;
+  const newPath = `${CHECKLISTS_DIR}/${newFilename}`;
+  
+  sharedState.FILE_PATH = newPath;
+  sharedState.checklistData.title = newName;
+  markSaveDirty(true);
+  
+  renderChecklist();
+  updatemainstatustext(`✅ Renamed to "${newName}" (will save as new file)`);
+}
+
+/**
+ * Make a copy of the current checklist under a new name.
+ */
+export async function copyChecklist() {
+  const curPath = sharedState.FILE_PATH;
+  if (!curPath) return;
+
+  const curName = sharedState.checklistData.title || curPath.split('/').pop().replace(/^\d{4}_\d{2}_\d{2}_@_\d{2}-\d{2}-\d{2}_/, '').replace(/\.json$/, '');
+  const newName = prompt('Copy checklist as:', `Copy of ${curName}`);
+  if (!newName) return;
+
+  const timestamp = timestampNow();
+  const newFilename = `${timestamp}_${newName.replace(/\s+/g, '_')}.json`;
+  const newPath = `${CHECKLISTS_DIR}/${newFilename}`;
+  
+  // Keep current data but update filename and title
+  sharedState.FILE_PATH = newPath;
+  sharedState.checklistData.title = newName;
+  sharedState.checklistData.lastSave = timestamp;
+  markSaveDirty(true);
+  
+  renderChecklist();
+  updatemainstatustext(`✅ Created copy "${newName}"`);
+  
+  // Save immediately
+  await saveChecklist();
+}
+
+/**
+ * Persist notes, checklist JSON, and update users.json with lastAccessed.
+ * @param {string} [pathOverride]
+ */
+/** 
+ * Find items that were edited both locally and remotely.
+ * Returns an array of { no, localItem, remoteItem } 
+ */
+function findConflictingItems(localState, remoteState) {
+  const conflicts = [];
+  
+  // TODO: implement proper conflict detection logic
+  
+  return conflicts;
+}
+
+/**
+ * Format conflicts as plain-text for user to review.
+ */
+function formatConflictsAsPlainText(conflicts) {
+  if (!conflicts.length) return '';
+  
+  // TODO: implement conflict formatting
+  
+  return 'Conflicts detected - implementation pending';
+}
+
+/**
+ * Save the current checklist, with conflict-on-save detection.
+ * @param {string} [pathOverride]
+ */
+export async function saveChecklist(pathOverride) {
+  const path = pathOverride || sharedState.FILE_PATH;
+  if (!path) {
+    alert('No checklist path set!');
+    return;
+  }
+  
+  if (sharedState.saveInProgress) {
+    console.log('Save already in progress, ignoring duplicate request');
+    return;
+  }
+  
+  sharedState.saveInProgress = true;
+  updatemainstatustext('💾 Saving...');
+  
+  try {
+    // 1. Check for conflicts with the server version
+    let serverVersion = null;
+    try {
+      serverVersion = await fetchRemoteChecklist(path);
+      
+      // If timestamps don't match, check for conflicts
+      if (serverVersion.lastSave !== sharedState.lastSave) {
+        console.warn(`Potential conflict: local lastSave=${sharedState.lastSave}, server lastSave=${serverVersion.lastSave}`);
+        
+        // Look for specific conflicts
+        const conflicts = findConflictingItems(sharedState.checklistData, serverVersion);
+        
+        if (conflicts.length) {
+          const proceed = confirm(
+            `Warning: This checklist was modified since you opened it.\n\n` +
+            formatConflictsAsPlainText(conflicts) +
+            `\n\nDo you want to overwrite these changes?`
+          );
+          
+          if (!proceed) {
+            updatemainstatustext('❌ Save cancelled due to conflicts');
+            return;
+          }
+        }
+      }
+    } catch (err) {
+      console.log('No server version found or error fetching:', err);
+      // Continue with save (likely a new file)
+    }
+    
+    // 2. Update the lastSave timestamp
+    const saveTimestamp = timestampNow();
+    sharedState.checklistData.lastSave = saveTimestamp;
+    
+    // 3. Save to GitHub via worker
+    const payload = {
+      file: path,
+      content: JSON.stringify(sharedState.checklistData, null, 2),
+      message: `Update checklist via webapp (${sharedState.currentUser || 'anonymous'})`
+    };
+    
+    const res = await fetch(`${WORKER_URL}/save`, {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify(payload)
+    });
+    
+    if (!res.ok) {
+      throw new Error(`Save failed: ${res.status} ${res.statusText}`);
+    }
+    
+    // 4. Update local state
+    sharedState.lastSave = saveTimestamp;
+    sharedState.isDirty = false;
+    sharedState.changeCount = 0;
+    sharedState.layoutDirty = false;
+    
+    // 5. Update users.json with lastAccessed
+    if (sharedState.currentUser) {
+      await updateUsersJson(path.split('/').pop(), sharedState.currentUser, saveTimestamp);
+    }
+    
+    updatemainstatustext('✅ Saved successfully');
+  } catch (err) {
+    console.error('[saveChecklist]', err);
+    updatemainstatustext(`❌ Save failed: ${err.message}`, { color: 'red' });
+    alert(`Error saving: ${err.message}`);
+  } finally {
+    sharedState.saveInProgress = false;
+  }
+}
+
+/**
+ * Mark the checklist as dirty/needs saving.
+ */
+export function markSaveDirty(flag = true) {
+  // Only allow marking as dirty if we're ready for edits
+  if (!sharedState.readyForEdits) return;
+  
+  // If we're marking as dirty and no actual changes have been made, ignore
+  if (flag && sharedState.changeCount === 0 && !sharedState.layoutDirty) {
+    console.log('Prevented unnecessary dirty state - no real changes detected');
+    return;
+  }
+  
+  sharedState.isDirty = flag;
+  const btn = document.getElementById('saveChecklistButton');
+  if (btn) btn.classList.toggle('dirty', sharedState.isDirty);
+}
+
+/**
+ * Merge helpers (future version-history integration)
+ */
+export function mergeChecklistData(local, remote) {
+  // Basic merge strategy - prefer local changes but include remote items
+  // TODO: implement proper merging logic
+  return local;
+}
+
+function mergeItems(localItems, remoteItems) {
+  // TODO: implement item merging logic
+  return localItems;
+}
+
+// Helper functions for item and path management
+export function getItemByPath(path) {
+  if (!path || !path.length) return null;
+  
+  let current = sharedState.checklistData.items;
+  
+  for (let i = 0; i < path.length; i++) {
+    const idx = path[i];
+    // Check if this is the last segment (item itself)
+    if (i === path.length - 1) {
+      return current[idx];
+    }
+    // Otherwise navigate to children
+    if (!current[idx] || !current[idx].children) {
+      return null;
+    }
+    current = current[idx].children;
+  }
+  
+  return null;
+}
+
+export function getParentArray(path) {
+  if (!path || path.length === 0) {
+    return sharedState.checklistData.items;
+  }
+  
+  if (path.length === 1) {
+    return sharedState.checklistData.items;
+  }
+  
+  // For deeper paths, navigate to the parent's children array
+  const parentPath = path.slice(0, -1);
+  const parent = getItemByPath(parentPath);
+  
+  if (!parent) return null;
+  if (!parent.children) {
+    parent.children = [];
+  }
+  
+  return parent.children;
+}
