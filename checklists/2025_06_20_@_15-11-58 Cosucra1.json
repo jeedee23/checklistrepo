@@ -71,15 +71,7 @@
               "children": []
             },
             {
-              "no": 0,
-              "label": "BBS – Bar Bending Schedule - Table listing rebar sizes, lengths, and bending shapes.",
-              "done": false,
-              "who": "Johan",
-              "date": "2025-07-01T21:09:16",
-              "children": []
-            },
-            {
-              "no": "1.1.8",
+              "no": "1.1.7",
               "label": "BES – Budget Estimate Description - Detailed breakdown of cost-estimate components.",
               "done": false,
               "who": "Johan",
@@ -87,8 +79,16 @@
               "children": []
             },
             {
-              "no": "1.1.9",
+              "no": "1.1.8",
               "label": "BLD – Block Diagram - High-level schematic showing systems or process flow.",
+              "done": false,
+              "who": "Johan",
+              "date": "2025-07-01T21:09:16",
+              "children": []
+            },
+            {
+              "no": "1.1.9",
+              "label": "BBS – Bar Bending Schedule - Table listing rebar sizes, lengths, and bending shapes.",
               "done": false,
               "who": "Johan",
               "date": "2025-07-01T21:09:16",
@@ -6144,7 +6144,7 @@
     "Cuong"
   ],
   "title": "Cosucra Project structure",
-  "lastSave": "2025_07_03_@_17-38-37",
+  "lastSave": "2025_07_03_@_17-40-25",
   "unitChoices": [
     "kg",
     "ton",
