@@ -1,4 +1,150 @@
-{
+{  "title": "Cosucra Project structure",
+  "lastSave": "2025_07_03_@_18-23-41",
+  "unitChoices": [
+    "kg",
+    "ton",
+    "hr",
+    "sec",
+    "m",
+    "m²",
+    "m³",
+    "l",
+    "pc"
+  ],
+    "layouts": [
+      {
+        "layoutName": "Default",
+        "columns": {
+          "16": {
+            "width": 100,
+            "visible": false
+          },
+          "17": {
+            "width": 100,
+            "visible": false
+          },
+          "18": {
+            "width": 100,
+            "visible": false
+          },
+          "19": {
+            "width": 100,
+            "visible": false
+          },
+          "20": {
+            "width": 100,
+            "visible": false
+          },
+          "done": {
+            "width": 37,
+            "visible": true
+          },
+          "no": {
+            "width": 73,
+            "visible": true
+          },
+          "unit": {
+            "width": 23,
+            "visible": false
+          },
+          "qty_est": {
+            "width": 53,
+            "visible": false
+          },
+          "qty_real": {
+            "width": 51,
+            "visible": false
+          },
+          "price_unit": {
+            "width": 48,
+            "visible": false
+          },
+          "total_price": {
+            "width": 47,
+            "visible": false
+          },
+          "date": {
+            "width": 174,
+            "visible": false
+          },
+          "who": {
+            "width": 100,
+            "visible": false
+          },
+          "label": {
+            "width": 466,
+            "visible": true
+          },
+          "Resp": {
+            "width": 74,
+            "visible": true
+          },
+          "Acc": {
+            "width": 70,
+            "visible": true
+          },
+          "Support": {
+            "width": 69,
+            "visible": true
+          },
+          "Consult": {
+            "width": 74,
+            "visible": true
+          },
+          "Informed": {
+            "width": 80,
+            "visible": true
+          }
+        },
+        "columnOrder": [
+          "16",
+          "17",
+          "18",
+          "19",
+          "20",
+          "done",
+          "no",
+          "unit",
+          "qty_est",
+          "qty_real",
+          "price_unit",
+          "total_price",
+          "date",
+          "who",
+          "label",
+          "Resp",
+          "Acc",
+          "Support",
+          "Consult",
+          "Informed"
+        ],
+        "rows": {
+          "height": 30
+        }
+      }
+    ],
+    "activeLayoutIndex": 0
+  },
+  "files": [
+    {
+      "name": "RASCI.png",
+      "path": "checklists/files/RASCI.png",
+      "uploadedBy": "Johan",
+      "uploadedAt": "2025-06-26T20:31:58.481Z"
+    },
+    {
+      "name": "Improved_Letter.docx",
+      "path": "checklists/files/Improved_Letter.docx",
+      "uploadedBy": "Johan",
+      "uploadedAt": "2025-06-26T20:35:01.970Z"
+    }
+  ],
+  "collaborators": [
+    "∅",
+    "Johan",
+    "Fred",
+    "Cuong"
+  ],
   "items": [
     {
       "no": "1",
@@ -5900,260 +6046,6 @@
         }
       ]
     }
-  ],
-  "layout": {
-    "columns": {
-      "16": {
-        "width": 100,
-        "visible": false
-      },
-      "17": {
-        "width": 100,
-        "visible": false
-      },
-      "18": {
-        "width": 100,
-        "visible": false
-      },
-      "19": {
-        "width": 100,
-        "visible": false
-      },
-      "20": {
-        "width": 100,
-        "visible": false
-      },
-      "done": {
-        "width": 37,
-        "visible": true
-      },
-      "no": {
-        "width": 73,
-        "visible": true
-      },
-      "unit": {
-        "width": 23,
-        "visible": false
-      },
-      "qty_est": {
-        "width": 53,
-        "visible": false
-      },
-      "qty_real": {
-        "width": 51,
-        "visible": false
-      },
-      "price_unit": {
-        "width": 48,
-        "visible": false
-      },
-      "total_price": {
-        "width": 47,
-        "visible": false
-      },
-      "date": {
-        "width": 174,
-        "visible": false
-      },
-      "who": {
-        "width": 100,
-        "visible": false
-      },
-      "label": {
-        "width": 466,
-        "visible": true
-      },
-      "Resp": {
-        "width": 74,
-        "visible": true
-      },
-      "Acc": {
-        "width": 70,
-        "visible": true
-      },
-      "Support": {
-        "width": 69,
-        "visible": true
-      },
-      "Consult": {
-        "width": 74,
-        "visible": true
-      },
-      "Informed": {
-        "width": 80,
-        "visible": true
-      }
-    },
-    "rows": {
-      "height": 30
-    },
-    "columnOrder": [
-      "16",
-      "17",
-      "18",
-      "19",
-      "20",
-      "done",
-      "no",
-      "unit",
-      "qty_est",
-      "qty_real",
-      "price_unit",
-      "total_price",
-      "date",
-      "who",
-      "label",
-      "Resp",
-      "Acc",
-      "Support",
-      "Consult",
-      "Informed"
-    ],
-    "layouts": [
-      {
-        "layoutName": "Default",
-        "columns": {
-          "16": {
-            "width": 100,
-            "visible": false
-          },
-          "17": {
-            "width": 100,
-            "visible": false
-          },
-          "18": {
-            "width": 100,
-            "visible": false
-          },
-          "19": {
-            "width": 100,
-            "visible": false
-          },
-          "20": {
-            "width": 100,
-            "visible": false
-          },
-          "done": {
-            "width": 37,
-            "visible": true
-          },
-          "no": {
-            "width": 73,
-            "visible": true
-          },
-          "unit": {
-            "width": 23,
-            "visible": false
-          },
-          "qty_est": {
-            "width": 53,
-            "visible": false
-          },
-          "qty_real": {
-            "width": 51,
-            "visible": false
-          },
-          "price_unit": {
-            "width": 48,
-            "visible": false
-          },
-          "total_price": {
-            "width": 47,
-            "visible": false
-          },
-          "date": {
-            "width": 174,
-            "visible": false
-          },
-          "who": {
-            "width": 100,
-            "visible": false
-          },
-          "label": {
-            "width": 466,
-            "visible": true
-          },
-          "Resp": {
-            "width": 74,
-            "visible": true
-          },
-          "Acc": {
-            "width": 70,
-            "visible": true
-          },
-          "Support": {
-            "width": 69,
-            "visible": true
-          },
-          "Consult": {
-            "width": 74,
-            "visible": true
-          },
-          "Informed": {
-            "width": 80,
-            "visible": true
-          }
-        },
-        "columnOrder": [
-          "16",
-          "17",
-          "18",
-          "19",
-          "20",
-          "done",
-          "no",
-          "unit",
-          "qty_est",
-          "qty_real",
-          "price_unit",
-          "total_price",
-          "date",
-          "who",
-          "label",
-          "Resp",
-          "Acc",
-          "Support",
-          "Consult",
-          "Informed"
-        ],
-        "rows": {
-          "height": 30
-        }
-      }
-    ],
-    "activeLayoutIndex": 0
-  },
-  "files": [
-    {
-      "name": "RASCI.png",
-      "path": "checklists/files/RASCI.png",
-      "uploadedBy": "Johan",
-      "uploadedAt": "2025-06-26T20:31:58.481Z"
-    },
-    {
-      "name": "Improved_Letter.docx",
-      "path": "checklists/files/Improved_Letter.docx",
-      "uploadedBy": "Johan",
-      "uploadedAt": "2025-06-26T20:35:01.970Z"
-    }
-  ],
-  "collaborators": [
-    "∅",
-    "Johan",
-    "Fred",
-    "Cuong"
-  ],
-  "title": "Cosucra Project structure",
-  "lastSave": "2025_07_03_@_18-23-41",
-  "unitChoices": [
-    "kg",
-    "ton",
-    "hr",
-    "sec",
-    "m",
-    "m²",
-    "m³",
-    "l",
-    "pc"
   ]
+
 }
