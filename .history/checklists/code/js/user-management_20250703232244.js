@@ -319,10 +319,6 @@ function attachUserManagementEventListeners() {
     }
   });
   
-  // User management
-  document.getElementById('new-user')?.addEventListener('click', createNewUser);
-  document.getElementById('delete-user')?.addEventListener('click', deleteCurrentUser);
-  
   // Form change detection
   const form = document.getElementById('user-form');
   if (form) {
@@ -538,90 +534,6 @@ function closeUserManagementDialog() {
  */
 function getCurrentUsername() {
   return sharedState.currentUser || 'System';
-}
-
-/**
- * Create a new user
- */
-function createNewUser() {
-  const newUser = {
-    id: `uuid-${Date.now()}-${Math.random().toString(36).substr(2, 9)}`,
-    username: '',
-    fullName: '',
-    email: '',
-    phoneNumber: '',
-    company: '',
-    companyAddress: {
-      street: '',
-      postalCode: '',
-      city: '',
-      country: ''
-    },
-    role: 'user',
-    jobFunction: '',
-    defaultAccessLevel: 8, // Default to read-only
-    passwordHash: '',
-    token: Math.random().toString(36).substr(2, 32),
-    twoFactorMethod: 'email',
-    checklists: []
-  };
-  
-  // Add the new user to the array
-  usersData.users.push(newUser);
-  
-  // Navigate to the new user
-  currentUserIndex = usersData.users.length - 1;
-  isEditing = true;
-  
-  // Refresh the dialog
-  refreshUserDialog();
-  
-  // Focus on the username field
-  setTimeout(() => {
-    const usernameField = document.getElementById('user-username');
-    if (usernameField) {
-      usernameField.focus();
-    }
-  }, 100);
-  
-  showNotification('info', 'New user created. Please fill in the required fields.');
-}
-
-/**
- * Delete the current user
- */
-function deleteCurrentUser() {
-  const currentUser = usersData.users[currentUserIndex];
-  
-  // Confirm deletion
-  const confirmDelete = confirm(
-    `Are you sure you want to delete user "${currentUser.fullName}" (${currentUser.username})?\n\n` +
-    `This action cannot be undone.`
-  );
-  
-  if (!confirmDelete) {
-    return;
-  }
-  
-  // Don't allow deletion of the last user
-  if (usersData.users.length <= 1) {
-    showNotification('error', 'Cannot delete the last user in the system.');
-    return;
-  }
-  
-  // Remove the user from the array
-  usersData.users.splice(currentUserIndex, 1);
-  
-  // Adjust current index if necessary
-  if (currentUserIndex >= usersData.users.length) {
-    currentUserIndex = usersData.users.length - 1;
-  }
-  
-  // Mark as edited and refresh
-  isEditing = true;
-  refreshUserDialog();
-  
-  showNotification('success', `User "${currentUser.fullName}" has been deleted.`);
 }
 
 // Make closeUserManagementDialog available globally for the close button
