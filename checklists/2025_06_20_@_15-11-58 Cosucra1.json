@@ -56,7 +56,7 @@
             },
             {
               "no": "1.1.5",
-              "label": "BEO – Budget Estimate Overview - General summary of project cost estimates.",
+              "label": "BES – Budget Estimate Description - Detailed breakdown of cost-estimate components.",
               "done": false,
               "who": "Johan",
               "date": "2025-07-01T21:09:16",
@@ -72,7 +72,7 @@
             },
             {
               "no": "1.1.7",
-              "label": "BES – Budget Estimate Description - Detailed breakdown of cost-estimate components.",
+              "label": "BLD – Block Diagram - High-level schematic showing systems or process flow.",
               "done": false,
               "who": "Johan",
               "date": "2025-07-01T21:09:16",
@@ -80,7 +80,7 @@
             },
             {
               "no": "1.1.8",
-              "label": "BLD – Block Diagram - High-level schematic showing systems or process flow.",
+              "label": "BEO – Budget Estimate Overview - General summary of project cost estimates.",
               "done": false,
               "who": "Johan",
               "date": "2025-07-01T21:09:16",
@@ -6144,7 +6144,7 @@
     "Cuong"
   ],
   "title": "Cosucra Project structure",
-  "lastSave": "2025_07_03_@_17-40-25",
+  "lastSave": "2025_07_03_@_17-42-29",
   "unitChoices": [
     "kg",
     "ton",
