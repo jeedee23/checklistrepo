@@ -27,546 +27,624 @@
               "label": "3AR / 3CI – 3D Model - Architectural or Civil 3D model used for design visualization and coordination.",
               "done": false,
               "who": "Johan",
-              "date": "2025-07-01T21:09:16"
+              "date": "2025-07-01T21:09:16",
+              "children": []
             },
             {
               "no": "1.1.2",
               "label": "ACS – Approved Changes Summary - Document listing all approved changes during project execution.",
               "done": false,
               "who": "Johan",
-              "date": "2025-07-01T21:09:16"
+              "date": "2025-07-01T21:09:16",
+              "children": []
             },
             {
               "no": "1.1.3",
               "label": "ASI – Asbestos Inventory - Overview of asbestos-containing materials identified on site.",
               "done": false,
               "who": "Johan",
-              "date": "2025-07-01T21:09:16"
+              "date": "2025-07-01T21:09:16",
+              "children": []
             },
             {
               "no": "1.1.4",
               "label": "BCO – Budget Estimate Comparison - Side-by-side comparison of estimated vs. updated budget.",
               "done": false,
               "who": "Johan",
-              "date": "2025-07-01T21:09:16"
+              "date": "2025-07-01T21:09:16",
+              "children": []
             },
             {
               "no": "1.1.5",
               "label": "BEO – Budget Estimate Overview - General summary of project cost estimates.",
               "done": false,
               "who": "Johan",
-              "date": "2025-07-01T21:09:16"
+              "date": "2025-07-01T21:09:16",
+              "children": []
             },
             {
               "no": "1.1.6",
               "label": "BEP – BIM Execution Plan - Strategy for Building Information Modeling use on the project.",
               "done": false,
               "who": "Johan",
-              "date": "2025-07-01T21:09:16"
+              "date": "2025-07-01T21:09:16",
+              "children": []
             },
             {
               "no": 0,
               "label": "BBS – Bar Bending Schedule - Table listing rebar sizes, lengths, and bending shapes.",
               "done": false,
               "who": "Johan",
-              "date": "2025-07-01T21:09:16"
+              "date": "2025-07-01T21:09:16",
+              "children": []
             },
             {
               "no": "1.1.8",
               "label": "BES – Budget Estimate Description - Detailed breakdown of cost-estimate components.",
               "done": false,
               "who": "Johan",
-              "date": "2025-07-01T21:09:16"
+              "date": "2025-07-01T21:09:16",
+              "children": []
             },
             {
               "no": "1.1.9",
               "label": "BLD – Block Diagram - High-level schematic showing systems or process flow.",
               "done": false,
               "who": "Johan",
-              "date": "2025-07-01T21:09:16"
+              "date": "2025-07-01T21:09:16",
+              "children": []
             },
             {
               "no": "1.1.10",
               "label": "CAL – Calculation - Engineering calculations (e.g., load, stress, capacity).",
               "done": false,
               "who": "Johan",
-              "date": "2025-07-01T21:09:16"
+              "date": "2025-07-01T21:09:16",
+              "children": []
             },
             {
               "no": "1.1.11",
               "label": "CHC – Chemical Cleaning - Procedure for cleaning internal systems before operation.",
               "done": false,
               "who": "Johan",
-              "date": "2025-07-01T21:09:16"
+              "date": "2025-07-01T21:09:16",
+              "children": []
             },
             {
               "no": "1.1.12",
               "label": "CIL – Civil Layout - Drawings representing civil structures and layouts.",
               "done": false,
               "who": "Johan",
-              "date": "2025-07-01T21:09:16"
+              "date": "2025-07-01T21:09:16",
+              "children": []
             },
             {
               "no": "1.1.13",
               "label": "CLP – Closing Plan - Plan outlining final project close-out activities.",
               "done": false,
               "who": "Johan",
-              "date": "2025-07-01T21:09:16"
+              "date": "2025-07-01T21:09:16",
+              "children": []
             },
             {
               "no": "1.1.14",
               "label": "COL – Coordination Layout - Plan showing spatial coordination among disciplines.",
               "done": false,
               "who": "Johan",
-              "date": "2025-07-01T21:09:16"
+              "date": "2025-07-01T21:09:16",
+              "children": []
             },
             {
               "no": "1.1.15",
               "label": "COM – Coordination Model - Integrated 3D model for clash detection and coordination.",
               "done": false,
               "who": "Johan",
-              "date": "2025-07-01T21:09:16"
+              "date": "2025-07-01T21:09:16",
+              "children": []
             },
             {
               "no": "1.1.16",
               "label": "CON – Contract - Legally binding agreement between client and contractor.",
               "done": false,
               "who": "Johan",
-              "date": "2025-07-01T21:09:16"
+              "date": "2025-07-01T21:09:16",
+              "children": []
             },
             {
               "no": "1.1.17",
               "label": "COP – Commissioning Plan - Strategy for starting up and validating systems.",
               "done": false,
               "who": "Johan",
-              "date": "2025-07-01T21:09:16"
+              "date": "2025-07-01T21:09:16",
+              "children": []
             },
             {
               "no": "1.1.18",
               "label": "COR – Coordination Registry - Register of roles and responsibilities in safety coordination.",
               "done": false,
               "who": "Johan",
-              "date": "2025-07-01T21:09:16"
+              "date": "2025-07-01T21:09:16",
+              "children": []
             },
             {
               "no": "1.1.19",
               "label": "CMP – Comparison - Evaluation of alternatives (e.g., supplier bids).",
               "done": false,
               "who": "Johan",
-              "date": "2025-07-01T21:09:16"
+              "date": "2025-07-01T21:09:16",
+              "children": []
             },
             {
               "no": "1.1.20",
               "label": "CSI – Construction Site Indication - Visual signage and markings on a construction site.",
               "done": false,
               "who": "Johan",
-              "date": "2025-07-01T21:09:16"
+              "date": "2025-07-01T21:09:16",
+              "children": []
             },
             {
               "no": "1.1.21",
               "label": "DFC – Docs for Closing - Documentation package needed at project closure.",
               "done": false,
               "who": "Johan",
-              "date": "2025-07-01T21:09:16"
+              "date": "2025-07-01T21:09:16",
+              "children": []
             },
             {
               "no": "1.1.22",
               "label": "DFI – Docs for Information - Documents shared for stakeholder awareness (no action needed).",
               "done": false,
               "who": "Johan",
-              "date": "2025-07-01T21:09:16"
+              "date": "2025-07-01T21:09:16",
+              "children": []
             },
             {
               "no": "1.1.23",
               "label": "DFP – Docs for Production - Documents used for fabrication or execution on site.",
               "done": false,
               "who": "Johan",
-              "date": "2025-07-01T21:09:16"
+              "date": "2025-07-01T21:09:16",
+              "children": []
             },
             {
               "no": "1.1.24",
               "label": "DFQ – Docs for Quotation - Documents provided to suppliers to obtain pricing offers.",
               "done": false,
               "who": "Johan",
-              "date": "2025-07-01T21:09:16"
+              "date": "2025-07-01T21:09:16",
+              "children": []
             },
             {
               "no": "1.1.25",
               "label": "EIA – Engineering, Procurement & Construction Management phase (client legend) / Electrical, Instrumentation & Automation supply and erection.",
               "done": false,
               "who": "Johan",
-              "date": "2025-07-01T21:09:16"
+              "date": "2025-07-01T21:09:16",
+              "children": []
             },
             {
               "no": "1.1.26",
               "label": "EQL – Equipment List - Register of all project-related equipment.",
               "done": false,
               "who": "Johan",
-              "date": "2025-07-01T21:09:16"
+              "date": "2025-07-01T21:09:16",
+              "children": []
             },
             {
               "no": "1.1.27",
               "label": "FDE – Functional Description - Description of how systems are expected to function.",
               "done": false,
               "who": "Johan",
-              "date": "2025-07-01T21:09:16"
+              "date": "2025-07-01T21:09:16",
+              "children": []
             },
             {
               "no": "1.1.28",
               "label": "FLL – Fluid List - Table of fluids used or transferred in the system.",
               "done": false,
               "who": "Johan",
-              "date": "2025-07-01T21:09:16"
+              "date": "2025-07-01T21:09:16",
+              "children": []
             },
             {
               "no": "1.1.29",
               "label": "FUL – Follow-Up List - Checklist or task list to monitor progress.",
               "done": false,
               "who": "Johan",
-              "date": "2025-07-01T21:09:16"
+              "date": "2025-07-01T21:09:16",
+              "children": []
             },
             {
               "no": "1.1.30",
               "label": "GPL – General Punch List - List of outstanding tasks or defects to resolve.",
               "done": false,
               "who": "Johan",
-              "date": "2025-07-01T21:09:16"
+              "date": "2025-07-01T21:09:16",
+              "children": []
             },
             {
               "no": "1.1.31",
               "label": "HAZ – Hazard and Operability Analysis - Systematic safety review to identify process hazards.",
               "done": false,
               "who": "Johan",
-              "date": "2025-07-01T21:09:16"
+              "date": "2025-07-01T21:09:16",
+              "children": []
             },
             {
               "no": "1.1.32",
               "label": "HSP – Health and Safety Plan - Strategy for ensuring health and safety on site.",
               "done": false,
               "who": "Johan",
-              "date": "2025-07-01T21:09:16"
+              "date": "2025-07-01T21:09:16",
+              "children": []
             },
             {
               "no": "1.1.33",
               "label": "IHM – Inventory of Hazardous Materials - Record of substances posing health or environmental risks.",
               "done": false,
               "who": "Johan",
-              "date": "2025-07-01T21:09:16"
+              "date": "2025-07-01T21:09:16",
+              "children": []
             },
             {
               "no": "1.1.34",
               "label": "INT – Integration Tools - Tools used to connect different project systems.",
               "done": false,
               "who": "Johan",
-              "date": "2025-07-01T21:09:16"
+              "date": "2025-07-01T21:09:16",
+              "children": []
             },
             {
               "no": "1.1.35",
               "label": "IOT – IO Testing - Input/Output testing for system automation and controls.",
               "done": false,
               "who": "Johan",
-              "date": "2025-07-01T21:09:16"
+              "date": "2025-07-01T21:09:16",
+              "children": []
             },
             {
               "no": "1.1.36",
               "label": "LAP – Leak and Pressure Test - Mechanical test for checking pressure integrity.",
               "done": false,
               "who": "Johan",
-              "date": "2025-07-01T21:09:16"
+              "date": "2025-07-01T21:09:16",
+              "children": []
             },
             {
               "no": "1.1.37",
               "label": "LIL – Line List - Index of process lines, typically pipes, with specifications.",
               "done": false,
               "who": "Johan",
-              "date": "2025-07-01T21:09:16"
+              "date": "2025-07-01T21:09:16",
+              "children": []
             },
             {
               "no": "1.1.38",
               "label": "LOD – List of Deliverables - All expected project outputs (drawings, documents, etc.).",
               "done": false,
               "who": "Johan",
-              "date": "2025-07-01T21:09:16"
+              "date": "2025-07-01T21:09:16",
+              "children": []
             },
             {
               "no": "1.1.39",
               "label": "LOI – Letter of Intent - Pre-contract document showing intent to award.",
               "done": false,
               "who": "Johan",
-              "date": "2025-07-01T21:09:16"
+              "date": "2025-07-01T21:09:16",
+              "children": []
             },
             {
               "no": "1.1.40",
               "label": "MES – Method Statements - Detailed procedural steps for construction activities.",
               "done": false,
               "who": "Johan",
-              "date": "2025-07-01T21:09:16"
+              "date": "2025-07-01T21:09:16",
+              "children": []
             },
             {
               "no": "1.1.41",
               "label": "NDM – NDA Management - Handling and enforcement of confidentiality agreements.",
               "done": false,
               "who": "Johan",
-              "date": "2025-07-01T21:09:16"
+              "date": "2025-07-01T21:09:16",
+              "children": []
             },
             {
               "no": "1.1.42",
               "label": "OOS – Out of Scope - Activities or deliverables excluded from the project.",
               "done": false,
               "who": "Johan",
-              "date": "2025-07-01T21:09:16"
+              "date": "2025-07-01T21:09:16",
+              "children": []
             },
             {
               "no": "1.1.43",
               "label": "OVS – Overall Schedule - High-level timeline showing project phases.",
               "done": false,
               "who": "Johan",
-              "date": "2025-07-01T21:09:16"
+              "date": "2025-07-01T21:09:16",
+              "children": []
             },
             {
               "no": "1.1.44",
               "label": "PBR – Price Breakdown - Cost structure for a quoted item or service.",
               "done": false,
               "who": "Johan",
-              "date": "2025-07-01T21:09:16"
+              "date": "2025-07-01T21:09:16",
+              "children": []
             },
             {
               "no": "1.1.45",
               "label": "PCA – Process Calculations - Engineering formulas for sizing and performance analysis.",
               "done": false,
               "who": "Johan",
-              "date": "2025-07-01T21:09:16"
+              "date": "2025-07-01T21:09:16",
+              "children": []
             },
             {
               "no": "1.1.46",
               "label": "PCH – Project Charter - Formal document authorizing the project.",
               "done": false,
               "who": "Johan",
-              "date": "2025-07-01T21:09:16"
+              "date": "2025-07-01T21:09:16",
+              "children": []
             },
             {
               "no": "1.1.47",
               "label": "PDS – Process Description Sheet - Description of specific processes or operations.",
               "done": false,
               "who": "Johan",
-              "date": "2025-07-01T21:09:16"
+              "date": "2025-07-01T21:09:16",
+              "children": []
             },
             {
               "no": "1.1.48",
               "label": "PID – Piping & Instrumentation Diagram - Technical drawing of mechanical systems with instrumentation.",
               "done": false,
               "who": "Johan",
-              "date": "2025-07-01T21:09:16"
+              "date": "2025-07-01T21:09:16",
+              "children": []
             },
             {
               "no": "1.1.49",
               "label": "PIB – Picture Book - Photographic record of construction or site conditions.",
               "done": false,
               "who": "Johan",
-              "date": "2025-07-01T21:09:16"
+              "date": "2025-07-01T21:09:16",
+              "children": []
             },
             {
               "no": "1.1.50",
               "label": "POK – Project Objectives and KPIs - Project goals and measurable performance indicators.",
               "done": false,
               "who": "Johan",
-              "date": "2025-07-01T21:09:16"
+              "date": "2025-07-01T21:09:16",
+              "children": []
             },
             {
               "no": "1.1.51",
               "label": "POR – Project Organization - Team structure and responsibilities.",
               "done": false,
               "who": "Johan",
-              "date": "2025-07-01T21:09:16"
+              "date": "2025-07-01T21:09:16",
+              "children": []
             },
             {
               "no": "1.1.52",
               "label": "PRN – Project Description - Overview and rationale behind the project.",
               "done": false,
               "who": "Johan",
-              "date": "2025-07-01T21:09:16"
+              "date": "2025-07-01T21:09:16",
+              "children": []
             },
             {
               "no": "1.1.53",
               "label": "QPL – Quality Plan - Guidelines and controls for quality assurance.",
               "done": false,
               "who": "Johan",
-              "date": "2025-07-01T21:09:16"
+              "date": "2025-07-01T21:09:16",
+              "children": []
             },
             {
               "no": "1.1.54",
               "label": "RASCI – Responsibility Matrix - Clarifies roles: Responsible, Accountable, Support, Consulted, Informed.",
               "done": false,
               "who": "Johan",
-              "date": "2025-07-01T21:09:16"
+              "date": "2025-07-01T21:09:16",
+              "children": []
             },
             {
               "no": "1.1.55",
               "label": "RCB – Request Contractor Badges - Process to issue site access for contractors.",
               "done": false,
               "who": "Johan",
-              "date": "2025-07-01T21:09:16"
+              "date": "2025-07-01T21:09:16",
+              "children": []
             },
             {
               "no": "1.1.56",
               "label": "REL – Reinforcement Layout - Layout showing steel reinforcements in structures.",
               "done": false,
               "who": "Johan",
-              "date": "2025-07-01T21:09:16"
+              "date": "2025-07-01T21:09:16",
+              "children": []
             },
             {
               "no": "1.1.57",
               "label": "REP – Resource Planning - Planning the deployment of human or material resources.",
               "done": false,
               "who": "Johan",
-              "date": "2025-07-01T21:09:16"
+              "date": "2025-07-01T21:09:16",
+              "children": []
             },
             {
               "no": "1.1.58",
               "label": "RET – Resource Tracker - Tool to monitor availability and use of resources.",
               "done": false,
               "who": "Johan",
-              "date": "2025-07-01T21:09:16"
+              "date": "2025-07-01T21:09:16",
+              "children": []
             },
             {
               "no": "1.1.59",
               "label": "RFI – Request for Information - Formal query raised during project execution.",
               "done": false,
               "who": "Johan",
-              "date": "2025-07-01T21:09:16"
+              "date": "2025-07-01T21:09:16",
+              "children": []
             },
             {
               "no": "1.1.60",
               "label": "RFQ – Request for Quotation - Request to suppliers for pricing proposals.",
               "done": false,
               "who": "Johan",
-              "date": "2025-07-01T21:09:16"
+              "date": "2025-07-01T21:09:16",
+              "children": []
             },
             {
               "no": "1.1.61",
               "label": "RSO – Radioactive Source Overview - Details of radioactive equipment or sources.",
               "done": false,
               "who": "Johan",
-              "date": "2025-07-01T21:09:16"
+              "date": "2025-07-01T21:09:16",
+              "children": []
             },
             {
               "no": "1.1.62",
               "label": "SAI – Specific Safety Introduction - Site-specific safety briefing.",
               "done": false,
               "who": "Johan",
-              "date": "2025-07-01T21:09:16"
+              "date": "2025-07-01T21:09:16",
+              "children": []
             },
             {
               "no": "1.1.63",
               "label": "SCC – Scope Change Control - Management of changes in project scope.",
               "done": false,
               "who": "Johan",
-              "date": "2025-07-01T21:09:16"
+              "date": "2025-07-01T21:09:16",
+              "children": []
             },
             {
               "no": "1.1.64",
               "label": "SII – Specific Site Information - Project-specific data relevant to the worksite.",
               "done": false,
               "who": "Johan",
-              "date": "2025-07-01T21:09:16"
+              "date": "2025-07-01T21:09:16",
+              "children": []
             },
             {
               "no": "1.1.65",
               "label": "SLI – Scope Limits - Defines the boundaries of project responsibility.",
               "done": false,
               "who": "Johan",
-              "date": "2025-07-01T21:09:16"
+              "date": "2025-07-01T21:09:16",
+              "children": []
             },
             {
               "no": "1.1.66",
               "label": "SPECS – Specifications - Technical requirements and standards.",
               "done": false,
               "who": "Johan",
-              "date": "2025-07-01T21:09:16"
+              "date": "2025-07-01T21:09:16",
+              "children": []
             },
             {
               "no": "1.1.67",
               "label": "SST – Stream Table - Process table showing inputs and outputs for streams.",
               "done": false,
               "who": "Johan",
-              "date": "2025-07-01T21:09:16"
+              "date": "2025-07-01T21:09:16",
+              "children": []
             },
             {
               "no": "1.1.68",
               "label": "STA – Stability Analysis - Structural analysis to ensure integrity.",
               "done": false,
               "who": "Johan",
-              "date": "2025-07-01T21:09:16"
+              "date": "2025-07-01T21:09:16",
+              "children": []
             },
             {
               "no": "1.1.69",
               "label": "TIL – Tie-In List - List of connection points to existing systems.",
               "done": false,
               "who": "Johan",
-              "date": "2025-07-01T21:09:16"
+              "date": "2025-07-01T21:09:16",
+              "children": []
             },
             {
               "no": "1.1.70",
               "label": "TPO – Test Package Overview - Summary of required test packages.",
               "done": false,
               "who": "Johan",
-              "date": "2025-07-01T21:09:16"
+              "date": "2025-07-01T21:09:16",
+              "children": []
             },
             {
               "no": "1.1.71",
               "label": "TSP – Technical Specifications - Specific technical details for systems or components.",
               "done": false,
               "who": "Johan",
-              "date": "2025-07-01T21:09:16"
+              "date": "2025-07-01T21:09:16",
+              "children": []
             },
             {
               "no": "1.1.72",
               "label": "UPA – User Point Layout - Layout of user access or connection points.",
               "done": false,
               "who": "Johan",
-              "date": "2025-07-01T21:09:16"
+              "date": "2025-07-01T21:09:16",
+              "children": []
             },
             {
               "no": "1.1.73",
               "label": "UPI – User Point List - List of all utility or service points in the system.",
               "done": false,
               "who": "Johan",
-              "date": "2025-07-01T21:09:16"
+              "date": "2025-07-01T21:09:16",
+              "children": []
             },
             {
               "no": "1.1.74",
               "label": "x – Perform task (mark as executed).",
               "done": false,
               "who": "Johan",
-              "date": "2025-07-01T21:09:16"
+              "date": "2025-07-01T21:09:16",
+              "children": []
             },
             {
               "no": "1.1.75",
               "label": "xb – Perform task during Basic Engineering phase.",
               "done": false,
               "who": "Johan",
-              "date": "2025-07-01T21:09:16"
+              "date": "2025-07-01T21:09:16",
+              "children": []
             },
             {
               "no": "1.1.76",
               "label": "xu – Update in EPCM phase.",
               "done": false,
               "who": "Johan",
-              "date": "2025-07-01T21:09:16"
+              "date": "2025-07-01T21:09:16",
+              "children": []
             },
             {
               "no": "1.1.77",
               "label": "s – Supply information (provide data or documentation).",
               "done": false,
               "who": "Johan",
-              "date": "2025-07-01T21:09:16"
+              "date": "2025-07-01T21:09:16",
+              "children": []
             },
             {
               "no": "1.1.78",
               "label": "EPCM - Engineering, Procurement & Construction Management",
               "done": false,
               "who": "Johan",
-              "date": "2025-07-01T21:09:16"
+              "date": "2025-07-01T21:09:16",
+              "children": []
             }
           ],
           "no": "1.1",
@@ -1155,28 +1233,32 @@
               "label": "s – Supply information (provide data or documentation).",
               "done": false,
               "who": "Johan",
-              "date": "2025-07-01T21:09:16"
+              "date": "2025-07-01T21:09:16",
+              "children": []
             },
             {
               "no": "2.2.7",
               "label": "s – Supply information (provide data or documentation).",
               "done": false,
               "who": "Johan",
-              "date": "2025-07-01T21:09:16"
+              "date": "2025-07-01T21:09:16",
+              "children": []
             },
             {
               "no": "2.2.8",
               "label": "s – Supply information (provide data or documentation).",
               "done": false,
               "who": "Johan",
-              "date": "2025-07-01T21:09:16"
+              "date": "2025-07-01T21:09:16",
+              "children": []
             },
             {
               "no": "2.2.9",
               "label": "s – Supply information (provide data or documentation).",
               "done": false,
               "who": "Johan",
-              "date": "2025-07-01T21:09:16"
+              "date": "2025-07-01T21:09:16",
+              "children": []
             }
           ],
           "noteFile": "checklists/notes/2025_06_22_@_21-39-06.html",
@@ -6062,7 +6144,7 @@
     "Cuong"
   ],
   "title": "Cosucra Project structure",
-  "lastSave": "2025_07_02_@_19-26-47",
+  "lastSave": "2025_07_03_@_17-38-37",
   "unitChoices": [
     "kg",
     "ton",
