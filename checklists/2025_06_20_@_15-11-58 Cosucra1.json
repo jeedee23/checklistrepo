@@ -1,6 +1,6 @@
 {
   "title": "Cosucra Project structure",
-  "lastSave": "2025_07_03_@_21-49-38",
+  "lastSave": "2025_07_03_@_21-49-50",
   "unitChoices": [
     "kg",
     "ton",
@@ -58,7 +58,7 @@
         },
         "progress": {
           "width": 80,
-          "visible": true
+          "visible": false
         },
         "Resp": {
           "width": 120,
@@ -139,7 +139,7 @@
         },
         "progress": {
           "width": 80,
-          "visible": true
+          "visible": false
         },
         "Resp": {
           "width": 120,
@@ -332,7 +332,7 @@
         },
         "progress": {
           "width": 80,
-          "visible": true
+          "visible": false
         },
         "Resp": {
           "width": 120,
@@ -6417,7 +6417,7 @@
       },
       "progress": {
         "width": 80,
-        "visible": true
+        "visible": false
       },
       "Resp": {
         "width": 120,
