@@ -1,0 +1,107 @@
+<!DOCTYPE html><html lang="en"><head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Checklist Viewer</title>
+  <link href="https://cdn.quilljs.com/1.3.6/quill.snow.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://mini-checklists.tiiny.site/css/style.css">
+</head>
+<body>
+  <!-- HEADER -->
+  <div id="header" style="display:flex; background:#fff; border-bottom:1px solid #ccc; padding:0.5rem;">
+    <div style="width:250px; padding-right:1rem;">
+      <div style="font-size:0.95rem; font-weight:bold;">Checklist, Quote &amp; Process Tree</div>
+      <div style="font-size:0.65rem; color:#666;">(An AAVDS creation by Johan)</div>
+    </div>
+    <div style="flex:1; display:flex; align-items:center; justify-content:space-between;">
+      <span id="loadedList" style="font-size:2rem; color:#444;">titel</span>
+
+      <div id="searchContainer" class="search-container">
+        <input id="searchInput" type="text" autocomplete="off" placeholder="🔍 Search checklist…" class="search-input">
+        <ul id="searchResults" class="search-results"></ul>
+      </div>
+
+      <div style="display:flex; gap:1rem; align-items:center;">
+        <button id="filterBtn" onclick="filterNotDone()">🔍 Not done</button>
+        <button id="onlymineBtn" onclick="selectmine()">🔍 Show Mine</button>
+        <button id="fieldsButton">Fields</button>
+        <a href="styles.html" target="_blank">⚙️</a>
+        <a id="loggedInUser" href="config/add-user.html">👤 Johan</a>
+        <div id="mainstatusText" style="font-size:0.75rem; color:#444;">Last checklist loaded</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- APP LAYOUT -->
+  <div class="app" style="display:flex; height:calc(100vh - 48px);">
+    <!-- SIDEBAR -->
+    <aside id="sidebar" style="width:300px; border-right:1px solid #ccc; display:flex; flex-direction:column;">
+      <ul id="checklistList" style="flex:1; margin:0; padding:0; list-style:none; overflow-y:auto;"></ul>
+      <div class="sidebar-controls" style="padding:0.5rem; border-top:1px solid #ccc;">
+        <button id="newChecklistButton" onclick="newChecklist()">🆕 New Checklist</button>
+        <button id="saveChecklistButton" onclick="saveChecklist()">💾 Save</button>
+        <div id="collaboratorSection" style="margin-top:1rem;">
+          <div style="display:flex; align-items:center; gap:0.5rem; font-size:0.75rem;">
+            <span>Collaborators</span>
+            <button id="addCollaboratorBtn">+</button>
+          </div>
+          <ul id="collaboratorList" style="margin-top:0.5rem; padding-left:1rem;"></ul>
+        </div>
+      </div>
+    </aside>
+
+    <!-- MAIN CONTENT -->
+    <main id="main" style="flex:1; overflow:auto; padding:1rem;">
+      <section id="checklistContainer"></section>
+    </main>
+  </div>
+
+  <!-- HIDDEN INPUTS & CONTEXT MENU -->
+  <input type="file" id="imageFileInput" accept="image/*" style="display:none;">
+  <div id="contextMenu" style="display:none; position:absolute;"></div>
+
+  <!-- NOTE EDITOR MODAL -->
+  <div id="noteModal" class="note-popup">
+    <div class="note-header">📝 Edit Note</div>
+    <div class="note-body">
+      <div id="editor" style="height:60vh; overflow:auto;"></div>
+      <div style="text-align:right; margin-top:1rem;">
+        <button id="saveNoteBtn" onclick="saveNote()">💾 Update Note</button>
+        <button onclick="closeNoteModal()">✖️ Close</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- NOTE VIEWER MODAL -->
+  <div id="viewerModal" class="note-popup">
+    <div class="note-header">📖 View Note</div>
+    <div class="note-body">
+      <div id="viewerContent" style="max-height:60vh; overflow:auto;"></div>
+      <div style="text-align:right; margin-top:1rem;">
+        <button onclick="closeViewerModal()">✖️ Close</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- LOGIN OVERLAY -->
+  <div id="identityOverlay" style="position:fixed; top:0; left:0; width:100%; height:100%; background:#fff; z-index:9999; display:flex; flex-direction:column; align-items:center; justify-content:center;">
+    <div style="text-align:center; margin-bottom:1rem;">
+      <h1 style="font-size:1.5rem; margin:0;">Checklist, Quote &amp; Process Tree</h1>
+      <div style="font-size:0.9rem; color:#666;">(An AAVDS creation by Johan)</div>
+    </div>
+    <h2>🔐 Login</h2>
+    <input id="loginUser" placeholder="Your name" style="padding:0.6rem; margin:0.5rem; width:80%;">
+    <input id="loginPass" type="password" placeholder="Your password" style="padding:0.6rem; margin:0.5rem; width:80%;">
+    <button onclick="secureLogin()" style="padding:0.6rem 1rem; font-size:1rem;">Login</button>
+    <div id="loginError" style="color:red; margin-top:1rem;"></div>
+  </div>
+
+  <!-- TOOLTIP -->
+  <div id="noteTooltip" style="display:none; position:absolute; max-width:350px; background:#fff; border:1px solid #ccc; padding:1rem; box-shadow:0 4px 12px rgba(0,0,0,0.15); font-size:0.9rem; z-index:10000;"></div>
+
+  <!-- SCRIPTS -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/bcryptjs/2.4.3/bcrypt.min.js"></script>
+  <script src="https://cdn.quilljs.com/1.3.6/quill.js"></script>
+  <script type="module" src="js/index.js"></script>
+
+
+</body></html>
