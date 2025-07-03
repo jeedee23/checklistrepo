@@ -1,6 +1,6 @@
 {
   "title": "Cosucra Project structure",
-  "lastSave": "2025_07_03_@_21-48-57",
+  "lastSave": "2025_07_03_@_21-49-38",
   "unitChoices": [
     "kg",
     "ton",
@@ -18,7 +18,7 @@
       "columns": {
         "done": {
           "width": 50,
-          "visible": false
+          "visible": true
         },
         "no": {
           "width": 80,
@@ -50,48 +50,47 @@
         },
         "date": {
           "width": 120,
-          "visible": false
+          "visible": true
         },
         "who": {
           "width": 120,
-          "visible": false
+          "visible": true
         },
         "progress": {
           "width": 80,
-          "visible": false
+          "visible": true
         },
         "Resp": {
-          "width": "137px",
-          "visible": true
+          "width": 120,
+          "visible": false
         },
         "Acc": {
-          "width": "122px",
-          "visible": true
+          "width": 120,
+          "visible": false
         },
         "Support": {
-          "width": "118px",
-          "visible": true
+          "width": 120,
+          "visible": false
         },
         "Consult": {
-          "width": "123px",
-          "visible": true
+          "width": 120,
+          "visible": false
         },
         "Informed": {
           "width": 120,
-          "visible": true
+          "visible": false
         }
       },
       "rows": {
         "height": 30
       },
       "columnOrder": [
+        "done",
         "no",
         "label",
-        "Resp",
-        "Acc",
-        "Support",
-        "Consult",
-        "Informed"
+        "date",
+        "who",
+        "progress"
       ]
     },
     {
@@ -100,7 +99,7 @@
       "columns": {
         "done": {
           "width": 50,
-          "visible": false
+          "visible": true
         },
         "no": {
           "width": 80,
@@ -132,45 +131,44 @@
         },
         "date": {
           "width": 120,
-          "visible": false
+          "visible": true
         },
         "who": {
           "width": 120,
-          "visible": false
+          "visible": true
         },
         "progress": {
           "width": 80,
-          "visible": false
+          "visible": true
         },
         "Resp": {
-          "width": "137px",
-          "visible": true
+          "width": 120,
+          "visible": false
         },
         "Acc": {
-          "width": "122px",
-          "visible": true
+          "width": 120,
+          "visible": false
         },
         "Support": {
-          "width": "118px",
-          "visible": true
+          "width": 120,
+          "visible": false
         },
         "Consult": {
-          "width": "123px",
-          "visible": true
+          "width": 120,
+          "visible": false
         },
         "Informed": {
           "width": 120,
-          "visible": true
+          "visible": false
         }
       },
       "columnOrder": [
+        "done",
         "no",
         "label",
-        "Resp",
-        "Acc",
-        "Support",
-        "Consult",
-        "Informed"
+        "date",
+        "who",
+        "progress"
       ],
       "rows": {
         "height": 30
@@ -6379,7 +6377,7 @@
     "columns": {
       "done": {
         "width": 50,
-        "visible": false
+        "visible": true
       },
       "no": {
         "width": 80,
@@ -6411,45 +6409,44 @@
       },
       "date": {
         "width": 120,
-        "visible": false
+        "visible": true
       },
       "who": {
         "width": 120,
-        "visible": false
+        "visible": true
       },
       "progress": {
         "width": 80,
-        "visible": false
+        "visible": true
       },
       "Resp": {
-        "width": "137px",
-        "visible": true
+        "width": 120,
+        "visible": false
       },
       "Acc": {
-        "width": "122px",
-        "visible": true
+        "width": 120,
+        "visible": false
       },
       "Support": {
-        "width": "118px",
-        "visible": true
+        "width": 120,
+        "visible": false
       },
       "Consult": {
-        "width": "123px",
-        "visible": true
+        "width": 120,
+        "visible": false
       },
       "Informed": {
         "width": 120,
-        "visible": true
+        "visible": false
       }
     },
     "columnOrder": [
+      "done",
       "no",
       "label",
-      "Resp",
-      "Acc",
-      "Support",
-      "Consult",
-      "Informed"
+      "date",
+      "who",
+      "progress"
     ],
     "rows": {
       "height": 30
@@ -6629,6 +6626,10 @@
     "Informed": {
       "type": "select",
       "label": "Informed"
+    },
+    "progress": {
+      "type": "number",
+      "label": "Progress (%)"
     }
   }
 }
