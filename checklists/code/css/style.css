@@ -3,11 +3,12 @@ body {
   margin: 0;
   font-family: sans-serif;
   background: #f5f5f5;
+  overflow: hidden; /* Prevent body scrolling */
 }
 
 .app {
   display: flex;
-  height: calc(100vh - 3.25rem); /* Fits below header */
+  height: calc(100vh - 85px); /* Adjusted for actual app-wrapper height */
   overflow: hidden;
 }
 
@@ -100,8 +101,17 @@ input[type="text"] {
 #main {
   flex-grow: 1;
   padding: 1rem;
-  overflow: auto;
+  overflow: hidden !important; /* Prevent main from scrolling */
+  display: flex;
+  flex-direction: column;
 }
+
+#checklistContainer {
+  flex: 1;
+  overflow: auto !important; /* Only the container scrolls */
+  padding: 0;
+}
+
 #main h2 {
   margin-top: 0;
 }
