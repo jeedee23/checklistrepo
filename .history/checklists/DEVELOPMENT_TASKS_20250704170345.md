@@ -39,8 +39,6 @@
 - [x] Consolas 9pt font implementation for consistent data-entry appearance
 - [x] Light yellow input field backgrounds for better visual distinction
 - [x] Proper modal dialog sizing with flex layout to eliminate scroll issues
-- [x] Scrollable checklist list in User Management dialog with fixed height
-- [x] Reduced padding and margins to maximum 3px for compact layout
 - [ ] Virtual scrolling for large checklists
 - [ ] Mobile-responsive design improvements
 - [ ] Accessibility enhancements (ARIA roles, keyboard navigation)

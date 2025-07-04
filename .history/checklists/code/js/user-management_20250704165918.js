@@ -484,7 +484,7 @@ function createUserManagementDialog() {
       </div>
       
       <!-- Action buttons moved to top -->
-      <div style="margin-bottom: 3px; padding: 3px; background: #e9ecef; border-radius: 4px; border: 1px solid #dee2e6; display: flex; justify-content: space-between; align-items: center; flex-shrink: 0;">
+      <div style="margin-bottom: 20px; padding: 15px; background: #e9ecef; border-radius: 4px; border: 1px solid #dee2e6; display: flex; justify-content: space-between; align-items: center; flex-shrink: 0;">
         <div>
           <button class="btn btn-success" onclick="newUser()">+ New User</button>
           <button class="btn btn-danger" onclick="deleteUser()">Delete User</button>

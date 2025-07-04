@@ -312,8 +312,8 @@ function createUserManagementDialog() {
       }
       
       #user-management-dialog .user-navigation button {
-        padding: 3px;
-        margin: 0 2px;
+        padding: 4px 6px;
+        margin: 0 5px;
         border: 1px solid #ced4da;
         border-radius: 4px;
         background: white;
@@ -322,8 +322,8 @@ function createUserManagementDialog() {
       }
       
       #user-management-dialog .user-navigation .btn {
-        padding: 3px;
-        margin-left: 3px;
+        padding: 6px 12px;
+        margin-left: 15px;
         font-size: 0.8rem;
         color: white;
         background-color: #6c757d;
@@ -484,7 +484,7 @@ function createUserManagementDialog() {
       </div>
       
       <!-- Action buttons moved to top -->
-      <div style="margin-bottom: 3px; padding: 3px; background: #e9ecef; border-radius: 4px; border: 1px solid #dee2e6; display: flex; justify-content: space-between; align-items: center; flex-shrink: 0;">
+      <div style="margin-bottom: 20px; padding: 15px; background: #e9ecef; border-radius: 4px; border: 1px solid #dee2e6; display: flex; justify-content: space-between; align-items: center; flex-shrink: 0;">
         <div>
           <button class="btn btn-success" onclick="newUser()">+ New User</button>
           <button class="btn btn-danger" onclick="deleteUser()">Delete User</button>

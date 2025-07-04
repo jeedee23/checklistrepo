@@ -249,21 +249,16 @@ function createUserManagementDialog() {
     console.log('[User Management] Using existing dialog element');
   }
   
-  // Get current user data
-  const currentUser = usersData.users[currentUserIndex];
-  const userCount = usersData.users.length;
-  
-  // Complete user management form with dynamic data
+  // Complete user management form from demo
   dialog.innerHTML = `
     <style>
       #user-management-dialog .modal-header {
-        padding: 3px;
+        padding: 15px;
         border-bottom: 1px solid #dee2e6;
         display: flex;
         justify-content: space-between;
         align-items: center;
         background-color: #f8f9fa;
-        flex-shrink: 0;
       }
       
       #user-management-dialog .modal-header h3 {
@@ -286,24 +281,21 @@ function createUserManagementDialog() {
       }
       
       #user-management-dialog .modal-body {
-        padding: 3px;
+        padding: 15px;
         background: #f5f5f5;
         flex: 1;
-        overflow: hidden;
-        display: flex;
-        flex-direction: column;
+        overflow-y: auto;
       }
       
       #user-management-dialog .user-navigation {
-        margin-bottom: 3px;
-        padding: 3px;
+        margin-bottom: 20px;
+        padding: 15px;
         background: #e9ecef;
         border-radius: 4px;
         border: 1px solid #dee2e6;
         display: flex;
         justify-content: space-between;
         align-items: center;
-        flex-shrink: 0;
       }
       
       #user-management-dialog .user-navigation span {
@@ -312,8 +304,8 @@ function createUserManagementDialog() {
       }
       
       #user-management-dialog .user-navigation button {
-        padding: 3px;
-        margin: 0 2px;
+        padding: 4px 6px;
+        margin: 0 5px;
         border: 1px solid #ced4da;
         border-radius: 4px;
         background: white;
@@ -322,8 +314,8 @@ function createUserManagementDialog() {
       }
       
       #user-management-dialog .user-navigation .btn {
-        padding: 3px;
-        margin-left: 3px;
+        padding: 6px 12px;
+        margin-left: 15px;
         font-size: 0.8rem;
         color: white;
         background-color: #6c757d;
@@ -338,7 +330,7 @@ function createUserManagementDialog() {
       }
       
       #user-management-dialog .form-table td {
-        padding: 3px;
+        padding: 6px 8px;
         vertical-align: middle;
         border: 2px solid #dee2e6;
       }
@@ -348,7 +340,7 @@ function createUserManagementDialog() {
         font-size: 10pt;
         background: #e9ecef;
         text-align: left;
-        padding: 3px;
+        padding: 10px 12px;
         color: #495057;
         border: 1px solid #dee2e6;
         border-bottom: 2px solid #adb5bd;
@@ -359,13 +351,13 @@ function createUserManagementDialog() {
         font-weight: bold;
         background: #f8f9fa;
         text-align: right;
-        padding-right: 3px;
+        padding-right: 12px;
         white-space: nowrap;
       }
       
       #user-management-dialog .input {
         width: 200px;
-        padding: 3px;
+        padding: 8px;
       }
       
       #user-management-dialog .input input,
@@ -388,7 +380,7 @@ function createUserManagementDialog() {
       
       #user-management-dialog .input-readonly {
         width: 200px;
-        padding: 3px;
+        padding: 4px 6px;
         background: #f8f9fa;
         color: #6c757d;
         font-family: Consolas, monospace;
@@ -402,37 +394,22 @@ function createUserManagementDialog() {
       }
       
       #user-management-dialog .checklist-cell {
-        padding: 3px;
+        padding: 8px;
         background: #f8f9fa;
-        vertical-align: top;
-        height: 200px;
       }
       
       #user-management-dialog .checklist-display {
-        height: 190px;
+        max-height: 100px;
         overflow-y: auto;
         border: 1px solid #ccc;
-        padding: 3px;
+        padding: 8px;
         background: #f8f9fa;
         font-family: Consolas, monospace;
         font-size: 9pt;
       }
       
-      #user-management-dialog .checklist-item {
-        padding: 3px;
-        margin: 1px 0;
-        background: white;
-        border: 1px solid #dee2e6;
-        border-radius: 3px;
-        cursor: pointer;
-      }
-      
-      #user-management-dialog .checklist-item:hover {
-        background: #e9ecef;
-      }
-      
       #user-management-dialog .status-badge {
-        padding: 2px 3px;
+        padding: 4px 8px;
         border-radius: 4px;
         font-size: 8pt;
         font-weight: 600;
@@ -452,12 +429,12 @@ function createUserManagementDialog() {
       }
       
       #user-management-dialog .btn {
-        padding: 3px;
+        padding: 10px 16px;
         border: none;
         border-radius: 4px;
         cursor: pointer;
         font-size: 0.9rem;
-        margin: 0 2px;
+        margin: 0 5px;
       }
       
       #user-management-dialog .btn-primary { background-color: #007bff; color: white; }
@@ -467,33 +444,33 @@ function createUserManagementDialog() {
     </style>
     
     <div class="modal-header">
-      <h3>Edit Users (${currentUserIndex + 1} of ${userCount})</h3>
-      <button class="close-button" onclick="closeUserManagementDialog()">×</button>
+      <h3>Edit Users (1 of 4)</h3>
+      <button class="close-button" onclick="document.getElementById('user-management-dialog').style.display='none'">×</button>
     </div>
     
     <div class="modal-body">
       <div class="user-navigation">
         <div>
-          <span>${currentUser.fullName || 'Unknown'} (${currentUser.username || 'unknown'})</span>
-          <button class="btn btn-secondary" onclick="setupTOTP()">Setup TOTP</button>
+          <span>Johan Degraeve (Johan)</span>
+          <button class="btn btn-secondary">Setup TOTP</button>
         </div>
         <div>
-          <button onclick="previousUser()" ${currentUserIndex === 0 ? 'disabled' : ''}>← Previous</button>
-          <button onclick="nextUser()" ${currentUserIndex === userCount - 1 ? 'disabled' : ''}>Next →</button>
+          <button>← Previous</button>
+          <button>Next →</button>
         </div>
       </div>
       
       <!-- Action buttons moved to top -->
-      <div style="margin-bottom: 3px; padding: 3px; background: #e9ecef; border-radius: 4px; border: 1px solid #dee2e6; display: flex; justify-content: space-between; align-items: center; flex-shrink: 0;">
+      <div style="margin-bottom: 20px; padding: 15px; background: #e9ecef; border-radius: 4px; border: 1px solid #dee2e6; display: flex; justify-content: space-between; align-items: center;">
         <div>
-          <button class="btn btn-success" onclick="newUser()">+ New User</button>
-          <button class="btn btn-danger" onclick="deleteUser()">Delete User</button>
-          <button class="btn btn-secondary" onclick="addCollaborator()">Add to Checklist as Collaborator</button>
+          <button class="btn btn-success">+ New User</button>
+          <button class="btn btn-danger">Delete User</button>
+          <button class="btn btn-secondary">Add to Checklist as Collaborator</button>
         </div>
         <div>
-          <button class="btn btn-primary" onclick="saveUserAndSendEmail()">Save User & Send Email</button>
-          <button class="btn btn-success" onclick="saveAndExit()">Save & Exit</button>
-          <button class="btn btn-secondary" onclick="closeUserManagementDialog()">Cancel</button>
+          <button class="btn btn-primary">Save User & Send Email</button>
+          <button class="btn btn-success">Save & Exit</button>
+          <button class="btn btn-secondary" onclick="document.getElementById('user-management-dialog').style.display='none'">Cancel</button>
         </div>
       </div>
       
@@ -504,27 +481,27 @@ function createUserManagementDialog() {
         </tr>
         <tr>
           <td class="label">User ID: *</td>
-          <td class="input"><input type="text" value="${currentUser.id || ''}" readonly></td>
+          <td class="input"><input type="text" value="uuid-1234-5678" readonly></td>
           <td class="spacer">&nbsp;</td>
           <td class="label">Username: *</td>
-          <td class="input"><input type="text" value="${currentUser.username || ''}" id="username-input"></td>
+          <td class="input"><input type="text" value="Johan"></td>
         </tr>
         <tr>
           <td class="label">Full Name: *</td>
-          <td class="input"><input type="text" value="${currentUser.fullName || ''}" id="fullname-input"></td>
+          <td class="input"><input type="text" value="Johan Degraeve"></td>
           <td class="spacer">&nbsp;</td>
           <td class="label">Email: *</td>
-          <td class="input"><input type="email" value="${currentUser.email || ''}" id="email-input"></td>
+          <td class="input"><input type="email" value="johan@aanscharius.com"></td>
         </tr>
         <tr>
           <td class="label">Phone Number: *</td>
-          <td class="input"><input type="tel" value="${currentUser.phoneNumber || ''}" id="phone-input"></td>
+          <td class="input"><input type="tel" value="+32 489 947 935"></td>
           <td class="spacer">&nbsp;</td>
           <td class="label">Role: *</td>
           <td class="input">
-            <select id="role-select">
-              <option value="user" ${currentUser.role === 'user' ? 'selected' : ''}>User</option>
-              <option value="admin" ${currentUser.role === 'admin' ? 'selected' : ''}>Admin</option>
+            <select>
+              <option>User</option>
+              <option selected>Admin</option>
             </select>
           </td>
         </tr>
@@ -535,72 +512,68 @@ function createUserManagementDialog() {
         </tr>
         <tr>
           <td class="label">Job Function: *</td>
-          <td class="input"><input type="text" value="${currentUser.jobFunction || ''}" id="jobfunction-input"></td>
+          <td class="input"><input type="text" value="Specialist"></td>
           <td class="spacer">&nbsp;</td>
           <td class="label">Company: *</td>
-          <td class="input"><input type="text" value="${currentUser.company || ''}" id="company-input"></td>
+          <td class="input"><input type="text" value="AAVDS"></td>
         </tr>
         <tr>
           <td class="label">Street: *</td>
-          <td class="input"><input type="text" value="${currentUser.companyAddress?.street || ''}" id="street-input"></td>
+          <td class="input"><input type="text" value="Veenstraat 28"></td>
           <td class="spacer">&nbsp;</td>
           <td class="label">Postal Code: *</td>
-          <td class="input"><input type="text" value="${currentUser.companyAddress?.postalCode || ''}" id="postalcode-input"></td>
+          <td class="input"><input type="text" value="8470"></td>
         </tr>
         <tr>
           <td class="label">City: *</td>
-          <td class="input"><input type="text" value="${currentUser.companyAddress?.city || ''}" id="city-input"></td>
+          <td class="input"><input type="text" value="Gistel"></td>
           <td class="spacer">&nbsp;</td>
           <td class="label">Country: *</td>
-          <td class="input"><input type="text" value="${currentUser.companyAddress?.country || ''}" id="country-input"></td>
+          <td class="input"><input type="text" value="Belgium"></td>
         </tr>
         
-        <!-- ACCESS & SECURITY Section -->
+        <!-- ACCESS & SECURITY (with 2FA) Section -->
         <tr>
           <td colspan="5" class="section-header">ACCESS & SECURITY</td>
         </tr>
         <tr>
           <td class="label">Access Level: *</td>
           <td class="input">
-            <select id="accesslevel-select">
-              <option value="0" ${currentUser.defaultAccessLevel === 0 ? 'selected' : ''}>0 - Full Admin/Developer</option>
-              <option value="1" ${currentUser.defaultAccessLevel === 1 ? 'selected' : ''}>1 - Full Admin/User Management</option>
-              <option value="2" ${currentUser.defaultAccessLevel === 2 ? 'selected' : ''}>2 - Admin (no field/user mgmt)</option>
-              <option value="3" ${currentUser.defaultAccessLevel === 3 ? 'selected' : ''}>3 - User (read/write)</option>
-              <option value="4" ${currentUser.defaultAccessLevel === 4 ? 'selected' : ''}>4 - User (read only)</option>
-              <option value="5" ${currentUser.defaultAccessLevel === 5 ? 'selected' : ''}>5 - Guest (limited access)</option>
+            <select>
+              <option selected>0 - Full Admin/Developer</option>
+              <option>1 - Full Admin/User Management</option>
+              <option>2 - Admin (no field/user mgmt)</option>
             </select>
           </td>
           <td class="spacer">&nbsp;</td>
           <td class="label">2FA Method: *</td>
           <td class="input">
-            <select id="twofa-select">
-              <option value="email" ${currentUser.twoFactorMethod === 'email' ? 'selected' : ''}>Email</option>
-              <option value="totp" ${currentUser.twoFactorMethod === 'totp' ? 'selected' : ''}>TOTP (Authenticator App)</option>
-              <option value="none" ${currentUser.twoFactorMethod === 'none' ? 'selected' : ''}>None</option>
+            <select>
+              <option selected>Email</option>
+              <option>TOTP (Authenticator App)</option>
+              <option>None</option>
             </select>
           </td>
         </tr>
         <tr>
           <td class="label">Current Method:</td>
-          <td class="input-readonly">${currentUser.twoFactorMethod || 'email'}</td>
+          <td class="input-readonly">email</td>
           <td class="spacer">&nbsp;</td>
           <td class="label">Status:</td>
           <td class="input-readonly">
-            <span class="status-badge ${currentUser.twoFactorMethod === 'email' ? 'inactive' : 'active'}">
-              ${currentUser.twoFactorMethod === 'email' ? '⚠ Email Only' : '✓ Secure'}
-            </span>
+            <span class="status-badge inactive">⚠ Email Only</span>
           </td>
         </tr>
         
         <!-- ASSIGNED CHECKLISTS Section -->
         <tr>
-          <td colspan="5" class="section-header">ASSIGNED CHECKLISTS (${currentUser.checklists ? currentUser.checklists.length : 0})</td>
+          <td colspan="5" class="section-header">ASSIGNED CHECKLISTS (2)</td>
         </tr>
         <tr>
           <td colspan="5" class="checklist-cell">
             <div class="checklist-display">
-              ${buildChecklistsDisplay(currentUser.checklists)}
+              <div><strong>Cosucra1</strong> (Access Level: 0) - Last accessed: 2025_07_03_@_21-49-50</div>
+              <div><strong>2025_04_27_@_16-13-33_DDV.data</strong> (Access Level: 0) - Last accessed: 2025_07_02_@_16-12-49</div>
             </div>
           </td>
         </tr>
@@ -612,141 +585,6 @@ function createUserManagementDialog() {
   dialog.style.display = 'flex';
   console.log('[User Management] Dialog should now be visible');
 }
-
-/**
- * Build the checklists display for current user
- */
-function buildChecklistsDisplay(checklists) {
-  if (!checklists || checklists.length === 0) {
-    return '<div style="color: #6c757d; font-style: italic; text-align: center; padding: 20px;">No checklists assigned</div>';
-  }
-  
-  return checklists.map(checklist => `
-    <div class="checklist-item" onclick="openAccessManager('${checklist.name}')">
-      <div><strong>${checklist.name}</strong></div>
-      <div style="font-size: 8pt; color: #6c757d;">
-        Access Level: ${checklist.accessLevel} | Last accessed: ${checklist.lastAccessed || 'Never'}
-      </div>
-    </div>
-  `).join('');
-}
-
-/**
- * Navigation functions
- */
-function previousUser() {
-  if (currentUserIndex > 0) {
-    currentUserIndex--;
-    createUserManagementDialog();
-  }
-}
-
-function nextUser() {
-  if (currentUserIndex < usersData.users.length - 1) {
-    currentUserIndex++;
-    createUserManagementDialog();
-  }
-}
-
-/**
- * Close the user management dialog
- */
-/**
- * Open access manager for a specific checklist
- */
-function openAccessManager(checklistName) {
-  console.log('[User Management] Opening access manager for:', checklistName);
-  
-  // Create access manager dialog
-  let accessDialog = document.getElementById('access-manager-dialog');
-  if (!accessDialog) {
-    accessDialog = document.createElement('div');
-    accessDialog.id = 'access-manager-dialog';
-    accessDialog.style.cssText = `
-      position: fixed;
-      top: 50%;
-      left: 50%;
-      transform: translate(-50%, -50%);
-      background: white;
-      border-radius: 8px;
-      box-shadow: 0 10px 30px rgba(0,0,0,0.3);
-      width: 800px;
-      max-width: 90vw;
-      height: 600px;
-      max-height: 90vh;
-      overflow: hidden;
-      z-index: 10001;
-      display: flex;
-      flex-direction: column;
-      border: 2px solid #007bff;
-    `;
-    document.body.appendChild(accessDialog);
-  }
-  
-  accessDialog.innerHTML = `
-    <div style="padding: 20px; text-align: center; background: #f8f9fa; border-bottom: 1px solid #dee2e6;">
-      <h3 style="margin: 0; color: #495057;">Access Manager</h3>
-      <p style="margin: 10px 0 0 0; color: #6c757d;">Checklist: ${checklistName}</p>
-      <button onclick="closeAccessManager()" style="position: absolute; top: 15px; right: 15px; background: none; border: none; font-size: 1.5rem; cursor: pointer; color: #6c757d;">×</button>
-    </div>
-    <div style="flex: 1; padding: 20px; display: flex; align-items: center; justify-content: center; font-size: 24px; color: #007bff;">
-      Access Manager
-    </div>
-  `;
-  
-  accessDialog.style.display = 'flex';
-}
-
-/**
- * Close access manager dialog
- */
-function closeAccessManager() {
-  const accessDialog = document.getElementById('access-manager-dialog');
-  if (accessDialog) {
-    accessDialog.style.display = 'none';
-  }
-}
-
-/**
- * Placeholder functions for buttons
- */
-function setupTOTP() {
-  console.log('[User Management] Setup TOTP clicked');
-  alert('TOTP setup not implemented yet');
-}
-
-function newUser() {
-  console.log('[User Management] New user clicked');
-  alert('New user functionality not implemented yet');
-}
-
-function deleteUser() {
-  console.log('[User Management] Delete user clicked');
-  alert('Delete user functionality not implemented yet');
-}
-
-function addCollaborator() {
-  console.log('[User Management] Add collaborator clicked');
-  alert('Add collaborator functionality not implemented yet');
-}
-
-function saveUserAndSendEmail() {
-  console.log('[User Management] Save user and send email clicked');
-  alert('Save user and send email functionality not implemented yet');
-}
-
-// Make functions available globally for onclick handlers
-window.previousUser = previousUser;
-window.nextUser = nextUser;
-window.closeUserManagementDialog = closeUserManagementDialog;
-window.openAccessManager = openAccessManager;
-window.closeAccessManager = closeAccessManager;
-window.setupTOTP = setupTOTP;
-window.newUser = newUser;
-window.deleteUser = deleteUser;
-window.addCollaborator = addCollaborator;
-window.saveUserAndSendEmail = saveUserAndSendEmail;
-window.saveAndExit = saveAndExit;
 
 /**
  * Build the user management dialog content
@@ -770,6 +608,26 @@ function buildUserManagementDialog(dialog) {
 /**
  * Build the checklists display for current user
  */
+function buildChecklistsDisplay(checklists) {
+  if (!checklists || checklists.length === 0) {
+    return '<p style="color: #6c757d; font-style: italic;">No checklists assigned</p>';
+  }
+  
+  return checklists.map(checklist => `
+    <div class="checklist-item" style="margin-bottom: 8px; padding: 8px; background: white; border: 1px solid #dee2e6; border-radius: 4px;">
+      <div style="display: flex; justify-content: space-between; align-items: center;">
+        <div>
+          <strong>${checklist.displayName}</strong>
+          <span style="font-size: 0.9em; color: #6c757d;">(Access Level: ${checklist.accessLevel})</span>
+        </div>
+        <div style="font-size: 0.8em; color: #6c757d;">
+          Last accessed: ${checklist.lastAccessed || 'Never'}
+        </div>
+      </div>
+    </div>
+  `).join('');
+}
+
 /**
  * Attach event listeners to the user management dialog
  */

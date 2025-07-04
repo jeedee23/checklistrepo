@@ -257,7 +257,7 @@ function createUserManagementDialog() {
   dialog.innerHTML = `
     <style>
       #user-management-dialog .modal-header {
-        padding: 3px;
+        padding: 15px;
         border-bottom: 1px solid #dee2e6;
         display: flex;
         justify-content: space-between;
@@ -286,17 +286,17 @@ function createUserManagementDialog() {
       }
       
       #user-management-dialog .modal-body {
-        padding: 3px;
+        padding: 15px;
         background: #f5f5f5;
         flex: 1;
-        overflow: hidden;
+        overflow: visible;
         display: flex;
         flex-direction: column;
       }
       
       #user-management-dialog .user-navigation {
-        margin-bottom: 3px;
-        padding: 3px;
+        margin-bottom: 20px;
+        padding: 15px;
         background: #e9ecef;
         border-radius: 4px;
         border: 1px solid #dee2e6;
@@ -312,8 +312,8 @@ function createUserManagementDialog() {
       }
       
       #user-management-dialog .user-navigation button {
-        padding: 3px;
-        margin: 0 2px;
+        padding: 4px 6px;
+        margin: 0 5px;
         border: 1px solid #ced4da;
         border-radius: 4px;
         background: white;
@@ -322,8 +322,8 @@ function createUserManagementDialog() {
       }
       
       #user-management-dialog .user-navigation .btn {
-        padding: 3px;
-        margin-left: 3px;
+        padding: 6px 12px;
+        margin-left: 15px;
         font-size: 0.8rem;
         color: white;
         background-color: #6c757d;
@@ -338,7 +338,7 @@ function createUserManagementDialog() {
       }
       
       #user-management-dialog .form-table td {
-        padding: 3px;
+        padding: 6px 8px;
         vertical-align: middle;
         border: 2px solid #dee2e6;
       }
@@ -348,7 +348,7 @@ function createUserManagementDialog() {
         font-size: 10pt;
         background: #e9ecef;
         text-align: left;
-        padding: 3px;
+        padding: 10px 12px;
         color: #495057;
         border: 1px solid #dee2e6;
         border-bottom: 2px solid #adb5bd;
@@ -359,13 +359,13 @@ function createUserManagementDialog() {
         font-weight: bold;
         background: #f8f9fa;
         text-align: right;
-        padding-right: 3px;
+        padding-right: 12px;
         white-space: nowrap;
       }
       
       #user-management-dialog .input {
         width: 200px;
-        padding: 3px;
+        padding: 8px;
       }
       
       #user-management-dialog .input input,
@@ -388,7 +388,7 @@ function createUserManagementDialog() {
       
       #user-management-dialog .input-readonly {
         width: 200px;
-        padding: 3px;
+        padding: 4px 6px;
         background: #f8f9fa;
         color: #6c757d;
         font-family: Consolas, monospace;
@@ -402,25 +402,23 @@ function createUserManagementDialog() {
       }
       
       #user-management-dialog .checklist-cell {
-        padding: 3px;
+        padding: 8px;
         background: #f8f9fa;
-        vertical-align: top;
-        height: 200px;
       }
       
       #user-management-dialog .checklist-display {
-        height: 190px;
+        max-height: 200px;
         overflow-y: auto;
         border: 1px solid #ccc;
-        padding: 3px;
+        padding: 8px;
         background: #f8f9fa;
         font-family: Consolas, monospace;
         font-size: 9pt;
       }
       
       #user-management-dialog .checklist-item {
-        padding: 3px;
-        margin: 1px 0;
+        padding: 4px 8px;
+        margin: 2px 0;
         background: white;
         border: 1px solid #dee2e6;
         border-radius: 3px;
@@ -432,7 +430,7 @@ function createUserManagementDialog() {
       }
       
       #user-management-dialog .status-badge {
-        padding: 2px 3px;
+        padding: 4px 8px;
         border-radius: 4px;
         font-size: 8pt;
         font-weight: 600;
@@ -452,12 +450,12 @@ function createUserManagementDialog() {
       }
       
       #user-management-dialog .btn {
-        padding: 3px;
+        padding: 10px 16px;
         border: none;
         border-radius: 4px;
         cursor: pointer;
         font-size: 0.9rem;
-        margin: 0 2px;
+        margin: 0 5px;
       }
       
       #user-management-dialog .btn-primary { background-color: #007bff; color: white; }
@@ -484,7 +482,7 @@ function createUserManagementDialog() {
       </div>
       
       <!-- Action buttons moved to top -->
-      <div style="margin-bottom: 3px; padding: 3px; background: #e9ecef; border-radius: 4px; border: 1px solid #dee2e6; display: flex; justify-content: space-between; align-items: center; flex-shrink: 0;">
+      <div style="margin-bottom: 20px; padding: 15px; background: #e9ecef; border-radius: 4px; border: 1px solid #dee2e6; display: flex; justify-content: space-between; align-items: center; flex-shrink: 0;">
         <div>
           <button class="btn btn-success" onclick="newUser()">+ New User</button>
           <button class="btn btn-danger" onclick="deleteUser()">Delete User</button>

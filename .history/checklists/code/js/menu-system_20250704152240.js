@@ -219,7 +219,7 @@ function attachMenuHandlers() {
   
   // Account menu
   attachHandler('menu-account-edit', 'click', () => window.open('config/edit-user.html', '_blank'));
-  attachHandler('menu-account-edit-users', 'click', showUserManagementDialog);
+  attachHandler('menu-account-edit-users', 'click', showUserManagementInContainer);
   // Note: Collaborators are managed via checklist.json and admin selection from users list
   // attachHandler('menu-account-collaborators', 'click', showCollaboratorsDialog); // Removed - obsolete
   attachHandler('menu-account-logout', 'click', logout);
