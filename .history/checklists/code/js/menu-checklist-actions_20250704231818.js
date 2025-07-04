@@ -464,25 +464,15 @@ export function addFile() {
       }
       
       // Store file reference with local path - will be processed during save
-      const fileObj = {
+      sharedState.selectedItem.files.push({
         name: file.name,
         path: file.name, // Local filename only - doesn't start with 'checklists/'
         uploadedBy: sharedState.currentUser || 'Unknown',
         uploadedAt: new Date().toISOString(),
+        localPath: file.path || file.name, // Store the absolute local path
         fileSize: file.size,
         fileType: file.type
-      };
-      
-      // Store the actual File object in a non-enumerable way so it doesn't get serialized
-      // but is accessible for upload during save
-      Object.defineProperty(fileObj, '_fileObject', {
-        value: file,
-        writable: false,
-        enumerable: false,
-        configurable: false
       });
-      
-      sharedState.selectedItem.files.push(fileObj);
       
       // Mark as dirty and re-render immediately
       markSaveDirty(true, sharedState.DIRTY_EVENTS.ADD_FILE);
@@ -765,69 +755,55 @@ export async function uploadNonUploadedFiles() {
     return Promise.resolve();
   }
   
-  console.log('[uploadNonUploadedFiles] Found', nonUploadedFiles.length, 'files to upload');
+  showNotification('info', `Uploading ${nonUploadedFiles.length} file(s)...`);
   
-  const uploadPromises = nonUploadedFiles.map(async (fileObj) => {
-    // Check if we have the actual File object stored
-    if (!fileObj._fileObject) {
-      console.error('[uploadNonUploadedFiles] No File object found for', fileObj.name);
-      throw new Error(`Cannot upload ${fileObj.name}: File object not available`);
-    }
-    
-    const file = fileObj._fileObject;
-    
-    // Read file as base64
-    const base64Data = await new Promise((resolve, reject) => {
+  const uploadPromises = nonUploadedFiles.map(fileObj => {
+    return new Promise((resolve, reject) => {
       const reader = new FileReader();
-      reader.onload = () => {
-        const result = reader.result;
-        const base64 = result.split(',')[1]; // Remove data:mime/type;base64, prefix
-        resolve(base64);
+      reader.onload = function(e) {
+        const base64Data = e.target.result.split(',')[1];
+        
+        const worker = new Worker('js/github-worker.js');
+        
+        worker.postMessage({
+          action: 'uploadFile',
+          path: fileObj.targetPath,
+          content: base64Data,
+          message: `Add file: ${fileObj.name}`
+        });
+        
+        worker.onmessage = function(e) {
+          if (e.data.success) {
+            // Update the file object with the remote path
+            fileObj.path = fileObj.targetPath;
+            delete fileObj.localFile; // Remove the local file reference
+            delete fileObj.targetPath; // Remove the target path
+            resolve();
+          } else {
+            reject(new Error(`Failed to upload ${fileObj.name}: ${e.data.error}`));
+          }
+          worker.terminate();
+        };
+        
+        worker.onerror = function(error) {
+          reject(new Error(`Upload failed for ${fileObj.name}: ${error.message}`));
+          worker.terminate();
+        };
       };
-      reader.onerror = reject;
-      reader.readAsDataURL(file);
+      
+      reader.onerror = function() {
+        reject(new Error(`Failed to read file ${fileObj.name}`));
+      };
+      
+      reader.readAsDataURL(fileObj.localFile);
     });
-    
-    // Generate target filename with timestamp
-    const timestamp = new Date().toISOString().replace(/[:.]/g, '-');
-    const targetPath = `checklists/files/${timestamp}_${fileObj.name}`;
-    
-    // Upload to GitHub
-    const payload = {
-      file: targetPath,
-      content: base64Data,
-      encoding: 'base64',
-      message: `Upload file: ${fileObj.name}`
-    };
-    
-    console.log('[uploadNonUploadedFiles] Uploading', fileObj.name, 'to', targetPath);
-    
-    const response = await fetch(`${WORKER_URL}/save`, {
-      method: 'POST',
-      headers: { 'Content-Type': 'application/json' },
-      body: JSON.stringify(payload)
-    });
-    
-    if (!response.ok) {
-      const errorText = await response.text();
-      throw new Error(`Upload failed for ${fileObj.name}: ${response.status} ${response.statusText} - ${errorText}`);
-    }
-    
-    // Update the file object with the remote path
-    fileObj.path = targetPath;
-    
-    // Clean up the File object reference
-    delete fileObj._fileObject;
-    
-    console.log('[uploadNonUploadedFiles] Successfully uploaded', fileObj.name);
-    return fileObj;
   });
   
   try {
     await Promise.all(uploadPromises);
-    console.log('[uploadNonUploadedFiles] All files uploaded successfully');
+    showNotification('success', `Successfully uploaded ${nonUploadedFiles.length} file(s)`);
   } catch (error) {
-    console.error('[uploadNonUploadedFiles] Upload failed:', error);
+    showNotification('error', `File upload failed: ${error.message}`);
     throw error;
   }
 }

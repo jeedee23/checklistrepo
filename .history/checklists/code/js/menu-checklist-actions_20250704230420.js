@@ -458,38 +458,60 @@ export function addFile() {
     }
     
     try {
-      // Add file to the checklist data immediately with local path (not uploaded yet)
-      if (!sharedState.selectedItem.files) {
-        sharedState.selectedItem.files = [];
-      }
+      // Show loading notification
+      showNotification('info', 'Uploading file...');
       
-      // Store file reference with local path - will be processed during save
-      const fileObj = {
-        name: file.name,
-        path: file.name, // Local filename only - doesn't start with 'checklists/'
-        uploadedBy: sharedState.currentUser || 'Unknown',
-        uploadedAt: new Date().toISOString(),
-        fileSize: file.size,
-        fileType: file.type
+      // Convert file to base64
+      const reader = new FileReader();
+      reader.onload = async function(e) {
+        const base64Data = e.target.result.split(',')[1]; // Remove data:mime;base64, prefix
+        
+        // Generate filename with timestamp to avoid conflicts
+        const timestamp = new Date().toISOString().replace(/[:.]/g, '-');
+        const filename = `${timestamp}_${file.name}`;
+        
+        // Upload to GitHub using worker
+        const worker = new Worker('js/github-worker.js');
+        
+        worker.postMessage({
+          action: 'uploadFile',
+          path: `files/${filename}`,
+          content: base64Data,
+          message: `Add file: ${file.name}`
+        });
+        
+        worker.onmessage = function(e) {
+          if (e.data.success) {
+            // Add file to the existing files array (maintain compatibility)
+            if (!sharedState.selectedItem.files) {
+              sharedState.selectedItem.files = [];
+            }
+            
+            sharedState.selectedItem.files.push({
+              name: file.name,
+              path: `checklists/files/${filename}`,
+              uploadedBy: sharedState.currentUser || 'Unknown',
+              uploadedAt: new Date().toISOString()
+            });
+            
+            markSaveDirty(true, sharedState.DIRTY_EVENTS.ADD_FILE);
+            showNotification('success', `File "${file.name}" attached successfully`);
+            
+            // Re-render the item to show the new attachment
+            renderChecklist();
+          } else {
+            showNotification('error', `Failed to upload file: ${e.data.error}`);
+          }
+          worker.terminate();
+        };
+        
+        worker.onerror = function(error) {
+          showNotification('error', `Upload failed: ${error.message}`);
+          worker.terminate();
+        };
       };
       
-      // Store the actual File object in a non-enumerable way so it doesn't get serialized
-      // but is accessible for upload during save
-      Object.defineProperty(fileObj, '_fileObject', {
-        value: file,
-        writable: false,
-        enumerable: false,
-        configurable: false
-      });
-      
-      sharedState.selectedItem.files.push(fileObj);
-      
-      // Mark as dirty and re-render immediately
-      markSaveDirty(true, sharedState.DIRTY_EVENTS.ADD_FILE);
-      renderChecklist();
-      
-      // Show notification
-      showNotification('success', `File "${file.name}" added to checklist. Will be uploaded when you save.`);
+      reader.readAsDataURL(file);
       
     } catch (error) {
       showNotification('error', `Failed to process file: ${error.message}`);
@@ -721,113 +743,4 @@ export function adjustZoom(delta) {
 export function resetZoom() {
   document.documentElement.style.zoom = 1;
   showNotification('info', 'Zoom reset to 100%');
-}
-
-/**
- * Check if there are any non-uploaded files in the checklist
- * @returns {Array} Array of file objects that need to be uploaded
- */
-export function findNonUploadedFiles() {
-  const nonUploadedFiles = [];
-  
-  function checkItem(item) {
-    if (item.files && Array.isArray(item.files)) {
-      item.files.forEach(file => {
-        // If path doesn't start with 'checklists/', it's a local file
-        if (!file.path.startsWith('checklists/')) {
-          nonUploadedFiles.push(file);
-        }
-      });
-    }
-    
-    // Check children recursively
-    if (item.children && Array.isArray(item.children)) {
-      item.children.forEach(child => checkItem(child));
-    }
-  }
-  
-  // Check all items in the checklist
-  if (sharedState.checklistData.items) {
-    sharedState.checklistData.items.forEach(item => checkItem(item));
-  }
-  
-  return nonUploadedFiles;
-}
-
-/**
- * Upload all non-uploaded files
- * @returns {Promise} Promise that resolves when all files are uploaded
- */
-export async function uploadNonUploadedFiles() {
-  const nonUploadedFiles = findNonUploadedFiles();
-  
-  if (nonUploadedFiles.length === 0) {
-    return Promise.resolve();
-  }
-  
-  console.log('[uploadNonUploadedFiles] Found', nonUploadedFiles.length, 'files to upload');
-  
-  const uploadPromises = nonUploadedFiles.map(async (fileObj) => {
-    // Check if we have the actual File object stored
-    if (!fileObj._fileObject) {
-      console.error('[uploadNonUploadedFiles] No File object found for', fileObj.name);
-      throw new Error(`Cannot upload ${fileObj.name}: File object not available`);
-    }
-    
-    const file = fileObj._fileObject;
-    
-    // Read file as base64
-    const base64Data = await new Promise((resolve, reject) => {
-      const reader = new FileReader();
-      reader.onload = () => {
-        const result = reader.result;
-        const base64 = result.split(',')[1]; // Remove data:mime/type;base64, prefix
-        resolve(base64);
-      };
-      reader.onerror = reject;
-      reader.readAsDataURL(file);
-    });
-    
-    // Generate target filename with timestamp
-    const timestamp = new Date().toISOString().replace(/[:.]/g, '-');
-    const targetPath = `checklists/files/${timestamp}_${fileObj.name}`;
-    
-    // Upload to GitHub
-    const payload = {
-      file: targetPath,
-      content: base64Data,
-      encoding: 'base64',
-      message: `Upload file: ${fileObj.name}`
-    };
-    
-    console.log('[uploadNonUploadedFiles] Uploading', fileObj.name, 'to', targetPath);
-    
-    const response = await fetch(`${WORKER_URL}/save`, {
-      method: 'POST',
-      headers: { 'Content-Type': 'application/json' },
-      body: JSON.stringify(payload)
-    });
-    
-    if (!response.ok) {
-      const errorText = await response.text();
-      throw new Error(`Upload failed for ${fileObj.name}: ${response.status} ${response.statusText} - ${errorText}`);
-    }
-    
-    // Update the file object with the remote path
-    fileObj.path = targetPath;
-    
-    // Clean up the File object reference
-    delete fileObj._fileObject;
-    
-    console.log('[uploadNonUploadedFiles] Successfully uploaded', fileObj.name);
-    return fileObj;
-  });
-  
-  try {
-    await Promise.all(uploadPromises);
-    console.log('[uploadNonUploadedFiles] All files uploaded successfully');
-  } catch (error) {
-    console.error('[uploadNonUploadedFiles] Upload failed:', error);
-    throw error;
-  }
 }

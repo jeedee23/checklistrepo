@@ -194,23 +194,11 @@ export async function saveChecklist(pathOverride) {
       ld.activeLayoutIndex = 0;
     }
     
-    // 2. Upload any pending files before saving
-    try {
-      console.log('[saveChecklist] Uploading pending files...');
-      await uploadPendingFiles(sharedState.checklistData);
-      console.log('[saveChecklist] File uploads completed');
-    } catch (error) {
-      console.error('[saveChecklist] File upload failed:', error);
-      updatemainstatustext(`❌ File upload failed: ${error.message}`, { color: 'red' });
-      alert(`File upload failed: ${error.message}`);
-      return;
-    }
-
-    // 3. Update the lastSave timestamp
+    // 2. Update the lastSave timestamp
     const saveTimestamp = timestampNow();
     sharedState.checklistData.lastSave = saveTimestamp;
     
-    // 4. Save to GitHub via worker
+    // 3. Save to GitHub via worker
     const payload = {
       file: path,
       json: sharedState.checklistData,
