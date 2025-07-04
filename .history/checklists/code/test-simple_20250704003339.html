@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Simple Test</title>
+</head>
+<body>
+    <div style="padding: 20px;">
+        <h1>Simple Test</h1>
+        <button id="test-btn">Test Button</button>
+        <div id="output" style="margin-top: 20px; padding: 10px; background: #f0f0f0; border: 1px solid #ccc;"></div>
+    </div>
+    
+    <script>
+        console.log('Simple script loading...');
+        
+        document.getElementById('test-btn').addEventListener('click', () => {
+            console.log('Simple button clicked');
+            document.getElementById('output').innerHTML = '<p>Button works! Time: ' + new Date().toLocaleTimeString() + '</p>';
+        });
+        
+        console.log('Simple event listener attached');
+    </script>
+</body>
+</html>

@@ -1,0 +1,366 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>User Management Demo</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 10px;
+            background: #f5f5f5;
+        }
+
+        .modal-dialog {
+            background: white;
+            border-radius: 8px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.3);
+            width: 1000px;
+            margin: 0 auto;
+            overflow: hidden;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .modal-header {
+            padding: 5px;
+            border-bottom: 1px solid #dee2e6;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            background-color: #f8f9fa;
+        }
+
+        .modal-header h3 {
+            margin: 0;
+            color: #495057;
+        }
+
+        .close-button {
+            background: none;
+            border: none;
+            font-size: 1.5rem;
+            cursor: pointer;
+            color: #6c757d;
+            padding: 0;
+            width: 30px;
+            height: 30px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .modal-body {
+            padding: 10px;
+            background: #f5f5f5;
+        }
+
+        .user-navigation {
+            margin-bottom: 20px;
+            padding: 15px;
+            background: #e9ecef;
+            border-radius: 4px;
+            border: 1px solid #dee2e6;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .user-navigation span {
+            font-weight: bold;
+            font-size: 1.1em;
+        }
+
+        .user-navigation button {
+            padding: 4px 6px;
+            margin: 0 5px;
+            border: 1px solid #ced4da;
+            border-radius: 4px;
+            background: white;
+            cursor: pointer;
+            font-size: 0.9rem;
+        }
+
+        .user-navigation .btn {
+            padding: 6px 12px;
+            margin-left: 15px;
+            font-size: 0.8rem;
+            color: white;
+        }
+
+        .form-table {
+            width: 100%;
+            border-collapse: collapse;
+            font-family: Consolas, monospace;
+            font-size: 10pt;
+        }
+
+        .form-table td {
+            padding: 6px 8px;
+            vertical-align: middle;
+            border: 2px solid #dee2e6;
+        }
+
+        .section-header {
+            font-weight: bold;
+            font-size: 10pt;
+            background: #e9ecef;
+            text-align: left;
+            padding: 10px 12px;
+            color: #495057;
+            border: 1px solid #dee2e6;
+            border-bottom: 2px solid #adb5bd;
+        }
+
+        .label {
+            width: 150px;
+            font-weight: bold;
+            background: #f8f9fa;
+            text-align: right;
+            padding-right: 12px;
+            white-space: nowrap;
+        }
+
+        .input {
+            width: 200px;
+            padding: 2px;
+           
+        }
+
+        .input input,
+        .input select {
+            width: 100%;
+            padding: 2px 2px;
+            border: 2px solid #75b9fe;
+            border-radius: 3px;
+            background: transparent;
+            font-family: Consolas, monospace;
+            font-size: 10pt;
+            box-sizing: border-box;
+             background: #FFFACD;
+        }
+
+        .input input[readonly] {
+            background: transparent;
+            color: #6c757d;
+            cursor: not-allowed;
+        }
+
+        .input-readonly {
+            width: 200px;
+            padding: 4px 6px;
+            background: #f8f9fa;
+            color: #6c757d;
+            font-family: Consolas, monospace;
+            font-size: 9pt;
+        }
+
+        .spacer {
+            width: 30px;
+            background: white;
+            border: 1px solid #dee2e6;
+        }
+
+        .checklist-cell {
+            padding: 8px;
+            background: #f8f9fa;
+        }
+
+        .checklist-display {
+            max-height: 100px;
+            overflow-y: auto;
+            border: 1px solid #ccc;
+            padding: 8px;
+            background: #f8f9fa;
+            font-family: Consolas, monospace;
+            font-size: 9pt;
+        }
+
+        .status-badge {
+            padding: 4px 8px;
+            border-radius: 4px;
+            font-size: 8pt;
+            font-weight: 600;
+            display: inline-block;
+        }
+
+        .status-badge.active {
+            background: #d4edda;
+            color: #155724;
+            border: 1px solid #c3e6cb;
+        }
+
+        .status-badge.inactive {
+            background: #f8d7da;
+            color: #721c24;
+            border: 1px solid #f5c6cb;
+        }
+
+        .modal-footer {
+            padding: 20px;
+            border-top: 1px solid #dee2e6;
+            display: flex;
+            justify-content: space-between;
+            background-color: #f8f9fa;
+        }
+
+        .btn {
+            padding: 10px 16px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            font-size: 0.9rem;
+            margin: 0 5px;
+        }
+
+        .btn-primary { background-color: #007bff; color: white; }
+        .btn-success { background-color: #28a745; color: white; }
+        .btn-secondary { background-color: #6c757d; color: white; }
+        .btn-danger { background-color: #dc3545; color: white; }
+    </style>
+</head>
+<body>
+    <div class="modal-dialog">
+        <div class="modal-header">
+            <h3>Edit Users (1 of 4)</h3>
+            <button class="close-button">×</button>
+        </div>
+        
+        <div class="modal-body">
+            <div class="user-navigation">
+                <div>
+                    <span>Johan Degraeve (Johan)</span>
+                    <button class="btn btn-secondary" style="margin-left: 15px;">Setup TOTP</button>
+                </div>
+                <div>
+                    <button>← Previous</button>
+                    <button>Next →</button>
+                </div>
+            </div>
+            
+            <!-- Action buttons moved to top -->
+            <div style="margin-bottom: 20px; padding: 15px; background: #e9ecef; border-radius: 4px; border: 1px solid #dee2e6; display: flex; justify-content: space-between; align-items: center;">
+                <div>
+                    <button class="btn btn-success">+ New User</button>
+                    <button class="btn btn-danger">Delete User</button>
+                    <button class="btn btn-secondary">Add to Checklist as Collaborator</button>
+                </div>
+                <div>
+                    <button class="btn btn-primary">Save User & Send Email</button>
+                    <button class="btn btn-success">Save & Exit</button>
+                    <button class="btn btn-secondary">Cancel</button>
+                </div>
+            </div>
+            
+            <table class="form-table">
+                <!-- PERSONAL DATA Section -->
+                <tr>
+                    <td colspan="5" class="section-header">PERSONAL DATA</td>
+                </tr>
+                <tr>
+                    <td class="label">User ID: *</td>
+                    <td class="input"><input type="text" value="uuid-1234-5678" readonly></td>
+                    <td class="spacer">&nbsp;</td>
+                    <td class="label">Username: *</td>
+                    <td class="input"><input type="text" value="Johan"></td>
+                </tr>
+                <tr>
+                    <td class="label">Full Name: *</td>
+                    <td class="input"><input type="text" value="Johan Degraeve"></td>
+                    <td class="spacer">&nbsp;</td>
+                    <td class="label">Email: *</td>
+                    <td class="input"><input type="email" value="johan@aanscharius.com"></td>
+                </tr>
+                <tr>
+                    <td class="label">Phone Number: *</td>
+                    <td class="input"><input type="tel" value="+32 489 947 935"></td>
+                    <td class="spacer">&nbsp;</td>
+                    <td class="label">Role: *</td>
+                    <td class="input">
+                        <select>
+                            <option>User</option>
+                            <option selected>Admin</option>
+                        </select>
+                    </td>
+                </tr>
+                
+                <!-- COMPANY INFORMATION & ADDRESS Section -->
+                <tr>
+                    <td colspan="5" class="section-header">COMPANY INFORMATION & ADDRESS</td>
+                </tr>
+                <tr>
+                    <td class="label">Job Function: *</td>
+                    <td class="input"><input type="text" value="Specialist"></td>
+                    <td class="spacer">&nbsp;</td>
+                    <td class="label">Company: *</td>
+                    <td class="input"><input type="text" value="AAVDS"></td>
+                </tr>
+                <tr>
+                    <td class="label">Street: *</td>
+                    <td class="input"><input type="text" value="Veenstraat 28"></td>
+                    <td class="spacer">&nbsp;</td>
+                    <td class="label">Postal Code: *</td>
+                    <td class="input"><input type="text" value="8470"></td>
+                </tr>
+                <tr>
+                    <td class="label">City: *</td>
+                    <td class="input"><input type="text" value="Gistel"></td>
+                    <td class="spacer">&nbsp;</td>
+                    <td class="label">Country: *</td>
+                    <td class="input"><input type="text" value="Belgium"></td>
+                </tr>
+                
+                <!-- ACCESS & SECURITY (with 2FA) Section -->
+                <tr>
+                    <td colspan="5" class="section-header">ACCESS & SECURITY</td>
+                </tr>
+                <tr>
+                    <td class="label">Access Level: *</td>
+                    <td class="input">
+                        <select>
+                            <option selected>0 - Full Admin/Developer</option>
+                            <option>1 - Full Admin/User Management</option>
+                            <option>2 - Admin (no field/user mgmt)</option>
+                        </select>
+                    </td>
+                    <td class="spacer">&nbsp;</td>
+                    <td class="label">2FA Method: *</td>
+                    <td class="input">
+                        <select>
+                            <option selected>Email</option>
+                            <option>TOTP (Authenticator App)</option>
+                            <option>None</option>
+                        </select>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="label">Current Method:</td>
+                    <td class="input-readonly">email</td>
+                    <td class="spacer">&nbsp;</td>
+                    <td class="label">Status:</td>
+                    <td class="input-readonly">
+                        <span class="status-badge inactive">⚠ Email Only</span>
+                    </td>
+                </tr>
+                
+                <!-- ASSIGNED CHECKLISTS Section -->
+                <tr>
+                    <td colspan="5" class="section-header">ASSIGNED CHECKLISTS (2)</td>
+                </tr>
+                <tr>
+                    <td colspan="5" class="checklist-cell">
+                        <div class="checklist-display">
+                            <div><strong>Cosucra1</strong> (Access Level: 0) - Last accessed: 2025_07_03_@_21-49-50</div>
+                            <div><strong>2025_04_27_@_16-13-33_DDV.data</strong> (Access Level: 0) - Last accessed: 2025_07_02_@_16-12-49</div>
+                        </div>
+                    </td>
+                </tr>
+            </table>
+        </div>
+        
+        <div class="modal-footer">
+            <!-- Footer kept minimal or can be removed since buttons are now at top -->
+        </div>
+    </div>
+</body>
+</html>

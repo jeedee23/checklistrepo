@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>User Management Dialog Test</title>
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../css/menu.css">
+</head>
+<body>
+    <div style="padding: 20px;">
+        <h1>User Management Dialog Test</h1>
+        <p>This is a test page for the user management dialog.</p>
+        <button id="test-user-dialog">Open User Management Dialog</button>
+        <button id="test-simple">Simple Test</button>
+        <div id="test-output" style="margin-top: 20px; padding: 10px; background: #f0f0f0; border: 1px solid #ccc;"></div>
+    </div>
+    
+    <script type="module">
+        console.log('Script loading...');
+        
+        try {
+            const { showUserManagementDialog } = await import('./js/user-management.js');
+            console.log('User management module loaded successfully');
+            
+            document.getElementById('test-user-dialog').addEventListener('click', () => {
+                console.log('Test button clicked - opening user management dialog');
+                try {
+                    showUserManagementDialog();
+                } catch (error) {
+                    console.error('Error opening dialog:', error);
+                    document.getElementById('test-output').innerHTML = '<p style="color: red;">Error: ' + error.message + '</p>';
+                }
+            });
+            
+            document.getElementById('test-simple').addEventListener('click', () => {
+                console.log('Simple test button clicked');
+                document.getElementById('test-output').innerHTML = '<p style="color: green;">Simple test works! Time: ' + new Date().toLocaleTimeString() + '</p>';
+            });
+            
+            console.log('Event listeners attached');
+            
+        } catch (error) {
+            console.error('Error loading user management module:', error);
+            document.getElementById('test-output').innerHTML = '<p style="color: red;">Module loading error: ' + error.message + '</p>';
+        }
+    </script>
+</body>
+</html>

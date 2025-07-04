@@ -11,8 +11,6 @@
 - [x] Add light yellow input field backgrounds for better usability
 - [x] Fix modal dialog height and scroll management
 - [x] Clean up redundant code files for better maintainability
-- [x] Restore user-management.js file with full functionality
-- [x] Update project documentation to reflect current cleaned-up state
 - [ ] Fix column visibility persistence
 - [ ] Improve error handling throughout the application
 - [ ] Implement TOTP/QR code-based 2FA setup
@@ -33,10 +31,6 @@
 
 ### UI/UX Improvements
 
-- [x] Professional User Management dialog with Excel-style table layout
-- [x] Consolas 9pt font implementation for consistent data-entry appearance
-- [x] Light yellow input field backgrounds for better visual distinction
-- [x] Proper modal dialog sizing with flex layout to eliminate scroll issues
 - [ ] Virtual scrolling for large checklists
 - [ ] Mobile-responsive design improvements
 - [ ] Accessibility enhancements (ARIA roles, keyboard navigation)
@@ -103,11 +97,7 @@
 
 ## Documentation
 
-- [x] User guide with screenshots and comprehensive feature documentation
-- [x] README.md updated with current project structure and features
-- [x] DEVELOPMENT_TASKS.md updated to reflect current state
-- [x] ARCHITECTURE.md provides detailed system architecture documentation
-- [x] USER_GUIDE.md comprehensive user documentation with all features
+- [ ] User guide with screenshots
 - [ ] API documentation for integration
 - [ ] Code comments and JSDoc
 - [ ] Deployment guide

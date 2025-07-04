@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>User Management Dialog Test</title>
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../css/menu.css">
+</head>
+<body>
+    <div style="padding: 20px;">
+        <h1>User Management Dialog Test</h1>
+        <p>This is a test page for the user management dialog.</p>
+        <button id="test-user-dialog">Open User Management Dialog</button>
+        <button id="test-simple">Simple Test</button>
+        <div id="test-output" style="margin-top: 20px; padding: 10px; background: #f0f0f0; border: 1px solid #ccc;"></div>
+    </div>
+    
+    <script type="module">
+        import { showUserManagementDialog } from './js/user-management.js';
+        
+        document.getElementById('test-user-dialog').addEventListener('click', () => {
+            showUserManagementDialog();
+        });
+    </script>
+</body>
+</html>

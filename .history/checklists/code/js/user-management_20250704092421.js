@@ -200,156 +200,159 @@ function buildUserManagementDialog(dialog) {
       <button class="close-button" onclick="closeUserManagementDialog()">×</button>
     </div>
     
-    <div class="modal-body">
+    <div class="modal-body" style="padding: 20px; max-height: 70vh; overflow-y: auto;">
       <form id="user-form">
         <!-- User Navigation -->
         <div class="user-navigation" style="margin-bottom: 20px; padding: 15px; background: #e9ecef; border-radius: 4px; border: 1px solid #dee2e6;">
           <div style="display: flex; justify-content: space-between; align-items: center;">
             <span style="font-weight: bold; font-size: 1.1em;">${currentUser.fullName} (${currentUser.username})</span>
             <div>
+              <button type="button" id="new-user" class="btn-success" style="margin-right: 10px;">+ New User</button>
               <button type="button" id="prev-user" ${currentUserIndex === 0 ? 'disabled' : ''}>← Previous</button>
               <button type="button" id="next-user" ${currentUserIndex === userCount - 1 ? 'disabled' : ''}>Next →</button>
             </div>
           </div>
         </div>
         
-        <!-- Single Table for All Data -->
-        <table class="form-table">
-          <!-- PERSONAL DATA Section -->
-          <tr>
-            <td colspan="5" class="section-header">PERSONAL DATA</td>
-          </tr>
-          <tr>
-            <td class="label">User ID: *</td>
-            <td class="input"><input type="text" id="user-id" value="${currentUser.id}" readonly></td>
-            <td class="spacer">&nbsp;</td>
-            <td class="label">Username: *</td>
-            <td class="input"><input type="text" id="user-username" value="${currentUser.username}" required></td>
-          </tr>
-          <tr>
-            <td class="label">Full Name: *</td>
-            <td class="input"><input type="text" id="user-fullname" value="${currentUser.fullName}" required></td>
-            <td class="spacer">&nbsp;</td>
-            <td class="label">Email: *</td>
-            <td class="input"><input type="email" id="user-email" value="${currentUser.email}" required></td>
-          </tr>
-          <tr>
-            <td class="label">Phone Number: *</td>
-            <td class="input"><input type="tel" id="user-phone" value="${currentUser.phoneNumber}" required></td>
-            <td class="spacer">&nbsp;</td>
-            <td class="label">Role: *</td>
-            <td class="input">
-              <select id="user-role" required>
-                <option value="user" ${currentUser.role === 'user' ? 'selected' : ''}>User</option>
-                <option value="admin" ${currentUser.role === 'admin' ? 'selected' : ''}>Admin</option>
-              </select>
-            </td>
-          </tr>
-          
-          <!-- COMPANY INFORMATION Section -->
-          <tr>
-            <td colspan="5" class="section-header">COMPANY INFORMATION</td>
-          </tr>
-          <tr>
-            <td class="label">Job Function: *</td>
-            <td class="input"><input type="text" id="user-jobfunction" value="${currentUser.jobFunction}" required></td>
-            <td class="spacer">&nbsp;</td>
-            <td class="label">Company: *</td>
-            <td class="input"><input type="text" id="user-company" value="${currentUser.company}" required></td>
-          </tr>
-          
-          <!-- ACCESS & SECURITY Section -->
-          <tr>
-            <td colspan="5" class="section-header">ACCESS & SECURITY</td>
-          </tr>
-          <tr>
-            <td class="label">Access Level: *</td>
-            <td class="input">
-              <select id="user-access-level" required>
-                <option value="0" ${currentUser.defaultAccessLevel === 0 ? 'selected' : ''}>0 - Full Admin/Developer</option>
-                <option value="1" ${currentUser.defaultAccessLevel === 1 ? 'selected' : ''}>1 - Full Admin/User Management</option>
-                <option value="2" ${currentUser.defaultAccessLevel === 2 ? 'selected' : ''}>2 - Admin (no field/user mgmt)</option>
-                <option value="3" ${currentUser.defaultAccessLevel === 3 ? 'selected' : ''}>3 - Layout Editor (high access)</option>
-                <option value="4" ${currentUser.defaultAccessLevel === 4 ? 'selected' : ''}>4 - Layout Editor (no structure)</option>
-                <option value="5" ${currentUser.defaultAccessLevel === 5 ? 'selected' : ''}>5 - Limited Field Editor</option>
-                <option value="6" ${currentUser.defaultAccessLevel === 6 ? 'selected' : ''}>6 - Layout Reader</option>
-                <option value="7" ${currentUser.defaultAccessLevel === 7 ? 'selected' : ''}>7 - List Editor Only</option>
-                <option value="8" ${currentUser.defaultAccessLevel === 8 ? 'selected' : ''}>8 - Read Only</option>
-                <option value="9" ${currentUser.defaultAccessLevel === 9 ? 'selected' : ''}>9 - Personal Items Only</option>
-              </select>
-            </td>
-            <td class="spacer">&nbsp;</td>
-            <td class="label">2FA Method: *</td>
-            <td class="input">
-              <select id="user-2fa-method" required>
-                <option value="email" ${currentUser.twoFactorMethod === 'email' ? 'selected' : ''}>Email</option>
-                <option value="totp" ${currentUser.twoFactorMethod === 'totp' ? 'selected' : ''}>TOTP (Authenticator App)</option>
-                <option value="none" ${currentUser.twoFactorMethod === 'none' ? 'selected' : ''}>None</option>
-              </select>
-            </td>
-          </tr>
-          
-          <!-- COMPANY ADDRESS Section -->
-          <tr>
-            <td colspan="5" class="section-header">COMPANY ADDRESS</td>
-          </tr>
-          <tr>
-            <td class="label">Street: *</td>
-            <td class="input"><input type="text" id="user-street" value="${currentUser.companyAddress?.street || ''}" required></td>
-            <td class="spacer">&nbsp;</td>
-            <td class="label">Postal Code: *</td>
-            <td class="input"><input type="text" id="user-postal" value="${currentUser.companyAddress?.postalCode || ''}" required></td>
-          </tr>
-          <tr>
-            <td class="label">City: *</td>
-            <td class="input"><input type="text" id="user-city" value="${currentUser.companyAddress?.city || ''}" required></td>
-            <td class="spacer">&nbsp;</td>
-            <td class="label">Country: *</td>
-            <td class="input"><input type="text" id="user-country" value="${currentUser.companyAddress?.country || ''}" required></td>
-          </tr>
-          
-          <!-- ASSIGNED CHECKLISTS Section -->
-          <tr>
-            <td colspan="5" class="section-header">ASSIGNED CHECKLISTS (${currentUser.checklists?.length || 0})</td>
-          </tr>
-          <tr>
-            <td colspan="5" class="checklist-cell">
-              <div id="user-checklists" style="max-height: 100px; overflow-y: auto; border: 1pt solid #ccc; padding: 8px; background: #f8f9fa; font-family: Consolas, monospace; font-size: 9pt;">
-                ${buildChecklistsDisplay(currentUser.checklists || [])}
-              </div>
-            </td>
-          </tr>
-          
-          <!-- TWO FACTOR AUTHENTICATION Section -->
-          <tr>
-            <td colspan="5" class="section-header">TWO FACTOR AUTHENTICATION</td>
-          </tr>
-          <tr>
-            <td class="label">Current Method:</td>
-            <td class="input-readonly">${currentUser.twoFactorMethod || 'email'}</td>
-            <td class="spacer">&nbsp;</td>
-            <td class="label">Status:</td>
-            <td class="input-readonly">
-              <span class="status-badge ${currentUser.twoFactorMethod === 'totp' ? 'active' : 'inactive'}">
-                ${currentUser.twoFactorMethod === 'totp' ? '✓ TOTP Configured' : '⚠ Email Only'}
-              </span>
-            </td>
-          </tr>
-          <tr>
-            <td colspan="5" style="text-align: center; padding: 12px; border: 1px solid #dee2e6;">
-              <button type="button" id="setup-2fa" class="btn-secondary">
-                ${currentUser.twoFactorMethod === 'totp' ? 'Reconfigure TOTP' : 'Setup TOTP'}
-              </button>
-            </td>
-          </tr>
-        </table>
+        <!-- Personal Data Section -->
+        <div class="form-section">
+          <h4>PERSONAL DATA</h4>
+          <table class="form-table">
+            <tr>
+              <td class="label">User ID: *</td>
+              <td class="input"><input type="text" id="user-id" value="${currentUser.id}" readonly></td>
+              <td class="spacer">&nbsp;</td>
+              <td class="label">Username: *</td>
+              <td class="input"><input type="text" id="user-username" value="${currentUser.username}" required></td>
+            </tr>
+            <tr>
+              <td class="label">Full Name: *</td>
+              <td class="input"><input type="text" id="user-fullname" value="${currentUser.fullName}" required></td>
+              <td class="spacer">&nbsp;</td>
+              <td class="label">Email: *</td>
+              <td class="input"><input type="email" id="user-email" value="${currentUser.email}" required></td>
+            </tr>
+            <tr>
+              <td class="label">Phone Number: *</td>
+              <td class="input"><input type="tel" id="user-phone" value="${currentUser.phoneNumber}" required></td>
+              <td class="spacer">&nbsp;</td>
+              <td class="label">Role: *</td>
+              <td class="input">
+                <select id="user-role" required>
+                  <option value="user" ${currentUser.role === 'user' ? 'selected' : ''}>User</option>
+                  <option value="admin" ${currentUser.role === 'admin' ? 'selected' : ''}>Admin</option>
+                </select>
+              </td>
+            </tr>
+          </table>
+        </div>
+        
+        <!-- Company Information Section -->
+        <div class="form-section">
+          <h4>COMPANY INFORMATION</h4>
+          <table class="form-table">
+            <tr>
+              <td class="label">Job Function: *</td>
+              <td class="input"><input type="text" id="user-jobfunction" value="${currentUser.jobFunction}" required></td>
+              <td class="spacer">&nbsp;</td>
+              <td class="label">Company: *</td>
+              <td class="input"><input type="text" id="user-company" value="${currentUser.company}" required></td>
+            </tr>
+          </table>
+        </div>
+        
+        <!-- Access & Security Section -->
+        <div class="form-section">
+          <h4>ACCESS & SECURITY</h4>
+          <table class="form-table">
+            <tr>
+              <td class="label">Access Level: *</td>
+              <td class="input">
+                <select id="user-access-level" required>
+                  <option value="0" ${currentUser.defaultAccessLevel === 0 ? 'selected' : ''}>0 - Full Admin/Developer</option>
+                  <option value="1" ${currentUser.defaultAccessLevel === 1 ? 'selected' : ''}>1 - Full Admin/User Management</option>
+                  <option value="2" ${currentUser.defaultAccessLevel === 2 ? 'selected' : ''}>2 - Admin (no field/user mgmt)</option>
+                  <option value="3" ${currentUser.defaultAccessLevel === 3 ? 'selected' : ''}>3 - Layout Editor (high access)</option>
+                  <option value="4" ${currentUser.defaultAccessLevel === 4 ? 'selected' : ''}>4 - Layout Editor (no structure)</option>
+                  <option value="5" ${currentUser.defaultAccessLevel === 5 ? 'selected' : ''}>5 - Limited Field Editor</option>
+                  <option value="6" ${currentUser.defaultAccessLevel === 6 ? 'selected' : ''}>6 - Layout Reader</option>
+                  <option value="7" ${currentUser.defaultAccessLevel === 7 ? 'selected' : ''}>7 - List Editor Only</option>
+                  <option value="8" ${currentUser.defaultAccessLevel === 8 ? 'selected' : ''}>8 - Read Only</option>
+                  <option value="9" ${currentUser.defaultAccessLevel === 9 ? 'selected' : ''}>9 - Personal Items Only</option>
+                </select>
+              </td>
+              <td class="spacer">&nbsp;</td>
+              <td class="label">2FA Method: *</td>
+              <td class="input">
+                <select id="user-2fa-method" required>
+                  <option value="email" ${currentUser.twoFactorMethod === 'email' ? 'selected' : ''}>Email</option>
+                  <option value="totp" ${currentUser.twoFactorMethod === 'totp' ? 'selected' : ''}>TOTP (Authenticator App)</option>
+                  <option value="none" ${currentUser.twoFactorMethod === 'none' ? 'selected' : ''}>None</option>
+                </select>
+              </td>
+            </tr>
+          </table>
+        </div>
+        
+        <!-- Company Address -->
+        <div class="form-section">
+          <h4>COMPANY ADDRESS</h4>
+          <table class="form-table">
+            <tr>
+              <td class="label">Street: *</td>
+              <td class="input"><input type="text" id="user-street" value="${currentUser.companyAddress?.street || ''}" required></td>
+              <td class="spacer">&nbsp;</td>
+              <td class="label">Postal Code: *</td>
+              <td class="input"><input type="text" id="user-postal" value="${currentUser.companyAddress?.postalCode || ''}" required></td>
+            </tr>
+            <tr>
+              <td class="label">City: *</td>
+              <td class="input"><input type="text" id="user-city" value="${currentUser.companyAddress?.city || ''}" required></td>
+              <td class="spacer">&nbsp;</td>
+              <td class="label">Country: *</td>
+              <td class="input"><input type="text" id="user-country" value="${currentUser.companyAddress?.country || ''}" required></td>
+            </tr>
+          </table>
+        </div>
+        
+        <!-- User Checklists -->
+        <div class="form-section">
+          <h4>ASSIGNED CHECKLISTS (${currentUser.checklists?.length || 0})</h4>
+          <div id="user-checklists" style="max-height: 150px; overflow-y: auto; border: 1pt solid black; padding: 4px; background: #f8f9fa; font-family: Consolas, monospace; font-size: 9pt;">
+            ${buildChecklistsDisplay(currentUser.checklists || [])}
+          </div>
+        </div>
+        
+        <!-- 2FA Status -->
+        <div class="form-section">
+          <h4>TWO FACTOR AUTHENTICATION</h4>
+          <table class="form-table">
+            <tr>
+              <td class="label">Current Method:</td>
+              <td class="input" style="background: #f0f0f0;">${currentUser.twoFactorMethod || 'email'}</td>
+              <td class="spacer">&nbsp;</td>
+              <td class="label">Status:</td>
+              <td class="input" style="background: #f0f0f0;">
+                <span class="status-badge ${currentUser.twoFactorMethod === 'totp' ? 'active' : 'inactive'}">
+                  ${currentUser.twoFactorMethod === 'totp' ? '✓ TOTP Configured' : '⚠ Email Only'}
+                </span>
+              </td>
+            </tr>
+            <tr>
+              <td colspan="5" style="text-align: center; padding: 8px;">
+                <button type="button" id="setup-2fa" class="btn-secondary">
+                  ${currentUser.twoFactorMethod === 'totp' ? 'Reconfigure TOTP' : 'Setup TOTP'}
+                </button>
+              </td>
+            </tr>
+          </table>
+        </div>
         
       </form>
     </div>
     
     <div class="modal-footer" style="padding: 20px; border-top: 1px solid #dee2e6; display: flex; justify-content: space-between; background: #f8f9fa;">
       <div>
-        <button type="button" id="new-user" class="btn-success" style="margin-right: 10px;">+ New User</button>
         <button type="button" id="delete-user" class="btn-danger" style="margin-right: 10px;">Delete User</button>
         <button type="button" id="add-collaborator" class="btn-secondary">Add to Checklist as Collaborator</button>
       </div>

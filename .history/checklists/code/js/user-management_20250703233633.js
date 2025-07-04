@@ -42,45 +42,15 @@ export function showUserManagementDialog() {
   try {
     // Load users data
     loadUsersData().then(() => {
-      console.log('[User Management] Users data loaded successfully, creating dialog');
       createUserManagementDialog();
     }).catch(error => {
-      console.error('[User Management] Error loading users data:', error);
-      
-      // Use fallback data if loading fails
-      console.log('[User Management] Using fallback data due to loading error');
-      usersData = {
-        users: [
-          {
-            id: "uuid-1234-5678",
-            username: "testuser",
-            fullName: "Test User", 
-            email: "test@example.com",
-            phoneNumber: "+1234567890",
-            company: "Test Company",
-            companyAddress: {
-              street: "123 Test St",
-              postalCode: "12345", 
-              city: "Test City",
-              country: "Test Country"
-            },
-            role: "admin",
-            jobFunction: "Tester",
-            defaultAccessLevel: 5,
-            twoFactorMethod: "email",
-            passwordHash: "testhash",
-            token: "testtoken",
-            checklists: []
-          }
-        ]
-      };
-      currentUserIndex = 0;
-      createUserManagementDialog();
+      console.error('Error loading users data:', error);
+      showNotification('error', 'Failed to load users data');
     });
     
   } catch (error) {
-    console.error('[User Management] Error showing user management dialog:', error);
-    showNotification('error', 'Failed to show user management dialog: ' + error.message);
+    console.error('Error showing user management dialog:', error);
+    showNotification('error', 'Failed to show user management dialog');
   }
 }
 
@@ -88,8 +58,6 @@ export function showUserManagementDialog() {
  * Load users data from config using worker
  */
 async function loadUsersData() {
-  console.log('[User Management] Loading users data...');
-  
   try {
     // Try to use shared state first (if already loaded)
     if (sharedState.usersData) {
@@ -99,56 +67,19 @@ async function loadUsersData() {
       return;
     }
     
-    console.log('[User Management] Loading from worker, URL:', `${WORKER_URL}/?file=${encodeURIComponent(USER_CONFIG_PATH)}`);
-    
     // Load from worker if not cached
     const response = await fetch(`${WORKER_URL}/?file=${encodeURIComponent(USER_CONFIG_PATH)}`);
-    
-    console.log('[User Management] Fetch response status:', response.status);
-    
     if (!response.ok) {
       throw new Error(`HTTP error! status: ${response.status}`);
     }
-    
     const data = await response.json();
-    console.log('[User Management] Received data:', data);
-    
     usersData = data;
     sharedState.usersData = data; // Cache in shared state
     currentUserIndex = 0;
     console.log('[User Management] Loaded users data from worker:', usersData);
   } catch (error) {
-    console.error('[User Management] Error loading users data:', error);
-    
-    // Fallback to test data if worker fails
-    console.log('[User Management] Using fallback test data');
-    usersData = {
-      users: [
-        {
-          id: "uuid-1234-5678",
-          username: "testuser",
-          fullName: "Test User",
-          email: "test@example.com",
-          phoneNumber: "+1234567890",
-          company: "Test Company",
-          companyAddress: {
-            street: "123 Test St",
-            postalCode: "12345",
-            city: "Test City",
-            country: "Test Country"
-          },
-          role: "admin",
-          jobFunction: "Tester",
-          defaultAccessLevel: 5,
-          twoFactorMethod: "email",
-          passwordHash: "testhash",
-          token: "testtoken",
-          checklists: []
-        }
-      ]
-    };
-    currentUserIndex = 0;
-    console.log('[User Management] Using fallback data:', usersData);
+    console.error('Error loading users data:', error);
+    throw error;
   }
 }
 
@@ -156,18 +87,13 @@ async function loadUsersData() {
  * Create and display the user management dialog
  */
 function createUserManagementDialog() {
-  console.log('[User Management] Creating dialog, users data:', usersData);
-  
   // Create or get existing modal
   let dialog = document.getElementById('user-management-dialog');
   if (!dialog) {
-    console.log('[User Management] Creating new dialog element');
     dialog = document.createElement('div');
     dialog.id = 'user-management-dialog';
     dialog.className = 'modal-dialog';
     document.body.appendChild(dialog);
-  } else {
-    console.log('[User Management] Using existing dialog element');
   }
   
   // Build the dialog content
@@ -175,7 +101,6 @@ function createUserManagementDialog() {
   
   // Show the dialog
   dialog.style.display = 'block';
-  console.log('[User Management] Dialog should now be visible');
   
   // Focus on first input
   const firstInput = dialog.querySelector('input:not([readonly])');
@@ -188,9 +113,6 @@ function createUserManagementDialog() {
  * Build the user management dialog content
  */
 function buildUserManagementDialog(dialog) {
-  console.log('[User Management] Building dialog content');
-  const startTime = performance.now();
-  
   const currentUser = usersData.users[currentUserIndex];
   const userCount = usersData.users.length;
   
@@ -200,156 +122,147 @@ function buildUserManagementDialog(dialog) {
       <button class="close-button" onclick="closeUserManagementDialog()">×</button>
     </div>
     
-    <div class="modal-body">
+    <div class="modal-body" style="padding: 20px; max-height: 70vh; overflow-y: auto;">
       <form id="user-form">
         <!-- User Navigation -->
         <div class="user-navigation" style="margin-bottom: 20px; padding: 15px; background: #e9ecef; border-radius: 4px; border: 1px solid #dee2e6;">
           <div style="display: flex; justify-content: space-between; align-items: center;">
             <span style="font-weight: bold; font-size: 1.1em;">${currentUser.fullName} (${currentUser.username})</span>
             <div>
+              <button type="button" id="new-user" class="btn-success" style="margin-right: 10px;">+ New User</button>
               <button type="button" id="prev-user" ${currentUserIndex === 0 ? 'disabled' : ''}>← Previous</button>
               <button type="button" id="next-user" ${currentUserIndex === userCount - 1 ? 'disabled' : ''}>Next →</button>
             </div>
           </div>
         </div>
         
-        <!-- Single Table for All Data -->
-        <table class="form-table">
-          <!-- PERSONAL DATA Section -->
-          <tr>
-            <td colspan="5" class="section-header">PERSONAL DATA</td>
-          </tr>
-          <tr>
-            <td class="label">User ID: *</td>
-            <td class="input"><input type="text" id="user-id" value="${currentUser.id}" readonly></td>
-            <td class="spacer">&nbsp;</td>
-            <td class="label">Username: *</td>
-            <td class="input"><input type="text" id="user-username" value="${currentUser.username}" required></td>
-          </tr>
-          <tr>
-            <td class="label">Full Name: *</td>
-            <td class="input"><input type="text" id="user-fullname" value="${currentUser.fullName}" required></td>
-            <td class="spacer">&nbsp;</td>
-            <td class="label">Email: *</td>
-            <td class="input"><input type="email" id="user-email" value="${currentUser.email}" required></td>
-          </tr>
-          <tr>
-            <td class="label">Phone Number: *</td>
-            <td class="input"><input type="tel" id="user-phone" value="${currentUser.phoneNumber}" required></td>
-            <td class="spacer">&nbsp;</td>
-            <td class="label">Role: *</td>
-            <td class="input">
-              <select id="user-role" required>
-                <option value="user" ${currentUser.role === 'user' ? 'selected' : ''}>User</option>
-                <option value="admin" ${currentUser.role === 'admin' ? 'selected' : ''}>Admin</option>
-              </select>
-            </td>
-          </tr>
+        <!-- User Details Grid -->
+        <div class="form-grid" style="display: grid; grid-template-columns: 1fr 1fr; gap: 20px;">
           
-          <!-- COMPANY INFORMATION Section -->
-          <tr>
-            <td colspan="5" class="section-header">COMPANY INFORMATION</td>
-          </tr>
-          <tr>
-            <td class="label">Job Function: *</td>
-            <td class="input"><input type="text" id="user-jobfunction" value="${currentUser.jobFunction}" required></td>
-            <td class="spacer">&nbsp;</td>
-            <td class="label">Company: *</td>
-            <td class="input"><input type="text" id="user-company" value="${currentUser.company}" required></td>
-          </tr>
+          <!-- Basic Information -->
+          <div class="form-group">
+            <label for="user-id">User ID: *</label>
+            <input type="text" id="user-id" value="${currentUser.id}" readonly>
+          </div>
           
-          <!-- ACCESS & SECURITY Section -->
-          <tr>
-            <td colspan="5" class="section-header">ACCESS & SECURITY</td>
-          </tr>
-          <tr>
-            <td class="label">Access Level: *</td>
-            <td class="input">
-              <select id="user-access-level" required>
-                <option value="0" ${currentUser.defaultAccessLevel === 0 ? 'selected' : ''}>0 - Full Admin/Developer</option>
-                <option value="1" ${currentUser.defaultAccessLevel === 1 ? 'selected' : ''}>1 - Full Admin/User Management</option>
-                <option value="2" ${currentUser.defaultAccessLevel === 2 ? 'selected' : ''}>2 - Admin (no field/user mgmt)</option>
-                <option value="3" ${currentUser.defaultAccessLevel === 3 ? 'selected' : ''}>3 - Layout Editor (high access)</option>
-                <option value="4" ${currentUser.defaultAccessLevel === 4 ? 'selected' : ''}>4 - Layout Editor (no structure)</option>
-                <option value="5" ${currentUser.defaultAccessLevel === 5 ? 'selected' : ''}>5 - Limited Field Editor</option>
-                <option value="6" ${currentUser.defaultAccessLevel === 6 ? 'selected' : ''}>6 - Layout Reader</option>
-                <option value="7" ${currentUser.defaultAccessLevel === 7 ? 'selected' : ''}>7 - List Editor Only</option>
-                <option value="8" ${currentUser.defaultAccessLevel === 8 ? 'selected' : ''}>8 - Read Only</option>
-                <option value="9" ${currentUser.defaultAccessLevel === 9 ? 'selected' : ''}>9 - Personal Items Only</option>
-              </select>
-            </td>
-            <td class="spacer">&nbsp;</td>
-            <td class="label">2FA Method: *</td>
-            <td class="input">
-              <select id="user-2fa-method" required>
-                <option value="email" ${currentUser.twoFactorMethod === 'email' ? 'selected' : ''}>Email</option>
-                <option value="totp" ${currentUser.twoFactorMethod === 'totp' ? 'selected' : ''}>TOTP (Authenticator App)</option>
-                <option value="none" ${currentUser.twoFactorMethod === 'none' ? 'selected' : ''}>None</option>
-              </select>
-            </td>
-          </tr>
+          <div class="form-group">
+            <label for="user-username">Username: *</label>
+            <input type="text" id="user-username" value="${currentUser.username}" required>
+          </div>
           
-          <!-- COMPANY ADDRESS Section -->
-          <tr>
-            <td colspan="5" class="section-header">COMPANY ADDRESS</td>
-          </tr>
-          <tr>
-            <td class="label">Street: *</td>
-            <td class="input"><input type="text" id="user-street" value="${currentUser.companyAddress?.street || ''}" required></td>
-            <td class="spacer">&nbsp;</td>
-            <td class="label">Postal Code: *</td>
-            <td class="input"><input type="text" id="user-postal" value="${currentUser.companyAddress?.postalCode || ''}" required></td>
-          </tr>
-          <tr>
-            <td class="label">City: *</td>
-            <td class="input"><input type="text" id="user-city" value="${currentUser.companyAddress?.city || ''}" required></td>
-            <td class="spacer">&nbsp;</td>
-            <td class="label">Country: *</td>
-            <td class="input"><input type="text" id="user-country" value="${currentUser.companyAddress?.country || ''}" required></td>
-          </tr>
+          <div class="form-group">
+            <label for="user-fullname">Full Name: *</label>
+            <input type="text" id="user-fullname" value="${currentUser.fullName}" required>
+          </div>
           
-          <!-- ASSIGNED CHECKLISTS Section -->
-          <tr>
-            <td colspan="5" class="section-header">ASSIGNED CHECKLISTS (${currentUser.checklists?.length || 0})</td>
-          </tr>
-          <tr>
-            <td colspan="5" class="checklist-cell">
-              <div id="user-checklists" style="max-height: 100px; overflow-y: auto; border: 1pt solid #ccc; padding: 8px; background: #f8f9fa; font-family: Consolas, monospace; font-size: 9pt;">
-                ${buildChecklistsDisplay(currentUser.checklists || [])}
-              </div>
-            </td>
-          </tr>
+          <div class="form-group">
+            <label for="user-email">Email: *</label>
+            <input type="email" id="user-email" value="${currentUser.email}" required>
+          </div>
           
-          <!-- TWO FACTOR AUTHENTICATION Section -->
-          <tr>
-            <td colspan="5" class="section-header">TWO FACTOR AUTHENTICATION</td>
-          </tr>
-          <tr>
-            <td class="label">Current Method:</td>
-            <td class="input-readonly">${currentUser.twoFactorMethod || 'email'}</td>
-            <td class="spacer">&nbsp;</td>
-            <td class="label">Status:</td>
-            <td class="input-readonly">
-              <span class="status-badge ${currentUser.twoFactorMethod === 'totp' ? 'active' : 'inactive'}">
-                ${currentUser.twoFactorMethod === 'totp' ? '✓ TOTP Configured' : '⚠ Email Only'}
-              </span>
-            </td>
-          </tr>
-          <tr>
-            <td colspan="5" style="text-align: center; padding: 12px; border: 1px solid #dee2e6;">
-              <button type="button" id="setup-2fa" class="btn-secondary">
-                ${currentUser.twoFactorMethod === 'totp' ? 'Reconfigure TOTP' : 'Setup TOTP'}
-              </button>
-            </td>
-          </tr>
-        </table>
+          <div class="form-group">
+            <label for="user-phone">Phone Number: *</label>
+            <input type="tel" id="user-phone" value="${currentUser.phoneNumber}" required>
+          </div>
+          
+          <div class="form-group">
+            <label for="user-role">Role: *</label>
+            <select id="user-role" required>
+              <option value="user" ${currentUser.role === 'user' ? 'selected' : ''}>User</option>
+              <option value="admin" ${currentUser.role === 'admin' ? 'selected' : ''}>Admin</option>
+            </select>
+          </div>
+          
+          <div class="form-group">
+            <label for="user-jobfunction">Job Function: *</label>
+            <input type="text" id="user-jobfunction" value="${currentUser.jobFunction}" required>
+          </div>
+          
+          <div class="form-group">
+            <label for="user-company">Company: *</label>
+            <input type="text" id="user-company" value="${currentUser.company}" required>
+          </div>
+          
+          <div class="form-group">
+            <label for="user-access-level">Default Access Level: *</label>
+            <select id="user-access-level" required>
+              <option value="0" ${currentUser.defaultAccessLevel === 0 ? 'selected' : ''}>0 - Full Admin/Developer</option>
+              <option value="1" ${currentUser.defaultAccessLevel === 1 ? 'selected' : ''}>1 - Full Admin/User Management</option>
+              <option value="2" ${currentUser.defaultAccessLevel === 2 ? 'selected' : ''}>2 - Admin (no field/user mgmt)</option>
+              <option value="3" ${currentUser.defaultAccessLevel === 3 ? 'selected' : ''}>3 - Layout Editor (high access)</option>
+              <option value="4" ${currentUser.defaultAccessLevel === 4 ? 'selected' : ''}>4 - Layout Editor (no structure)</option>
+              <option value="5" ${currentUser.defaultAccessLevel === 5 ? 'selected' : ''}>5 - Limited Field Editor</option>
+              <option value="6" ${currentUser.defaultAccessLevel === 6 ? 'selected' : ''}>6 - Layout Reader</option>
+              <option value="7" ${currentUser.defaultAccessLevel === 7 ? 'selected' : ''}>7 - List Editor Only</option>
+              <option value="8" ${currentUser.defaultAccessLevel === 8 ? 'selected' : ''}>8 - Read Only</option>
+              <option value="9" ${currentUser.defaultAccessLevel === 9 ? 'selected' : ''}>9 - Personal Items Only</option>
+            </select>
+          </div>
+          
+          <div class="form-group">
+            <label for="user-2fa-method">2FA Method: *</label>
+            <select id="user-2fa-method" required>
+              <option value="email" ${currentUser.twoFactorMethod === 'email' ? 'selected' : ''}>Email</option>
+              <option value="totp" ${currentUser.twoFactorMethod === 'totp' ? 'selected' : ''}>TOTP (Authenticator App)</option>
+              <option value="none" ${currentUser.twoFactorMethod === 'none' ? 'selected' : ''}>None</option>
+            </select>
+          </div>
+          
+        </div>
+        
+        <!-- Company Address -->
+        <div class="form-section" style="margin-top: 25px;">
+          <h4 style="margin-bottom: 15px; color: #495057; padding: 10px; background: #e9ecef; border-radius: 4px;">Company Address</h4>
+          <div class="form-grid" style="display: grid; grid-template-columns: 1fr 1fr; gap: 20px;">
+            <div class="form-group">
+              <label for="user-street">Street: *</label>
+              <input type="text" id="user-street" value="${currentUser.companyAddress?.street || ''}" required>
+            </div>
+            
+            <div class="form-group">
+              <label for="user-postal">Postal Code: *</label>
+              <input type="text" id="user-postal" value="${currentUser.companyAddress?.postalCode || ''}" required>
+            </div>
+            
+            <div class="form-group">
+              <label for="user-city">City: *</label>
+              <input type="text" id="user-city" value="${currentUser.companyAddress?.city || ''}" required>
+            </div>
+            
+            <div class="form-group">
+              <label for="user-country">Country: *</label>
+              <input type="text" id="user-country" value="${currentUser.companyAddress?.country || ''}" required>
+            </div>
+          </div>
+        </div>
+        
+        <!-- User Checklists -->
+        <div class="form-section" style="margin-top: 25px;">
+          <h4 style="margin-bottom: 15px; color: #495057; padding: 10px; background: #e9ecef; border-radius: 4px;">Assigned Checklists (${currentUser.checklists?.length || 0})</h4>
+          <div id="user-checklists" style="max-height: 150px; overflow-y: auto; border: 1px solid #dee2e6; padding: 15px; background: #f8f9fa; border-radius: 4px;">
+            ${buildChecklistsDisplay(currentUser.checklists || [])}
+          </div>
+        </div>
+        
+        <!-- 2FA Status -->
+        <div class="form-section" style="margin-top: 25px;">
+          <h4 style="margin-bottom: 15px; color: #495057; padding: 10px; background: #e9ecef; border-radius: 4px;">Two-Factor Authentication</h4>
+          <div style="padding: 15px; background: #f8f9fa; border: 1px solid #dee2e6; border-radius: 4px;">
+            <p><strong>Current Method:</strong> ${currentUser.twoFactorMethod || 'email'}</p>
+            <p><strong>Status:</strong> <span class="status-badge ${currentUser.twoFactorMethod === 'totp' ? 'active' : 'inactive'}">
+              ${currentUser.twoFactorMethod === 'totp' ? '✓ TOTP Configured' : '⚠ Email Only'}
+            </span></p>
+            <button type="button" id="setup-2fa" class="btn-secondary" style="margin-top: 10px;">
+              ${currentUser.twoFactorMethod === 'totp' ? 'Reconfigure TOTP' : 'Setup TOTP'}
+            </button>
+          </div>
+        </div>
         
       </form>
     </div>
     
     <div class="modal-footer" style="padding: 20px; border-top: 1px solid #dee2e6; display: flex; justify-content: space-between; background: #f8f9fa;">
       <div>
-        <button type="button" id="new-user" class="btn-success" style="margin-right: 10px;">+ New User</button>
         <button type="button" id="delete-user" class="btn-danger" style="margin-right: 10px;">Delete User</button>
         <button type="button" id="add-collaborator" class="btn-secondary">Add to Checklist as Collaborator</button>
       </div>
@@ -363,9 +276,6 @@ function buildUserManagementDialog(dialog) {
   
   // Attach event listeners
   attachUserManagementEventListeners();
-  
-  const endTime = performance.now();
-  console.log(`[User Management] Dialog built in ${endTime - startTime}ms`);
 }
 
 /**
@@ -405,7 +315,6 @@ function attachUserManagementEventListeners() {
   
   // Navigation
   document.getElementById('prev-user')?.addEventListener('click', () => {
-    console.log('[User Management] Previous button clicked, current index:', currentUserIndex);
     if (currentUserIndex > 0) {
       currentUserIndex--;
       refreshUserDialog();
@@ -413,7 +322,6 @@ function attachUserManagementEventListeners() {
   });
   
   document.getElementById('next-user')?.addEventListener('click', () => {
-    console.log('[User Management] Next button clicked, current index:', currentUserIndex);
     if (currentUserIndex < usersData.users.length - 1) {
       currentUserIndex++;
       refreshUserDialog();
@@ -421,14 +329,8 @@ function attachUserManagementEventListeners() {
   });
   
   // User management
-  document.getElementById('new-user')?.addEventListener('click', () => {
-    console.log('[User Management] New User button clicked');
-    createNewUser();
-  });
-  document.getElementById('delete-user')?.addEventListener('click', () => {
-    console.log('[User Management] Delete User button clicked');
-    deleteCurrentUser();
-  });
+  document.getElementById('new-user')?.addEventListener('click', createNewUser);
+  document.getElementById('delete-user')?.addEventListener('click', deleteCurrentUser);
   
   // Form change detection
   const form = document.getElementById('user-form');
@@ -440,26 +342,11 @@ function attachUserManagementEventListeners() {
   }
   
   // Action buttons
-  document.getElementById('save-user')?.addEventListener('click', () => {
-    console.log('[User Management] Save User button clicked');
-    saveAndExit();
-  });
-  document.getElementById('save-and-email')?.addEventListener('click', () => {
-    console.log('[User Management] Save and Email button clicked');
-    saveAndSendEmail();
-  });
-  document.getElementById('cancel-user')?.addEventListener('click', () => {
-    console.log('[User Management] Cancel button clicked');
-    cancelUserManagement();
-  });
-  document.getElementById('add-collaborator')?.addEventListener('click', () => {
-    console.log('[User Management] Add Collaborator button clicked');
-    addToCollaborators();
-  });
-  document.getElementById('setup-2fa')?.addEventListener('click', () => {
-    console.log('[User Management] Setup 2FA button clicked');
-    setup2FA();
-  });
+  document.getElementById('save-user')?.addEventListener('click', saveAndExit);
+  document.getElementById('save-and-email')?.addEventListener('click', saveAndSendEmail);
+  document.getElementById('cancel-user')?.addEventListener('click', cancelUserManagement);
+  document.getElementById('add-collaborator')?.addEventListener('click', addToCollaborators);
+  document.getElementById('setup-2fa')?.addEventListener('click', setup2FA);
 }
 
 /**
@@ -477,9 +364,6 @@ function refreshUserDialog() {
  * Update user content without rebuilding the entire dialog (performance optimization)
  */
 function updateUserContent() {
-  console.log('[User Management] Updating user content for index:', currentUserIndex);
-  const startTime = performance.now();
-  
   const currentUser = usersData.users[currentUserIndex];
   const userCount = usersData.users.length;
   
@@ -537,17 +421,11 @@ function updateUserContent() {
     checklistsContainer.innerHTML = buildChecklistsDisplay(currentUser.checklists || []);
   }
   
-  // Update 2FA status in table
-  const twoFactorMethodCell = document.querySelector('.form-section:last-child .form-table td.input');
-  if (twoFactorMethodCell) {
-    twoFactorMethodCell.innerHTML = currentUser.twoFactorMethod || 'email';
-  }
-  
-  const twoFactorStatusCell = document.querySelector('.form-section:last-child .form-table tr:first-child td.input:last-child');
-  if (twoFactorStatusCell) {
-    twoFactorStatusCell.innerHTML = `<span class="status-badge ${currentUser.twoFactorMethod === 'totp' ? 'active' : 'inactive'}">
-      ${currentUser.twoFactorMethod === 'totp' ? '✓ TOTP Configured' : '⚠ Email Only'}
-    </span>`;
+  // Update 2FA status
+  const twoFactorStatus = document.querySelector('.form-section:last-child p:nth-child(2) span');
+  if (twoFactorStatus) {
+    twoFactorStatus.textContent = currentUser.twoFactorMethod === 'totp' ? '✓ TOTP Configured' : '⚠ Email Only';
+    twoFactorStatus.className = `status-badge ${currentUser.twoFactorMethod === 'totp' ? 'active' : 'inactive'}`;
   }
   
   const setup2FABtn = document.getElementById('setup-2fa');
@@ -555,18 +433,9 @@ function updateUserContent() {
     setup2FABtn.textContent = currentUser.twoFactorMethod === 'totp' ? 'Reconfigure TOTP' : 'Setup TOTP';
   }
   
-  // Update section headers with counts
-  const checklistsHeader = document.querySelector('.form-section h4');
-  if (checklistsHeader && checklistsHeader.textContent.includes('ASSIGNED CHECKLISTS')) {
-    checklistsHeader.textContent = `ASSIGNED CHECKLISTS (${currentUser.checklists?.length || 0})`;
-  }
-  
   // Reset editing state
   isEditing = false;
   updateFormState();
-  
-  const endTime = performance.now();
-  console.log(`[User Management] User content updated in ${endTime - startTime}ms`);
 }
 
 /**
