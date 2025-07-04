@@ -1,189 +1,11 @@
-// data.js — Module for loading, saving, and listing checklists
+// data2.js — CRUD operations and checklist management
 
-import { WORKER_URL, CHECKLISTS_DIR, USER_CONFIG_PATH, sharedState } from './constants.js';
-import { traverse, timestampNow } from './utils.js';
+import { WORKER_URL, CHECKLISTS_DIR, sharedState } from './constants.js';
+import { timestampNow } from './utils.js';
 import { updatemainstatustext } from './ui-mainrender.js';
-import { createCheckpoint, hasChanged, findChanges, logChanges } from './debug-helpers.js';
-import { renderChecklist} from './renderchecklist.js';
-// For version‐conflict monitoring (handled in events.js)
-sharedState.readyForEdits = false;
-
-/**
- * Fetches the JSON list of available checklist files, renders the sidebar (if exists),
- * and returns the array of files.
- */
-export async function fetchChecklists() {
-  const listEl = document.getElementById('checklistList');
-  
-  // Check if the sidebar element exists
-  if (listEl) {
-    listEl.innerHTML = '🔄 Loading...';
-  } else {
-    console.log('Checklist list element not found (sidebar removed), fetching data only');
-  }
-
-  let jsonFiles = [];
-
-  try {
-    // 1. Get raw file listing
-    const res = await fetch(`${WORKER_URL}?list=checklists`);
-    if (!res.ok) throw new Error('Failed to fetch checklist list');
-    const files = await res.json();
-
-    // 2. Keep only our timestamped JSONs
-    jsonFiles = files.filter(f =>
-      f.name.endsWith('.json') &&
-      /^\d{4}_\d{2}_\d{2}_@_\d{2}-\d{2}-\d{2}/.test(f.name) &&
-      !f.path.startsWith('checklists/config/')
-    );
-
-    // 3. Load users.json to see lastAccessed for this user
-    const usersRes = await fetch(
-      `${WORKER_URL}?file=${encodeURIComponent(USER_CONFIG_PATH)}`
-    );
-    const usersConfig = usersRes.ok ? await usersRes.json() : { users: [] };
-    const me = usersConfig.users.find(
-      u => u.username?.toLowerCase() === sharedState.currentUser?.toLowerCase()
-    );
-    const myEntries = me?.checklists || [];
-
-    // 4. Sort: your recent checklists first, then alphabetically
-    jsonFiles.sort((a, b) => {
-      const aEntry = myEntries.find(e => e.id === a.name);
-      const bEntry = myEntries.find(e => e.id === b.name);
-      if (aEntry && bEntry) {
-        return new Date(bEntry.lastAccessed) - new Date(aEntry.lastAccessed);
-      }
-      if (aEntry) return -1;
-      if (bEntry) return 1;
-      return a.name.localeCompare(b.name);
-    });
-
-    // 5. Render the sidebar buttons (only if listEl exists)
-    if (listEl) {
-      listEl.innerHTML = '';
-      jsonFiles.forEach(file => {
-        const li = document.createElement('li');
-        li.style.listStyle = 'none';
-
-        const btn = document.createElement('button');
-        btn.style.display = 'block';
-
-        // Human-friendly label
-        const label = file.name
-          .replace(/^\d{4}_\d{2}_\d{2}_@_/, '')
-          .replace(/\.json$/, '')
-          .replace(/_/g, ' ');
-        btn.textContent = label;
-
-        btn.onclick = () => loadChecklist(file.path);
-
-        li.appendChild(btn);
-        listEl.appendChild(li);
-      });
-    }
-  } catch (err) {
-    console.error('[fetchChecklists]', err);
-    if (listEl) {
-      listEl.innerHTML = '❌ Failed to load list';
-    }
-  }
-
-  console.log('[data.js] fetchChecklists jsonFiles =', jsonFiles);
-  return jsonFiles;
-}
-
-/**
- * Fetch a single checklist JSON by path.
- * @param {string} path
- * @returns {Promise<Object>}
- */
-export async function fetchRemoteChecklist(path) {
-  const res = await fetch(
-    `${WORKER_URL}?file=${encodeURIComponent(path)}`,
-    { cache: 'no-cache' }
-  );
-  if (!res.ok) throw new Error(`Failed to load checklist: ${path}`);
-  return res.json();
-}
-
-/**
- * Load and display a checklist, validating lastSave and initializing state.
- * @param {string} path
- */
-export async function loadChecklist(path) {
-  console.log(`🔄 Loading checklist from ${path}...`);
-  updatemainstatustext(`🔄 Loading ${path}…`);
-  try {
-    // 1. Fetch the JSON
-    const data = await fetchRemoteChecklist(path);
-
-    // 2. Validate lastSave
-    if (!data.lastSave) {
-      alert('❌ Cannot load this checklist: no lastSave timestamp found.');
-      updatemainstatustext('❌ Load failed: missing lastSave');
-      return;
-    }
-
-    // Create a checkpoint for later comparison
-    const originalCheckpoint = createCheckpoint(data);
-    console.log('Checklist data checkpoint created before loading');
-
-    // 3. Initialize shared state
-    sharedState.FILE_PATH = path;
-    // Make a clean deep copy to avoid accidental mutations
-    sharedState.checklistData = JSON.parse(JSON.stringify(data));
-    sharedState.lastSave = data.lastSave;
-    sharedState.isDirty = false;
-    sharedState.changeCount = 0; // Reset change counter
-    sharedState.layoutDirty = false; // Reset layout dirty flag
-    sharedState.readyForEdits = false; // Prevent markDirty during initial rendering
-    sharedState.filterState = 'all';
-    
-    // 4. Update header UI
-    const loadedListEl = document.getElementById('loadedList');
-    if (loadedListEl) loadedListEl.textContent = data.title || '';
-
-    // 5. Render collaborators
-    const collabListEl = document.getElementById('collaboratorList');
-    if (collabListEl) {
-      collabListEl.innerHTML = '';
-      (data.collaborators || []).forEach(collab => {
-        const li = document.createElement('li');
-        li.textContent = `${collab.name}${collab.role ? ' (' + collab.role + ')' : ''}`;
-        collabListEl.appendChild(li);
-      });
-    }
-
-    // 6. Render the checklist
-    renderChecklist();
-    
-    // Now check if any unintended changes happened during rendering
-    if (hasChanged(originalCheckpoint, sharedState.checklistData)) {
-      console.warn('⚠️ Checklist data was modified during loading/rendering!');
-      const changes = findChanges(originalCheckpoint, sharedState.checklistData);
-      logChanges(changes);
-      
-      // Fix unwanted changes by reverting to original data if only numbering changed
-      if (changes.itemNumberingChanged && !changes.itemPropertiesChanged && !changes.layoutChanged && !changes.metadataChanged) {
-        console.log('Reverting unintended numbering changes to maintain original state');
-        sharedState.checklistData = JSON.parse(originalCheckpoint);
-        sharedState.isDirty = false;
-      }
-    } else {
-      console.log('✅ No unintended modifications occurred during loading');
-    }
-    
-    // Now it's safe to enable editing
-    sharedState.readyForEdits = true;
-
-    // 7. Final status update
-    updatemainstatustext(`✅ Loaded "${data.title || path}" (saved: ${data.lastSave})`);
-  } catch (err) {
-    updatemainstatustext(`❌ Error loading: ${err.message}`, { color: 'red' });
-    console.error('[loadChecklist]', err);
-  }
-}
+import { renderChecklist } from './renderchecklist.js';
+import { updateUsersJson } from './auth-login.js';
+import { fetchRemoteChecklist } from './data.js';
 
 /**
  * Create a brand-new checklist template and save immediately.
@@ -248,7 +70,7 @@ export function renameChecklist() {
   
   sharedState.FILE_PATH = newPath;
   sharedState.checklistData.title = newName;
-  markSaveDirty(true);
+  markSaveDirty(true, sharedState.DIRTY_EVENTS.RENAME_CHECKLIST);
   
   renderChecklist();
   updatemainstatustext(`✅ Renamed to "${newName}" (will save as new file)`);
@@ -273,7 +95,7 @@ export async function copyChecklist() {
   sharedState.FILE_PATH = newPath;
   sharedState.checklistData.title = newName;
   sharedState.checklistData.lastSave = timestamp;
-  markSaveDirty(true);
+  markSaveDirty(true, sharedState.DIRTY_EVENTS.COPY_CHECKLIST);
   
   renderChecklist();
   updatemainstatustext(`✅ Created copy "${newName}"`);
@@ -282,10 +104,6 @@ export async function copyChecklist() {
   await saveChecklist();
 }
 
-/**
- * Persist notes, checklist JSON, and update users.json with lastAccessed.
- * @param {string} [pathOverride]
- */
 /** 
  * Find items that were edited both locally and remotely.
  * Returns an array of { no, localItem, remoteItem } 
@@ -315,17 +133,21 @@ function formatConflictsAsPlainText(conflicts) {
  */
 export async function saveChecklist(pathOverride) {
   const path = pathOverride || sharedState.FILE_PATH;
+  console.log('[saveChecklist] Called with path:', path);
+  
   if (!path) {
+    console.error('[saveChecklist] No path provided!');
     alert('No checklist path set!');
     return;
   }
   
   if (sharedState.saveInProgress) {
-    console.log('Save already in progress, ignoring duplicate request');
+    console.log('[saveChecklist] Save already in progress, ignoring duplicate request');
     return;
   }
   
   sharedState.saveInProgress = true;
+  console.log('[saveChecklist] Starting save process...');
   updatemainstatustext('💾 Saving...');
   
   try {
@@ -359,6 +181,18 @@ export async function saveChecklist(pathOverride) {
       // Continue with save (likely a new file)
     }
     
+    // 1.5 Ensure a named layout exists for saving
+    const ld = sharedState.checklistData.layout;
+    if (ld && !ld.layouts) {
+      ld.layouts = [{
+        layoutName: 'lastused',
+        columns: JSON.parse(JSON.stringify(ld.columns)),
+        rows: ld.rows ? JSON.parse(JSON.stringify(ld.rows)) : { height: 30 },
+        columnOrder: Array.isArray(ld.columnOrder) ? ld.columnOrder.slice() : Object.keys(ld.columns)
+      }];
+      ld.activeLayoutIndex = 0;
+    }
+    
     // 2. Update the lastSave timestamp
     const saveTimestamp = timestampNow();
     sharedState.checklistData.lastSave = saveTimestamp;
@@ -366,15 +200,23 @@ export async function saveChecklist(pathOverride) {
     // 3. Save to GitHub via worker
     const payload = {
       file: path,
-      content: JSON.stringify(sharedState.checklistData, null, 2),
+      json: sharedState.checklistData,
       message: `Update checklist via webapp (${sharedState.currentUser || 'anonymous'})`
     };
+    
+    console.log('[saveChecklist] About to POST to GitHub with payload:', {
+      file: payload.file,
+      message: payload.message,
+      itemCount: payload.json.items ? payload.json.items.length : 0
+    });
     
     const res = await fetch(`${WORKER_URL}/save`, {
       method: 'POST',
       headers: { 'Content-Type': 'application/json' },
       body: JSON.stringify(payload)
     });
+    
+    console.log('[saveChecklist] GitHub response status:', res.status, res.statusText);
     
     if (!res.ok) {
       throw new Error(`Save failed: ${res.status} ${res.statusText}`);
@@ -383,6 +225,8 @@ export async function saveChecklist(pathOverride) {
     // 4. Update local state
     sharedState.lastSave = saveTimestamp;
     sharedState.isDirty = false;
+    // Hide the Save button after saving
+    markSaveDirty(false);
     sharedState.changeCount = 0;
     sharedState.layoutDirty = false;
     
@@ -403,20 +247,58 @@ export async function saveChecklist(pathOverride) {
 
 /**
  * Mark the checklist as dirty/needs saving.
+ * Returns a Promise that resolves when the render is complete
  */
-export function markSaveDirty(flag = true) {
+export async function markSaveDirty(flag = true, eventId = 0) {
   // Only allow marking as dirty if we're ready for edits
   if (!sharedState.readyForEdits) return;
   
-  // If we're marking as dirty and no actual changes have been made, ignore
-  if (flag && sharedState.changeCount === 0 && !sharedState.layoutDirty) {
-    console.log('Prevented unnecessary dirty state - no real changes detected');
-    return;
+  sharedState.isDirty = flag;
+  sharedState.isDirtyType = flag ? eventId : 0;
+  
+  if (flag) {
+    sharedState.changeCount++;
+    sharedState.renderCount++;
+    
+    // Auto-save suggestion after many changes - COMMENTED OUT FOR NOW
+    // Structural changes like renumbering cause too many changes and trigger this unnecessarily
+    /*
+    if (sharedState.renderCount >= 50) {
+      const shouldSave = confirm(`You've made ${sharedState.renderCount} changes. Save now?`);
+      if (shouldSave) {
+        saveChecklist();
+        return; // Exit early, saveChecklist will reset counters
+      }
+    }
+    */
+  } else {
+    // Reset counters on save
+    sharedState.renderCount = 0;
+    sharedState.changeCount = 0;
   }
   
-  sharedState.isDirty = flag;
+  // Update save button
   const btn = document.getElementById('saveChecklistButton');
-  if (btn) btn.classList.toggle('dirty', sharedState.isDirty);
+  if (btn) {
+    // Toggle visibility: show when dirty, hide when clean
+    btn.style.display = sharedState.isDirty ? 'inline-block' : 'none';
+    // Keep red styling through CSS class if needed
+    btn.classList.toggle('dirty', sharedState.isDirty);
+  }
+  
+  // Auto-trigger specific render based on event ID
+  if (sharedState.isDirty && sharedState.isDirtyType > 0) {
+    // Trigger render with the specific event ID
+    console.log(`[markSaveDirty] Triggering render with event: ${eventId}`);
+    try {
+      // Use the imported renderChecklist function
+      await renderChecklist(sharedState.isDirtyType);
+      sharedState.isDirtyType = 0; // Reset after rendering
+      console.log(`[markSaveDirty] Render complete for event: ${eventId}`);
+    } catch (error) {
+      console.error('[markSaveDirty] Error during render:', error);
+    }
+  }
 }
 
 /**
@@ -435,43 +317,100 @@ function mergeItems(localItems, remoteItems) {
 
 // Helper functions for item and path management
 export function getItemByPath(path) {
-  if (!path || !path.length) return null;
+  console.log('[getItemByPath] Called with path:', path);
+  
+  if (!path || !path.length) {
+    console.log('[getItemByPath] Invalid path, returning null');
+    return null;
+  }
   
   let current = sharedState.checklistData.items;
+  let pathSoFar = "checklistData.items";
   
   for (let i = 0; i < path.length; i++) {
-    const idx = path[i];
-    // Check if this is the last segment (item itself)
-    if (i === path.length - 1) {
-      return current[idx];
-    }
-    // Otherwise navigate to children
-    if (!current[idx] || !current[idx].children) {
+    const idx = path[i] - 1; // Convert from 1-indexed to 0-indexed
+    pathSoFar += `[${idx}]`;
+    
+    // Check if this index exists
+    if (idx < 0 || idx >= current.length) {
+      console.error(`[getItemByPath] Index out of bounds at ${pathSoFar}, array length ${current.length}`);
       return null;
     }
+    
+    // Check if this is the last segment (item itself)
+    if (i === path.length - 1) {
+      console.log(`[getItemByPath] Found item at ${pathSoFar}`);
+      return current[idx];
+    }
+    
+    // Otherwise navigate to children
+    pathSoFar += ".children";
+    if (!current[idx].children || !Array.isArray(current[idx].children)) {
+      console.error(`[getItemByPath] No children at ${pathSoFar}`);
+      return null;
+    }
+    
     current = current[idx].children;
   }
   
+  // This should not happen if path has at least one element
+  console.error("[getItemByPath] Path traversal failed unexpectedly");
   return null;
 }
 
 export function getParentArray(path) {
+  console.log('[getParentArray] Called with path:', path);
+  
   if (!path || path.length === 0) {
+    console.log('[getParentArray] Returning top-level items array (empty path)');
     return sharedState.checklistData.items;
   }
   
   if (path.length === 1) {
+    console.log('[getParentArray] Returning top-level items array (path length 1)');
     return sharedState.checklistData.items;
   }
   
   // For deeper paths, navigate to the parent's children array
   const parentPath = path.slice(0, -1);
-  const parent = getItemByPath(parentPath);
+  console.log('[getParentArray] Looking for parent at path:', parentPath);
   
-  if (!parent) return null;
-  if (!parent.children) {
-    parent.children = [];
+  // Traverse the path manually to ensure we're getting the right parent
+  let current = sharedState.checklistData.items;
+  let pathSoFar = "checklistData.items";
+  
+  for (let i = 0; i < parentPath.length; i++) {
+    const idx = parentPath[i] - 1; // Convert 1-indexed to 0-indexed
+    pathSoFar += `[${idx}]`;
+    
+    // Make sure current[idx] exists
+    if (!current[idx]) {
+      console.error(`[getParentArray] Cannot find item at ${pathSoFar}`);
+      return null;
+    }
+    
+    // If this is the last segment, we found our parent
+    if (i === parentPath.length - 1) {
+      // Make sure children array exists
+      if (!current[idx].children) {
+        console.log(`[getParentArray] Creating children array for ${pathSoFar}`);
+        current[idx].children = [];
+      }
+      console.log(`[getParentArray] Returning children array from ${pathSoFar}.children`);
+      return current[idx].children;
+    }
+    
+    // Otherwise move to the next level down
+    if (!current[idx].children) {
+      console.error(`[getParentArray] No children at ${pathSoFar}`);
+      return null;
+    }
+    
+    pathSoFar += ".children";
+    current = current[idx].children;
   }
   
-  return parent.children;
+  // This should not happen if parentPath has at least one element
+  console.error("[getParentArray] Path traversal failed unexpectedly");
+  return null;
 }

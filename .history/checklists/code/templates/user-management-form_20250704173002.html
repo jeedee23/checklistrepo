@@ -1,0 +1,337 @@
+<!-- User Management Dialog Template -->
+<style>
+  #user-management-dialog .modal-header {
+    padding: 3px;
+    border-bottom: 1px solid #dee2e6;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #f8f9fa;
+    flex-shrink: 0;
+  }
+  
+  #user-management-dialog .modal-header h3 {
+    margin: 0;
+    color: #495057;
+  }
+  
+  #user-management-dialog .close-button {
+    background: none;
+    border: none;
+    font-size: 1.5rem;
+    cursor: pointer;
+    color: #6c757d;
+    padding: 0;
+    width: 30px;
+    height: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  #user-management-dialog .modal-body {
+    padding: 3px;
+    background: #f5f5f5;
+    flex: 1;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+  }
+  
+  #user-management-dialog .user-navigation {
+    margin-bottom: 3px;
+    padding: 3px;
+    background: #e9ecef;
+    border-radius: 4px;
+    border: 1px solid #dee2e6;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-shrink: 0;
+  }
+  
+  #user-management-dialog .user-navigation span {
+    font-weight: bold;
+    font-size: 1.1em;
+  }
+  
+  #user-management-dialog .user-navigation button {
+    padding: 3px;
+    margin: 0 2px;
+    border: 1px solid #ced4da;
+    border-radius: 4px;
+    background: white;
+    cursor: pointer;
+    font-size: 0.9rem;
+  }
+  
+  #user-management-dialog .user-navigation .btn {
+    padding: 3px;
+    margin-left: 3px;
+    font-size: 0.8rem;
+    color: white;
+    background-color: #6c757d;
+    border: none;
+  }
+  
+  #user-management-dialog .form-table {
+    width: 100%;
+    border-collapse: collapse;
+    font-family: Consolas, monospace;
+    font-size: 10pt;
+  }
+  
+  #user-management-dialog .form-table td {
+    padding: 3px;
+    vertical-align: middle;
+    border: 2px solid #dee2e6;
+  }
+  
+  #user-management-dialog .section-header {
+    font-weight: bold;
+    font-size: 10pt;
+    background: #e9ecef;
+    text-align: left;
+    padding: 3px;
+    color: #495057;
+    border: 1px solid #dee2e6;
+    border-bottom: 2px solid #adb5bd;
+  }
+  
+  #user-management-dialog .label {
+    width: 150px;
+    font-weight: bold;
+    background: #f8f9fa;
+    text-align: right;
+    padding-right: 3px;
+    white-space: nowrap;
+  }
+  
+  #user-management-dialog .input {
+    width: 200px;
+    padding: 3px;
+  }
+  
+  #user-management-dialog .input input,
+  #user-management-dialog .input select {
+    width: 100%;
+    padding: 2px;
+    border: 2px solid #75b9fe;
+    border-radius: 3px;
+    background: #FFFACD;
+    font-family: Consolas, monospace;
+    font-size: 10pt;
+    box-sizing: border-box;
+  }
+  
+  #user-management-dialog .input input[readonly] {
+    background: transparent;
+    color: #6c757d;
+    cursor: not-allowed;
+  }
+  
+  #user-management-dialog .input-readonly {
+    width: 200px;
+    padding: 3px;
+    background: #f8f9fa;
+    color: #6c757d;
+    font-family: Consolas, monospace;
+    font-size: 9pt;
+  }
+  
+  #user-management-dialog .spacer {
+    width: 30px;
+    background: white;
+    border: 1px solid #dee2e6;
+  }
+  
+  #user-management-dialog .checklist-cell {
+    padding: 3px;
+    background: #f8f9fa;
+    vertical-align: top;
+    height: 200px;
+  }
+  
+  #user-management-dialog .checklist-display {
+    height: 190px;
+    overflow-y: auto;
+    border: 1px solid #ccc;
+    padding: 3px;
+    background: #f8f9fa;
+    font-family: Consolas, monospace;
+    font-size: 9pt;
+  }
+  
+  #user-management-dialog .checklist-item {
+    padding: 3px;
+    margin: 1px 0;
+    background: white;
+    border: 1px solid #dee2e6;
+    border-radius: 3px;
+    cursor: pointer;
+  }
+  
+  #user-management-dialog .checklist-item:hover {
+    background: #e9ecef;
+  }
+  
+  #user-management-dialog .status-badge {
+    padding: 2px 3px;
+    border-radius: 4px;
+    font-size: 8pt;
+    font-weight: 600;
+    display: inline-block;
+  }
+  
+  #user-management-dialog .status-badge.active {
+    background: #d4edda;
+    color: #155724;
+    border: 1px solid #c3e6cb;
+  }
+  
+  #user-management-dialog .status-badge.inactive {
+    background: #f8d7da;
+    color: #721c24;
+    border: 1px solid #f5c6cb;
+  }
+  
+  #user-management-dialog .modal-footer {
+    padding: 3px;
+    border-top: 1px solid #dee2e6;
+    display: flex;
+    justify-content: flex-end;
+    gap: 3px;
+    background-color: #f8f9fa;
+    flex-shrink: 0;
+  }
+  
+  #user-management-dialog .btn {
+    padding: 6px 12px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 0.9rem;
+  }
+  
+  #user-management-dialog .btn-primary {
+    background: #007bff;
+    color: white;
+    border-color: #007bff;
+  }
+  
+  #user-management-dialog .btn-secondary {
+    background: #6c757d;
+    color: white;
+    border-color: #6c757d;
+  }
+  
+  #user-management-dialog .btn-danger {
+    background: #dc3545;
+    color: white;
+    border-color: #dc3545;
+  }
+</style>
+
+<div class="modal-header">
+  <h3>Edit Users ({{current_user_display}})</h3>
+  <button class="close-button" onclick="closeUserManagement()">&times;</button>
+</div>
+
+<div class="modal-body">
+  <div class="user-navigation">
+    <div>
+      <button onclick="navigateUser(-1)" {{prev_disabled}}>← Previous</button>
+      <span>User {{current_index}} of {{total_users}}: {{username}}</span>
+      <button onclick="navigateUser(1)" {{next_disabled}}>Next →</button>
+    </div>
+    <div>
+      <button class="btn" onclick="createNewUser()">+ New User</button>
+      <button class="btn" onclick="deleteCurrentUser()" {{delete_disabled}}>Delete User</button>
+    </div>
+  </div>
+
+  <table class="form-table">
+    <tr>
+      <td colspan="4" class="section-header">User Account Information</td>
+    </tr>
+    <tr>
+      <td class="label">Username:</td>
+      <td class="input">
+        <input type="text" id="edit-username" value="{{username}}" {{username_readonly}}>
+      </td>
+      <td class="spacer"></td>
+      <td class="input-readonly">
+        <strong>User ID:</strong> {{user_id}}
+      </td>
+    </tr>
+    <tr>
+      <td class="label">Full Name:</td>
+      <td class="input">
+        <input type="text" id="edit-fullname" value="{{full_name}}" placeholder="Enter full name">
+      </td>
+      <td class="spacer"></td>
+      <td class="input-readonly">
+        <strong>Created:</strong> {{created_date}}
+      </td>
+    </tr>
+    <tr>
+      <td class="label">Email:</td>
+      <td class="input">
+        <input type="email" id="edit-email" value="{{email}}" placeholder="Enter email address">
+      </td>
+      <td class="spacer"></td>
+      <td class="input-readonly">
+        <strong>Last Active:</strong> {{last_active}}
+      </td>
+    </tr>
+    <tr>
+      <td class="label">Password:</td>
+      <td class="input">
+        <input type="password" id="edit-password" placeholder="Enter new password (leave blank to keep current)">
+      </td>
+      <td class="spacer"></td>
+      <td class="input-readonly">
+        <strong>Token:</strong> {{token_display}}
+      </td>
+    </tr>
+    
+    <tr>
+      <td colspan="4" class="section-header">Access & Security</td>
+    </tr>
+    <tr>
+      <td class="label">Access Level:</td>
+      <td class="input">
+        <select id="edit-access-level">
+          {{access_level_options}}
+        </select>
+      </td>
+      <td class="spacer"></td>
+      <td class="input-readonly">
+        <strong>Status:</strong> {{user_status}}
+      </td>
+    </tr>
+    <tr>
+      <td class="label">2FA Method:</td>
+      <td id="twofa-method-cell">{{two_factor_method}}</td>
+      <td class="spacer"></td>
+      <td id="twofa-status-cell">{{two_factor_status}}</td>
+    </tr>
+    
+    <tr>
+      <td colspan="4" class="section-header">Checklist Access ({{checklist_count}} items)</td>
+    </tr>
+    <tr>
+      <td colspan="4" class="checklist-cell">
+        <div id="user-checklists-display" class="checklist-display">
+          {{checklists_content}}
+        </div>
+      </td>
+    </tr>
+  </table>
+</div>
+
+<div class="modal-footer">
+  <button class="btn btn-primary" onclick="saveUserChanges()">Save Changes</button>
+  <button class="btn btn-secondary" onclick="resetUserForm()">Reset</button>
+  <button class="btn btn-secondary" onclick="closeUserManagement()">Close</button>
+</div>
