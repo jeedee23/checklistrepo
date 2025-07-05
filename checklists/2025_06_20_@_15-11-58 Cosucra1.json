@@ -1,6 +1,6 @@
 {
   "title": "Cosucra Project structure",
-  "lastSave": "2025_07_05_@_16-21-02",
+  "lastSave": "2025_07_05_@_18-42-31",
   "lastlayout": "minilist",
   "layouts": [
     {
@@ -69,6 +69,10 @@
         "Informed": {
           "width": 120,
           "visible": false
+        },
+        "IsPreEngineering": {
+          "width": "100px",
+          "visible": true
         }
       },
       "rows": {
@@ -80,7 +84,18 @@
         "label",
         "date",
         "who",
-        "progress"
+        "progress",
+        "unit",
+        "qty_est",
+        "qty_real",
+        "price_unit",
+        "total_price",
+        "Resp",
+        "Acc",
+        "Support",
+        "Consult",
+        "Informed",
+        "IsPreEngineering"
       ]
     },
     {
@@ -6185,105 +6200,7 @@
       "Informed",
       "IsPreEngineering"
     ],
-    "rowHeight": 30,
-    "layouts": [
-      {
-        "layoutName": "default",
-        "columns": {
-          "done": {
-            "width": 50,
-            "visible": true
-          },
-          "hns": {
-            "width": 80,
-            "visible": true
-          },
-          "label": {
-            "width": 250,
-            "visible": true
-          },
-          "unit": {
-            "width": 120,
-            "visible": false
-          },
-          "qty_est": {
-            "width": 80,
-            "visible": false
-          },
-          "qty_real": {
-            "width": 80,
-            "visible": false
-          },
-          "price_unit": {
-            "width": 80,
-            "visible": false
-          },
-          "total_price": {
-            "width": 100,
-            "visible": false
-          },
-          "date": {
-            "width": 120,
-            "visible": true
-          },
-          "who": {
-            "width": 120,
-            "visible": true
-          },
-          "progress": {
-            "width": 80,
-            "visible": false
-          },
-          "Resp": {
-            "width": 120,
-            "visible": false
-          },
-          "Acc": {
-            "width": 120,
-            "visible": false
-          },
-          "Support": {
-            "width": 120,
-            "visible": false
-          },
-          "Consult": {
-            "width": 120,
-            "visible": false
-          },
-          "Informed": {
-            "width": 120,
-            "visible": false
-          },
-          "IsPreEngineering": {
-            "width": "100px",
-            "visible": true
-          }
-        },
-        "rows": {
-          "height": 30
-        },
-        "columnOrder": [
-          "done",
-          "hns",
-          "label",
-          "date",
-          "who",
-          "progress",
-          "unit",
-          "qty_est",
-          "qty_real",
-          "price_unit",
-          "total_price",
-          "Resp",
-          "Acc",
-          "Support",
-          "Consult",
-          "Informed",
-          "IsPreEngineering"
-        ]
-      }
-    ],
-    "activeLayoutIndex": 0
+    "rowHeight": 30
   },
   "activeLayoutIndex": 0,
   "fields": {
