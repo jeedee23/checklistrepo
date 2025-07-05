@@ -92,8 +92,8 @@ try {
     cleanedData.layouts = extractedLayouts;
     
     // Set the active layout to the first one (or "lastused" if it exists)
-    const lastUsedLayout = extractedLayouts.find(l => l.layoutName === 'lastused');
-    const activeLayout = lastUsedLayout || extractedLayouts[0];
+    const lastLayout = extractedLayouts.find(l => l.layoutName === 'lastused');
+    const activeLayout = lastLayout || extractedLayouts[0];
     
     if (activeLayout) {
         cleanedData.layout = {

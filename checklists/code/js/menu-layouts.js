@@ -45,7 +45,7 @@ export function applyLayoutToChecklist(layout) {
 /**
  * Update the last used layout by storing just the layout name
  */
-function updateLastUsedLayout(layout) {
+function updatelastLayout(layout) {
   // Simply store the layout name as the last used layout
   if (layout && layout.layoutName) {
     sharedState.checklistData.lastlayout = layout.layoutName;

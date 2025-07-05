@@ -1299,7 +1299,7 @@ function applyLayoutToChecklist(layout) {
   }
   
   // Copy this layout to "lastused" 
-  updateLastUsedLayout(layout);
+  updatelastLayout(layout);
   
   // Update the submenu to reflect any changes
   populateLayoutSubmenu();
@@ -1311,7 +1311,7 @@ function applyLayoutToChecklist(layout) {
 /**
  * Update the "lastused" layout with the current layout
  */
-function updateLastUsedLayout(layout) {
+function updatelastLayout(layout) {
   // Try to get the correct layouts array
   let layoutsArray = null;
   
@@ -1335,7 +1335,7 @@ function updateLastUsedLayout(layout) {
   // Find existing "lastused" layout or create new one
   let lastUsedIndex = layoutsArray.findIndex(l => l.layoutName === 'lastused');
   
-  const lastUsedLayout = {
+  const lastLayout = {
     layoutName: 'lastused',
     columns: { ...layout.columns },
     rows: { height: layout.rows?.height || 30 },
@@ -1344,10 +1344,10 @@ function updateLastUsedLayout(layout) {
   
   if (lastUsedIndex >= 0) {
     // Update existing lastused
-    layoutsArray[lastUsedIndex] = lastUsedLayout;
+    layoutsArray[lastUsedIndex] = lastLayout;
   } else {
     // Add new lastused at the beginning
-    layoutsArray.unshift(lastUsedLayout);
+    layoutsArray.unshift(lastLayout);
   }
   
   console.log('[Layout] Updated lastused layout');
