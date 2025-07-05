@@ -1,6 +1,6 @@
 {
   "title": "Cosucra Project structure",
-  "lastSave": "2025_07_05_@_23-21-27",
+  "lastSave": "2025_07_05_@_23-30-32",
   "lastlayout": "minilist",
   "lastcollaborator": "Johan",
   "fields": {
@@ -103,15 +103,15 @@
       "layoutName": "minilist",
       "columns": {
         "done": {
-          "width": 69,
+          "width": "4.40%",
           "visible": true
         },
         "hns": {
-          "width": 60,
+          "width": "4.93%",
           "visible": true
         },
         "label": {
-          "width": 39,
+          "width": "23.31%",
           "visible": true
         },
         "unit": {
@@ -135,7 +135,7 @@
           "visible": false
         },
         "date": {
-          "width": 42,
+          "width": "6.84%",
           "visible": true
         },
         "who": {
@@ -151,7 +151,7 @@
           "visible": true
         },
         "Acc": {
-          "width": 125,
+          "width": "6.24%",
           "visible": true
         },
         "Support": {
@@ -6206,15 +6206,15 @@
   "layout": {
     "columns": {
       "done": {
-        "width": 69,
+        "width": "4.40%",
         "visible": true
       },
       "hns": {
-        "width": 60,
+        "width": "4.93%",
         "visible": true
       },
       "label": {
-        "width": 39,
+        "width": "23.31%",
         "visible": true
       },
       "unit": {
@@ -6238,7 +6238,7 @@
         "visible": false
       },
       "date": {
-        "width": 42,
+        "width": "6.84%",
         "visible": true
       },
       "who": {
@@ -6254,7 +6254,7 @@
         "visible": true
       },
       "Acc": {
-        "width": 125,
+        "width": "6.24%",
         "visible": true
       },
       "Support": {
