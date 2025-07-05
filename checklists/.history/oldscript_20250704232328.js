@@ -452,12 +452,12 @@ async function checkStaleVersion() {
    const map = new Map();
    // start with remote
    remoteItems.forEach(item=>{
-     const key = item.no||item.label;
+     const key = itemhns||item.label;
      map.set(key, item);
    });
    // overlay local
    localItems.forEach(item=>{
-     const key = item.no||item.label;
+     const key = itemhns||item.label;
      if (map.has(key)) {
        map.set(key, mergeChecklistData(item, map.get(key)));
      } else {
@@ -2501,7 +2501,7 @@ document.addEventListener("DOMContentLoaded", async () => {
 
   function getItemDisplay(item) {
     const parts = [];
-    if (item.hns != null) parts.push(item.no);
+    if (item.hns != null) parts.push(itemhns);
     for (const [key, val] of Object.entries(item)) {
       if (key === "no" || key === "children") continue;
       if (typeof val === "string" || typeof val === "number") {

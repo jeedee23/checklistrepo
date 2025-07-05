@@ -26,7 +26,7 @@
         "width": 40,
         "visible": true
       },
-      "no": {
+      "hns": {
         "width": 40,
         "visible": true
       },
@@ -69,18 +69,18 @@
   },
   "items": [
     {
-      "no": "1",
+      "hns": "1",
       "label": "Power System---hhhhgg",
       "who": "Johan",
       "date": "2025-05-12",
       "children": [
         {
-          "no": "1.1",
+          "hns": "1.1",
           "label": "Install 200 Ah 24V LiFePO₄ battery",
           "who": "Johan"
         },
         {
-          "no": "1.2",
+          "hns": "1.2",
           "label": "Add automatic charging antenna system",
           "done": false,
           "who": "Johan"
@@ -88,18 +88,18 @@
       ]
     },
     {
-      "no": "2",
+      "hns": "2",
       "label": "Drive System",
       "who": "Johan",
       "date": "2025-05-12",
       "children": [
         {
-          "no": "2.1",
+          "hns": "2.1",
           "label": "Integrate electronic brake for turning",
           "done": true
         },
         {
-          "no": "2.2",
+          "hns": "2.2",
           "label": "Test forward/backward drive control",
           "done": false
         }
@@ -125,107 +125,107 @@
           "date": "2025-05-17",
           "who": "",
           "children": [],
-          "no": "3.1"
+          "hns": "3.1"
         }
       ],
-      "no": "3"
+      "hns": "3"
     },
     {
-      "no": "4",
+      "hns": "4",
       "label": "Sensors & Navigation",
       "who": "Johan",
       "date": "2025-05-12",
       "children": [
         {
-          "no": "4.1",
+          "hns": "4.1",
           "label": "Install RTK GPS"
         },
         {
-          "no": "4.2",
+          "hns": "4.2",
           "label": "Add IMU and wheel encoders"
         },
         {
-          "no": "4.3",
+          "hns": "4.3",
           "label": "Mount LIDAR and ultrasonic sensors"
         },
         {
-          "no": "4.4",
+          "hns": "4.4",
           "label": "Setup camera (optional Visual SLAM)"
         }
       ]
     },
     {
-      "no": "5",
+      "hns": "5",
       "label": "Cleaning System Automation",
       "who": "Johan",
       "date": "2025-05-12",
       "children": [
         {
-          "no": "5.1",
+          "hns": "5.1",
           "label": "Connect brush motors to control unit"
         },
         {
-          "no": "5.2",
+          "hns": "5.2",
           "label": "Wire suction motor"
         },
         {
-          "no": "5.3",
+          "hns": "5.3",
           "label": "Install flow and pressure sensors"
         }
       ]
     },
     {
-      "no": "6",
+      "hns": "6",
       "label": "Docking & Charging",
       "who": "Johan",
       "date": "2025-05-12",
       "children": [
         {
-          "no": "6.1",
+          "hns": "6.1",
           "label": "Align antenna system for auto-docking"
         },
         {
-          "no": "6.2",
+          "hns": "6.2",
           "label": "Add visual/IR or tag-based alignment system"
         }
       ]
     },
     {
-      "no": "7",
+      "hns": "7",
       "label": "Control & Compute System",
       "who": "Johan",
       "date": "2025-05-12",
       "children": [
         {
-          "no": "7.1",
+          "hns": "7.1",
           "label": "Install Jetson/Raspberry Pi"
         },
         {
-          "no": "7.2",
+          "hns": "7.2",
           "label": "Add microcontroller for I/O"
         },
         {
-          "no": "7.3",
+          "hns": "7.3",
           "label": "Set up safety buzzer and lights"
         }
       ]
     },
     {
-      "no": "8",
+      "hns": "8",
       "label": "Software",
       "who": "Johan",
       "date": "2025-05-12",
       "children": [
         {
-          "no": "8.1",
+          "hns": "8.1",
           "label": "Develop navigation stack"
         },
         {
-          "no": "8.2",
+          "hns": "8.2",
           "label": "Program cleaning logic and conditions"
         },
         {
-          "no": "8.3",
+          "hns": "8.3",
           "label": "Add remote monitoring interface"
         }
       ]

@@ -36,7 +36,7 @@ export function renderItem(item, tbody, path, columnDefs, rowHeight) {
   row.style.fontFamily = 'Consolas, monospace';
   row.dataset.path = JSON.stringify(path);
   if (item.important) row.classList.add('important');
-  // IMPORTANT: Never modify item.no here - use exactly as saved in file
+  // IMPORTANT: Never modify itemhns here - use exactly as saved in file
   // The item.hns field is part of the saved file structure and should never be recalculated
 
   // Events

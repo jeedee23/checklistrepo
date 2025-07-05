@@ -623,7 +623,7 @@ export function addLink() {
   // Set default text based on checklist ID and item number
   const linkTextInput = modal.querySelector('#linkText');
   const checklistId = sharedState.currentChecklist?.id || 'CHK';
-  const itemNo = sharedState.selectedItem?.no || '001';
+  const itemNo = sharedState.selectedItem?hns || '001';
   linkTextInput.value = `${checklistId}-${itemNo}-`;
   
   // Focus on URL input

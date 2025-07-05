@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Config Loading Test</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/menu.css">
+</head>
+<body>
+    <div style="padding: 20px;">
+        <h1>Config Loading Test</h1>
+        
+        <div style="margin-bottom: 20px;">
+            <button id="test-config-load" class="primary-btn">Load Config</button>
+            <button id="test-field-types" class="secondary-btn">Load Field Types</button>
+        </div>
+
+        <div id="test-results" style="margin-top: 20px;"></div>
+        
+        <div style="margin-top: 20px;">
+            <h3>Config Data:</h3>
+            <pre id="config-data" style="background: #f5f5f5; padding: 10px; border-radius: 4px; max-height: 300px; overflow-y: auto;"></pre>
+        </div>
+    </div>
+
+    <script type="module">
+        import { loadConfig } from './js/data-persistence.js';
+        import { sharedState } from './js/constants.js';
+
+        // Mock notification function
+        window.showNotification = (type, message) => {
+            const results = document.getElementById('test-results');
+            const div = document.createElement('div');
+            div.style.cssText = `
+                padding: 10px; 
+                margin: 10px 0; 
+                border-radius: 4px; 
+                background: ${type === 'error' ? '#fee' : type === 'success' ? '#efe' : '#eef'}; 
+                color: ${type === 'error' ? '#c33' : type === 'success' ? '#363' : '#333'};
+                border: 1px solid ${type === 'error' ? '#faa' : type === 'success' ? '#afa' : '#aaf'};
+            `;
+            div.textContent = `[${type.toUpperCase()}] ${message}`;
+            results.appendChild(div);
+            console.log(`[${type.toUpperCase()}] ${message}`);
+        };
+
+        // Function to update the config data display
+        function updateConfigDisplay(data) {
+            const configData = document.getElementById('config-data');
+            configData.textContent = JSON.stringify(data, null, 2);
+        }
+
+        document.addEventListener('DOMContentLoaded', () => {
+            document.getElementById('test-config-load').addEventListener('click', async () => {
+                try {
+                    const config = await loadConfig();
+                    updateConfigDisplay(config);
+                    showNotification('success', 'Config loaded successfully');
+                } catch (error) {
+                    showNotification('error', 'Failed to load config: ' + error.message);
+                }
+            });
+
+            document.getElementById('test-field-types').addEventListener('click', async () => {
+                try {
+                    const config = await loadConfig();
+                    const fieldTypes = config.fieldTypes || ['text', 'number', 'checkbox', 'select', 'tree', 'formula'];
+                    updateConfigDisplay({ fieldTypes });
+                    showNotification('success', `Field types loaded: ${fieldTypes.join(', ')}`);
+                } catch (error) {
+                    showNotification('error', 'Failed to load field types: ' + error.message);
+                }
+            });
+        });
+    </script>
+</body>
+</html>

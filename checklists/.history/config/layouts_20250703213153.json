@@ -5,7 +5,7 @@
       "description": "Standard checklist view with basic fields",
       "columns": {
         "done": { "width": "50px", "visible": true, "label": "✔ Done" },
-        "no": { "width": "60px", "visible": true, "label": "No" },
+        "hns": { "width": "60px", "visible": true, "label": "No" },
         "label": { "width": "300px", "visible": true, "label": "Label" }
       },
       "rowHeight": 30,
@@ -16,7 +16,7 @@
       "description": "Full project management view with status, dates, and assignments",
       "columns": {
         "done": { "width": "50px", "visible": true, "label": "✔ Done" },
-        "no": { "width": "60px", "visible": true, "label": "No" },
+        "hns": { "width": "60px", "visible": true, "label": "No" },
         "label": { "width": "250px", "visible": true, "label": "Task" },
         "status": { "width": "120px", "visible": true, "label": "Status" },
         "priority": { "width": "80px", "visible": true, "label": "Priority" },
@@ -32,7 +32,7 @@
       "description": "Financial tracking with quantities and pricing",
       "columns": {
         "done": { "width": "50px", "visible": true, "label": "✔ Done" },
-        "no": { "width": "60px", "visible": true, "label": "No" },
+        "hns": { "width": "60px", "visible": true, "label": "No" },
         "label": { "width": "200px", "visible": true, "label": "Item" },
         "unit": { "width": "80px", "visible": true, "label": "Unit" },
         "qty_est": { "width": "100px", "visible": true, "label": "Est. Qty" },
@@ -48,7 +48,7 @@
       "description": "Responsibility assignment matrix view",
       "columns": {
         "done": { "width": "50px", "visible": true, "label": "✔ Done" },
-        "no": { "width": "60px", "visible": true, "label": "No" },
+        "hns": { "width": "60px", "visible": true, "label": "No" },
         "label": { "width": "250px", "visible": true, "label": "Activity" },
         "Resp": { "width": "120px", "visible": true, "label": "Responsible" },
         "Acc": { "width": "120px", "visible": true, "label": "Accountable" },

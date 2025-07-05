@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Field Manager Test</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/menu.css">
+</head>
+<body>
+    <div style="padding: 20px;">
+        <h1>Field Manager Test</h1>
+        <button id="test-field-dialog">Test Field Dialog</button>
+        <div id="test-results"></div>
+    </div>
+
+    <script type="module">
+        import { showFieldsDialog, showNewFieldDialog } from './js/menu-fields-actions.js';
+        import { loadFieldDefinitions } from './js/data-fields.js';
+        import { sharedState } from './js/constants.js';
+
+        // Mock minimal shared state for testing
+        sharedState.checklistData = { items: [] };
+        sharedState.currentUser = { accessLevel: 10 };
+
+        document.addEventListener('DOMContentLoaded', async () => {
+            await loadFieldDefinitions();
+            console.log('Fields loaded:', sharedState.fieldsData);
+            
+            document.getElementById('test-field-dialog').addEventListener('click', () => {
+                showNewFieldDialog();
+            });
+        });
+
+        // Mock notification function
+        window.showNotification = (type, message) => {
+            const results = document.getElementById('test-results');
+            results.innerHTML = `<div style="padding: 10px; margin: 10px 0; border-radius: 4px; background: ${type === 'error' ? '#fee' : '#efe'}; color: ${type === 'error' ? '#c33' : '#363'};">${message}</div>`;
+            console.log(`[${type.toUpperCase()}] ${message}`);
+        };
+    </script>
+</body>
+</html>

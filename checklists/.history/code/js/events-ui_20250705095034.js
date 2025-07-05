@@ -41,7 +41,7 @@ export function initUIEvents() {
 
   function getItemDisplay(item) {
     const parts = [];
-    if (item.hns != null) parts.push(item.no);
+    if (item.hns != null) parts.push(itemhns);
     for (const [key, val] of Object.entries(item)) {
       if (key === 'hns' || key === 'children') continue;
       if (typeof val === 'string' || typeof val === 'number') {

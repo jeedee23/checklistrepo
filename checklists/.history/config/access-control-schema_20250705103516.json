@@ -1,0 +1,83 @@
+{
+  "layouts": {
+    "overview": {
+      "createdBy": "admin",
+      "createdAt": "2025-07-05T10:00:00Z",
+      "description": "General overview for most users",
+      "fields": {
+        "done": { "visible": true, "editable": true },
+        "hns": { "visible": true, "editable": false },
+        "label": { "visible": true, "editable": true },
+        "date": { "visible": true, "editable": true },
+        "who": { "visible": true, "editable": true },
+        "confidential_notes": { "visible": false, "editable": false }
+      },
+      "accessLevels": {
+        "readOnly": 5,
+        "readWrite": 3
+      }
+    },
+    "admin_full": {
+      "createdBy": "admin",
+      "createdAt": "2025-07-05T10:00:00Z", 
+      "description": "Full access for administrators",
+      "fields": {
+        "done": { "visible": true, "editable": true },
+        "hns": { "visible": true, "editable": true },
+        "label": { "visible": true, "editable": true },
+        "date": { "visible": true, "editable": true },
+        "who": { "visible": true, "editable": true },
+        "confidential_notes": { "visible": true, "editable": true },
+        "budget": { "visible": true, "editable": true }
+      },
+      "accessLevels": {
+        "readOnly": 1,
+        "readWrite": 0
+      }
+    }
+  },
+  
+  "filters": {
+    "basics": {
+      "createdBy": "admin",
+      "createdAt": "2025-07-05T10:00:00Z",
+      "description": "Basic items visible to all users",
+      "condition": "item.category === 'basic' || item.priority === 'low'",
+      "accessLevels": {
+        "read": 6
+      }
+    },
+    "pre-engineering": {
+      "createdBy": "admin", 
+      "createdAt": "2025-07-05T10:00:00Z",
+      "description": "Engineering-specific items",
+      "condition": "item.isEngineering === true",
+      "accessLevels": {
+        "read": 4
+      }
+    },
+    "confidential": {
+      "createdBy": "admin",
+      "createdAt": "2025-07-05T10:00:00Z", 
+      "description": "Sensitive information",
+      "condition": "item.confidential === true",
+      "accessLevels": {
+        "read": 2
+      }
+    }
+  },
+  
+  "userAccess": {
+    "exampleUser": {
+      "username": "engineer_joe",
+      "defaultAccessLevel": 5,
+      "checklists": [
+        {
+          "id": "project1.json",
+          "layoutName": "overview",
+          "filterNames": ["basics"]
+        }
+      ]
+    }
+  }
+}

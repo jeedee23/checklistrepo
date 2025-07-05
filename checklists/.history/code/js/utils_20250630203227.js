@@ -49,7 +49,7 @@ export function getParentArray(path) {
 export function renumberChecklist(items = sharedState.checklistData.items, prefix = []) {
   items.forEach((item, idx) => {
     const number = [...prefix, idx + 1];
-    item.no = number.join('.');
+    itemhns = number.join('.');
 
     // Recurse into children (if any)
     if (Array.isArray(item.children) && item.children.length > 0) {

@@ -1,0 +1,1823 @@
+{
+  "default": "Minilist",
+  "Minilist": {
+    "level1.done": {
+      "fontSize": "1.00rem"
+    },
+    "level1hns": {
+      "fontSize": "1.00rem",
+      "indent": 20
+    },
+    "level1.label": {
+      "fontSize": "1.00rem",
+      "bold": true
+    },
+    "level1.unit": {
+      "fontSize": "1.00rem"
+    },
+    "level1.qty_est": {
+      "fontSize": "1.00rem"
+    },
+    "level1.qty_real": {
+      "fontSize": "1.00rem"
+    },
+    "level1.price_unit": {
+      "fontSize": "1.00rem"
+    },
+    "level1.total_price": {
+      "fontSize": "1.00rem"
+    },
+    "level1.date": {
+      "fontSize": "1.00rem"
+    },
+    "level1.who": {
+      "fontSize": "1.00rem"
+    },
+    "level1.status": {
+      "fontSize": "1.00rem"
+    },
+    "level1.priority": {
+      "fontSize": "1.00rem"
+    },
+    "level1.progress": {
+      "fontSize": "1.00rem"
+    },
+    "level1.need": {
+      "fontSize": "1.00rem"
+    },
+    "level1.type": {
+      "fontSize": "1.00rem"
+    },
+    "level1.approved_by": {
+      "fontSize": "1.00rem"
+    },
+    "level2.done": {
+      "fontSize": "0.95rem"
+    },
+    "level2hns": {
+      "fontSize": "0.95rem",
+      "indent": 40
+    },
+    "level2.label": {
+      "fontSize": "0.95rem"
+    },
+    "level2.unit": {
+      "fontSize": "0.95rem"
+    },
+    "level2.qty_est": {
+      "fontSize": "0.95rem"
+    },
+    "level2.qty_real": {
+      "fontSize": "0.95rem"
+    },
+    "level2.price_unit": {
+      "fontSize": "0.95rem"
+    },
+    "level2.total_price": {
+      "fontSize": "0.95rem"
+    },
+    "level2.date": {
+      "fontSize": "0.95rem"
+    },
+    "level2.who": {
+      "fontSize": "0.95rem"
+    },
+    "level2.status": {
+      "fontSize": "0.95rem"
+    },
+    "level2.priority": {
+      "fontSize": "0.95rem"
+    },
+    "level2.progress": {
+      "fontSize": "0.95rem"
+    },
+    "level2.need": {
+      "fontSize": "0.95rem"
+    },
+    "level2.type": {
+      "fontSize": "0.95rem"
+    },
+    "level2.approved_by": {
+      "fontSize": "0.95rem"
+    },
+    "level3.done": {
+      "fontSize": "0.90rem"
+    },
+    "level3hns": {
+      "fontSize": "0.90rem",
+      "indent": 60
+    },
+    "level3.label": {
+      "fontSize": "0.90rem"
+    },
+    "level3.unit": {
+      "fontSize": "0.90rem"
+    },
+    "level3.qty_est": {
+      "fontSize": "0.90rem"
+    },
+    "level3.qty_real": {
+      "fontSize": "0.90rem"
+    },
+    "level3.price_unit": {
+      "fontSize": "0.90rem"
+    },
+    "level3.total_price": {
+      "fontSize": "0.90rem"
+    },
+    "level3.date": {
+      "fontSize": "0.90rem"
+    },
+    "level3.who": {
+      "fontSize": "0.90rem"
+    },
+    "level3.status": {
+      "fontSize": "0.90rem"
+    },
+    "level3.priority": {
+      "fontSize": "0.90rem"
+    },
+    "level3.progress": {
+      "fontSize": "0.90rem"
+    },
+    "level3.need": {
+      "fontSize": "0.90rem"
+    },
+    "level3.type": {
+      "fontSize": "0.90rem"
+    },
+    "level3.approved_by": {
+      "fontSize": "0.90rem"
+    },
+    "level4.done": {
+      "fontSize": "0.85rem"
+    },
+    "level4hns": {
+      "fontSize": "0.85rem",
+      "indent": 80
+    },
+    "level4.label": {
+      "fontSize": "0.85rem"
+    },
+    "level4.unit": {
+      "fontSize": "0.85rem"
+    },
+    "level4.qty_est": {
+      "fontSize": "0.85rem"
+    },
+    "level4.qty_real": {
+      "fontSize": "0.85rem"
+    },
+    "level4.price_unit": {
+      "fontSize": "0.85rem"
+    },
+    "level4.total_price": {
+      "fontSize": "0.85rem"
+    },
+    "level4.date": {
+      "fontSize": "0.85rem"
+    },
+    "level4.who": {
+      "fontSize": "0.85rem"
+    },
+    "level4.status": {
+      "fontSize": "0.85rem"
+    },
+    "level4.priority": {
+      "fontSize": "0.85rem"
+    },
+    "level4.progress": {
+      "fontSize": "0.85rem"
+    },
+    "level4.need": {
+      "fontSize": "0.85rem"
+    },
+    "level4.type": {
+      "fontSize": "0.85rem"
+    },
+    "level4.approved_by": {
+      "fontSize": "0.85rem"
+    },
+    "level5.done": {
+      "fontSize": "0.80rem"
+    },
+    "level5hns": {
+      "fontSize": "0.80rem",
+      "indent": 100
+    },
+    "level5.label": {
+      "fontSize": "0.80rem"
+    },
+    "level5.unit": {
+      "fontSize": "0.80rem"
+    },
+    "level5.qty_est": {
+      "fontSize": "0.80rem"
+    },
+    "level5.qty_real": {
+      "fontSize": "0.80rem"
+    },
+    "level5.price_unit": {
+      "fontSize": "0.80rem"
+    },
+    "level5.total_price": {
+      "fontSize": "0.80rem"
+    },
+    "level5.date": {
+      "fontSize": "0.80rem"
+    },
+    "level5.who": {
+      "fontSize": "0.80rem"
+    },
+    "level5.status": {
+      "fontSize": "0.80rem"
+    },
+    "level5.priority": {
+      "fontSize": "0.80rem"
+    },
+    "level5.progress": {
+      "fontSize": "0.80rem"
+    },
+    "level5.need": {
+      "fontSize": "0.80rem"
+    },
+    "level5.type": {
+      "fontSize": "0.80rem"
+    },
+    "level5.approved_by": {
+      "fontSize": "0.80rem"
+    },
+    "notes": {
+      "type": "plain",
+      "style": {
+        "fontSize": "0.85rem",
+        "italic": true
+      }
+    },
+    "images": {
+      "framed": true,
+      "maxWidth": "300px"
+    },
+    "print": {}
+  },
+  "Todo's": {
+    "level1.done": {
+      "fontSize": "1.00rem"
+    },
+    "level1hns": {
+      "fontSize": "1.00rem",
+      "indent": 20
+    },
+    "level1.label": {
+      "fontSize": "1.00rem",
+      "bold": true
+    },
+    "level1.unit": {
+      "fontSize": "1.00rem"
+    },
+    "level1.qty_est": {
+      "fontSize": "1.00rem"
+    },
+    "level1.qty_real": {
+      "fontSize": "1.00rem"
+    },
+    "level1.price_unit": {
+      "fontSize": "1.00rem"
+    },
+    "level1.total_price": {
+      "fontSize": "1.00rem"
+    },
+    "level1.date": {
+      "fontSize": "1.00rem"
+    },
+    "level1.who": {
+      "fontSize": "1.00rem"
+    },
+    "level1.status": {
+      "fontSize": "1.00rem"
+    },
+    "level1.priority": {
+      "fontSize": "1.00rem"
+    },
+    "level1.progress": {
+      "fontSize": "1.00rem"
+    },
+    "level1.need": {
+      "fontSize": "1.00rem"
+    },
+    "level1.type": {
+      "fontSize": "1.00rem"
+    },
+    "level1.approved_by": {
+      "fontSize": "1.00rem"
+    },
+    "level2.done": {
+      "fontSize": "0.95rem"
+    },
+    "level2hns": {
+      "fontSize": "0.95rem",
+      "indent": 40
+    },
+    "level2.label": {
+      "fontSize": "0.95rem"
+    },
+    "level2.unit": {
+      "fontSize": "0.95rem"
+    },
+    "level2.qty_est": {
+      "fontSize": "0.95rem"
+    },
+    "level2.qty_real": {
+      "fontSize": "0.95rem"
+    },
+    "level2.price_unit": {
+      "fontSize": "0.95rem"
+    },
+    "level2.total_price": {
+      "fontSize": "0.95rem"
+    },
+    "level2.date": {
+      "fontSize": "0.95rem"
+    },
+    "level2.who": {
+      "fontSize": "0.95rem"
+    },
+    "level2.status": {
+      "fontSize": "0.95rem"
+    },
+    "level2.priority": {
+      "fontSize": "0.95rem"
+    },
+    "level2.progress": {
+      "fontSize": "0.95rem"
+    },
+    "level2.need": {
+      "fontSize": "0.95rem"
+    },
+    "level2.type": {
+      "fontSize": "0.95rem"
+    },
+    "level2.approved_by": {
+      "fontSize": "0.95rem"
+    },
+    "level3.done": {
+      "fontSize": "0.90rem"
+    },
+    "level3hns": {
+      "fontSize": "0.90rem",
+      "indent": 60
+    },
+    "level3.label": {
+      "fontSize": "0.90rem"
+    },
+    "level3.unit": {
+      "fontSize": "0.90rem"
+    },
+    "level3.qty_est": {
+      "fontSize": "0.90rem"
+    },
+    "level3.qty_real": {
+      "fontSize": "0.90rem"
+    },
+    "level3.price_unit": {
+      "fontSize": "0.90rem"
+    },
+    "level3.total_price": {
+      "fontSize": "0.90rem"
+    },
+    "level3.date": {
+      "fontSize": "0.90rem"
+    },
+    "level3.who": {
+      "fontSize": "0.90rem"
+    },
+    "level3.status": {
+      "fontSize": "0.90rem"
+    },
+    "level3.priority": {
+      "fontSize": "0.90rem"
+    },
+    "level3.progress": {
+      "fontSize": "0.90rem"
+    },
+    "level3.need": {
+      "fontSize": "0.90rem"
+    },
+    "level3.type": {
+      "fontSize": "0.90rem"
+    },
+    "level3.approved_by": {
+      "fontSize": "0.90rem"
+    },
+    "level4.done": {
+      "fontSize": "0.85rem"
+    },
+    "level4hns": {
+      "fontSize": "0.85rem",
+      "indent": 80
+    },
+    "level4.label": {
+      "fontSize": "0.85rem"
+    },
+    "level4.unit": {
+      "fontSize": "0.85rem"
+    },
+    "level4.qty_est": {
+      "fontSize": "0.85rem"
+    },
+    "level4.qty_real": {
+      "fontSize": "0.85rem"
+    },
+    "level4.price_unit": {
+      "fontSize": "0.85rem"
+    },
+    "level4.total_price": {
+      "fontSize": "0.85rem"
+    },
+    "level4.date": {
+      "fontSize": "0.85rem"
+    },
+    "level4.who": {
+      "fontSize": "0.85rem"
+    },
+    "level4.status": {
+      "fontSize": "0.85rem"
+    },
+    "level4.priority": {
+      "fontSize": "0.85rem"
+    },
+    "level4.progress": {
+      "fontSize": "0.85rem"
+    },
+    "level4.need": {
+      "fontSize": "0.85rem"
+    },
+    "level4.type": {
+      "fontSize": "0.85rem"
+    },
+    "level4.approved_by": {
+      "fontSize": "0.85rem"
+    },
+    "level5.done": {
+      "fontSize": "0.80rem"
+    },
+    "level5hns": {
+      "fontSize": "0.80rem",
+      "indent": 100
+    },
+    "level5.label": {
+      "fontSize": "0.80rem"
+    },
+    "level5.unit": {
+      "fontSize": "0.80rem"
+    },
+    "level5.qty_est": {
+      "fontSize": "0.80rem"
+    },
+    "level5.qty_real": {
+      "fontSize": "0.80rem"
+    },
+    "level5.price_unit": {
+      "fontSize": "0.80rem"
+    },
+    "level5.total_price": {
+      "fontSize": "0.80rem"
+    },
+    "level5.date": {
+      "fontSize": "0.80rem"
+    },
+    "level5.who": {
+      "fontSize": "0.80rem"
+    },
+    "level5.status": {
+      "fontSize": "0.80rem"
+    },
+    "level5.priority": {
+      "fontSize": "0.80rem"
+    },
+    "level5.progress": {
+      "fontSize": "0.80rem"
+    },
+    "level5.need": {
+      "fontSize": "0.80rem"
+    },
+    "level5.type": {
+      "fontSize": "0.80rem"
+    },
+    "level5.approved_by": {
+      "fontSize": "0.80rem"
+    },
+    "notes": {
+      "type": "plain",
+      "style": {
+        "fontSize": "0.85rem",
+        "italic": true
+      }
+    },
+    "images": {
+      "framed": true,
+      "maxWidth": "300px"
+    },
+    "print": {}
+  },
+  "Organisation list": {
+    "level1.done": {
+      "fontSize": "1.00rem"
+    },
+    "level1hns": {
+      "fontSize": "1.00rem",
+      "indent": 20
+    },
+    "level1.label": {
+      "fontSize": "1.00rem",
+      "bold": true
+    },
+    "level1.unit": {
+      "fontSize": "1.00rem"
+    },
+    "level1.qty_est": {
+      "fontSize": "1.00rem"
+    },
+    "level1.qty_real": {
+      "fontSize": "1.00rem"
+    },
+    "level1.price_unit": {
+      "fontSize": "1.00rem"
+    },
+    "level1.total_price": {
+      "fontSize": "1.00rem"
+    },
+    "level1.date": {
+      "fontSize": "1.00rem"
+    },
+    "level1.who": {
+      "fontSize": "1.00rem"
+    },
+    "level1.status": {
+      "fontSize": "1.00rem"
+    },
+    "level1.priority": {
+      "fontSize": "1.00rem"
+    },
+    "level1.progress": {
+      "fontSize": "1.00rem"
+    },
+    "level1.need": {
+      "fontSize": "1.00rem"
+    },
+    "level1.type": {
+      "fontSize": "1.00rem"
+    },
+    "level1.approved_by": {
+      "fontSize": "1.00rem"
+    },
+    "level2.done": {
+      "fontSize": "0.95rem"
+    },
+    "level2hns": {
+      "fontSize": "0.95rem",
+      "indent": 40
+    },
+    "level2.label": {
+      "fontSize": "0.95rem"
+    },
+    "level2.unit": {
+      "fontSize": "0.95rem"
+    },
+    "level2.qty_est": {
+      "fontSize": "0.95rem"
+    },
+    "level2.qty_real": {
+      "fontSize": "0.95rem"
+    },
+    "level2.price_unit": {
+      "fontSize": "0.95rem"
+    },
+    "level2.total_price": {
+      "fontSize": "0.95rem"
+    },
+    "level2.date": {
+      "fontSize": "0.95rem"
+    },
+    "level2.who": {
+      "fontSize": "0.95rem"
+    },
+    "level2.status": {
+      "fontSize": "0.95rem"
+    },
+    "level2.priority": {
+      "fontSize": "0.95rem"
+    },
+    "level2.progress": {
+      "fontSize": "0.95rem"
+    },
+    "level2.need": {
+      "fontSize": "0.95rem"
+    },
+    "level2.type": {
+      "fontSize": "0.95rem"
+    },
+    "level2.approved_by": {
+      "fontSize": "0.95rem"
+    },
+    "level3.done": {
+      "fontSize": "0.90rem"
+    },
+    "level3hns": {
+      "fontSize": "0.90rem",
+      "indent": 60
+    },
+    "level3.label": {
+      "fontSize": "0.90rem"
+    },
+    "level3.unit": {
+      "fontSize": "0.90rem"
+    },
+    "level3.qty_est": {
+      "fontSize": "0.90rem"
+    },
+    "level3.qty_real": {
+      "fontSize": "0.90rem"
+    },
+    "level3.price_unit": {
+      "fontSize": "0.90rem"
+    },
+    "level3.total_price": {
+      "fontSize": "0.90rem"
+    },
+    "level3.date": {
+      "fontSize": "0.90rem"
+    },
+    "level3.who": {
+      "fontSize": "0.90rem"
+    },
+    "level3.status": {
+      "fontSize": "0.90rem"
+    },
+    "level3.priority": {
+      "fontSize": "0.90rem"
+    },
+    "level3.progress": {
+      "fontSize": "0.90rem"
+    },
+    "level3.need": {
+      "fontSize": "0.90rem"
+    },
+    "level3.type": {
+      "fontSize": "0.90rem"
+    },
+    "level3.approved_by": {
+      "fontSize": "0.90rem"
+    },
+    "level4.done": {
+      "fontSize": "0.85rem"
+    },
+    "level4hns": {
+      "fontSize": "0.85rem",
+      "indent": 80
+    },
+    "level4.label": {
+      "fontSize": "0.85rem"
+    },
+    "level4.unit": {
+      "fontSize": "0.85rem"
+    },
+    "level4.qty_est": {
+      "fontSize": "0.85rem"
+    },
+    "level4.qty_real": {
+      "fontSize": "0.85rem"
+    },
+    "level4.price_unit": {
+      "fontSize": "0.85rem"
+    },
+    "level4.total_price": {
+      "fontSize": "0.85rem"
+    },
+    "level4.date": {
+      "fontSize": "0.85rem"
+    },
+    "level4.who": {
+      "fontSize": "0.85rem"
+    },
+    "level4.status": {
+      "fontSize": "0.85rem"
+    },
+    "level4.priority": {
+      "fontSize": "0.85rem"
+    },
+    "level4.progress": {
+      "fontSize": "0.85rem"
+    },
+    "level4.need": {
+      "fontSize": "0.85rem"
+    },
+    "level4.type": {
+      "fontSize": "0.85rem"
+    },
+    "level4.approved_by": {
+      "fontSize": "0.85rem"
+    },
+    "level5.done": {
+      "fontSize": "0.80rem"
+    },
+    "level5hns": {
+      "fontSize": "0.80rem",
+      "indent": 100
+    },
+    "level5.label": {
+      "fontSize": "0.80rem"
+    },
+    "level5.unit": {
+      "fontSize": "0.80rem"
+    },
+    "level5.qty_est": {
+      "fontSize": "0.80rem"
+    },
+    "level5.qty_real": {
+      "fontSize": "0.80rem"
+    },
+    "level5.price_unit": {
+      "fontSize": "0.80rem"
+    },
+    "level5.total_price": {
+      "fontSize": "0.80rem"
+    },
+    "level5.date": {
+      "fontSize": "0.80rem"
+    },
+    "level5.who": {
+      "fontSize": "0.80rem"
+    },
+    "level5.status": {
+      "fontSize": "0.80rem"
+    },
+    "level5.priority": {
+      "fontSize": "0.80rem"
+    },
+    "level5.progress": {
+      "fontSize": "0.80rem"
+    },
+    "level5.need": {
+      "fontSize": "0.80rem"
+    },
+    "level5.type": {
+      "fontSize": "0.80rem"
+    },
+    "level5.approved_by": {
+      "fontSize": "0.80rem"
+    },
+    "notes": {
+      "type": "plain",
+      "style": {
+        "fontSize": "0.85rem",
+        "italic": true
+      }
+    },
+    "images": {
+      "framed": true,
+      "maxWidth": "300px"
+    },
+    "print": {}
+  },
+  "Quote": {
+    "level1.done": {
+      "fontSize": "1.00rem"
+    },
+    "level1hns": {
+      "fontSize": "1.00rem",
+      "indent": 20
+    },
+    "level1.label": {
+      "fontSize": "1.00rem",
+      "bold": true
+    },
+    "level1.unit": {
+      "fontSize": "1.00rem"
+    },
+    "level1.qty_est": {
+      "fontSize": "1.00rem"
+    },
+    "level1.qty_real": {
+      "fontSize": "1.00rem"
+    },
+    "level1.price_unit": {
+      "fontSize": "1.00rem"
+    },
+    "level1.total_price": {
+      "fontSize": "1.00rem"
+    },
+    "level1.date": {
+      "fontSize": "1.00rem"
+    },
+    "level1.who": {
+      "fontSize": "1.00rem"
+    },
+    "level1.status": {
+      "fontSize": "1.00rem"
+    },
+    "level1.priority": {
+      "fontSize": "1.00rem"
+    },
+    "level1.progress": {
+      "fontSize": "1.00rem"
+    },
+    "level1.need": {
+      "fontSize": "1.00rem"
+    },
+    "level1.type": {
+      "fontSize": "1.00rem"
+    },
+    "level1.approved_by": {
+      "fontSize": "1.00rem"
+    },
+    "level2.done": {
+      "fontSize": "0.95rem"
+    },
+    "level2hns": {
+      "fontSize": "0.95rem",
+      "indent": 40
+    },
+    "level2.label": {
+      "fontSize": "0.95rem"
+    },
+    "level2.unit": {
+      "fontSize": "0.95rem"
+    },
+    "level2.qty_est": {
+      "fontSize": "0.95rem"
+    },
+    "level2.qty_real": {
+      "fontSize": "0.95rem"
+    },
+    "level2.price_unit": {
+      "fontSize": "0.95rem"
+    },
+    "level2.total_price": {
+      "fontSize": "0.95rem"
+    },
+    "level2.date": {
+      "fontSize": "0.95rem"
+    },
+    "level2.who": {
+      "fontSize": "0.95rem"
+    },
+    "level2.status": {
+      "fontSize": "0.95rem"
+    },
+    "level2.priority": {
+      "fontSize": "0.95rem"
+    },
+    "level2.progress": {
+      "fontSize": "0.95rem"
+    },
+    "level2.need": {
+      "fontSize": "0.95rem"
+    },
+    "level2.type": {
+      "fontSize": "0.95rem"
+    },
+    "level2.approved_by": {
+      "fontSize": "0.95rem"
+    },
+    "level3.done": {
+      "fontSize": "0.90rem"
+    },
+    "level3hns": {
+      "fontSize": "0.90rem",
+      "indent": 60
+    },
+    "level3.label": {
+      "fontSize": "0.90rem"
+    },
+    "level3.unit": {
+      "fontSize": "0.90rem"
+    },
+    "level3.qty_est": {
+      "fontSize": "0.90rem"
+    },
+    "level3.qty_real": {
+      "fontSize": "0.90rem"
+    },
+    "level3.price_unit": {
+      "fontSize": "0.90rem"
+    },
+    "level3.total_price": {
+      "fontSize": "0.90rem"
+    },
+    "level3.date": {
+      "fontSize": "0.90rem"
+    },
+    "level3.who": {
+      "fontSize": "0.90rem"
+    },
+    "level3.status": {
+      "fontSize": "0.90rem"
+    },
+    "level3.priority": {
+      "fontSize": "0.90rem"
+    },
+    "level3.progress": {
+      "fontSize": "0.90rem"
+    },
+    "level3.need": {
+      "fontSize": "0.90rem"
+    },
+    "level3.type": {
+      "fontSize": "0.90rem"
+    },
+    "level3.approved_by": {
+      "fontSize": "0.90rem"
+    },
+    "level4.done": {
+      "fontSize": "0.85rem"
+    },
+    "level4hns": {
+      "fontSize": "0.85rem",
+      "indent": 80
+    },
+    "level4.label": {
+      "fontSize": "0.85rem"
+    },
+    "level4.unit": {
+      "fontSize": "0.85rem"
+    },
+    "level4.qty_est": {
+      "fontSize": "0.85rem"
+    },
+    "level4.qty_real": {
+      "fontSize": "0.85rem"
+    },
+    "level4.price_unit": {
+      "fontSize": "0.85rem"
+    },
+    "level4.total_price": {
+      "fontSize": "0.85rem"
+    },
+    "level4.date": {
+      "fontSize": "0.85rem"
+    },
+    "level4.who": {
+      "fontSize": "0.85rem"
+    },
+    "level4.status": {
+      "fontSize": "0.85rem"
+    },
+    "level4.priority": {
+      "fontSize": "0.85rem"
+    },
+    "level4.progress": {
+      "fontSize": "0.85rem"
+    },
+    "level4.need": {
+      "fontSize": "0.85rem"
+    },
+    "level4.type": {
+      "fontSize": "0.85rem"
+    },
+    "level4.approved_by": {
+      "fontSize": "0.85rem"
+    },
+    "level5.done": {
+      "fontSize": "0.80rem"
+    },
+    "level5hns": {
+      "fontSize": "0.80rem",
+      "indent": 100
+    },
+    "level5.label": {
+      "fontSize": "0.80rem"
+    },
+    "level5.unit": {
+      "fontSize": "0.80rem"
+    },
+    "level5.qty_est": {
+      "fontSize": "0.80rem"
+    },
+    "level5.qty_real": {
+      "fontSize": "0.80rem"
+    },
+    "level5.price_unit": {
+      "fontSize": "0.80rem"
+    },
+    "level5.total_price": {
+      "fontSize": "0.80rem"
+    },
+    "level5.date": {
+      "fontSize": "0.80rem"
+    },
+    "level5.who": {
+      "fontSize": "0.80rem"
+    },
+    "level5.status": {
+      "fontSize": "0.80rem"
+    },
+    "level5.priority": {
+      "fontSize": "0.80rem"
+    },
+    "level5.progress": {
+      "fontSize": "0.80rem"
+    },
+    "level5.need": {
+      "fontSize": "0.80rem"
+    },
+    "level5.type": {
+      "fontSize": "0.80rem"
+    },
+    "level5.approved_by": {
+      "fontSize": "0.80rem"
+    },
+    "notes": {
+      "type": "plain",
+      "style": {
+        "fontSize": "0.85rem",
+        "italic": true
+      }
+    },
+    "images": {
+      "framed": true,
+      "maxWidth": "300px"
+    },
+    "print": {}
+  },
+  "Structural overview": {
+    "level1.done": {
+      "fontSize": "1.00rem"
+    },
+    "level1hns": {
+      "fontSize": "1.00rem",
+      "indent": 20
+    },
+    "level1.label": {
+      "fontSize": "1.00rem",
+      "bold": true
+    },
+    "level1.unit": {
+      "fontSize": "1.00rem"
+    },
+    "level1.qty_est": {
+      "fontSize": "1.00rem"
+    },
+    "level1.qty_real": {
+      "fontSize": "1.00rem"
+    },
+    "level1.price_unit": {
+      "fontSize": "1.00rem"
+    },
+    "level1.total_price": {
+      "fontSize": "1.00rem"
+    },
+    "level1.date": {
+      "fontSize": "1.00rem"
+    },
+    "level1.who": {
+      "fontSize": "1.00rem"
+    },
+    "level1.status": {
+      "fontSize": "1.00rem"
+    },
+    "level1.priority": {
+      "fontSize": "1.00rem"
+    },
+    "level1.progress": {
+      "fontSize": "1.00rem"
+    },
+    "level1.need": {
+      "fontSize": "1.00rem"
+    },
+    "level1.type": {
+      "fontSize": "1.00rem"
+    },
+    "level1.approved_by": {
+      "fontSize": "1.00rem"
+    },
+    "level2.done": {
+      "fontSize": "0.95rem"
+    },
+    "level2hns": {
+      "fontSize": "0.95rem",
+      "indent": 40
+    },
+    "level2.label": {
+      "fontSize": "0.95rem"
+    },
+    "level2.unit": {
+      "fontSize": "0.95rem"
+    },
+    "level2.qty_est": {
+      "fontSize": "0.95rem"
+    },
+    "level2.qty_real": {
+      "fontSize": "0.95rem"
+    },
+    "level2.price_unit": {
+      "fontSize": "0.95rem"
+    },
+    "level2.total_price": {
+      "fontSize": "0.95rem"
+    },
+    "level2.date": {
+      "fontSize": "0.95rem"
+    },
+    "level2.who": {
+      "fontSize": "0.95rem"
+    },
+    "level2.status": {
+      "fontSize": "0.95rem"
+    },
+    "level2.priority": {
+      "fontSize": "0.95rem"
+    },
+    "level2.progress": {
+      "fontSize": "0.95rem"
+    },
+    "level2.need": {
+      "fontSize": "0.95rem"
+    },
+    "level2.type": {
+      "fontSize": "0.95rem"
+    },
+    "level2.approved_by": {
+      "fontSize": "0.95rem"
+    },
+    "level3.done": {
+      "fontSize": "0.90rem"
+    },
+    "level3hns": {
+      "fontSize": "0.90rem",
+      "indent": 60
+    },
+    "level3.label": {
+      "fontSize": "0.90rem"
+    },
+    "level3.unit": {
+      "fontSize": "0.90rem"
+    },
+    "level3.qty_est": {
+      "fontSize": "0.90rem"
+    },
+    "level3.qty_real": {
+      "fontSize": "0.90rem"
+    },
+    "level3.price_unit": {
+      "fontSize": "0.90rem"
+    },
+    "level3.total_price": {
+      "fontSize": "0.90rem"
+    },
+    "level3.date": {
+      "fontSize": "0.90rem"
+    },
+    "level3.who": {
+      "fontSize": "0.90rem"
+    },
+    "level3.status": {
+      "fontSize": "0.90rem"
+    },
+    "level3.priority": {
+      "fontSize": "0.90rem"
+    },
+    "level3.progress": {
+      "fontSize": "0.90rem"
+    },
+    "level3.need": {
+      "fontSize": "0.90rem"
+    },
+    "level3.type": {
+      "fontSize": "0.90rem"
+    },
+    "level3.approved_by": {
+      "fontSize": "0.90rem"
+    },
+    "level4.done": {
+      "fontSize": "0.85rem"
+    },
+    "level4hns": {
+      "fontSize": "0.85rem",
+      "indent": 80
+    },
+    "level4.label": {
+      "fontSize": "0.85rem"
+    },
+    "level4.unit": {
+      "fontSize": "0.85rem"
+    },
+    "level4.qty_est": {
+      "fontSize": "0.85rem"
+    },
+    "level4.qty_real": {
+      "fontSize": "0.85rem"
+    },
+    "level4.price_unit": {
+      "fontSize": "0.85rem"
+    },
+    "level4.total_price": {
+      "fontSize": "0.85rem"
+    },
+    "level4.date": {
+      "fontSize": "0.85rem"
+    },
+    "level4.who": {
+      "fontSize": "0.85rem"
+    },
+    "level4.status": {
+      "fontSize": "0.85rem"
+    },
+    "level4.priority": {
+      "fontSize": "0.85rem"
+    },
+    "level4.progress": {
+      "fontSize": "0.85rem"
+    },
+    "level4.need": {
+      "fontSize": "0.85rem"
+    },
+    "level4.type": {
+      "fontSize": "0.85rem"
+    },
+    "level4.approved_by": {
+      "fontSize": "0.85rem"
+    },
+    "level5.done": {
+      "fontSize": "0.80rem"
+    },
+    "level5hns": {
+      "fontSize": "0.80rem",
+      "indent": 100
+    },
+    "level5.label": {
+      "fontSize": "0.80rem"
+    },
+    "level5.unit": {
+      "fontSize": "0.80rem"
+    },
+    "level5.qty_est": {
+      "fontSize": "0.80rem"
+    },
+    "level5.qty_real": {
+      "fontSize": "0.80rem"
+    },
+    "level5.price_unit": {
+      "fontSize": "0.80rem"
+    },
+    "level5.total_price": {
+      "fontSize": "0.80rem"
+    },
+    "level5.date": {
+      "fontSize": "0.80rem"
+    },
+    "level5.who": {
+      "fontSize": "0.80rem"
+    },
+    "level5.status": {
+      "fontSize": "0.80rem"
+    },
+    "level5.priority": {
+      "fontSize": "0.80rem"
+    },
+    "level5.progress": {
+      "fontSize": "0.80rem"
+    },
+    "level5.need": {
+      "fontSize": "0.80rem"
+    },
+    "level5.type": {
+      "fontSize": "0.80rem"
+    },
+    "level5.approved_by": {
+      "fontSize": "0.80rem"
+    },
+    "notes": {
+      "type": "plain",
+      "style": {
+        "fontSize": "0.85rem",
+        "italic": true
+      }
+    },
+    "images": {
+      "framed": true,
+      "maxWidth": "300px"
+    },
+    "print": {}
+  },
+  "Manual": {
+    "level1.done": {
+      "fontSize": "1.00rem"
+    },
+    "level1hns": {
+      "fontSize": "1.00rem",
+      "indent": 20
+    },
+    "level1.label": {
+      "fontSize": "1.00rem",
+      "bold": true
+    },
+    "level1.unit": {
+      "fontSize": "1.00rem"
+    },
+    "level1.qty_est": {
+      "fontSize": "1.00rem"
+    },
+    "level1.qty_real": {
+      "fontSize": "1.00rem"
+    },
+    "level1.price_unit": {
+      "fontSize": "1.00rem"
+    },
+    "level1.total_price": {
+      "fontSize": "1.00rem"
+    },
+    "level1.date": {
+      "fontSize": "1.00rem"
+    },
+    "level1.who": {
+      "fontSize": "1.00rem"
+    },
+    "level1.status": {
+      "fontSize": "1.00rem"
+    },
+    "level1.priority": {
+      "fontSize": "1.00rem"
+    },
+    "level1.progress": {
+      "fontSize": "1.00rem"
+    },
+    "level1.need": {
+      "fontSize": "1.00rem"
+    },
+    "level1.type": {
+      "fontSize": "1.00rem"
+    },
+    "level1.approved_by": {
+      "fontSize": "1.00rem"
+    },
+    "level2.done": {
+      "fontSize": "0.95rem"
+    },
+    "level2hns": {
+      "fontSize": "0.95rem",
+      "indent": 40
+    },
+    "level2.label": {
+      "fontSize": "0.95rem"
+    },
+    "level2.unit": {
+      "fontSize": "0.95rem"
+    },
+    "level2.qty_est": {
+      "fontSize": "0.95rem"
+    },
+    "level2.qty_real": {
+      "fontSize": "0.95rem"
+    },
+    "level2.price_unit": {
+      "fontSize": "0.95rem"
+    },
+    "level2.total_price": {
+      "fontSize": "0.95rem"
+    },
+    "level2.date": {
+      "fontSize": "0.95rem"
+    },
+    "level2.who": {
+      "fontSize": "0.95rem"
+    },
+    "level2.status": {
+      "fontSize": "0.95rem"
+    },
+    "level2.priority": {
+      "fontSize": "0.95rem"
+    },
+    "level2.progress": {
+      "fontSize": "0.95rem"
+    },
+    "level2.need": {
+      "fontSize": "0.95rem"
+    },
+    "level2.type": {
+      "fontSize": "0.95rem"
+    },
+    "level2.approved_by": {
+      "fontSize": "0.95rem"
+    },
+    "level3.done": {
+      "fontSize": "0.90rem"
+    },
+    "level3hns": {
+      "fontSize": "0.90rem",
+      "indent": 60
+    },
+    "level3.label": {
+      "fontSize": "0.90rem"
+    },
+    "level3.unit": {
+      "fontSize": "0.90rem"
+    },
+    "level3.qty_est": {
+      "fontSize": "0.90rem"
+    },
+    "level3.qty_real": {
+      "fontSize": "0.90rem"
+    },
+    "level3.price_unit": {
+      "fontSize": "0.90rem"
+    },
+    "level3.total_price": {
+      "fontSize": "0.90rem"
+    },
+    "level3.date": {
+      "fontSize": "0.90rem"
+    },
+    "level3.who": {
+      "fontSize": "0.90rem"
+    },
+    "level3.status": {
+      "fontSize": "0.90rem"
+    },
+    "level3.priority": {
+      "fontSize": "0.90rem"
+    },
+    "level3.progress": {
+      "fontSize": "0.90rem"
+    },
+    "level3.need": {
+      "fontSize": "0.90rem"
+    },
+    "level3.type": {
+      "fontSize": "0.90rem"
+    },
+    "level3.approved_by": {
+      "fontSize": "0.90rem"
+    },
+    "level4.done": {
+      "fontSize": "0.85rem"
+    },
+    "level4hns": {
+      "fontSize": "0.85rem",
+      "indent": 80
+    },
+    "level4.label": {
+      "fontSize": "0.85rem"
+    },
+    "level4.unit": {
+      "fontSize": "0.85rem"
+    },
+    "level4.qty_est": {
+      "fontSize": "0.85rem"
+    },
+    "level4.qty_real": {
+      "fontSize": "0.85rem"
+    },
+    "level4.price_unit": {
+      "fontSize": "0.85rem"
+    },
+    "level4.total_price": {
+      "fontSize": "0.85rem"
+    },
+    "level4.date": {
+      "fontSize": "0.85rem"
+    },
+    "level4.who": {
+      "fontSize": "0.85rem"
+    },
+    "level4.status": {
+      "fontSize": "0.85rem"
+    },
+    "level4.priority": {
+      "fontSize": "0.85rem"
+    },
+    "level4.progress": {
+      "fontSize": "0.85rem"
+    },
+    "level4.need": {
+      "fontSize": "0.85rem"
+    },
+    "level4.type": {
+      "fontSize": "0.85rem"
+    },
+    "level4.approved_by": {
+      "fontSize": "0.85rem"
+    },
+    "level5.done": {
+      "fontSize": "0.80rem"
+    },
+    "level5hns": {
+      "fontSize": "0.80rem",
+      "indent": 100
+    },
+    "level5.label": {
+      "fontSize": "0.80rem"
+    },
+    "level5.unit": {
+      "fontSize": "0.80rem"
+    },
+    "level5.qty_est": {
+      "fontSize": "0.80rem"
+    },
+    "level5.qty_real": {
+      "fontSize": "0.80rem"
+    },
+    "level5.price_unit": {
+      "fontSize": "0.80rem"
+    },
+    "level5.total_price": {
+      "fontSize": "0.80rem"
+    },
+    "level5.date": {
+      "fontSize": "0.80rem"
+    },
+    "level5.who": {
+      "fontSize": "0.80rem"
+    },
+    "level5.status": {
+      "fontSize": "0.80rem"
+    },
+    "level5.priority": {
+      "fontSize": "0.80rem"
+    },
+    "level5.progress": {
+      "fontSize": "0.80rem"
+    },
+    "level5.need": {
+      "fontSize": "0.80rem"
+    },
+    "level5.type": {
+      "fontSize": "0.80rem"
+    },
+    "level5.approved_by": {
+      "fontSize": "0.80rem"
+    },
+    "notes": {
+      "type": "plain",
+      "style": {
+        "fontSize": "0.85rem",
+        "italic": true
+      }
+    },
+    "images": {
+      "framed": true,
+      "maxWidth": "300px"
+    },
+    "print": {}
+  },
+  "BIG list": {
+    "level1.done": {
+      "fontSize": "1.00rem"
+    },
+    "level1hns": {
+      "fontSize": "1.00rem",
+      "indent": 20
+    },
+    "level1.label": {
+      "fontSize": "1.00rem",
+      "bold": true
+    },
+    "level1.unit": {
+      "fontSize": "1.00rem"
+    },
+    "level1.qty_est": {
+      "fontSize": "1.00rem"
+    },
+    "level1.qty_real": {
+      "fontSize": "1.00rem"
+    },
+    "level1.price_unit": {
+      "fontSize": "1.00rem"
+    },
+    "level1.total_price": {
+      "fontSize": "1.00rem"
+    },
+    "level1.date": {
+      "fontSize": "1.00rem"
+    },
+    "level1.who": {
+      "fontSize": "1.00rem"
+    },
+    "level1.status": {
+      "fontSize": "1.00rem"
+    },
+    "level1.priority": {
+      "fontSize": "1.00rem"
+    },
+    "level1.progress": {
+      "fontSize": "1.00rem"
+    },
+    "level1.need": {
+      "fontSize": "1.00rem"
+    },
+    "level1.type": {
+      "fontSize": "1.00rem"
+    },
+    "level1.approved_by": {
+      "fontSize": "1.00rem"
+    },
+    "level2.done": {
+      "fontSize": "0.95rem"
+    },
+    "level2hns": {
+      "fontSize": "0.95rem",
+      "indent": 40
+    },
+    "level2.label": {
+      "fontSize": "0.95rem"
+    },
+    "level2.unit": {
+      "fontSize": "0.95rem"
+    },
+    "level2.qty_est": {
+      "fontSize": "0.95rem"
+    },
+    "level2.qty_real": {
+      "fontSize": "0.95rem"
+    },
+    "level2.price_unit": {
+      "fontSize": "0.95rem"
+    },
+    "level2.total_price": {
+      "fontSize": "0.95rem"
+    },
+    "level2.date": {
+      "fontSize": "0.95rem"
+    },
+    "level2.who": {
+      "fontSize": "0.95rem"
+    },
+    "level2.status": {
+      "fontSize": "0.95rem"
+    },
+    "level2.priority": {
+      "fontSize": "0.95rem"
+    },
+    "level2.progress": {
+      "fontSize": "0.95rem"
+    },
+    "level2.need": {
+      "fontSize": "0.95rem"
+    },
+    "level2.type": {
+      "fontSize": "0.95rem"
+    },
+    "level2.approved_by": {
+      "fontSize": "0.95rem"
+    },
+    "level3.done": {
+      "fontSize": "0.90rem"
+    },
+    "level3hns": {
+      "fontSize": "0.90rem",
+      "indent": 60
+    },
+    "level3.label": {
+      "fontSize": "0.90rem"
+    },
+    "level3.unit": {
+      "fontSize": "0.90rem"
+    },
+    "level3.qty_est": {
+      "fontSize": "0.90rem"
+    },
+    "level3.qty_real": {
+      "fontSize": "0.90rem"
+    },
+    "level3.price_unit": {
+      "fontSize": "0.90rem"
+    },
+    "level3.total_price": {
+      "fontSize": "0.90rem"
+    },
+    "level3.date": {
+      "fontSize": "0.90rem"
+    },
+    "level3.who": {
+      "fontSize": "0.90rem"
+    },
+    "level3.status": {
+      "fontSize": "0.90rem"
+    },
+    "level3.priority": {
+      "fontSize": "0.90rem"
+    },
+    "level3.progress": {
+      "fontSize": "0.90rem"
+    },
+    "level3.need": {
+      "fontSize": "0.90rem"
+    },
+    "level3.type": {
+      "fontSize": "0.90rem"
+    },
+    "level3.approved_by": {
+      "fontSize": "0.90rem"
+    },
+    "level4.done": {
+      "fontSize": "0.85rem"
+    },
+    "level4hns": {
+      "fontSize": "0.85rem",
+      "indent": 80
+    },
+    "level4.label": {
+      "fontSize": "0.85rem"
+    },
+    "level4.unit": {
+      "fontSize": "0.85rem"
+    },
+    "level4.qty_est": {
+      "fontSize": "0.85rem"
+    },
+    "level4.qty_real": {
+      "fontSize": "0.85rem"
+    },
+    "level4.price_unit": {
+      "fontSize": "0.85rem"
+    },
+    "level4.total_price": {
+      "fontSize": "0.85rem"
+    },
+    "level4.date": {
+      "fontSize": "0.85rem"
+    },
+    "level4.who": {
+      "fontSize": "0.85rem"
+    },
+    "level4.status": {
+      "fontSize": "0.85rem"
+    },
+    "level4.priority": {
+      "fontSize": "0.85rem"
+    },
+    "level4.progress": {
+      "fontSize": "0.85rem"
+    },
+    "level4.need": {
+      "fontSize": "0.85rem"
+    },
+    "level4.type": {
+      "fontSize": "0.85rem"
+    },
+    "level4.approved_by": {
+      "fontSize": "0.85rem"
+    },
+    "level5.done": {
+      "fontSize": "0.80rem"
+    },
+    "level5hns": {
+      "fontSize": "0.80rem",
+      "indent": 100
+    },
+    "level5.label": {
+      "fontSize": "0.80rem"
+    },
+    "level5.unit": {
+      "fontSize": "0.80rem"
+    },
+    "level5.qty_est": {
+      "fontSize": "0.80rem"
+    },
+    "level5.qty_real": {
+      "fontSize": "0.80rem"
+    },
+    "level5.price_unit": {
+      "fontSize": "0.80rem"
+    },
+    "level5.total_price": {
+      "fontSize": "0.80rem"
+    },
+    "level5.date": {
+      "fontSize": "0.80rem"
+    },
+    "level5.who": {
+      "fontSize": "0.80rem"
+    },
+    "level5.status": {
+      "fontSize": "0.80rem"
+    },
+    "level5.priority": {
+      "fontSize": "0.80rem"
+    },
+    "level5.progress": {
+      "fontSize": "0.80rem"
+    },
+    "level5.need": {
+      "fontSize": "0.80rem"
+    },
+    "level5.type": {
+      "fontSize": "0.80rem"
+    },
+    "level5.approved_by": {
+      "fontSize": "0.80rem"
+    },
+    "notes": {
+      "type": "plain",
+      "style": {
+        "fontSize": "0.85rem",
+        "italic": true
+      }
+    },
+    "images": {
+      "framed": true,
+      "maxWidth": "300px"
+    },
+    "print": {}
+  }
+}

@@ -137,7 +137,7 @@ export async function loadChecklist(path) {
         items.forEach(item => {
           // Check if children property exists and is an array
           if (!item.hasOwnProperty('children') || !Array.isArray(item.children)) {
-            console.log(`[loadChecklist] Adding missing children array to item: ${item.label || item.no || 'unlabeled'}`);
+            console.log(`[loadChecklist] Adding missing children array to item: ${item.label || itemhns || 'unlabeled'}`);
             item.children = [];
             fixed = true;
           }
