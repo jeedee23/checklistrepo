@@ -1,6 +1,6 @@
 {
   "title": "Cosucra Project structure",
-  "lastSave": "2025_07_05_@_21-03-25",
+  "lastSave": "2025_07_05_@_21-04-07",
   "lastlayout": "minilist",
   "lastcollaborator": "Johan",
   "fields": {
@@ -102,11 +102,11 @@
           "visible": true
         },
         "hns": {
-          "width": 55,
+          "width": 74,
           "visible": true
         },
         "label": {
-          "width": 250,
+          "width": 459,
           "visible": true
         },
         "unit": {
@@ -6195,11 +6195,11 @@
         "visible": true
       },
       "hns": {
-        "width": 55,
+        "width": 74,
         "visible": true
       },
       "label": {
-        "width": 250,
+        "width": 459,
         "visible": true
       },
       "unit": {
