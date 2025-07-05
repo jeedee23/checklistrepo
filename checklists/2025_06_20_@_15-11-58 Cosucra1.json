@@ -1,6 +1,6 @@
 {
   "title": "Cosucra Project structure",
-  "lastSave": "2025_07_04_@_22-57-21",
+  "lastSave": "2025_07_05_@_12-59-06",
   "unitChoices": [
     "kg",
     "ton",
@@ -6697,5 +6697,13 @@
       "type": "number",
       "label": "Progress (%)"
     }
+  },
+  "sources": {
+    "collaborators": [
+      "∅",
+      "Johan",
+      "Fred",
+      "Cuong"
+    ]
   }
 }
