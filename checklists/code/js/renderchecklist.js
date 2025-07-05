@@ -152,7 +152,17 @@ export async function renderChecklist(eventId = 0) {
     if (sharedState.checklistData.layout.columns[key]?.visible === false) return;
     
     const headerCell = document.createElement('th');
-    headerCell.textContent = sharedState.checklistData.layout.columns[key].label || key;
+    
+    // Get the header label - priority: layout label > field definition label > key
+    let headerLabel = sharedState.checklistData.layout.columns[key]?.label;
+    if (!headerLabel && fieldDefs[key]) {
+      headerLabel = fieldDefs[key].label;
+    }
+    if (!headerLabel) {
+      headerLabel = key;
+    }
+    
+    headerCell.textContent = headerLabel;
     headerCell.className = `col-${key}`;
     headerCell.style.position = 'relative';
     headerCell.dataset.colKey = key;

@@ -1,274 +1,787 @@
 {
   "title": "Custom SSR System - Project Checklist",
-  "collaborators": [
-    "Johan",
-    "Jeamichel"
+  "lastSave": "2025_07_05_@_16-30-00",
+  "lastlayout": "default",
+  "lastcollaborator": "Johan",
+  "fields": {
+    "done": {
+      "type": "checkbox",
+      "label": "✔ Done"
+    },
+    "hns": {
+      "type": "number",
+      "label": "hns"
+    },
+    "label": {
+      "type": "tree",
+      "label": "Label"
+    },
+    "unit": {
+      "type": "text",
+      "label": "Unit"
+    },
+    "qty_est": {
+      "type": "number",
+      "label": "Est. Qty"
+    },
+    "qty_real": {
+      "type": "number",
+      "label": "Real Qty"
+    },
+    "price_unit": {
+      "type": "number",
+      "label": "Unit Price"
+    },
+    "total_price": {
+      "type": "computed",
+      "label": "Total Price"
+    },
+    "date": {
+      "type": "date",
+      "label": "Date"
+    },
+    "who": {
+      "type": "select",
+      "label": "Who"
+    }
+  },
+  "sources": {
+    "collaborators": ["Johan", "Jeamichel"],
+    "unitChoices": [
+      "kg",
+      "ton",
+      "hr",
+      "sec",
+      "m",
+      "m²",
+      "m³",
+      "l",
+      "pc"
+    ]
+  },
+  "other_inits": {},
+  "layouts": [
+    {
+      "layoutName": "default",
+      "columns": {
+        "done": {
+          "width": 40,
+          "visible": true
+        },
+        "hns": {
+          "width": 40,
+          "visible": true
+        },
+        "label": {
+          "width": 776,
+          "visible": true
+        },
+        "unit": {
+          "width": 23,
+          "visible": false
+        },
+        "qty_est": {
+          "width": 53,
+          "visible": false
+        },
+        "qty_real": {
+          "width": 51,
+          "visible": false
+        },
+        "price_unit": {
+          "width": 48,
+          "visible": false
+        },
+        "total_price": {
+          "width": 47,
+          "visible": false
+        },
+        "date": {
+          "width": 174,
+          "visible": true
+        },
+        "who": {
+          "width": 100,
+          "visible": true
+        }
+      },
+      "rows": {
+        "height": 30
+      },
+      "columnOrder": [
+        "done",
+        "hns",
+        "label",
+        "unit",
+        "qty_est",
+        "qty_real",
+        "price_unit",
+        "total_price",
+        "date",
+        "who"
+      ]
+    }
   ],
   "items": [
     {
+      "hns": "1",
       "label": "Power Input & Protection",
-      "responsible": "Johan",
-      "targetDate": "2025-04-20",
       "done": false,
+      "unit": "",
+      "qty_est": "",
+      "qty_real": "",
+      "price_unit": "",
+      "total_price": 0,
+      "date": "2025-04-20",
+      "who": "Johan",
       "children": [
         {
+          "hns": "1.1",
           "label": "EMI filter (X2 cap + MOV)",
-          "done": false
+          "done": false,
+          "unit": "",
+          "qty_est": "",
+          "qty_real": "",
+          "price_unit": "",
+          "total_price": 0,
+          "date": "",
+          "who": ""
         },
         {
+          "hns": "1.2",
           "label": "Fast-blow fuse (Eaton 25A KLKE-25) not needed",
-          "done": false
+          "done": false,
+          "unit": "",
+          "qty_est": "",
+          "qty_real": "",
+          "price_unit": "",
+          "total_price": 0,
+          "date": "",
+          "who": ""
         },
         {
+          "hns": "1.3",
           "label": "MOV across AC line",
-          "done": false
+          "done": false,
+          "unit": "",
+          "qty_est": "",
+          "qty_real": "",
+          "price_unit": "",
+          "total_price": 0,
+          "date": "",
+          "who": ""
         },
         {
+          "hns": "1.4",
           "label": "Surge suppression path verified",
-          "done": false
+          "done": false,
+          "unit": "",
+          "qty_est": "",
+          "qty_real": "",
+          "price_unit": "",
+          "total_price": 0,
+          "date": "",
+          "who": ""
         }
       ]
     },
     {
+      "hns": "2",
       "label": "Triac Switching",
-      "responsible": "Jeamichel",
-      "targetDate": "2025-04-20",
       "done": false,
+      "unit": "",
+      "qty_est": "",
+      "qty_real": "",
+      "price_unit": "",
+      "total_price": 0,
+      "date": "2025-04-20",
+      "who": "Jeamichel",
       "children": [
         {
+          "hns": "2.1",
           "label": "Triac TPDV1240RG (40A, 1200V)L1 & L2",
-          "done": false
+          "done": false,
+          "unit": "",
+          "qty_est": "",
+          "qty_real": "",
+          "price_unit": "",
+          "total_price": 0,
+          "date": "",
+          "who": ""
         },
         {
+          "hns": "2.2",
           "label": "Gate triggered by MOC3052 optocoupler with two outputs",
-          "done": false
+          "done": false,
+          "unit": "",
+          "qty_est": "",
+          "qty_real": "",
+          "price_unit": "",
+          "total_price": 0,
+          "date": "",
+          "who": ""
         },
         {
-          "label": "Snubber: 47 Ω + 0.15 µF Nichicon PPA2253150KN (triple or single?)",
-          "done": false
+          "hns": "2.3",
+          "label": "Snubber: 47 Ω + 0.15 µF Nichicon PPA2253150KN (triple or single?)",
+          "done": false,
+          "unit": "",
+          "qty_est": "",
+          "qty_real": "",
+          "price_unit": "",
+          "total_price": 0,
+          "date": "",
+          "who": ""
         },
         {
+          "hns": "2.4",
           "label": "Verify heatsinking via aluminum chassis",
-          "done": false
+          "done": false,
+          "unit": "",
+          "qty_est": "",
+          "qty_real": "",
+          "price_unit": "",
+          "total_price": 0,
+          "date": "",
+          "who": ""
         }
       ]
     },
     {
+      "hns": "3",
       "label": "Snubber Power Check",
-      "responsible": "Johan",
-      "targetDate": "2025-04-20",
       "done": false,
+      "unit": "",
+      "qty_est": "",
+      "qty_real": "",
+      "price_unit": "",
+      "total_price": 0,
+      "date": "2025-04-20",
+      "who": "Johan",
       "children": [
         {
-          "label": "47 Ω 10W flameproof resistor",
-          "done": false
+          "hns": "3.1",
+          "label": "47 Ω 10W flameproof resistor",
+          "done": false,
+          "unit": "",
+          "qty_est": "",
+          "qty_real": "",
+          "price_unit": "",
+          "total_price": 0,
+          "date": "",
+          "who": ""
         },
         {
+          "hns": "3.2",
           "label": "Simulate power dissipation under load",
-          "done": false
+          "done": false,
+          "unit": "",
+          "qty_est": "",
+          "qty_real": "",
+          "price_unit": "",
+          "total_price": 0,
+          "date": "",
+          "who": ""
         }
       ]
     },
     {
+      "hns": "4",
       "label": "Voltage detection primary",
       "done": false,
+      "unit": "",
+      "qty_est": "",
+      "qty_real": "",
+      "price_unit": "",
+      "total_price": 0,
+      "date": "",
+      "who": "",
       "children": [
         {
+          "hns": "4.1",
           "label": "Transformer winding 75:1 ratio",
           "done": false,
-          "children": []
+          "unit": "",
+          "qty_est": "",
+          "qty_real": "",
+          "price_unit": "",
+          "total_price": 0,
+          "date": "",
+          "who": ""
         },
         {
-          "label": "output to voltage divider  (10k/5.6k)",
-          "done": false
+          "hns": "4.2",
+          "label": "output to voltage divider  (10k/5.6k)",
+          "done": false,
+          "unit": "",
+          "qty_est": "",
+          "qty_real": "",
+          "price_unit": "",
+          "total_price": 0,
+          "date": "",
+          "who": ""
         },
         {
+          "hns": "4.3",
           "label": "Input to STM32 ADC",
-          "done": false
+          "done": false,
+          "unit": "",
+          "qty_est": "",
+          "qty_real": "",
+          "price_unit": "",
+          "total_price": 0,
+          "date": "",
+          "who": ""
         }
       ]
     },
     {
-      "label": "New item",
-      "done": false
-    },
-    {
+      "hns": "5",
       "label": "Voltage Detection secondary(AC Monitoring)",
-      "responsible": "Jeamichel",
-      "targetDate": "2025-04-20",
       "done": false,
+      "unit": "",
+      "qty_est": "",
+      "qty_real": "",
+      "price_unit": "",
+      "total_price": 0,
+      "date": "2025-04-20",
+      "who": "Jeamichel",
       "children": [
         {
+          "hns": "5.1",
           "label": "Transformer winding 400:1 ratio",
-          "done": false
+          "done": false,
+          "unit": "",
+          "qty_est": "",
+          "qty_real": "",
+          "price_unit": "",
+          "total_price": 0,
+          "date": "",
+          "who": ""
         },
         {
+          "hns": "5.2",
           "label": "Custom winding tool ready",
-          "done": false
+          "done": false,
+          "unit": "",
+          "qty_est": "",
+          "qty_real": "",
+          "price_unit": "",
+          "total_price": 0,
+          "date": "",
+          "who": ""
         },
         {
+          "hns": "5.3",
           "label": "Output to voltage divider (10k/5.6k)",
-          "done": false
+          "done": false,
+          "unit": "",
+          "qty_est": "",
+          "qty_real": "",
+          "price_unit": "",
+          "total_price": 0,
+          "date": "",
+          "who": ""
         },
         {
+          "hns": "5.4",
           "label": "Input to STM32 ADC",
-          "done": false
+          "done": false,
+          "unit": "",
+          "qty_est": "",
+          "qty_real": "",
+          "price_unit": "",
+          "total_price": 0,
+          "date": "",
+          "who": ""
         },
         {
-          "label": "Test scaling up to 1200 V spikes",
-          "done": false
+          "hns": "5.5",
+          "label": "Test scaling up to 1200 V spikes",
+          "done": false,
+          "unit": "",
+          "qty_est": "",
+          "qty_real": "",
+          "price_unit": "",
+          "total_price": 0,
+          "date": "",
+          "who": ""
         }
       ]
     },
     {
+      "hns": "6",
       "label": "Current Sensing on line, primary and secondary",
-      "responsible": "Johan",
-      "targetDate": "2025-04-20",
       "done": false,
+      "unit": "",
+      "qty_est": "",
+      "qty_real": "",
+      "price_unit": "",
+      "total_price": 0,
+      "date": "2025-04-20",
+      "who": "Johan",
       "children": [
         {
+          "hns": "6.1",
           "label": "3 times ACS711ELCTR-25AB-T wired to ADC",
-          "done": false
+          "done": false,
+          "unit": "",
+          "qty_est": "",
+          "qty_real": "",
+          "price_unit": "",
+          "total_price": 0,
+          "date": "",
+          "who": ""
         },
         {
+          "hns": "6.2",
           "label": "Verified real-time current feedback",
-          "done": false
+          "done": false,
+          "unit": "",
+          "qty_est": "",
+          "qty_real": "",
+          "price_unit": "",
+          "total_price": 0,
+          "date": "",
+          "who": ""
         }
       ]
     },
     {
+      "hns": "7",
       "label": "Temperature Feedback",
-      "responsible": "Jeamichel",
-      "targetDate": "2025-04-20",
       "done": false,
+      "unit": "",
+      "qty_est": "",
+      "qty_real": "",
+      "price_unit": "",
+      "total_price": 0,
+      "date": "2025-04-20",
+      "who": "Jeamichel",
       "children": [
         {
+          "hns": "7.1",
           "label": "LM35DZ mounted, on triacs",
-          "done": false
+          "done": false,
+          "unit": "",
+          "qty_est": "",
+          "qty_real": "",
+          "price_unit": "",
+          "total_price": 0,
+          "date": "",
+          "who": ""
         },
         {
+          "hns": "7.2",
           "label": "ADC input verified",
-          "done": false
+          "done": false,
+          "unit": "",
+          "qty_est": "",
+          "qty_real": "",
+          "price_unit": "",
+          "total_price": 0,
+          "date": "",
+          "who": ""
         }
       ]
     },
     {
+      "hns": "8",
       "label": "Control Logic (MCU)",
-      "responsible": "Johan",
-      "targetDate": "2025-04-20",
       "done": false,
+      "unit": "",
+      "qty_est": "",
+      "qty_real": "",
+      "price_unit": "",
+      "total_price": 0,
+      "date": "2025-04-20",
+      "who": "Johan",
       "children": [
         {
+          "hns": "8.1",
           "label": "STM32G431 installed",
-          "done": false
+          "done": false,
+          "unit": "",
+          "qty_est": "",
+          "qty_real": "",
+          "price_unit": "",
+          "total_price": 0,
+          "date": "",
+          "who": ""
         },
         {
+          "hns": "8.2",
           "label": "GPIO triggers opto",
-          "done": false
+          "done": false,
+          "unit": "",
+          "qty_est": "",
+          "qty_real": "",
+          "price_unit": "",
+          "total_price": 0,
+          "date": "",
+          "who": ""
         },
         {
+          "hns": "8.3",
           "label": "ADC channels wired (V/I/T)",
-          "done": false
+          "done": false,
+          "unit": "",
+          "qty_est": "",
+          "qty_real": "",
+          "price_unit": "",
+          "total_price": 0,
+          "date": "",
+          "who": ""
         },
         {
+          "hns": "8.4",
           "label": "Burst/phase firmware hybrid",
-          "done": false
+          "done": false,
+          "unit": "",
+          "qty_est": "",
+          "qty_real": "",
+          "price_unit": "",
+          "total_price": 0,
+          "date": "",
+          "who": ""
         }
       ]
     },
     {
+      "hns": "9",
       "label": "RS-485 Communication",
-      "responsible": "Jeamichel",
-      "targetDate": "2025-04-20",
       "done": false,
+      "unit": "",
+      "qty_est": "",
+      "qty_real": "",
+      "price_unit": "",
+      "total_price": 0,
+      "date": "2025-04-20",
+      "who": "Jeamichel",
       "children": [
         {
+          "hns": "9.1",
           "label": "MAX3087EESA mounted",
-          "done": false
+          "done": false,
+          "unit": "",
+          "qty_est": "",
+          "qty_real": "",
+          "price_unit": "",
+          "total_price": 0,
+          "date": "",
+          "who": ""
         },
         {
+          "hns": "9.2",
           "label": "SM712 ESD diode + TVS protection",
-          "done": false
+          "done": false,
+          "unit": "",
+          "qty_est": "",
+          "qty_real": "",
+          "price_unit": "",
+          "total_price": 0,
+          "date": "",
+          "who": ""
         },
         {
+          "hns": "9.3",
           "label": "RJ45 ports + terminator setup",
-          "done": false
+          "done": false,
+          "unit": "",
+          "qty_est": "",
+          "qty_real": "",
+          "price_unit": "",
+          "total_price": 0,
+          "date": "",
+          "who": ""
         },
         {
+          "hns": "9.4",
           "label": "DIP switch tested",
-          "done": false
+          "done": false,
+          "unit": "",
+          "qty_est": "",
+          "qty_real": "",
+          "price_unit": "",
+          "total_price": 0,
+          "date": "",
+          "who": ""
         }
       ]
     },
     {
+      "hns": "10",
       "label": "Zero-Cross Detection",
-      "responsible": "Johan",
-      "targetDate": "2025-04-20",
       "done": false,
+      "unit": "",
+      "qty_est": "",
+      "qty_real": "",
+      "price_unit": "",
+      "total_price": 0,
+      "date": "2025-04-20",
+      "who": "Johan",
       "children": [
         {
+          "hns": "10.1",
           "label": "Zero-cross detection implemented in firmware",
-          "done": false
+          "done": false,
+          "unit": "",
+          "qty_est": "",
+          "qty_real": "",
+          "price_unit": "",
+          "total_price": 0,
+          "date": "",
+          "who": ""
         },
         {
+          "hns": "10.2",
           "label": "Verified zero sync vs power phase",
-          "done": false
+          "done": false,
+          "unit": "",
+          "qty_est": "",
+          "qty_real": "",
+          "price_unit": "",
+          "total_price": 0,
+          "date": "",
+          "who": ""
         }
       ]
     },
     {
+      "hns": "11",
       "label": "Firmware",
-      "responsible": "Jeamichel",
-      "targetDate": "2025-04-20",
       "done": false,
+      "unit": "",
+      "qty_est": "",
+      "qty_real": "",
+      "price_unit": "",
+      "total_price": 0,
+      "date": "2025-04-20",
+      "who": "Jeamichel",
       "children": [
         {
+          "hns": "11.1",
           "label": "PID regulation verified",
-          "done": false
+          "done": false,
+          "unit": "",
+          "qty_est": "",
+          "qty_real": "",
+          "price_unit": "",
+          "total_price": 0,
+          "date": "",
+          "who": ""
         },
         {
+          "hns": "11.2",
           "label": "Modbus-like RS485 support",
-          "done": false
+          "done": false,
+          "unit": "",
+          "qty_est": "",
+          "qty_real": "",
+          "price_unit": "",
+          "total_price": 0,
+          "date": "",
+          "who": ""
         },
         {
+          "hns": "11.3",
           "label": "EEPROM config save working",
-          "done": false
+          "done": false,
+          "unit": "",
+          "qty_est": "",
+          "qty_real": "",
+          "price_unit": "",
+          "total_price": 0,
+          "date": "",
+          "who": ""
         }
       ]
     },
     {
+      "hns": "12",
       "label": "GUI & Debug",
-      "responsible": "Johan",
-      "targetDate": "2025-04-20",
       "done": false,
+      "unit": "",
+      "qty_est": "",
+      "qty_real": "",
+      "price_unit": "",
+      "total_price": 0,
+      "date": "2025-04-20",
+      "who": "Johan",
       "children": [
         {
+          "hns": "12.1",
           "label": "Python GUI debug hooks",
-          "done": false
+          "done": false,
+          "unit": "",
+          "qty_est": "",
+          "qty_real": "",
+          "price_unit": "",
+          "total_price": 0,
+          "date": "",
+          "who": ""
         },
         {
+          "hns": "12.2",
           "label": "RS485 & UART monitoring",
-          "done": false
+          "done": false,
+          "unit": "",
+          "qty_est": "",
+          "qty_real": "",
+          "price_unit": "",
+          "total_price": 0,
+          "date": "",
+          "who": ""
         }
       ]
     },
     {
+      "hns": "13",
       "label": "Enclosure",
-      "responsible": "Jeamichel",
-      "targetDate": "2025-04-20",
       "done": false,
+      "unit": "",
+      "qty_est": "",
+      "qty_real": "",
+      "price_unit": "",
+      "total_price": 0,
+      "date": "2025-04-20",
+      "who": "Jeamichel",
       "children": [
         {
+          "hns": "13.1",
           "label": "Aluminum box installed",
-          "done": false
+          "done": false,
+          "unit": "",
+          "qty_est": "",
+          "qty_real": "",
+          "price_unit": "",
+          "total_price": 0,
+          "date": "",
+          "who": ""
         },
         {
+          "hns": "13.2",
           "label": "Cable glands mounted",
-          "done": false
+          "done": false,
+          "unit": "",
+          "qty_est": "",
+          "qty_real": "",
+          "price_unit": "",
+          "total_price": 0,
+          "date": "",
+          "who": ""
         },
         {
+          "hns": "13.3",
           "label": "CNC labeling ready",
-          "done": false
+          "done": false,
+          "unit": "",
+          "qty_est": "",
+          "qty_real": "",
+          "price_unit": "",
+          "total_price": 0,
+          "date": "",
+          "who": ""
         }
       ]
     }

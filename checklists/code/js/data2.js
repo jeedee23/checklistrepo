@@ -209,16 +209,41 @@ export async function saveChecklist(pathOverride) {
       // Continue with save (likely a new file)
     }
     
-    // 1.5 Ensure a named layout exists for saving
-    const ld = sharedState.checklistData.layout;
-    if (ld && !ld.layouts) {
-      ld.layouts = [{
-        layoutName: 'default',
-        columns: JSON.parse(JSON.stringify(ld.columns)),
-        rows: ld.rows ? JSON.parse(JSON.stringify(ld.rows)) : { height: 30 },
-        columnOrder: Array.isArray(ld.columnOrder) ? ld.columnOrder.slice() : Object.keys(ld.columns)
-      }];
-      ld.activeLayoutIndex = 0;
+    // 1.5 Sync current layout changes to the correct top-level layouts array
+    // The structure must be: { title, lastSave, lastlayout, layouts[], items[] }
+    
+    // DEBUG: Log layout state before sync
+    console.log('[saveChecklist] Current layout (working copy):', JSON.stringify(sharedState.checklistData.layout, null, 2));
+    console.log('[saveChecklist] Top-level layouts (saved copy):', JSON.stringify(sharedState.checklistData.layouts, null, 2));
+    console.log('[saveChecklist] lastlayout value:', sharedState.checklistData.lastlayout);
+    
+    // The layouts must be stored at the top level, NOT inside layout object
+    if (sharedState.checklistData.layouts && sharedState.checklistData.lastlayout) {
+      const activeLayoutName = sharedState.checklistData.lastlayout;
+      const activeLayout = sharedState.checklistData.layouts.find(layout => layout.layoutName === activeLayoutName);
+      
+      if (activeLayout && sharedState.checklistData.layout) {
+        console.log(`[saveChecklist] Syncing current layout changes to top-level layout: ${activeLayout.layoutName}`);
+        
+        // Update the named layout with current working layout state
+        activeLayout.columns = JSON.parse(JSON.stringify(sharedState.checklistData.layout.columns));
+        activeLayout.rows = sharedState.checklistData.layout.rows ? 
+          JSON.parse(JSON.stringify(sharedState.checklistData.layout.rows)) : { height: 30 };
+        activeLayout.columnOrder = Array.isArray(sharedState.checklistData.layout.columnOrder) ? 
+          sharedState.checklistData.layout.columnOrder.slice() : Object.keys(sharedState.checklistData.layout.columns);
+        
+        console.log(`[saveChecklist] Updated top-level layout "${activeLayout.layoutName}" with visible columns:`, 
+          Object.entries(activeLayout.columns)
+            .filter(([key, col]) => col.visible)
+            .map(([key]) => key)
+        );
+        
+        console.log('[saveChecklist] Layout sync complete - changes will be saved to top-level layouts array');
+      } else {
+        console.warn(`[saveChecklist] Could not find active layout "${activeLayoutName}" in top-level layouts array`);
+      }
+    } else {
+      console.warn('[saveChecklist] No top-level layouts array or lastlayout found');
     }
     
     // 2. Upload any pending files before saving

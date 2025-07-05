@@ -1,60 +1,115 @@
 {
   "title": "checklist_tester",
-  "collaborators": [
-    "Johan",
-    "Hung",
-    "Cuong",
-    "Robert",
-    "Mohamed",
-    "Jeamichel"
-  ],
-  "layout": {
-    "columns": {
-      "done": {
-        "width": 10,
-        "visible": true
-      },
-      "hns": {
-        "width": 46,
-        "visible": true
-      },
-      "label": {
-        "width": 219,
-        "visible": true
-      },
-      "unit": {
-        "width": 23,
-        "visible": true
-      },
-      "qty_est": {
-        "width": 34,
-        "visible": true
-      },
-      "qty_real": {
-        "width": 51,
-        "visible": true
-      },
-      "price_unit": {
-        "width": 48,
-        "visible": true
-      },
-      "total_price": {
-        "width": 47,
-        "visible": true
-      },
-      "date": {
-        "width": 100,
-        "visible": true
-      },
-      "who": {
-        "width": 100,
-        "visible": true
-      }
+  "lastSave": "2025_07_05_@_16-30-00",
+  "lastlayout": "default",
+  "lastcollaborator": "Johan",
+  "fields": {
+    "done": {
+      "type": "checkbox",
+      "label": "✔ Done"
     },
-    "rows": {
-      "height": 30
+    "hns": {
+      "type": "number",
+      "label": "hns"
+    },
+    "label": {
+      "type": "tree",
+      "label": "Label"
+    },
+    "unit": {
+      "type": "text",
+      "label": "Unit"
+    },
+    "qty_est": {
+      "type": "number",
+      "label": "Est. Qty"
+    },
+    "qty_real": {
+      "type": "number",
+      "label": "Real Qty"
+    },
+    "price_unit": {
+      "type": "number",
+      "label": "Unit Price"
+    },
+    "total_price": {
+      "type": "computed",
+      "label": "Total Price"
+    },
+    "date": {
+      "type": "date",
+      "label": "Date"
+    },
+    "who": {
+      "type": "select",
+      "label": "Who"
     }
   },
+  "sources": {
+    "collaborators": ["Johan", "Hung", "Cuong", "Robert", "Mohamed", "Jeamichel"],
+    "unitChoices": [
+      "kg",
+      "ton",
+      "hr",
+      "sec",
+      "m",
+      "m²",
+      "m³",
+      "l",
+      "pc"
+    ]
+  },
+  "other_inits": {},
+  "layouts": [
+    {
+      "layoutName": "default",
+      "columns": {
+        "done": {
+          "width": 10,
+          "visible": true
+        },
+        "hns": {
+          "width": 46,
+          "visible": true
+        },
+        "label": {
+          "width": 219,
+          "visible": true
+        },
+        "unit": {
+          "width": 23,
+          "visible": true
+        },
+        "qty_est": {
+          "width": 34,
+          "visible": true
+        },
+        "qty_real": {
+          "width": 51,
+          "visible": true
+        },
+        "price_unit": {
+          "width": 48,
+          "visible": true
+        },
+        "total_price": {
+          "width": 47,
+          "visible": true
+        },
+        "date": {
+          "width": 100,
+          "visible": true
+        },
+        "who": {
+          "width": 100,
+          "visible": true
+        }
+      },
+      "rows": {
+        "height": 30
+      }
+    }
+  ],
   "items": [
     {
       "hns": "1",
