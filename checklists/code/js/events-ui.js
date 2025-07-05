@@ -164,8 +164,16 @@ export function initUIEvents() {
   document.getElementById('addCollaboratorBtn')?.addEventListener('click', () => {
     const name = prompt('Enter collaborator name:');
     if (!name) return;
-    sharedState.checklistData.collaborators ||= [];
-    sharedState.checklistData.collaborators.push(name);
+    
+    // Ensure sources.collaborators exists
+    if (!sharedState.checklistData.sources) {
+      sharedState.checklistData.sources = {};
+    }
+    if (!sharedState.checklistData.sources.collaborators) {
+      sharedState.checklistData.sources.collaborators = [];
+    }
+    
+    sharedState.checklistData.sources.collaborators.push(name);
     renderCollaborators();
   });
 

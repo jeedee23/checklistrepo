@@ -9,7 +9,8 @@ export function renderCollaborators() {
   const listEl = document.getElementById('collaboratorList');
   if (!listEl) return;
   listEl.innerHTML = '';
-  sharedState.checklistData.collaborators.forEach(name => {
+  const collaborators = sharedState.checklistData.sources?.collaborators || [];
+  collaborators.forEach(name => {
     const li = document.createElement('li');
     const user = sharedState.usersData.users.find(u => u.username.toLowerCase() === name.toLowerCase());
     if (user && user.token) {
@@ -37,10 +38,19 @@ export function initCollaboratorUI() {
   btn.addEventListener('click', async () => {
     const name = prompt('Enter new collaborator name:')?.trim();
     if (!name) return;
-    if (sharedState.checklistData.collaborators.includes(name)) {
+    
+    // Ensure sources.collaborators exists
+    if (!sharedState.checklistData.sources) {
+      sharedState.checklistData.sources = {};
+    }
+    if (!sharedState.checklistData.sources.collaborators) {
+      sharedState.checklistData.sources.collaborators = [];
+    }
+    
+    if (sharedState.checklistData.sources.collaborators.includes(name)) {
       return alert('⚠️ Collaborator already exists in this checklist.');
     }
-    sharedState.checklistData.collaborators.push(name);
+    sharedState.checklistData.sources.collaborators.push(name);
     markSaveDirty(true);
     renderCollaborators();
     try {
