@@ -286,10 +286,35 @@ function addToCollaborators() {
   
   console.log('[User Management] Adding user to collaborators:', currentUser.username);
   
-  // TODO: Integrate with existing collaborator system
-  // This would call the existing collaborator management functions
+  // Check if checklist is loaded
+  if (!sharedState.checklistData) {
+    showNotification('warning', 'No checklist is currently loaded');
+    return;
+  }
   
-  showNotification('info', `Adding ${currentUser.fullName} as collaborator (feature coming soon)`);
+  // Ensure sources.collaborators exists
+  if (!sharedState.checklistData.sources) {
+    sharedState.checklistData.sources = {};
+  }
+  if (!sharedState.checklistData.sources.collaborators) {
+    sharedState.checklistData.sources.collaborators = [];
+  }
+  
+  // Check if user is already a collaborator
+  if (sharedState.checklistData.sources.collaborators.includes(currentUser.username)) {
+    showNotification('info', `${currentUser.fullName} is already a collaborator on this checklist`);
+    return;
+  }
+  
+  // Add user to collaborators
+  sharedState.checklistData.sources.collaborators.push(currentUser.username);
+  
+  // Mark as dirty to trigger save
+  if (window.markSaveDirty) {
+    window.markSaveDirty(true);
+  }
+  
+  showNotification('success', `Added ${currentUser.fullName} as collaborator to current checklist`);
 }
 
 /**
