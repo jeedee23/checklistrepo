@@ -452,12 +452,12 @@ async function checkStaleVersion() {
    const map = new Map();
    // start with remote
    remoteItems.forEach(item=>{
-     const key = item.no||item.label;
+     const key = item.hns||item.label;
      map.set(key, item);
    });
    // overlay local
    localItems.forEach(item=>{
-     const key = item.no||item.label;
+     const key = item.hns||item.label;
      if (map.has(key)) {
        map.set(key, mergeChecklistData(item, map.get(key)));
      } else {
@@ -762,7 +762,7 @@ async function newChecklist() {
     layout: {
       columns: {
         done:  { width:  40, visible: true },
-        no:    { width:  40, visible: true },
+        hns:   { width:  40, visible: true },
         label: { width: 697, visible: true },
         date:  { width: 100, visible: true },
         who:   { width: 100, visible: true }
@@ -773,7 +773,7 @@ async function newChecklist() {
     // 3) One starter item, only your five keys
     items: [
       {
-        no:    "1",
+        hns:   "1",
         label: "",         // user to fill
         done:  false,
         date:  today,      // “now”
@@ -2501,7 +2501,7 @@ document.addEventListener("DOMContentLoaded", async () => {
 
   function getItemDisplay(item) {
     const parts = [];
-    if (item.hns != null) parts.push(item.no);
+    if (item.hns != null) parts.push(item.hns);
     for (const [key, val] of Object.entries(item)) {
       if (key === "hns" || key === "children") continue;
       if (typeof val === "string" || typeof val === "number") {

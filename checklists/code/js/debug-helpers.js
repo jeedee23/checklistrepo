@@ -71,13 +71,13 @@ export function findChanges(checkpoint, currentData) {
       // Item exists in both
       if (origItem && currItem) {
         // Check if numbering changed
-        if (origItem.hns !== currItem.no) {
+        if (origItem.hns !== currItem.hns) {
           changes.itemNumberingChanged = true;
           changes.changedItems.push({
             path: [...path, i],
             change: 'numbering',
-            original: origItem.no,
-            current: currItem.no
+            original: origItem.hns,
+            current: currItem.hns
           });
         }
         

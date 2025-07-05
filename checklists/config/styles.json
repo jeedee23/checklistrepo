@@ -4,7 +4,7 @@
     "level1.done": {
       "fontSize": "1.00rem"
     },
-    "level1.no": {
+    "level1.hns": {
       "fontSize": "1.00rem",
       "indent": 20
     },
@@ -54,7 +54,7 @@
     "level2.done": {
       "fontSize": "0.95rem"
     },
-    "level2.no": {
+    "level2.hns": {
       "fontSize": "0.95rem",
       "indent": 40
     },
@@ -103,7 +103,7 @@
     "level3.done": {
       "fontSize": "0.90rem"
     },
-    "level3.no": {
+    "level3.hns": {
       "fontSize": "0.90rem",
       "indent": 60
     },
@@ -152,7 +152,7 @@
     "level4.done": {
       "fontSize": "0.85rem"
     },
-    "level4.no": {
+    "level4.hns": {
       "fontSize": "0.85rem",
       "indent": 80
     },
@@ -201,7 +201,7 @@
     "level5.done": {
       "fontSize": "0.80rem"
     },
-    "level5.no": {
+    "level5.hns": {
       "fontSize": "0.80rem",
       "indent": 100
     },
@@ -264,7 +264,7 @@
     "level1.done": {
       "fontSize": "1.00rem"
     },
-    "level1.no": {
+    "level1.hns": {
       "fontSize": "1.00rem",
       "indent": 20
     },
@@ -314,7 +314,7 @@
     "level2.done": {
       "fontSize": "0.95rem"
     },
-    "level2.no": {
+    "level2.hns": {
       "fontSize": "0.95rem",
       "indent": 40
     },
@@ -363,7 +363,7 @@
     "level3.done": {
       "fontSize": "0.90rem"
     },
-    "level3.no": {
+    "level3.hns": {
       "fontSize": "0.90rem",
       "indent": 60
     },
@@ -412,7 +412,7 @@
     "level4.done": {
       "fontSize": "0.85rem"
     },
-    "level4.no": {
+    "level4.hns": {
       "fontSize": "0.85rem",
       "indent": 80
     },
@@ -461,7 +461,7 @@
     "level5.done": {
       "fontSize": "0.80rem"
     },
-    "level5.no": {
+    "level5.hns": {
       "fontSize": "0.80rem",
       "indent": 100
     },
@@ -524,7 +524,7 @@
     "level1.done": {
       "fontSize": "1.00rem"
     },
-    "level1.no": {
+    "level1.hns": {
       "fontSize": "1.00rem",
       "indent": 20
     },
@@ -574,7 +574,7 @@
     "level2.done": {
       "fontSize": "0.95rem"
     },
-    "level2.no": {
+    "level2.hns": {
       "fontSize": "0.95rem",
       "indent": 40
     },
@@ -623,7 +623,7 @@
     "level3.done": {
       "fontSize": "0.90rem"
     },
-    "level3.no": {
+    "level3.hns": {
       "fontSize": "0.90rem",
       "indent": 60
     },
@@ -672,7 +672,7 @@
     "level4.done": {
       "fontSize": "0.85rem"
     },
-    "level4.no": {
+    "level4.hns": {
       "fontSize": "0.85rem",
       "indent": 80
     },
@@ -721,7 +721,7 @@
     "level5.done": {
       "fontSize": "0.80rem"
     },
-    "level5.no": {
+    "level5.hns": {
       "fontSize": "0.80rem",
       "indent": 100
     },
@@ -784,7 +784,7 @@
     "level1.done": {
       "fontSize": "1.00rem"
     },
-    "level1.no": {
+    "level1.hns": {
       "fontSize": "1.00rem",
       "indent": 20
     },
@@ -834,7 +834,7 @@
     "level2.done": {
       "fontSize": "0.95rem"
     },
-    "level2.no": {
+    "level2.hns": {
       "fontSize": "0.95rem",
       "indent": 40
     },
@@ -883,7 +883,7 @@
     "level3.done": {
       "fontSize": "0.90rem"
     },
-    "level3.no": {
+    "level3.hns": {
       "fontSize": "0.90rem",
       "indent": 60
     },
@@ -932,7 +932,7 @@
     "level4.done": {
       "fontSize": "0.85rem"
     },
-    "level4.no": {
+    "level4.hns": {
       "fontSize": "0.85rem",
       "indent": 80
     },
@@ -981,7 +981,7 @@
     "level5.done": {
       "fontSize": "0.80rem"
     },
-    "level5.no": {
+    "level5.hns": {
       "fontSize": "0.80rem",
       "indent": 100
     },
@@ -1044,7 +1044,7 @@
     "level1.done": {
       "fontSize": "1.00rem"
     },
-    "level1.no": {
+    "level1.hns": {
       "fontSize": "1.00rem",
       "indent": 20
     },
@@ -1094,7 +1094,7 @@
     "level2.done": {
       "fontSize": "0.95rem"
     },
-    "level2.no": {
+    "level2.hns": {
       "fontSize": "0.95rem",
       "indent": 40
     },
@@ -1143,7 +1143,7 @@
     "level3.done": {
       "fontSize": "0.90rem"
     },
-    "level3.no": {
+    "level3.hns": {
       "fontSize": "0.90rem",
       "indent": 60
     },
@@ -1192,7 +1192,7 @@
     "level4.done": {
       "fontSize": "0.85rem"
     },
-    "level4.no": {
+    "level4.hns": {
       "fontSize": "0.85rem",
       "indent": 80
     },
@@ -1241,7 +1241,7 @@
     "level5.done": {
       "fontSize": "0.80rem"
     },
-    "level5.no": {
+    "level5.hns": {
       "fontSize": "0.80rem",
       "indent": 100
     },
@@ -1304,7 +1304,7 @@
     "level1.done": {
       "fontSize": "1.00rem"
     },
-    "level1.no": {
+    "level1.hns": {
       "fontSize": "1.00rem",
       "indent": 20
     },
@@ -1354,7 +1354,7 @@
     "level2.done": {
       "fontSize": "0.95rem"
     },
-    "level2.no": {
+    "level2.hns": {
       "fontSize": "0.95rem",
       "indent": 40
     },
@@ -1403,7 +1403,7 @@
     "level3.done": {
       "fontSize": "0.90rem"
     },
-    "level3.no": {
+    "level3.hns": {
       "fontSize": "0.90rem",
       "indent": 60
     },
@@ -1452,7 +1452,7 @@
     "level4.done": {
       "fontSize": "0.85rem"
     },
-    "level4.no": {
+    "level4.hns": {
       "fontSize": "0.85rem",
       "indent": 80
     },
@@ -1501,7 +1501,7 @@
     "level5.done": {
       "fontSize": "0.80rem"
     },
-    "level5.no": {
+    "level5.hns": {
       "fontSize": "0.80rem",
       "indent": 100
     },
@@ -1564,7 +1564,7 @@
     "level1.done": {
       "fontSize": "1.00rem"
     },
-    "level1.no": {
+    "level1.hns": {
       "fontSize": "1.00rem",
       "indent": 20
     },
@@ -1614,7 +1614,7 @@
     "level2.done": {
       "fontSize": "0.95rem"
     },
-    "level2.no": {
+    "level2.hns": {
       "fontSize": "0.95rem",
       "indent": 40
     },
@@ -1663,7 +1663,7 @@
     "level3.done": {
       "fontSize": "0.90rem"
     },
-    "level3.no": {
+    "level3.hns": {
       "fontSize": "0.90rem",
       "indent": 60
     },
@@ -1712,7 +1712,7 @@
     "level4.done": {
       "fontSize": "0.85rem"
     },
-    "level4.no": {
+    "level4.hns": {
       "fontSize": "0.85rem",
       "indent": 80
     },
@@ -1761,7 +1761,7 @@
     "level5.done": {
       "fontSize": "0.80rem"
     },
-    "level5.no": {
+    "level5.hns": {
       "fontSize": "0.80rem",
       "indent": 100
     },

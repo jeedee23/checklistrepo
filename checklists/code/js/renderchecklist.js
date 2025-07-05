@@ -52,13 +52,13 @@ export async function renderChecklist(eventId = 0) {
       const itemAtPath = getItemByPath(sharedState.checklistData.items, sharedState.selectedPath);
       if (itemAtPath) {
         sharedState.selectedItem = itemAtPath;
-        console.log(`[renderChecklist] Selection after renumbering: path=${JSON.stringify(sharedState.selectedPath)}, item=${itemAtPath.label}, no=${itemAtPath.no}`);
+        console.log(`[renderChecklist] Selection after renumbering: path=${JSON.stringify(sharedState.selectedPath)}, item=${itemAtPath.label}, hns=${itemAtPath.hns}`);
       } else {
         console.warn(`[renderChecklist] Could not find item at path after renumbering: ${JSON.stringify(sharedState.selectedPath)}`);
       }
     }
     
-    console.log(`[renderChecklist] Renumbering complete: before=[path: ${JSON.stringify(beforePath)}, label: ${beforeLabel}], after=[path: ${JSON.stringify(sharedState.selectedPath)}, label: ${sharedState.selectedItem?.label}, no: ${sharedState.selectedItem?.no}]`);
+    console.log(`[renderChecklist] Renumbering complete: before=[path: ${JSON.stringify(beforePath)}, label: ${beforeLabel}], after=[path: ${JSON.stringify(sharedState.selectedPath)}, label: ${sharedState.selectedItem?.label}, hns: ${sharedState.selectedItem?.hns}]`);
   }
 
   // Log the specific event type
@@ -205,16 +205,16 @@ export async function renderChecklist(eventId = 0) {
     // Log the current selected item info for debugging
     console.log('[renderChecklist] Current selected item before focus:', 
                 sharedState.selectedItem ? 
-                `${sharedState.selectedItem.label} (${sharedState.selectedItem.no}) at path ${JSON.stringify(sharedState.selectedPath)}` :
+                `${sharedState.selectedItem.label} (${sharedState.selectedItem.hns}) at path ${JSON.stringify(sharedState.selectedPath)}` :
                 'None');
                 
     // For structural changes, verify selected item has a valid number
     if (sharedState.selectedItem && (!sharedState.selectedItem.hns || sharedState.selectedItem.hns === '')) {
       console.warn('[renderChecklist] Selected item has no number, attempting to fix');
       const itemAtPath = getItemByPath(sharedState.checklistData.items, sharedState.selectedPath);
-      if (itemAtPath && itemAtPath.no) {
+      if (itemAtPath && itemAtPath.hns) {
         sharedState.selectedItem = itemAtPath;
-        console.log('[renderChecklist] Fixed selected item reference:', sharedState.selectedItem.no);
+        console.log('[renderChecklist] Fixed selected item reference:', sharedState.selectedItem.hns);
       }
     }
     
@@ -267,7 +267,7 @@ async function setFocusAfterStructuralChange() {
   console.log('[setFocusAfterStructuralChange] Attempting to focus item:', 
               sharedState.selectedItem.label, 
               'at path:', pathStr,
-              'with number:', sharedState.selectedItem.no);
+              'with number:', sharedState.selectedItem.hns);
   
   // Helper function to find and focus a row
   const findAndFocusRow = () => {
@@ -294,14 +294,14 @@ async function setFocusAfterStructuralChange() {
     }
     
     // If still not found, try finding by item number
-    if (!row && sharedState.selectedItem.no) {
-      console.log('[setFocusAfterStructuralChange] Trying alternate lookup by item number:', sharedState.selectedItem.no);
+    if (!row && sharedState.selectedItem.hns) {
+      console.log('[setFocusAfterStructuralChange] Trying alternate lookup by item number:', sharedState.selectedItem.hns);
       const allRows = document.querySelectorAll('#checklistTable tbody tr');
       for (const rowEl of allRows) {
         const numberCell = rowEl.querySelector('.item-number');
         if (numberCell) {
           const itemNo = numberCell.textContent.trim();
-          if (itemNo === sharedState.selectedItem.no) {
+          if (itemNo === sharedState.selectedItem.hns) {
             console.log('[setFocusAfterStructuralChange] Found by item number:', itemNo);
             row = rowEl;
             break;
