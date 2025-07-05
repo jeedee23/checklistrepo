@@ -1,6 +1,6 @@
 {
   "title": "Cosucra Project structure",
-  "lastSave": "2025_07_05_@_12-59-06",
+  "lastSave": "2025_07_05_@_14-18-19",
   "unitChoices": [
     "kg",
     "ton",
@@ -6704,6 +6704,17 @@
       "Johan",
       "Fred",
       "Cuong"
+    ],
+    "unitChoices": [
+      "kg",
+      "ton",
+      "hr",
+      "sec",
+      "m",
+      "m²",
+      "m³",
+      "l",
+      "pc"
     ]
   }
 }
