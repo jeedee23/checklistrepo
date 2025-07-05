@@ -68,7 +68,7 @@
       "type": "number",
       "label": "Progress (%)"
     },
-    "IsPreEngineering": {
+    "IsPE": {
       "type": "checkbox",
       "label": "IsPE"
     }
@@ -161,7 +161,7 @@
           "width": 120,
           "visible": false
         },
-        "IsPreEngineering": {
+        "IsPE": {
           "width": "100px",
           "visible": true
         }
@@ -186,7 +186,7 @@
         "Support",
         "Consult",
         "Informed",
-        "IsPreEngineering"
+        "IsPE"
       ]
     },
     {
@@ -6254,7 +6254,7 @@
         "width": 120,
         "visible": false
       },
-      "IsPreEngineering": {
+      "IsPE": {
         "width": "100px",
         "visible": true
       }
@@ -6276,7 +6276,7 @@
       "Support",
       "Consult",
       "Informed",
-      "IsPreEngineering"
+      "IsPE"
     ],
     "rowHeight": 30
   }
