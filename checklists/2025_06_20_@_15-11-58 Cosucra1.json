@@ -1,6 +1,6 @@
 {
   "title": "Cosucra Project structure",
-  "lastSave": "2025_07_05_@_14-33-43",
+  "lastSave": "2025_07_05_@_15-26-38",
   "layouts": [
     {
       "layoutName": "lastused",
@@ -68,6 +68,10 @@
         "Informed": {
           "width": 120,
           "visible": false
+        },
+        "IsPreEngineering": {
+          "width": "100px",
+          "visible": true
         }
       },
       "rows": {
@@ -6517,6 +6521,10 @@
       "Informed": {
         "width": 120,
         "visible": false
+      },
+      "IsPreEngineering": {
+        "width": "100px",
+        "visible": true
       }
     },
     "rows": {
@@ -6679,6 +6687,10 @@
     "progress": {
       "type": "number",
       "label": "Progress (%)"
+    },
+    "IsPreEngineering": {
+      "type": "checkbox",
+      "label": "IsPE"
     }
   },
   "sources": {
