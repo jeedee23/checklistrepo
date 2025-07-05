@@ -7,6 +7,7 @@ import { renderChecklist } from './renderchecklist.js';
 import { createCheckpoint, hasChanged, findChanges, logChanges } from './debug-helpers.js';
 import { updateUsersJson } from './auth-login.js';
 import { populateLayoutSubmenu } from './menu-layouts.js';
+import { saveChecklist } from './data2.js';
 
 // For version‐conflict monitoring (handled in events.js)
 sharedState.readyForEdits = false;
