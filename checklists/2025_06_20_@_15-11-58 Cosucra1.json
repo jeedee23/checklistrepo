@@ -1,18 +1,7 @@
 {
   "title": "Cosucra Project structure",
   "lastSave": "2025_07_05_@_14-18-19",
-  "unitChoices": [
-    "kg",
-    "ton",
-    "hr",
-    "sec",
-    "m",
-    "m²",
-    "m³",
-    "l",
-    "pc"
-  ],
-  "layouts": [
+   "layouts": [
     {
       "layoutName": "lastused",
       "columns": {
@@ -545,12 +534,6 @@
       "uploadedBy": "Johan",
       "uploadedAt": "2025-06-26T20:35:01.970Z"
     }
-  ],
-  "collaborators": [
-    "∅",
-    "Johan",
-    "Fred",
-    "Cuong"
   ],
   "items": [
     {
