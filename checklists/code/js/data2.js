@@ -22,6 +22,10 @@ export async function newChecklist() {
   const template = {
     title: name,
     lastSave: timestamp,
+    sources: {
+      unitChoices: ["kg", "ton", "hr", "sec", "m", "m²", "m³", "l", "pc"],
+      collaborators: [sharedState.currentUser || ""]
+    },
     items: [
       {
         label: "First item",
@@ -37,7 +41,9 @@ export async function newChecklist() {
         date: { visible: true, width: 100 }
       }
     },
-    collaborators: [sharedState.currentUser],
+    // Backward compatibility properties (point to sources)
+    collaborators: [sharedState.currentUser || ""],
+    unitChoices: ["kg", "ton", "hr", "sec", "m", "m²", "m³", "l", "pc"],
     files: []
   };
   

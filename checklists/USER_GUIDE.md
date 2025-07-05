@@ -1,3 +1,170 @@
+# Checklist Application - User Guide
+
+## 🎯 **CURRENT VERSION: Enhanced Field Management System**
+
+*Last Updated: July 5, 2025*
+
+---
+
+## 🚀 **NEW FEATURES AVAILABLE:**
+
+### **✅ Enhanced Field Manager**
+Create and manage custom fields with powerful validation and persistence.
+
+#### **How to Access:**
+1. Go to **Tools > Field Management** in the menu
+2. Click **"Choose Fields"** to open the field selector
+3. Click **"+ New Field"** to create custom fields
+
+#### **Creating New Fields:**
+1. **Field Name**: Enter unique field identifier (e.g., "ProjectCode")
+2. **Field Type**: Choose from available types:
+   - `text` - Free text input
+   - `number` - Numeric values
+   - `checkbox` - True/false selections
+   - `select` - Dropdown selections
+   - `date` - Date picker
+   - `tree` - Hierarchical data
+3. **Display Label**: User-friendly name (e.g., "Project Code")
+4. **For Select Fields** - Choose ONE option:
+   - **Source**: Use `"collaborators"` for dynamic user lists
+   - **Options**: Enter static choices (one per line)
+5. **Default Value**: Optional default when creating new items
+
+#### **Field Validation:**
+- ✅ **Unique Names**: Field names must be unique
+- ✅ **Format Validation**: Names must start with letter, contain only letters/numbers/underscores
+- ✅ **Select Field Rules**: Must have either Source OR Options (never both)
+- ✅ **Real-time Feedback**: Immediate validation with helpful error messages
+
+#### **Automatic Features:**
+- ✅ **Instant Persistence**: New fields saved to GitHub immediately
+- ✅ **UI Refresh**: Field chooser updates automatically after creation
+- ✅ **Immediate Availability**: New fields appear in checklist right away
+
+---
+
+## 🏗️ **SYSTEM ARCHITECTURE UPDATES:**
+
+### **Centralized Save System**
+All data operations now go through a unified, validated save system:
+- **Consistent Error Handling**: All save operations use the same error management
+- **Progress Indicators**: Visual feedback during save operations
+- **Automatic Validation**: Data validated before saving
+- **Event-Driven UI**: Interface updates automatically when data changes
+
+### **Field Structure Changes**
+Important changes to field configuration:
+- ❌ **Removed `accesslevel`**: No longer used in field definitions
+- ✅ **Source/Options Validation**: Select fields properly validated
+- ✅ **Enhanced Field Types**: Support for all standard field types from config
+
+---
+
+## 📋 **CONFIGURATION REFERENCE:**
+
+### **Current Field Structure** (`fields.json`)
+```json
+{
+  "fields": {
+    "1": {
+      "key": "done",
+      "label": "✔ Done",
+      "type": "checkbox",
+      "fixed": true,
+      "default_value": false
+    },
+    "10": {
+      "key": "who",
+      "label": "Who",
+      "type": "select",
+      "source": "collaborators",
+      "default_value": "currentuser"
+    },
+    "11": {
+      "key": "status", 
+      "label": "Status",
+      "type": "select",
+      "options": ["Planned", "In Progress", "Completed", "Blocked"],
+      "default_value": ""
+    }
+  }
+}
+```
+
+### **Available Field Types** (from `config.json`)
+- `checkbox` - True/false toggle
+- `tree` - Hierarchical text structure  
+- `select` - Dropdown selection
+- `text` - Free text input
+- `number` - Numeric input
+- `formula` - Calculated fields
+
+---
+
+## 🔄 **MIGRATION NOTES:**
+
+### **"no" → "hns" Migration**
+The application has been updated to use "hns" instead of "no" throughout:
+- **Field References**: All field keys updated
+- **Code References**: All JavaScript code updated
+- **Configuration**: All config files updated
+- **No Action Required**: Migration is complete and transparent to users
+
+---
+
+## 🎯 **UPCOMING FEATURES:**
+
+### **Layout Manager** (Coming Soon)
+- Create custom field layouts for different user roles
+- Control field visibility and edit permissions per layout
+- Assign layouts to specific users or access levels
+
+### **Filter Manager** (Planned)
+- Advanced filtering with multiple conditions
+- Save and share custom filters
+- Filter access controls based on user permissions
+
+---
+
+## 🔧 **TROUBLESHOOTING:**
+
+### **Field Creation Issues**
+**Problem**: Source/Options fields not appearing in new field dialog
+**Solution**: This was resolved in the latest update. Clear browser cache and refresh.
+
+**Problem**: New fields not appearing in checklist
+**Solution**: Ensure fields are saved properly. Check browser console for errors.
+
+**Problem**: "Field already exists" error
+**Solution**: Field names must be unique. Choose a different name or modify existing field.
+
+### **Save Operation Issues**
+**Problem**: Changes not persisting
+**Solution**: All saves now go through centralized system. Check for error notifications.
+
+**Problem**: Slow save operations
+**Solution**: Large data sets may take time. Progress indicators show save status.
+
+---
+
+## 📞 **SUPPORT:**
+
+For technical issues or questions about new features:
+1. Check browser console for error messages
+2. Verify internet connection for GitHub synchronization
+3. Contact system administrator for access-related issues
+4. Report bugs with specific error messages and steps to reproduce
+
+---
+
+*This user guide reflects the current state of the enhanced field management system.*  
+*Additional features will be documented as they become available.*
+
+---
+
+## 📚 **ORIGINAL USER GUIDE (Historical Reference)**
+
 # Checklist Application - Complete User Guide
 
 ## 📋 Table of Contents

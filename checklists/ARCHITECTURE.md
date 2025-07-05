@@ -202,3 +202,172 @@ checklists/
 │           ├── styles-manage.js   # Style management
 │           └── debug-helpers.js   # Development tools
 ```
+
+# ARCHITECTURE.md - System Architecture Documentation
+
+## 🏗️ Current Architecture: Centralized Data Persistence
+
+### **System Overview**
+The checklist application now implements a centralized data persistence architecture that provides unified, validated, and consistent data operations across all components.
+
+### **Core Components**
+
+#### **1. Data Persistence Layer** (`data-persistence.js`)
+```javascript
+// Unified save/load operations for all data types
+export const saveFields = (data, options = {}) => saveData('FIELDS', data, options);
+export const loadFields = (options = {}) => loadData('FIELDS', options);
+export const saveUsers = (data, options = {}) => saveData('USERS', data, options);
+// ... other data types
+```
+
+**Features:**
+- **Generic Operations**: `saveData()` and `loadData()` handle all data types
+- **Built-in Validation**: Data validated before saving using type-specific validators
+- **Progress Feedback**: User notifications during operations
+- **Event System**: Automatic UI refresh via `dataUpdated` events
+- **Error Handling**: Consistent error management with rollback capability
+
+#### **2. Field Management System** (`menu-fields-actions.js`, `data-fields.js`)
+```javascript
+// Enhanced field creation with validation
+const fieldDef = {
+  key: fieldName,
+  label: fieldLabel,
+  type: fieldType,
+  default_value: getDefaultValueForType(fieldType),
+  // Either source OR options, never both
+  source: "collaborators",        // For dynamic data
+  options: ["A", "B", "C"]       // For static options
+};
+```
+
+**Features:**
+- **Mutual Exclusivity**: Select fields use either `source` OR `options`
+- **Real-time Validation**: Prevents invalid field configurations
+- **Immediate Persistence**: New fields saved to GitHub immediately
+- **UI Synchronization**: Fields chooser updates automatically
+
+#### **3. State Management** (`constants.js`, `sharedState`)
+```javascript
+export const sharedState = {
+  fieldsData: {},      // Loaded from fields.json
+  usersData: {},       // Loaded from users.json
+  configData: {},      // Loaded from config.json
+  checklistData: {},   // Current checklist
+  currentUser: {}      // Authenticated user
+};
+```
+
+### **Data Flow Architecture**
+
+```
+User Action
+    ↓
+UI Component (Field Manager, User Manager, etc.)
+    ↓
+Data Operation Request
+    ↓
+data-persistence.js
+    ↓
+Validation (type-specific validators)
+    ↓
+WORKER_URL → GitHub Repository
+    ↓
+Success Response
+    ↓
+Update sharedState
+    ↓
+Dispatch dataUpdated Event
+    ↓
+UI Components Auto-refresh
+```
+
+### **Access Control Architecture (Future)**
+
+#### **Three-Layer Access System:**
+1. **Layout Level**: Controls which fields are visible/editable per layout
+2. **Filter Level**: Controls which rows/items are accessible
+3. **User Level**: Custom per-user filter overrides
+
+#### **Field Access Logic:**
+```javascript
+// Planned implementation
+function canAccessField(fieldKey, user, layout, filter) {
+  // 1. Check layout-level permissions
+  if (!layout.allowsField(fieldKey, user.accessLevel)) return false;
+  
+  // 2. Check filter-level permissions  
+  if (!filter.allowsField(fieldKey, user)) return false;
+  
+  // 3. Check user-level overrides
+  return user.customFilter?.allowsField(fieldKey) ?? true;
+}
+```
+
+### **File Structure & Dependencies**
+
+```
+code/js/
+├── data-persistence.js     # Central save/load system
+│   ├── saveData()          # Generic save function
+│   ├── loadData()          # Generic load function
+│   ├── validateFieldsData() # Field validation
+│   └── performSave()       # WORKER_URL integration
+│
+├── data-fields.js          # Field-specific operations
+│   ├── loadFieldDefinitions() # Uses loadData('FIELDS')
+│   ├── saveFieldDefinitions() # Uses saveData('FIELDS')
+│   └── addNewField()       # Field creation logic
+│
+├── menu-fields-actions.js  # Field manager UI
+│   ├── showFieldsDialog()  # Fields chooser dialog
+│   ├── showNewFieldDialog() # New field creation
+│   └── setupNewFieldEventHandlers() # UI event handling
+│
+└── constants.js            # Shared state & configuration
+    ├── sharedState         # Global application state
+    ├── WORKER_URL          # GitHub integration endpoint
+    └── Field type definitions
+```
+
+### **Key Architectural Decisions**
+
+1. **Centralized Persistence**: All save operations go through single module
+2. **Event-Driven UI**: Components listen for `dataUpdated` events
+3. **Validation-First**: Data validated before any persistence
+4. **GitHub Integration**: All file operations via WORKER_URL for consistency
+5. **Modular Design**: Clear separation of concerns between components
+
+### **Migration Status**
+
+#### **✅ Completed Migrations:**
+- **Field Management**: Now uses centralized save/load
+- **Configuration Loading**: Uses centralized config loading
+- **State Synchronization**: Automatic state updates after saves
+- **"no" → "hns"**: Complete migration of legacy references
+
+#### **🔄 Pending Migrations:**
+- **Checklist Save**: Move to centralized system
+- **Note Save**: Move to centralized system  
+- **User Management**: Partially migrated, needs completion
+- **Layout/Filter Systems**: New implementations needed
+
+### **Performance Considerations**
+
+1. **Lazy Loading**: Data loaded only when needed
+2. **Event Debouncing**: Prevent excessive UI updates
+3. **Validation Caching**: Cache validation results for performance
+4. **State Synchronization**: Efficient updates only when data changes
+
+### **Security Architecture**
+
+1. **Input Validation**: All data validated before processing
+2. **Error Isolation**: Errors contained within components
+3. **State Protection**: Controlled access to shared state
+4. **GitHub Integration**: Secure token-based authentication via WORKER_URL
+
+---
+
+*Last Updated: July 5, 2025*  
+*Architecture Status: Centralized Data Persistence Implemented*

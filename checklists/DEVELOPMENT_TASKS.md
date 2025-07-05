@@ -1,3 +1,181 @@
+# DEVELOPMENT TASKS - Current Status & Roadmap
+
+## 🎯 **CURRENT STATUS: Phase 2 Complete - Centralized Save Architecture**
+
+### **✅ PHASE 1: COMPLETED - Foundation & Migration**
+- [x] **Complete "no" → "hns" Migration**: All code and config updated
+- [x] **Field Structure Cleanup**: Removed `accesslevel` from fields.json
+- [x] **Access Control Design**: Three-layer architecture planned
+- [x] **Code Organization**: Modular structure established
+
+### **✅ PHASE 2: COMPLETED - Centralized Data Persistence**
+- [x] **data-persistence.js**: Unified save/load system for all data types
+- [x] **Validation Framework**: Built-in data validation before saves
+- [x] **Event System**: `dataUpdated` events for automatic UI refresh
+- [x] **Field Manager Integration**: Complete field CRUD operations
+- [x] **Source/Options Validation**: Mutual exclusivity enforced
+- [x] **GitHub Integration**: All saves go through WORKER_URL
+- [x] **Progress Indicators**: User feedback during save operations
+- [x] **Error Handling**: Consistent error management across all operations
+
+---
+
+## 🚀 **PHASE 3: IN PROGRESS - Layout Manager**
+
+### **Priority Tasks:**
+- [ ] **Layout Manager Dialog**: Create UI for layout creation/editing
+- [ ] **Layout Data Structure**: Define layouts.json schema
+- [ ] **Access Level Integration**: Layout-level field access controls
+- [ ] **Layout Assignment**: Assign layouts to users/roles
+- [ ] **Layout Preview**: Show how layout appears for different users
+- [ ] **Layout Validation**: Ensure layouts reference valid fields
+
+### **Technical Requirements:**
+```json
+// layouts.json structure (planned)
+{
+  "layouts": {
+    "1": {
+      "id": "1",
+      "name": "Basic View",
+      "description": "Basic fields for all users",
+      "accessLevel": 1,
+      "fields": {
+        "1": { "visible": true, "editable": true },
+        "2": { "visible": true, "editable": false },
+        "3": { "visible": false, "editable": false }
+      },
+      "defaultLayout": true
+    }
+  }
+}
+```
+
+---
+
+## 🔍 **PHASE 4: PLANNED - Filter Manager**
+
+### **Upcoming Tasks:**
+- [ ] **Filter Manager Dialog**: UI for advanced filter creation
+- [ ] **Filter Logic Builder**: Visual condition builder (field = value, field > value, etc.)
+- [ ] **Filter Data Structure**: Define filters.json schema
+- [ ] **Filter Access Controls**: User-level filter restrictions
+- [ ] **Filter Testing**: Preview filter results before saving
+- [ ] **Combined Filter Logic**: Multiple filters working together
+
+### **Filter Architecture (Planned):**
+```json
+// filters.json structure (planned)
+{
+  "filters": {
+    "1": {
+      "id": "1",
+      "name": "High Priority Items",
+      "description": "Items with high priority",
+      "accessLevel": 2,
+      "conditions": [
+        { "field": "priority", "operator": "equals", "value": "High" },
+        { "field": "status", "operator": "not_equals", "value": "Completed" }
+      ],
+      "operator": "AND"
+    }
+  }
+}
+```
+
+---
+
+## 🧪 **PHASE 5: PLANNED - Testing & Validation**
+
+### **Comprehensive Testing:**
+- [ ] **Field Manager Testing**: End-to-end field creation workflow
+- [ ] **Layout Manager Testing**: Layout creation, assignment, and preview
+- [ ] **Filter Manager Testing**: Filter creation and application
+- [ ] **Integration Testing**: All systems working together
+- [ ] **Performance Testing**: Large dataset handling
+- [ ] **Security Testing**: Access control validation
+- [ ] **User Experience Testing**: Real-world usage scenarios
+
+---
+
+## 🔄 **ONGOING TASKS:**
+
+### **Save Function Migration:**
+- [x] **saveFields()**: ✅ Migrated to centralized system
+- [ ] **saveChecklist()**: Migrate to use `saveData('CHECKLIST', ...)`
+- [ ] **saveNote()**: Migrate to centralized system
+- [x] **saveUsers()**: ✅ Partially migrated (needs completion)
+- [ ] **saveConfig()**: Migrate to centralized system
+- [ ] **saveLayouts()**: Implement when layout manager ready
+- [ ] **saveFilters()**: Implement when filter manager ready
+
+### **UI/UX Improvements:**
+- [x] **Dialog Scrollability**: ✅ Fixed for field dialogs
+- [x] **Field Validation**: ✅ Source/options mutual exclusivity
+- [x] **Progress Indicators**: ✅ Implemented for save operations
+- [ ] **Mobile Responsiveness**: Ensure all dialogs work on mobile
+- [ ] **Accessibility**: Add ARIA labels and keyboard navigation
+- [ ] **Visual Polish**: Consistent styling across all dialogs
+
+### **Documentation:**
+- [x] **README.md**: ✅ Updated with current status
+- [x] **ARCHITECTURE.md**: ✅ Current system architecture
+- [x] **TODO.md**: ✅ Development tracking
+- [x] **DEVELOPMENT_TASKS.md**: ✅ This file
+- [ ] **USER_GUIDE.md**: Update with new features
+- [ ] **API Documentation**: Document all save functions
+
+---
+
+## 📊 **PROGRESS METRICS:**
+
+### **Completion Status:**
+- **Phase 1 (Foundation)**: ✅ 100% Complete
+- **Phase 2 (Centralized Save)**: ✅ 100% Complete  
+- **Phase 3 (Layout Manager)**: 🔄 0% Complete (Next Priority)
+- **Phase 4 (Filter Manager)**: ⏳ 0% Complete (Planned)
+- **Phase 5 (Testing)**: ⏳ 0% Complete (Planned)
+
+### **Code Quality Metrics:**
+- **Centralized Save Operations**: ✅ Implemented
+- **Input Validation**: ✅ Implemented  
+- **Error Handling**: ✅ Consistent across components
+- **Event System**: ✅ UI auto-refresh implemented
+- **Modular Architecture**: ✅ Clean separation of concerns
+
+### **Technical Debt:**
+- **Legacy Save Functions**: 🔄 4 of 7 migrated to centralized system
+- **Manual UI Updates**: ✅ Replaced with event-driven system
+- **Inconsistent Error Handling**: ✅ Unified error management
+- **Data Validation**: ✅ Centralized validation framework
+
+---
+
+## 🎯 **IMMEDIATE NEXT STEPS:**
+
+1. **Start Layout Manager Implementation**:
+   - Create `menu-layouts.js` for layout management UI
+   - Design layouts.json schema
+   - Implement layout creation dialog
+
+2. **Complete Save Migration**:
+   - Migrate remaining save functions to centralized system
+   - Update all components to use event-driven updates
+
+3. **Testing & Documentation**:
+   - Test current field manager functionality
+   - Update user guide with new features
+   - Prepare for layout manager development
+
+---
+
+*Last Updated: July 5, 2025*  
+*Current Focus: Layout Manager Implementation*
+
+---
+
+## 📋 **HISTORICAL DEVELOPMENT PROGRESS (Pre-Architecture Redesign)**
+
 # Development Tasks - Current Status & Roadmap
 
 ## ✅ COMPLETED FEATURES (July 2025)

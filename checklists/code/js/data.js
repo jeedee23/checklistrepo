@@ -274,6 +274,65 @@ export async function loadChecklist(path) {
       }
     }
     
+    // ===== SOURCES STRUCTURE MIGRATION AND VALIDATION =====
+    // Ensure every checklist has proper sources structure with unitChoices and collaborators
+    
+    let sourcesCreated = false;
+    
+    // Step 1: Check if sources structure exists
+    if (!sharedState.checklistData.sources) {
+      sharedState.checklistData.sources = {};
+      sourcesCreated = true;
+      defaultsApplied = true;
+      console.log('[Data] Created sources structure');
+    }
+    
+    // Step 2: Handle unitChoices migration and validation
+    if (sharedState.checklistData.unitChoices && !sharedState.checklistData.sources.unitChoices) {
+      // Migrate old unitChoices array to sources structure
+      sharedState.checklistData.sources.unitChoices = sharedState.checklistData.unitChoices;
+      defaultsApplied = true;
+      console.log('[Data] Migrated unitChoices to sources structure');
+    }
+    
+    // Step 3: Ensure unitChoices always exists (REQUIRED for every checklist)
+    if (!sharedState.checklistData.sources.unitChoices) {
+      // Default unit choices that should be in every checklist
+      sharedState.checklistData.sources.unitChoices = [
+        "kg", "ton", "hr", "sec", "m", "m²", "m³", "l", "pc"
+      ];
+      defaultsApplied = true;
+      console.log('[Data] Added default unitChoices to sources');
+    }
+    
+    // Step 4: Handle collaborators migration
+    if (sharedState.checklistData.collaborators && !sharedState.checklistData.sources.collaborators) {
+      // Migrate old collaborators array to sources structure
+      sharedState.checklistData.sources.collaborators = sharedState.checklistData.collaborators;
+      defaultsApplied = true;
+      console.log('[Data] Migrated collaborators to sources structure');
+    }
+    
+    // Step 5: Ensure collaborators exists in sources (can be empty array)
+    if (!sharedState.checklistData.sources.collaborators) {
+      sharedState.checklistData.sources.collaborators = [];
+      defaultsApplied = true;
+      console.log('[Data] Added empty collaborators array to sources');
+    }
+    
+    // Step 6: Maintain backward compatibility properties
+    sharedState.checklistData.collaborators = sharedState.checklistData.sources.collaborators;
+    sharedState.checklistData.unitChoices = sharedState.checklistData.sources.unitChoices;
+    
+    // Step 7: Log the final sources structure
+    if (sourcesCreated || defaultsApplied) {
+      console.log('[Data] Final sources structure:', {
+        unitChoices: sharedState.checklistData.sources.unitChoices?.length || 0,
+        collaborators: sharedState.checklistData.sources.collaborators?.length || 0,
+        otherSources: Object.keys(sharedState.checklistData.sources).filter(k => !['unitChoices', 'collaborators'].includes(k))
+      });
+    }
+    
     // Create a checkpoint for later comparison after all layout setup is complete
     const originalCheckpoint = createCheckpoint(sharedState.checklistData);
     
