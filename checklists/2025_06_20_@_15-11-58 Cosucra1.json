@@ -1,6 +1,6 @@
 {
   "title": "Cosucra Project structure",
-  "lastSave": "2025_07_05_@_16-30-00",
+  "lastSave": "2025_07_05_@_18-48-41",
   "lastlayout": "minilist",
   "lastcollaborator": "Johan",
   "fields": {
@@ -256,7 +256,7 @@
       ]
     }
   ],
-   "items": [
+  "items": [
     {
       "hns": "1",
       "label": "Introduction.",
@@ -6171,5 +6171,83 @@
         }
       ]
     }
-  ]
+  ],
+  "activeLayoutIndex": 0,
+  "layout": {
+    "columns": {
+      "done": {
+        "width": 50,
+        "visible": true
+      },
+      "hns": {
+        "width": 80,
+        "visible": true
+      },
+      "label": {
+        "width": 250,
+        "visible": true
+      },
+      "unit": {
+        "width": 120,
+        "visible": false
+      },
+      "qty_est": {
+        "width": 80,
+        "visible": false
+      },
+      "qty_real": {
+        "width": 80,
+        "visible": false
+      },
+      "price_unit": {
+        "width": 80,
+        "visible": false
+      },
+      "total_price": {
+        "width": 100,
+        "visible": false
+      },
+      "date": {
+        "width": 120,
+        "visible": true
+      },
+      "who": {
+        "width": 120,
+        "visible": true
+      },
+      "progress": {
+        "width": 80,
+        "visible": false
+      },
+      "Resp": {
+        "width": 120,
+        "visible": false
+      },
+      "Acc": {
+        "width": 120,
+        "visible": false
+      },
+      "Support": {
+        "width": 120,
+        "visible": false
+      },
+      "Consult": {
+        "width": 120,
+        "visible": false
+      },
+      "Informed": {
+        "width": 120,
+        "visible": false
+      }
+    },
+    "columnOrder": [
+      "done",
+      "hns",
+      "label",
+      "date",
+      "who",
+      "progress"
+    ],
+    "rowHeight": 30
+  }
 }
