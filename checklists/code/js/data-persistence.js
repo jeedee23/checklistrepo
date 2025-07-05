@@ -187,7 +187,16 @@ async function performSave(filename, data) {
       throw new Error(`Save failed: ${response.status} ${response.statusText} - ${errorText}`);
     }
     
-    const result = await response.json();
+    // Handle both JSON and text responses
+    const contentType = response.headers.get('content-type');
+    let result;
+    
+    if (contentType && contentType.includes('application/json')) {
+      result = await response.json();
+    } else {
+      result = await response.text();
+    }
+    
     console.log(`[Data Persistence] Save successful:`, result);
     
     return true;
