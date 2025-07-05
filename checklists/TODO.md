@@ -1,7 +1,7 @@
 # TODO: Checklist Application Development
 
-## 🏗️ COMPLETED: Centralized Save Architecture
-*Foundation implemented and integrated with field manager*
+## 🏗️ COMPLETED: Centralized Save Architecture & Sources Migration
+*Foundation implemented, integrated with field manager, and sources migration complete*
 
 ### ✅ Core Save Functions Implemented
 - [x] **saveFieldDefinitions()** - Save fields.json (fully implemented with WORKER_URL)
@@ -11,11 +11,19 @@
 - [x] **Progress indicators** - User feedback during save operations
 - [x] **State synchronization** - Automatic state updates after saves
 
+### ✅ Sources Migration Completed
+- [x] **collaborators migration** - All references updated to use sources.collaborators
+- [x] **unitChoices migration** - All references updated to use sources.unitChoices
+- [x] **Migration logic** - Automatically migrates legacy structures and removes old properties
+- [x] **New checklist creation** - Creates only modern sources structure
+- [x] **Backward compatibility** - Seamless migration for existing checklists
+
 ### ✅ Field Manager Integration
 - [x] **Updated data-fields.js** - Uses centralized save/load functions
 - [x] **Field creation persistence** - New fields are actually saved to fields.json
 - [x] **UI refresh mechanism** - Fields dialog updates after creating new fields
 - [x] **Event system** - dataUpdated events trigger UI refreshes
+- [x] **Sources integration** - Field options/sources use new sources structure
 
 ### Remaining Save Functions to Migrate
 - [ ] **saveChecklist()** - Save checklist data
