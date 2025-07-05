@@ -63,7 +63,6 @@ export async function saveData(dataType, data, options = {}) {
   const {
     filename = config.filename,
     showProgress = true,
-    createBackup = true,
     validateData = true,
     updateState = true
   } = options;
@@ -80,11 +79,6 @@ export async function saveData(dataType, data, options = {}) {
       if (!validation.isValid) {
         throw new Error(`Data validation failed: ${validation.errors.join(', ')}`);
       }
-    }
-
-    // Create backup if requested
-    if (createBackup) {
-      await createBackup(filename);
     }
 
     // Perform the save operation
@@ -218,26 +212,6 @@ async function performLoad(filename) {
   } catch (error) {
     console.error(`Load operation failed for ${filename}:`, error);
     throw error;
-  }
-}
-
-/**
- * Create a backup of the current file
- * @param {string} filename - File to backup
- * @returns {Promise<boolean>} Success status
- */
-async function createBackup(filename) {
-  try {
-    const timestamp = new Date().toISOString().replace(/[:.]/g, '-');
-    const backupFilename = `${filename}.backup-${timestamp}`;
-    
-    // TODO: Implement actual backup creation
-    console.log(`[Data Persistence] Creating backup: ${backupFilename}`);
-    
-    return true;
-  } catch (error) {
-    console.error(`Backup creation failed for ${filename}:`, error);
-    return false;
   }
 }
 

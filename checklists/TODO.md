@@ -43,10 +43,55 @@
 - [x] **State synchronization**: fieldDefs and sharedState.fieldsData stay in sync
 - [x] **UI refresh**: Fields chooser dialog updates after field creation
 - [x] **Active/Visible functionality**: Fields appear in checklist because they exist in fields.json
+- [x] **Backup system removed**: Eliminated redundant backup functionality (Git provides version control)
 
 ### Remaining Minor Issues
-- [ ] **Dialog scrollability**: Verify source/options fields are visible and scrollable
+- [ ] **Dynamic sources loading**: Update field dialog to show all available sources (collaborators, unitChoices, demo, etc.)
 - [ ] **UI polish**: Final testing of field creation workflow
+
+---
+
+## 🔄 In-Memory Undo System (Ctrl-Z)
+*Implement undo/redo functionality for checklistData modifications*
+
+### Requirements
+- [ ] **Memory-based undo stack**: Keep last 10 checklistData states in memory (not file-based)
+- [ ] **Deep clone states**: Store complete deep copies of checklistData before user modifications
+- [ ] **Keyboard shortcuts**: Implement Ctrl-Z (undo) and Ctrl-Y (redo) event handlers
+- [ ] **State triggers**: Capture state before user actions like:
+  - Field value changes
+  - Adding/removing checklist items
+  - Changing field visibility/order
+  - User modifications (not automatic saves)
+- [ ] **UI feedback**: Show undo/redo availability in UI (grayed out when unavailable)
+- [ ] **Memory management**: Limit to 10 states max, remove oldest when exceeded
+- [ ] **State restoration**: Restore complete checklistData and refresh UI components
+
+### Implementation Notes
+- Use `structuredClone()` or `JSON.parse(JSON.stringify())` for deep copying
+- Hook into existing user interaction events
+- Clear undo stack on checklist load/switch
+- Separate from file save/load operations
+
+---
+
+## 🔄 In-Memory Undo System (Ctrl-Z)
+*Implement user-friendly undo functionality for checklist modifications*
+
+### Features to Implement
+- [ ] **Undo Stack**: Keep last 10 checklistData states in memory (circular buffer)
+- [ ] **State Capture**: Save checklistData snapshot on user interventions (field changes, user actions, etc.)
+- [ ] **Ctrl-Z Handler**: Keyboard shortcut to revert to previous checklistData state
+- [ ] **Ctrl-Y Handler**: Redo functionality (forward through undo stack)
+- [ ] **Visual Feedback**: Show undo/redo status in UI (e.g., "Undo: Field value changed")
+- [ ] **Smart Capture**: Only capture states on meaningful changes (not every keystroke)
+- [ ] **Memory Management**: Efficient circular buffer to prevent memory leaks
+
+### Implementation Notes
+- Store complete checklistData snapshots in memory array
+- Trigger state capture on: field value changes, user assignments, note additions, etc.
+- Use deep cloning to prevent reference issues
+- Clear undo stack when loading new checklist
 
 ---
 
