@@ -161,7 +161,7 @@
       "key": "IsPreEngineering",
       "label": "IsPE",
       "type": "checkbox",
-      "default_value": "0"
+      "default_value": false
     }
   }
 }
