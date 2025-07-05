@@ -18,7 +18,8 @@
     },
     "unit": {
       "type": "text",
-      "label": "Unit"
+      "label": "Unit",
+      "source": "unitchoices"
     },
     "qty_est": {
       "type": "number",
@@ -46,15 +47,18 @@
     },
     "Resp": {
       "type": "select",
-      "label": "Responsable"
+      "label": "Responsable",
+      "source": "collaborators"
     },
     "Acc": {
       "type": "select",
-      "label": "Accountable"
+      "label": "Accountable",
+      "source": "collaborators"
     },
     "Support": {
       "type": "select",
-      "label": "Support"
+      "label": "Support",
+      "source": "collaborators"
     },
     "Consult": {
       "type": "select",
@@ -62,7 +66,8 @@
     },
     "Informed": {
       "type": "select",
-      "label": "Informed"
+      "label": "Informed",
+      "source": "collaborators"
     },
     "progress": {
       "type": "number",
