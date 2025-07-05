@@ -61,30 +61,6 @@
 ---
 
 ## 🔄 In-Memory Undo System (Ctrl-Z)
-*Implement undo/redo functionality for checklistData modifications*
-
-### Requirements
-- [ ] **Memory-based undo stack**: Keep last 10 checklistData states in memory (not file-based)
-- [ ] **Deep clone states**: Store complete deep copies of checklistData before user modifications
-- [ ] **Keyboard shortcuts**: Implement Ctrl-Z (undo) and Ctrl-Y (redo) event handlers
-- [ ] **State triggers**: Capture state before user actions like:
-  - Field value changes
-  - Adding/removing checklist items
-  - Changing field visibility/order
-  - User modifications (not automatic saves)
-- [ ] **UI feedback**: Show undo/redo availability in UI (grayed out when unavailable)
-- [ ] **Memory management**: Limit to 10 states max, remove oldest when exceeded
-- [ ] **State restoration**: Restore complete checklistData and refresh UI components
-
-### Implementation Notes
-- Use `structuredClone()` or `JSON.parse(JSON.stringify())` for deep copying
-- Hook into existing user interaction events
-- Clear undo stack on checklist load/switch
-- Separate from file save/load operations
-
----
-
-## 🔄 In-Memory Undo System (Ctrl-Z)
 *Implement user-friendly undo functionality for checklist modifications*
 
 ### Features to Implement
@@ -99,8 +75,9 @@
 ### Implementation Notes
 - Store complete checklistData snapshots in memory array
 - Trigger state capture on: field value changes, user assignments, note additions, etc.
-- Use deep cloning to prevent reference issues
+- Use deep cloning (`structuredClone()` or `JSON.parse(JSON.stringify())`) to prevent reference issues
 - Clear undo stack when loading new checklist
+- Hook into existing user interaction events, separate from file save/load operations
 
 ---
 
