@@ -62,7 +62,8 @@
     },
     "Consult": {
       "type": "select",
-      "label": "Consult"
+      "label": "Consult",
+      "source": "collaborators"
     },
     "Informed": {
       "type": "select",
