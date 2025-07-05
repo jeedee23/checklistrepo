@@ -25,6 +25,15 @@
 - [x] **Event system** - dataUpdated events trigger UI refreshes
 - [x] **Sources integration** - Field options/sources use new sources structure
 
+### ✅ Layout System Refactor Completed
+- [x] **Eliminated legacy "lastused" layout objects** - Removed all nested layout object methodology
+- [x] **Implemented "lastlayout" property** - Simple string reference to active layout by name
+- [x] **Cleaned up JSON structure** - Removed all nested layouts arrays and duplicated objects
+- [x] **Updated layout application logic** - All code now references layouts by name
+- [x] **Updated UI components** - Layout selectors and menus use new naming system
+- [x] **Migrated existing checklists** - All JSON files cleaned and converted to new structure
+- [x] **Updated new checklist creation** - Sets "lastlayout" to "Default" for new checklists
+
 ### Remaining Save Functions to Migrate
 - [ ] **saveChecklist()** - Save checklist data
 - [ ] **saveNote()** - Save notes
@@ -96,10 +105,22 @@
 ---
 
 ## 🎯 Layout Manager (After Centralized Save)
+*Create advanced layout management UI - foundational layout system completed*
+
+### Core Layout System ✅ COMPLETED
+- [x] **Eliminated legacy "lastused" objects** - Removed all nested layout methodology
+- [x] **Implemented "lastlayout" property** - Simple string reference to active layout by name
+- [x] **JSON structure cleanup** - Flat layouts array with named layouts only
+- [x] **Layout application by name** - All code uses layout names, not objects
+- [x] **UI integration** - Layout selectors highlight active layout by name
+
+### Advanced Layout Features (TODO)
 - [ ] **Create Layout Manager Dialog**: UI for creating/editing layouts
 - [ ] **Access Level Controls**: Layout-level access restrictions
 - [ ] **Layout Preview**: Show how layout will look for different users
 - [ ] **Layout Assignment**: Assign layouts to users/roles
+- [ ] **Layout Validation**: Ensure layouts are valid before saving
+- [ ] **Layout Templates**: Common layout templates for quick setup
 
 ---
 
@@ -137,6 +158,17 @@
 ---
 
 ## 🔄 Current Status
-**NEXT STEP**: Implement centralized save architecture starting with `data-persistence.js`
+**NEXT STEP**: Continue with in-memory undo system implementation
 
-This will resolve the field manager issues and provide the foundation for all future features.
+### Recently Completed
+- ✅ **Layout System Refactor**: Eliminated legacy "lastused" objects, implemented clean "lastlayout" property system
+- ✅ **JSON Structure Cleanup**: All checklist JSON files now use flat layouts array with named layouts
+- ✅ **Code Migration**: Updated all layout-related code to use names instead of objects
+- ✅ **UI Integration**: Layout selectors and menus now highlight active layout by name
+
+### Current Priority
+1. **In-Memory Undo System**: Implement Ctrl-Z functionality for user modifications
+2. **Complete Save Function Migration**: Migrate remaining save functions to centralized architecture
+3. **Advanced Layout Manager**: Build UI for creating/editing layouts with access controls
+
+This provides a solid foundation for all future features with clean data structures and consistent code patterns.
