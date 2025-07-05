@@ -31,8 +31,9 @@ export function applyLayoutToChecklist(layout) {
     sharedState.checklistData.layout.columnOrder = Object.keys(layout.columns || {});
   }
   
-  // Copy this layout to "lastused" 
-  updateLastUsedLayout(layout);
+  // Update the lastlayout property to remember which layout was applied
+  sharedState.checklistData.lastlayout = layout.layoutName;
+  console.log(`[Layout] Set lastlayout to: ${layout.layoutName}`);
   
   // Update the submenu to reflect any changes
   populateLayoutSubmenu();
@@ -42,48 +43,16 @@ export function applyLayoutToChecklist(layout) {
 }
 
 /**
- * Update the "lastused" layout with the current layout
+ * Update the last used layout by storing just the layout name
  */
 function updateLastUsedLayout(layout) {
-  // Try to get the correct layouts array
-  let layoutsArray = null;
-  
-  // First try root level layouts array
-  if (sharedState.checklistData.layouts && Array.isArray(sharedState.checklistData.layouts)) {
-    layoutsArray = sharedState.checklistData.layouts;
-  }
-  // Then try nested layouts within current layout
-  else if (sharedState.checklistData.layout) {
-    if (!sharedState.checklistData.layout.layouts) {
-      sharedState.checklistData.layout.layouts = [];
-    }
-    layoutsArray = sharedState.checklistData.layout.layouts;
-  }
-  
-  if (!layoutsArray) {
-    console.warn('[Layout] Could not find layouts array to update lastused');
-    return;
-  }
-  
-  // Find existing "lastused" layout or create new one
-  let lastUsedIndex = layoutsArray.findIndex(l => l.layoutName === 'lastused');
-  
-  const lastUsedLayout = {
-    layoutName: 'lastused',
-    columns: { ...layout.columns },
-    rows: { height: layout.rows?.height || 30 },
-    columnOrder: [...(layout.columnOrder || [])]
-  };
-  
-  if (lastUsedIndex >= 0) {
-    // Update existing lastused
-    layoutsArray[lastUsedIndex] = lastUsedLayout;
+  // Simply store the layout name as the last used layout
+  if (layout && layout.layoutName) {
+    sharedState.checklistData.lastlayout = layout.layoutName;
+    console.log('[Layout] Updated lastlayout to:', layout.layoutName);
   } else {
-    // Add new lastused at the beginning
-    layoutsArray.unshift(lastUsedLayout);
+    console.warn('[Layout] Cannot update lastlayout - no layout name provided');
   }
-  
-  console.log('[Layout] Updated lastused layout');
 }
 
 /**
@@ -136,7 +105,7 @@ export async function showLayoutSelector() {
             <input type="radio" name="layout" value="${index}" ${isFirst ? 'checked' : ''} id="layout-${index}">
             <label for="layout-${index}">
               <strong>${layout.layoutName}</strong>
-              ${layout.layoutName === 'lastused' ? '<span class="current-badge">Current</span>' : ''}
+              ${layout.layoutName === sharedState.checklistData.lastlayout ? '<span class="current-badge">Current</span>' : ''}
             </label>
           </div>
           <div class="layout-fields">
@@ -245,8 +214,8 @@ export function populateLayoutSubmenu() {
     a.textContent = layout.layoutName;
     a.dataset.layoutIndex = index;
     
-    // Add current indicator for lastused or active layout
-    if (layout.layoutName === 'lastused') {
+    // Add current indicator for the lastlayout
+    if (layout.layoutName === sharedState.checklistData.lastlayout) {
       a.innerHTML = `${layout.layoutName} <span style="color: #28a745; font-size: 0.8em;">●</span>`;
     }
     

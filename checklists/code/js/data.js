@@ -275,6 +275,30 @@ export async function loadChecklist(path) {
       }
     }
     
+    // Apply the lastlayout if specified
+    if (sharedState.checklistData.lastlayout && sharedState.checklistData.layouts) {
+      const lastLayoutName = sharedState.checklistData.lastlayout;
+      const lastLayout = sharedState.checklistData.layouts.find(l => l.layoutName === lastLayoutName);
+      
+      if (lastLayout) {
+        console.log(`[Data] Applying lastlayout: ${lastLayoutName}`);
+        // Apply the layout to current layout reference
+        sharedState.checklistData.layout = {
+          columns: { ...lastLayout.columns },
+          columnOrder: [...(lastLayout.columnOrder || [])],
+          rowHeight: lastLayout.rows?.height || 30
+        };
+      } else {
+        console.warn(`[Data] lastlayout "${lastLayoutName}" not found in available layouts`);
+        // Fall back to first layout if lastlayout not found
+        if (sharedState.checklistData.layouts.length > 0) {
+          const firstLayout = sharedState.checklistData.layouts[0];
+          sharedState.checklistData.layout = firstLayout;
+          console.log(`[Data] Falling back to first layout: ${firstLayout.layoutName}`);
+        }
+      }
+    }
+    
     // ===== SOURCES STRUCTURE MIGRATION AND VALIDATION =====
     // Ensure every checklist has proper sources structure with unitChoices and collaborators
     

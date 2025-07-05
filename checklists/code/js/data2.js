@@ -22,6 +22,7 @@ export async function newChecklist() {
   const template = {
     title: name,
     lastSave: timestamp,
+    lastlayout: "Default",
     sources: {
       unitChoices: ["kg", "ton", "hr", "sec", "m", "m²", "m³", "l", "pc"],
       collaborators: [sharedState.currentUser || ""]
@@ -212,7 +213,7 @@ export async function saveChecklist(pathOverride) {
     const ld = sharedState.checklistData.layout;
     if (ld && !ld.layouts) {
       ld.layouts = [{
-        layoutName: 'lastused',
+        layoutName: 'default',
         columns: JSON.parse(JSON.stringify(ld.columns)),
         rows: ld.rows ? JSON.parse(JSON.stringify(ld.rows)) : { height: 30 },
         columnOrder: Array.isArray(ld.columnOrder) ? ld.columnOrder.slice() : Object.keys(ld.columns)

@@ -24,8 +24,11 @@ export const sharedState = {
   FILE_PATH: null,
   checklistData: {
     items: [],
+    lastlayout: "Default",
     layout: {
-      columns: {}
+      columns: {},
+      columnOrder: [],
+      rowHeight: DEFAULT_ROW_HEIGHT
     },
     files: [],
     collaborators: []
