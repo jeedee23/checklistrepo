@@ -234,8 +234,8 @@ export function setupFieldsGridEventHandlers(dialog, gridData) {
   // New field button
   const newFieldBtn = document.getElementById('new-field-btn');
   if (newFieldBtn) {
-    newFieldBtn.addEventListener('click', () => {
-      showNewFieldDialog();
+    newFieldBtn.addEventListener('click', async () => {
+      await showNewFieldDialog();
     });
   }
   
@@ -436,7 +436,7 @@ export function getDefaultFieldWidth(fieldType) {
 /**
  * Show the new field creation dialog
  */
-export function showNewFieldDialog() {
+export async function showNewFieldDialog() {
   console.log('[New Field Dialog] Opening new field dialog');
   
   // Create or get existing modal
@@ -462,9 +462,8 @@ export function showNewFieldDialog() {
   }
   
   // Load field types from config.json
-  loadFieldTypesFromConfig().then(fieldTypes => {
-    buildNewFieldDialog(dialog, fieldTypes);
-  });
+  const fieldTypes = await loadFieldTypesFromConfig();
+  await buildNewFieldDialog(dialog, fieldTypes);
 }
 
 /**
@@ -481,9 +480,40 @@ async function loadFieldTypesFromConfig() {
 }
 
 /**
+ * Get available sources for select fields
+ */
+async function getAvailableSources() {
+  const sources = ['collaborators', 'unitChoices']; // Built-in sources from checklist
+  
+  // Check if checklist has sources structure
+  if (sharedState.checklistData && sharedState.checklistData.sources) {
+    // Add any additional sources from the checklist
+    Object.keys(sharedState.checklistData.sources).forEach(key => {
+      if (!sources.includes(key)) {
+        sources.push(key);
+      }
+    });
+  }
+  
+  // TODO: In the future, also scan sources/ directory for external JSON files
+  // For now, add demo source if available
+  try {
+    // This would eventually scan the sources directory
+    sources.push('demo'); // From sources/demo.json
+  } catch (error) {
+    console.log('No external sources found');
+  }
+  
+  return sources;
+}
+
+/**
  * Build the new field dialog
  */
-function buildNewFieldDialog(dialog, fieldTypes) {
+async function buildNewFieldDialog(dialog, fieldTypes) {
+  // Get available sources from current checklist
+  const availableSources = await getAvailableSources();
+  
   const content = `
     <div class="modal-header">
       <h3>Create New Field</h3>
@@ -509,7 +539,7 @@ function buildNewFieldDialog(dialog, fieldTypes) {
         <label for="field-source">Source (for select fields):</label>
         <select id="field-source">
           <option value="">None</option>
-          <option value="collaborators">Collaborators</option>
+          ${availableSources.map(source => `<option value="${source}">${source}</option>`).join('')}
         </select>
         <small style="color: #666; font-size: 0.8em;">Use Source OR Options below, not both</small>
       </div>
