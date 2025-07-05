@@ -1,6 +1,6 @@
 {
   "title": "Cosucra Project structure",
-  "lastSave": "2025_07_05_@_21-08-54",
+  "lastSave": "2025_07_05_@_22-09-39",
   "lastlayout": "minilist",
   "lastcollaborator": "Johan",
   "fields": {
@@ -107,7 +107,7 @@
           "visible": true
         },
         "hns": {
-          "width": 41,
+          "width": 81,
           "visible": true
         },
         "label": {
@@ -1216,7 +1216,7 @@
           "hns": "1.6"
         }
       ],
-      "collapsed": true,
+      "collapsed": false,
       "important": true
     },
     {
@@ -1230,7 +1230,7 @@
       "total_price": 0,
       "date": "",
       "who": "Frédéric",
-      "collapsed": true,
+      "collapsed": false,
       "children": [
         {
           "hns": "2.1",
@@ -1400,7 +1400,8 @@
               "collapsed": false,
               "children": [],
               "important": true,
-              "Resp": "Frédéric"
+              "Resp": "Frédéric",
+              "IsPE": true
             },
             {
               "hns": "2.2.2",
@@ -1426,7 +1427,8 @@
                   "who": "Johan",
                   "children": [],
                   "hns": "2.2.2.1",
-                  "collapsed": false
+                  "collapsed": false,
+                  "IsPE": true
                 },
                 {
                   "label": "Electricity0",
@@ -1440,7 +1442,8 @@
                   "who": "Johan",
                   "children": [],
                   "collapsed": false,
-                  "hns": "2.2.2.2"
+                  "hns": "2.2.2.2",
+                  "IsPE": true
                 },
                 {
                   "label": "Electricity",
@@ -1472,7 +1475,8 @@
                 }
               ],
               "important": true,
-              "Resp": "Frédéric"
+              "Resp": "Frédéric",
+              "IsPE": true
             },
             {
               "hns": "2.2.3",
@@ -1486,7 +1490,8 @@
               "date": "",
               "who": "Johan",
               "collapsed": false,
-              "children": []
+              "children": [],
+              "IsPE": true
             },
             {
               "hns": "2.2.4",
@@ -1500,7 +1505,8 @@
               "date": "",
               "who": "Johan",
               "collapsed": false,
-              "children": []
+              "children": [],
+              "IsPE": true
             },
             {
               "label": "Out of Scope (OOS)",
@@ -1517,7 +1523,8 @@
               "hns": "2.2.5",
               "important": true,
               "Resp": "Frédéric",
-              "Acc": "Johan"
+              "Acc": "Johan",
+              "IsPE": true
             },
             {
               "hns": "2.2.6",
@@ -1554,7 +1561,8 @@
           ],
           "noteFile": "checklists/notes/2025_06_22_@_21-39-06.html",
           "important": true,
-          "Resp": "Frédéric"
+          "Resp": "Frédéric",
+          "IsPE": true
         },
         {
           "hns": "2.3",
@@ -6202,7 +6210,7 @@
         "visible": true
       },
       "hns": {
-        "width": 41,
+        "width": 81,
         "visible": true
       },
       "label": {
