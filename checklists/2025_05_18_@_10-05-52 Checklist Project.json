@@ -21,7 +21,7 @@
         "width": 37,
         "visible": true
       },
-      "no": {
+      "hns": {
         "width": 40,
         "visible": true
       },
@@ -64,7 +64,7 @@
   },
   "items": [
     {
-      "no": "1",
+      "hns": "1",
       "label": "HTML b",
       "done": false,
       "unit": "",
@@ -77,7 +77,7 @@
       "collapsed": true,
       "children": [
         {
-          "no": "1.1",
+          "hns": "1.1",
           "label": "Header",
           "done": true,
           "unit": "",
@@ -90,7 +90,7 @@
           "collapsed": false,
           "children": [
             {
-              "no": "1.1.1",
+              "hns": "1.1.1",
               "label": "Left cell",
               "done": true,
               "unit": "",
@@ -103,7 +103,7 @@
               "collapsed": false,
               "children": [
                 {
-                  "no": "1.1.1.1",
+                  "hns": "1.1.1.1",
                   "label": "title/logo",
                   "done": true,
                   "unit": "",
@@ -123,7 +123,7 @@
               "important": false
             },
             {
-              "no": "1.1.2",
+              "hns": "1.1.2",
               "label": "Right cell",
               "done": true,
               "unit": "",
@@ -145,14 +145,14 @@
                   "date": "2025-05-18",
                   "who": "Johan",
                   "children": [],
-                  "no": "1.1.2.1",
+                  "hns": "1.1.2.1",
                   "imageFile": "2025_05_18_@_15-41-22_2024-11-16_14-19-19.png",
                   "image": "2025_05_18_@_15-41-22_2024-11-16_14-19-19.png"
                 },
                 {
                   "label": "show mine button",
                   "done": true,
-                  "no": "1.1.2.2",
+                  "hns": "1.1.2.2",
                   "children": []
                 },
                 {
@@ -167,7 +167,7 @@
                   "who": "Johan",
                   "children": [],
                   "collapsed": false,
-                  "no": "1.1.2.3"
+                  "hns": "1.1.2.3"
                 },
                 {
                   "label": "status text",
@@ -181,7 +181,7 @@
                   "who": "Johan",
                   "children": [],
                   "collapsed": false,
-                  "no": "1.1.2.4"
+                  "hns": "1.1.2.4"
                 }
               ],
               "imageFile": "2025_05_18_@_15-40-04_2025-04-03_13-12-13.png",
@@ -202,7 +202,7 @@
           "who": "Johan",
           "children": [
             {
-              "no": "1.2.1",
+              "hns": "1.2.1",
               "label": "Sidebar(left pane)",
               "done": false,
               "unit": "",
@@ -226,10 +226,10 @@
                   "who": "Johan",
                   "children": [],
                   "collapsed": false,
-                  "no": "1.2.1.1"
+                  "hns": "1.2.1.1"
                 },
                 {
-                  "no": "1.2.1.2",
+                  "hns": "1.2.1.2",
                   "label": "Checklist Table",
                   "done": false,
                   "unit": "",
@@ -251,7 +251,7 @@
                       "date": "2025-06-03",
                       "who": "Johan",
                       "children": [],
-                      "no": "1.2.1.2.1"
+                      "hns": "1.2.1.2.1"
                     }
                   ]
                 },
@@ -276,7 +276,7 @@
                       "date": "2025-06-03",
                       "who": "Johan",
                       "children": [],
-                      "no": "1.2.1.3.1"
+                      "hns": "1.2.1.3.1"
                     },
                     {
                       "label": "Save",
@@ -290,11 +290,11 @@
                       "who": "Johan",
                       "children": [],
                       "collapsed": false,
-                      "no": "1.2.1.3.2"
+                      "hns": "1.2.1.3.2"
                     }
                   ],
                   "collapsed": false,
-                  "no": "1.2.1.3"
+                  "hns": "1.2.1.3"
                 },
                 {
                   "label": "Footer of sidebar",
@@ -319,7 +319,7 @@
                       "who": "Johan",
                       "children": [],
                       "collapsed": false,
-                      "no": "1.2.1.4.1"
+                      "hns": "1.2.1.4.1"
                     },
                     {
                       "label": "Current user",
@@ -333,7 +333,7 @@
                       "who": "Johan",
                       "children": [],
                       "collapsed": false,
-                      "no": "1.2.1.4.2"
+                      "hns": "1.2.1.4.2"
                     },
                     {
                       "label": "gear for settings only visible for Johan",
@@ -347,11 +347,11 @@
                       "who": "Johan",
                       "children": [],
                       "collapsed": false,
-                      "no": "1.2.1.4.3"
+                      "hns": "1.2.1.4.3"
                     }
                   ],
                   "collapsed": false,
-                  "no": "1.2.1.4"
+                  "hns": "1.2.1.4"
                 }
               ]
             },
@@ -376,7 +376,7 @@
                   "date": "2025-06-03",
                   "who": "Johan",
                   "children": [],
-                  "no": "1.2.2.1"
+                  "hns": "1.2.2.1"
                 },
                 {
                   "label": "The top row should be visible at all times",
@@ -390,7 +390,7 @@
                   "who": "Johan",
                   "children": [],
                   "collapsed": false,
-                  "no": "1.2.2.2"
+                  "hns": "1.2.2.2"
                 },
                 {
                   "label": "right-click ->style: add option stylenames",
@@ -404,7 +404,7 @@
                   "who": "Johan",
                   "children": [],
                   "collapsed": false,
-                  "no": "1.2.2.3"
+                  "hns": "1.2.2.3"
                 },
                 {
                   "label": "wordwrap in a cell",
@@ -418,21 +418,21 @@
                   "who": "Johan",
                   "children": [],
                   "collapsed": false,
-                  "no": "1.2.2.4"
+                  "hns": "1.2.2.4"
                 }
               ],
               "collapsed": false,
-              "no": "1.2.2"
+              "hns": "1.2.2"
             }
           ],
           "collapsed": false,
-          "no": "1.2"
+          "hns": "1.2"
         }
       ],
       "noteFile": "checklists/notes/2025_05_18_@_12-57-21.html"
     },
     {
-      "no": "2",
+      "hns": "2",
       "label": "Style: in /css/style.css : this is the basic style for the HTML page, not to be confused with the style the user creates for display and printing",
       "done": false,
       "unit": "",
@@ -445,7 +445,7 @@
       "collapsed": true,
       "children": [
         {
-          "no": "2.1",
+          "hns": "2.1",
           "label": "Layout & spacing",
           "done": false,
           "unit": "",
@@ -458,7 +458,7 @@
           "collapsed": false
         },
         {
-          "no": "2.2",
+          "hns": "2.2",
           "label": "Colors and themes",
           "done": false,
           "unit": "",
@@ -471,7 +471,7 @@
           "collapsed": false
         },
         {
-          "no": "2.3",
+          "hns": "2.3",
           "label": "Responsive design",
           "done": false,
           "unit": "",
@@ -484,7 +484,7 @@
           "collapsed": false
         },
         {
-          "no": "2.4",
+          "hns": "2.4",
           "label": "Custom fonts and icons",
           "done": false,
           "unit": "",
@@ -499,7 +499,7 @@
       ]
     },
     {
-      "no": "3",
+      "hns": "3",
       "label": "Script",
       "done": false,
       "unit": "",
@@ -512,7 +512,7 @@
       "collapsed": false,
       "children": [
         {
-          "no": "3.1",
+          "hns": "3.1",
           "label": "Checklist rendering",
           "done": false,
           "unit": "",
@@ -534,12 +534,12 @@
               "date": "2025-06-22",
               "who": "Johan",
               "children": [],
-              "no": "3.1.1"
+              "hns": "3.1.1"
             }
           ]
         },
         {
-          "no": "3.2",
+          "hns": "3.2",
           "label": "Filter logic",
           "done": true,
           "unit": "",
@@ -552,7 +552,7 @@
           "collapsed": false
         },
         {
-          "no": "3.3",
+          "hns": "3.3",
           "label": "Right-click menu",
           "done": false,
           "unit": "",
@@ -565,7 +565,7 @@
           "collapsed": false
         },
         {
-          "no": "3.4",
+          "hns": "3.4",
           "label": "Modal and Quill editor",
           "done": true,
           "unit": "",
@@ -578,7 +578,7 @@
           "collapsed": false
         },
         {
-          "no": "3.5",
+          "hns": "3.5",
           "label": "Save/load logic",
           "done": true,
           "unit": "",
@@ -591,7 +591,7 @@
           "collapsed": false
         },
         {
-          "no": "3.6",
+          "hns": "3.6",
           "label": "GitHub integration",
           "done": true,
           "unit": "",
@@ -606,7 +606,7 @@
       ]
     },
     {
-      "no": "4",
+      "hns": "4",
       "label": "Files",
       "done": false,
       "unit": "",
@@ -619,7 +619,7 @@
       "collapsed": false,
       "children": [
         {
-          "no": "4.1",
+          "hns": "4.1",
           "label": "index.html : the main page",
           "done": false,
           "unit": "",
@@ -643,10 +643,10 @@
           "who": "Johan",
           "children": [],
           "collapsed": false,
-          "no": "4.2"
+          "hns": "4.2"
         },
         {
-          "no": "4.3",
+          "hns": "4.3",
           "label": "style.css",
           "done": false,
           "unit": "",
@@ -659,7 +659,7 @@
           "collapsed": false
         },
         {
-          "no": "4.4",
+          "hns": "4.4",
           "label": "script.js",
           "done": false,
           "unit": "",
@@ -672,7 +672,7 @@
           "collapsed": false
         },
         {
-          "no": "4.5",
+          "hns": "4.5",
           "label": "checklist jsons",
           "done": false,
           "unit": "",
@@ -694,12 +694,12 @@
               "date": "2025-06-03",
               "who": "Johan",
               "children": [],
-              "no": "4.5.1"
+              "hns": "4.5.1"
             }
           ]
         },
         {
-          "no": "4.6",
+          "hns": "4.6",
           "label": "GitHub token and security",
           "done": false,
           "unit": "",
@@ -714,7 +714,7 @@
       ]
     },
     {
-      "no": "5",
+      "hns": "5",
       "label": "Settings (not yet developed)",
       "done": false,
       "unit": "",
@@ -727,7 +727,7 @@
       "collapsed": true,
       "children": [
         {
-          "no": "5.1",
+          "hns": "5.1",
           "label": "User preferences",
           "done": false,
           "unit": "",
@@ -740,7 +740,7 @@
           "collapsed": false
         },
         {
-          "no": "5.2",
+          "hns": "5.2",
           "label": "Theme toggles",
           "done": false,
           "unit": "",
@@ -754,7 +754,7 @@
           "noteFile": "checklists/notes/2025_05_18_@_13-16-17.html"
         },
         {
-          "no": "5.3",
+          "hns": "5.3",
           "label": "Column visibility",
           "done": false,
           "unit": "",
@@ -770,7 +770,7 @@
       ]
     },
     {
-      "no": "6",
+      "hns": "6",
       "label": "Settings (not yet developed)",
       "done": false,
       "unit": "",
@@ -783,7 +783,7 @@
       "collapsed": true,
       "children": [
         {
-          "no": "6.1",
+          "hns": "6.1",
           "label": "User preferences",
           "done": false,
           "unit": "",
@@ -796,7 +796,7 @@
           "collapsed": false
         },
         {
-          "no": "6.2",
+          "hns": "6.2",
           "label": "Theme toggles",
           "done": false,
           "unit": "",
@@ -810,7 +810,7 @@
           "children": []
         },
         {
-          "no": "6.3",
+          "hns": "6.3",
           "label": "Column visibility",
           "done": false,
           "unit": "",
@@ -826,7 +826,7 @@
       ]
     },
     {
-      "no": "7",
+      "hns": "7",
       "label": "shortcuts",
       "done": false,
       "unit": "",
@@ -839,7 +839,7 @@
       "collapsed": true,
       "children": [
         {
-          "no": "7.1",
+          "hns": "7.1",
           "label": "dblclick in label -> add one below if it is last",
           "done": false,
           "unit": "",
@@ -852,7 +852,7 @@
           "collapsed": false
         },
         {
-          "no": "7.2",
+          "hns": "7.2",
           "label": "ctrl-b = bold",
           "done": false,
           "unit": "",
@@ -866,7 +866,7 @@
           "bold": true
         },
         {
-          "no": "7.3",
+          "hns": "7.3",
           "label": "ctrl-d = duplicate complete below structure before other parent",
           "done": false,
           "unit": "",
@@ -880,7 +880,7 @@
           "children": []
         },
         {
-          "no": "7.4",
+          "hns": "7.4",
           "label": "ctrl-up = move up one level",
           "done": false,
           "unit": "",
@@ -903,7 +903,7 @@
           "date": "2025-05-18",
           "who": "Johan",
           "children": [],
-          "no": "7.5"
+          "hns": "7.5"
         },
         {
           "label": "Type content here (ctrl-del to delete row)",
@@ -917,7 +917,7 @@
           "who": "Johan",
           "children": [],
           "collapsed": false,
-          "no": "7.6"
+          "hns": "7.6"
         }
       ]
     }

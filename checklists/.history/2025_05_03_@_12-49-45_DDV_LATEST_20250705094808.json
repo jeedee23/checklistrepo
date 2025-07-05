@@ -1,0 +1,619 @@
+{
+  "title": "Ddv Checklist",
+  "collaborators": [
+    "Johan",
+    "Hung",
+    "Cuong",
+    "Robert",
+    "Mohamed",
+    "Jeamichel"
+  ],
+  "unitChoices": [
+    "kg",
+    "ton",
+    "hr",
+    "sec",
+    "m",
+    "m²",
+    "m³",
+    "l",
+    "pc"
+  ],
+  "layout": {
+    "columns": {
+      "done": {
+        "width": 40,
+        "visible": true
+      },
+      "hns": {
+        "width": 40,
+        "visible": true
+      },
+      "label": {
+        "width": 697,
+        "visible": true
+      },
+      "unit": {
+        "width": 23,
+        "visible": true
+      },
+      "qty_est": {
+        "width": 53,
+        "visible": true
+      },
+      "qty_real": {
+        "width": 51,
+        "visible": true
+      },
+      "price_unit": {
+        "width": 48,
+        "visible": true
+      },
+      "total_price": {
+        "width": 47,
+        "visible": true
+      },
+      "date": {
+        "width": 100,
+        "visible": true
+      },
+      "who": {
+        "width": 100,
+        "visible": true
+      }
+    },
+    "rows": {
+      "height": 30
+    }
+  },
+  "items": [
+    {
+      "hns": "1",
+      "label": "Body DDV",
+      "done": true,
+      "unit": "ton",
+      "qty_est": 0,
+      "qty_real": "",
+      "price_unit": "",
+      "total_price": 0,
+      "date": "2025-04-22",
+      "who": "Hung",
+      "collapsed": false,
+      "rowHeight": 45,
+      "children": [
+        {
+          "hns": "1.1",
+          "label": "Body optimized (hung); welds complete.",
+          "done": true,
+          "unit": "",
+          "qty_est": "",
+          "qty_real": "",
+          "price_unit": "",
+          "total_price": 0,
+          "date": "",
+          "who": "",
+          "collapsed": true
+        },
+        {
+          "hns": "1.2",
+          "label": "Drilling",
+          "done": true,
+          "bold": true,
+          "unit": "",
+          "qty_est": "",
+          "qty_real": "",
+          "price_unit": "",
+          "total_price": 0,
+          "date": "",
+          "who": "",
+          "collapsed": true
+        },
+        {
+          "hns": "1.3",
+          "label": "8 × Ø7.5 mm holes",
+          "done": true,
+          "unit": "",
+          "qty_est": "",
+          "qty_real": "",
+          "price_unit": "",
+          "total_price": 0,
+          "date": "",
+          "who": "",
+          "collapsed": true
+        },
+        {
+          "hns": "1.4",
+          "label": "12 × Ø5 mm holes",
+          "done": true,
+          "unit": "",
+          "qty_est": "",
+          "qty_real": "",
+          "price_unit": "",
+          "total_price": 0,
+          "date": "",
+          "who": "",
+          "collapsed": true
+        },
+        {
+          "hns": "1.5",
+          "label": "Close weld unused holes",
+          "done": true,
+          "unit": "",
+          "qty_est": "",
+          "qty_real": "",
+          "price_unit": "",
+          "total_price": 0,
+          "date": "",
+          "who": "",
+          "collapsed": true
+        }
+      ],
+      "bold": false,
+      "color": "rgba(255,0,0,1)"
+    },
+    {
+      "hns": "2",
+      "label": "Doors DDV",
+      "done": false,
+      "unit": "",
+      "qty_est": "",
+      "qty_real": "",
+      "price_unit": "",
+      "total_price": 0,
+      "date": "2025-04-23",
+      "who": "Johan",
+      "children": [
+        {
+          "hns": "2.1",
+          "label": "Two new 2 mm doors made (flexible & strong).",
+          "done": true,
+          "unit": "",
+          "qty_est": "",
+          "qty_real": "",
+          "price_unit": "",
+          "total_price": 0,
+          "date": "",
+          "who": "",
+          "collapsed": true
+        },
+        {
+          "hns": "2.2",
+          "label": "Upper door needs slight clearance adjustment.",
+          "done": true,
+          "unit": "",
+          "qty_est": "",
+          "qty_real": "",
+          "price_unit": "",
+          "total_price": 0,
+          "date": "",
+          "who": "",
+          "collapsed": true
+        },
+        {
+          "hns": "2.3",
+          "label": "Hinges:",
+          "done": true,
+          "unit": "",
+          "qty_est": "",
+          "qty_real": "",
+          "price_unit": "",
+          "total_price": 0,
+          "date": "",
+          "who": "",
+          "children": [
+            {
+              "hns": "2.3.1",
+              "label": "Both use Ø12 mm shaft. We considered not to add grinding protection",
+              "done": true,
+              "bold": true,
+              "color": "rgba(255,0,0,1)",
+              "unit": "",
+              "qty_est": "",
+              "qty_real": "",
+              "price_unit": "",
+              "total_price": 0,
+              "date": "",
+              "who": "",
+              "collapsed": true
+            },
+            {
+              "hns": "2.3.2",
+              "label": "Hinge Shaft & End Plates:",
+              "done": true,
+              "unit": "",
+              "qty_est": "",
+              "qty_real": "",
+              "price_unit": "",
+              "total_price": 0,
+              "date": "",
+              "who": "",
+              "collapsed": true
+            },
+            {
+              "hns": "2.3.3",
+              "label": "Shaft cut and fits into end plates milled out slot",
+              "done": true,
+              "unit": "",
+              "qty_est": "",
+              "qty_real": "",
+              "price_unit": "",
+              "total_price": 0,
+              "date": "",
+              "who": "",
+              "collapsed": true
+            }
+          ],
+          "collapsed": false
+        },
+        {
+          "hns": "2.4",
+          "label": "End plates:",
+          "done": false,
+          "unit": "",
+          "qty_est": "",
+          "qty_real": "",
+          "price_unit": "",
+          "total_price": 0,
+          "date": "",
+          "who": "",
+          "children": [
+            {
+              "hns": "2.4.1",
+              "label": "Slot for shaft (through seal)",
+              "done": true,
+              "unit": "",
+              "qty_est": "",
+              "qty_real": "",
+              "price_unit": "",
+              "total_price": 0,
+              "date": "",
+              "who": "",
+              "collapsed": true
+            },
+            {
+              "hns": "2.4.2",
+              "label": "Weld-on hang-up arms (weld while mounted)",
+              "done": false,
+              "unit": "",
+              "qty_est": "",
+              "qty_real": "",
+              "price_unit": "",
+              "total_price": 0,
+              "date": "",
+              "who": "",
+              "collapsed": true
+            }
+          ],
+          "collapsed": false
+        }
+      ],
+      "collapsed": false
+    },
+    {
+      "hns": "3",
+      "label": "Upper Door Drive",
+      "done": false,
+      "unit": "",
+      "qty_est": "",
+      "qty_real": "",
+      "price_unit": "",
+      "total_price": 0,
+      "date": "",
+      "who": "Johan",
+      "children": [
+        {
+          "hns": "3.1",
+          "label": "Arms (laser-cut):",
+          "done": true,
+          "unit": "",
+          "qty_est": "",
+          "qty_real": "",
+          "price_unit": "",
+          "total_price": 0,
+          "date": "",
+          "who": "",
+          "collapsed": true
+        },
+        {
+          "hns": "3.2",
+          "label": "Drill:",
+          "done": false,
+          "unit": "",
+          "qty_est": "",
+          "qty_real": "",
+          "price_unit": "",
+          "total_price": 0,
+          "date": "",
+          "who": "",
+          "children": [
+            {
+              "hns": "3.2.1",
+              "label": "1 × M6 tapped hole (for flat on drive shaft)",
+              "done": false,
+              "unit": "",
+              "qty_est": "",
+              "qty_real": "",
+              "price_unit": "",
+              "total_price": 0,
+              "date": "",
+              "who": "",
+              "collapsed": true
+            },
+            {
+              "hns": "3.2.2",
+              "label": "2 × Ø5 mm through holes (for spring steel - arriving tomorrow)",
+              "done": true,
+              "unit": "",
+              "qty_est": "",
+              "qty_real": "",
+              "price_unit": "",
+              "total_price": 0,
+              "date": "",
+              "who": "",
+              "collapsed": true
+            }
+          ],
+          "collapsed": false
+        }
+      ],
+      "collapsed": false
+    },
+    {
+      "hns": "4",
+      "label": "Total length: 355 mm – likely too long- needs robust support (TBD week of April 21)",
+      "done": false,
+      "unit": "",
+      "qty_est": "",
+      "qty_real": "",
+      "price_unit": "",
+      "total_price": 0,
+      "date": "",
+      "who": "Hung",
+      "collapsed": true
+    },
+    {
+      "hns": "5",
+      "label": "4. Lower Door Drive",
+      "done": false,
+      "unit": "",
+      "qty_est": "",
+      "qty_real": "",
+      "price_unit": "",
+      "total_price": 0,
+      "date": "",
+      "who": "",
+      "children": [
+        {
+          "hns": "5.1",
+          "label": "Minor changes:",
+          "done": false,
+          "unit": "",
+          "qty_est": "",
+          "qty_real": "",
+          "price_unit": "",
+          "total_price": 0,
+          "date": "",
+          "who": "",
+          "collapsed": true
+        },
+        {
+          "hns": "5.2",
+          "label": "Swapped position",
+          "done": false,
+          "unit": "",
+          "qty_est": "",
+          "qty_real": "",
+          "price_unit": "",
+          "total_price": 0,
+          "date": "",
+          "who": "",
+          "collapsed": true
+        },
+        {
+          "hns": "5.3",
+          "label": "Now uses flexible coupling",
+          "done": false,
+          "unit": "",
+          "qty_est": "",
+          "qty_real": "",
+          "price_unit": "",
+          "total_price": 0,
+          "date": "",
+          "who": "",
+          "collapsed": true
+        },
+        {
+          "hns": "5.4",
+          "label": "Door is 2 mm; shaft Ø12 mm",
+          "done": false,
+          "unit": "",
+          "qty_est": "",
+          "qty_real": "",
+          "price_unit": "",
+          "total_price": 0,
+          "date": "",
+          "who": "",
+          "collapsed": true
+        }
+      ],
+      "collapsed": false
+    },
+    {
+      "hns": "6",
+      "label": "5. Upper Seal",
+      "done": false,
+      "unit": "",
+      "qty_est": "",
+      "qty_real": "",
+      "price_unit": "",
+      "total_price": 0,
+      "date": "",
+      "who": "",
+      "children": [
+        {
+          "hns": "6.1",
+          "label": "Likely functional as-is; one final print version may improve performance.",
+          "done": false,
+          "unit": "",
+          "qty_est": "",
+          "qty_real": "",
+          "price_unit": "",
+          "total_price": 0,
+          "date": "",
+          "who": "",
+          "collapsed": true
+        }
+      ],
+      "collapsed": false
+    },
+    {
+      "hns": "7",
+      "label": "6. Lower Seal",
+      "done": false,
+      "unit": "",
+      "qty_est": "",
+      "qty_real": "",
+      "price_unit": "",
+      "total_price": 0,
+      "date": "",
+      "who": "",
+      "children": [
+        {
+          "hns": "7.1",
+          "label": "Thin flat seal: start printing ASAP tomorrow- ready in 24h.",
+          "done": false,
+          "unit": "",
+          "qty_est": "",
+          "qty_real": "",
+          "price_unit": "",
+          "total_price": 0,
+          "date": "",
+          "who": "",
+          "collapsed": true
+        },
+        {
+          "hns": "7.2",
+          "label": "Should be final version.",
+          "done": false,
+          "unit": "",
+          "qty_est": "",
+          "qty_real": "",
+          "price_unit": "",
+          "total_price": 0,
+          "date": "",
+          "who": "",
+          "collapsed": true
+        }
+      ],
+      "collapsed": false
+    },
+    {
+      "hns": "8",
+      "label": "7. Motors & Connector Plug",
+      "done": false,
+      "unit": "",
+      "qty_est": "",
+      "qty_real": "",
+      "price_unit": "",
+      "total_price": 0,
+      "date": "",
+      "who": "",
+      "children": [
+        {
+          "hns": "8.1",
+          "label": "Both motors to get TPU navy blue flexible jackets",
+          "done": false,
+          "unit": "",
+          "qty_est": "",
+          "qty_real": "",
+          "price_unit": "",
+          "total_price": 0,
+          "date": "",
+          "who": "",
+          "collapsed": true
+        },
+        {
+          "hns": "8.2",
+          "label": "Wiring integrated in the seal",
+          "done": false,
+          "unit": "",
+          "qty_est": "",
+          "qty_real": "",
+          "price_unit": "",
+          "total_price": 0,
+          "date": "",
+          "who": "",
+          "collapsed": true
+        },
+        {
+          "hns": "8.3",
+          "label": "Connector plug: large 3D-printed piece combining drive-through and stepper (upper door)",
+          "done": false,
+          "unit": "",
+          "qty_est": "",
+          "qty_real": "",
+          "price_unit": "",
+          "total_price": 0,
+          "date": "",
+          "who": "",
+          "collapsed": true
+        }
+      ],
+      "collapsed": false
+    },
+    {
+      "hns": "9",
+      "label": "8. Control & Software",
+      "done": false,
+      "unit": "",
+      "qty_est": "",
+      "qty_real": "",
+      "price_unit": "",
+      "total_price": 0,
+      "date": "",
+      "who": "",
+      "children": [
+        {
+          "hns": "9.1",
+          "label": "Minor updates (~1h)",
+          "done": false,
+          "unit": "",
+          "qty_est": "",
+          "qty_real": "",
+          "price_unit": "",
+          "total_price": 0,
+          "date": "",
+          "who": "",
+          "collapsed": true
+        },
+        {
+          "hns": "9.2",
+          "label": "Finalize MCU enclosure",
+          "done": false,
+          "unit": "",
+          "qty_est": "",
+          "qty_real": "",
+          "price_unit": "",
+          "total_price": 0,
+          "date": "",
+          "who": "",
+          "collapsed": true
+        },
+        {
+          "hns": "9.3",
+          "label": "Stepper motor power to be set after spring-arm tests",
+          "done": false,
+          "unit": "",
+          "qty_est": "",
+          "qty_real": "",
+          "price_unit": "",
+          "total_price": 0,
+          "date": "",
+          "who": "",
+          "collapsed": true
+        }
+      ],
+      "collapsed": false
+    }
+  ]
+}

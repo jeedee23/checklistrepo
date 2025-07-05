@@ -1,0 +1,43 @@
+{
+  "title": "test",
+  "collaborators": [
+    "Johan",
+    "Frédéric"
+  ],
+  "layout": {
+    "columns": {
+      "done": {
+        "width": 40,
+        "visible": true
+      },
+      "hns": {
+        "width": 40,
+        "visible": true
+      },
+      "label": {
+        "width": 697,
+        "visible": true
+      },
+      "date": {
+        "width": 100,
+        "visible": true
+      },
+      "who": {
+        "width": 100,
+        "visible": true
+      }
+    },
+    "rows": {
+      "height": 30
+    }
+  },
+  "items": [
+    {
+      "hns": "1",
+      "label": "",
+      "done": false,
+      "date": "2025-06-21",
+      "who": "Johan"
+    }
+  ]
+}

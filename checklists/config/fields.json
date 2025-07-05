@@ -9,8 +9,8 @@
       "accesslevel": 10
     },
     "2": {
-      "key": "no",
-      "label": "No",
+      "key": "hns",
+      "label": "hns",
       "type": "number",
       "default_value": 0,
       "accesslevel": 10

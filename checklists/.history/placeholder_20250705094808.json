@@ -1,0 +1,203 @@
+{
+  "title": "Wetrok Robot Retrofit",
+  "collaborators": [
+    "Johan",
+    "Hung",
+    "Cuong",
+    "Robert",
+    "Mohamed",
+    "Jeamichel"
+  ],
+  "unitChoices": [
+    "kg",
+    "ton",
+    "hr",
+    "sec",
+    "m",
+    "m²",
+    "m³",
+    "l",
+    "pc"
+  ],
+  "layout": {
+    "columns": {
+      "done": {
+        "width": 40,
+        "visible": true
+      },
+      "hns": {
+        "width": 40,
+        "visible": true
+      },
+      "label": {
+        "width": 697,
+        "visible": true
+      },
+      "unit": {
+        "width": 23,
+        "visible": true
+      },
+      "qty_est": {
+        "width": 53,
+        "visible": true
+      },
+      "qty_real": {
+        "width": 51,
+        "visible": true
+      },
+      "price_unit": {
+        "width": 48,
+        "visible": true
+      },
+      "total_price": {
+        "width": 47,
+        "visible": true
+      },
+      "date": {
+        "width": 100,
+        "visible": true
+      },
+      "who": {
+        "width": 100,
+        "visible": true
+      }
+    },
+    "rows": {
+      "height": 30
+    }
+  },
+  "items": [
+    {
+      "hns": "1",
+      "label": "Power System---",
+      "who": "Johan",
+      "date": "2025-05-12",
+      "children": [
+        {
+          "hns": "1.1",
+          "label": "Install 200 Ah 24V LiFePO₄ battery"
+        },
+        {
+          "hns": "1.2",
+          "label": "Add automatic charging antenna system"
+        }
+      ]
+    },
+    {
+      "hns": "2",
+      "label": "Drive System",
+      "who": "Johan",
+      "date": "2025-05-12",
+      "children": [
+        {
+          "hns": "2.1",
+          "label": "Integrate electronic brake for turning"
+        },
+        {
+          "hns": "2.2",
+          "label": "Test forward/backward drive control"
+        }
+      ]
+    },
+    {
+      "hns": "3",
+      "label": "Sensors & Navigation",
+      "who": "Johan",
+      "date": "2025-05-12",
+      "children": [
+        {
+          "hns": "3.1",
+          "label": "Install RTK GPS"
+        },
+        {
+          "hns": "3.2",
+          "label": "Add IMU and wheel encoders"
+        },
+        {
+          "hns": "3.3",
+          "label": "Mount LIDAR and ultrasonic sensors"
+        },
+        {
+          "hns": "3.4",
+          "label": "Setup camera (optional Visual SLAM)"
+        }
+      ]
+    },
+    {
+      "hns": "4",
+      "label": "Cleaning System Automation",
+      "who": "Johan",
+      "date": "2025-05-12",
+      "children": [
+        {
+          "hns": "4.1",
+          "label": "Connect brush motors to control unit"
+        },
+        {
+          "hns": "4.2",
+          "label": "Wire suction motor"
+        },
+        {
+          "hns": "4.3",
+          "label": "Install flow and pressure sensors"
+        }
+      ]
+    },
+    {
+      "hns": "5",
+      "label": "Docking & Charging",
+      "who": "Johan",
+      "date": "2025-05-12",
+      "children": [
+        {
+          "hns": "5.1",
+          "label": "Align antenna system for auto-docking"
+        },
+        {
+          "hns": "5.2",
+          "label": "Add visual/IR or tag-based alignment system"
+        }
+      ]
+    },
+    {
+      "hns": "6",
+      "label": "Control & Compute System",
+      "who": "Johan",
+      "date": "2025-05-12",
+      "children": [
+        {
+          "hns": "6.1",
+          "label": "Install Jetson/Raspberry Pi"
+        },
+        {
+          "hns": "6.2",
+          "label": "Add microcontroller for I/O"
+        },
+        {
+          "hns": "6.3",
+          "label": "Set up safety buzzer and lights"
+        }
+      ]
+    },
+    {
+      "hns": "7",
+      "label": "Software",
+      "who": "Johan",
+      "date": "2025-05-12",
+      "children": [
+        {
+          "hns": "7.1",
+          "label": "Develop navigation stack"
+        },
+        {
+          "hns": "7.2",
+          "label": "Program cleaning logic and conditions"
+        },
+        {
+          "hns": "7.3",
+          "label": "Add remote monitoring interface"
+        }
+      ]
+    }
+  ]
+}

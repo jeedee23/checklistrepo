@@ -480,7 +480,7 @@ System Information:
 function showListTypesDebug() {
   if (listTypesData) {
     console.log('List Types Debug Info:', listTypesData);
-    alert(`List Types Debug:\n\nLoaded: ${listTypesData ? 'Yes' : 'No'}\nTypes: ${Object.keys(listTypesData.types || {}).join(', ')}\nDefault: ${listTypesData.defaultType || 'None'}\n\nSee console for full details.`);
+    alert(`List Types Debug:\n\nLoaded: ${listTypesData ? 'Yes' : 'hns'}\nTypes: ${Object.keys(listTypesData.types || {}).join(', ')}\nDefault: ${listTypesData.defaultType || 'None'}\n\nSee console for full details.`);
   } else {
     alert('List types data not loaded yet.');
   }

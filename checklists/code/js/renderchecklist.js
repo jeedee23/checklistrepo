@@ -136,7 +136,7 @@ export async function renderChecklist(eventId = 0) {
   const thead = document.createElement('thead');
   const headerRow = document.createElement('tr');
   
-  // Add headers for each visible column (including 'no' if visible)
+  // Add headers for each visible column (including 'hns' if visible)
   columnKeys.forEach(key => {
     if (sharedState.checklistData.layout.columns[key]?.visible === false) return;
     
@@ -178,7 +178,7 @@ export async function renderChecklist(eventId = 0) {
     const emptyCell = document.createElement('td');
     emptyCell.colSpan = columnKeys.filter(key => 
       sharedState.checklistData.layout.columns[key]?.visible !== false
-    ).length; // Total visible columns (including 'no' if visible)
+    ).length; // Total visible columns (including 'hns' if visible)
     emptyCell.textContent = 'No items in this checklist. Click "Add" to create a new item.';
     emptyCell.style.textAlign = 'center';
     emptyCell.style.padding = '2rem';
@@ -209,7 +209,7 @@ export async function renderChecklist(eventId = 0) {
                 'None');
                 
     // For structural changes, verify selected item has a valid number
-    if (sharedState.selectedItem && (!sharedState.selectedItem.no || sharedState.selectedItem.no === '')) {
+    if (sharedState.selectedItem && (!sharedState.selectedItem.hns || sharedState.selectedItem.hns === '')) {
       console.warn('[renderChecklist] Selected item has no number, attempting to fix');
       const itemAtPath = getItemByPath(sharedState.checklistData.items, sharedState.selectedPath);
       if (itemAtPath && itemAtPath.no) {
@@ -244,7 +244,7 @@ export async function renderChecklist(eventId = 0) {
 export function renumberChecklist(items = sharedState.checklistData.items, prefix = []) {
   items.forEach((item, idx) => {
     const number = [...prefix, idx + 1];
-    item.no = number.join('.');
+    item.hns = number.join('.');
 
     // Recurse into children (if any)
     if (Array.isArray(item.children) && item.children.length > 0) {

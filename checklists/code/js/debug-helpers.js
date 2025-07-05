@@ -71,7 +71,7 @@ export function findChanges(checkpoint, currentData) {
       // Item exists in both
       if (origItem && currItem) {
         // Check if numbering changed
-        if (origItem.no !== currItem.no) {
+        if (origItem.hns !== currItem.no) {
           changes.itemNumberingChanged = true;
           changes.changedItems.push({
             path: [...path, i],
@@ -83,7 +83,7 @@ export function findChanges(checkpoint, currentData) {
         
         // Check other properties
         Object.keys(origItem).forEach(key => {
-          if (key !== 'children' && key !== 'no' && JSON.stringify(origItem[key]) !== JSON.stringify(currItem[key])) {
+          if (key !== 'children' && key !== 'hns' && JSON.stringify(origItem[key]) !== JSON.stringify(currItem[key])) {
             changes.itemPropertiesChanged = true;
             changes.changedItems.push({
               path: [...path, i],
@@ -96,7 +96,7 @@ export function findChanges(checkpoint, currentData) {
         
         // Check for new properties in current
         Object.keys(currItem).forEach(key => {
-          if (key !== 'children' && key !== 'no' && !(key in origItem)) {
+          if (key !== 'children' && key !== 'hns' && !(key in origItem)) {
             changes.itemPropertiesChanged = true;
             changes.changedItems.push({
               path: [...path, i],

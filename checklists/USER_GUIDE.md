@@ -420,7 +420,7 @@ Located at the top, contains six main menus:
 3. Set appropriate access level:
    - **0**: Full Admin/Developer
    - **1**: Full Admin/User Management
-   - **2**: Admin (no field/user mgmt)
+   - **2**: Admin (hns field/user mgmt)
    - **3**: Layout Editor (high access)
    - **4**: Layout Editor (no structure)
    - **5**: Limited Field Editor
@@ -1114,7 +1114,7 @@ The application features a comprehensive rich text notes system powered by Quill
 #### User Access Levels
 - **0 - Full Admin/Developer**: Complete system access
 - **1 - Full Admin/User Management**: Admin access including user management
-- **2 - Admin (no field/user mgmt)**: Admin without field or user management
+- **2 - Admin (hns field/user mgmt)**: Admin without field or user management
 - **3 - Layout Editor (high access)**: Can edit layouts with high permissions
 - **4 - Layout Editor (no structure)**: Layout editing without structural changes
 - **5 - Limited Field Editor**: Basic field editing capabilities

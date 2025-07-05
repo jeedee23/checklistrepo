@@ -1062,7 +1062,7 @@ function renderItem(item, tbody, path, columnDefs, rowHeight) {
   row.style.fontFamily = 'Consolas, monospace';
   row.dataset.path = JSON.stringify(path);
   if (item.important) row.classList.add('important');
-  item.no = path.join('.');
+  item.hns = path.join('.');
 
   // Events
   row.addEventListener('click', () => {
@@ -2281,7 +2281,7 @@ function duplicate_Structure(path = selectedPath) {
 
   // ✅ Renumber recursively
   function applyNumbers(item, path) {
-    item.no = path.join(".");
+    item.hns = path.join(".");
     if (Array.isArray(item.children)) {
       item.children.forEach((child, i) => applyNumbers(child, [...path, i + 1]));
     }
@@ -2386,7 +2386,7 @@ function addSubItem() {
 function renumberChecklist(items = checklistData.items, prefix = []) {
   items.forEach((item, idx) => {
     const number = [...prefix, idx + 1];
-    item.no = number.join('.');
+    item.hns = number.join('.');
 
     // Recurse into children (if any)
     if (Array.isArray(item.children) && item.children.length > 0) {
@@ -2501,9 +2501,9 @@ document.addEventListener("DOMContentLoaded", async () => {
 
   function getItemDisplay(item) {
     const parts = [];
-    if (item.no != null) parts.push(item.no);
+    if (item.hns != null) parts.push(item.no);
     for (const [key, val] of Object.entries(item)) {
-      if (key === "no" || key === "children") continue;
+      if (key === "hns" || key === "children") continue;
       if (typeof val === "string" || typeof val === "number") {
         parts.push(val);
       } else if (Array.isArray(val)) {

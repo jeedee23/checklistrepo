@@ -21,7 +21,7 @@
         "width": 40,
         "visible": true
       },
-      "no": {
+      "hns": {
         "width": 40,
         "visible": true
       },
@@ -64,7 +64,7 @@
   },
   "items": [
     {
-      "no": "1",
+      "hns": "1",
       "label": "Power Input & Protection",
       "done": false,
       "unit": "",
@@ -77,7 +77,7 @@
       "collapsed": true,
       "children": [
         {
-          "no": "1.1",
+          "hns": "1.1",
           "label": "EMI filter (X2 cap + MOV)",
           "done": false,
           "unit": "",
@@ -90,7 +90,7 @@
           "collapsed": false
         },
         {
-          "no": "1.2",
+          "hns": "1.2",
           "label": "Fast-blow fuse (Eaton 25A KLKE-25) not needed",
           "done": false,
           "unit": "",
@@ -103,7 +103,7 @@
           "collapsed": false
         },
         {
-          "no": "1.3",
+          "hns": "1.3",
           "label": "MOV across AC line",
           "done": false,
           "unit": "",
@@ -116,7 +116,7 @@
           "collapsed": false
         },
         {
-          "no": "1.4",
+          "hns": "1.4",
           "label": "Surge suppression path verified",
           "done": false,
           "unit": "",
@@ -131,7 +131,7 @@
       ]
     },
     {
-      "no": "2",
+      "hns": "2",
       "label": "Triac Switching",
       "done": false,
       "unit": "",
@@ -144,7 +144,7 @@
       "collapsed": true,
       "children": [
         {
-          "no": "2.1",
+          "hns": "2.1",
           "label": "Triac TPDV1240RG (40A, 1200V)L1 & L2",
           "done": false,
           "unit": "",
@@ -157,7 +157,7 @@
           "collapsed": false
         },
         {
-          "no": "2.2",
+          "hns": "2.2",
           "label": "Gate triggered by MOC3052 optocoupler with two outputs",
           "done": false,
           "unit": "",
@@ -170,7 +170,7 @@
           "collapsed": false
         },
         {
-          "no": "2.3",
+          "hns": "2.3",
           "label": "Snubber: 47 Ω + 0.15 µF Nichicon PPA2253150KN (triple or single?)",
           "done": false,
           "unit": "",
@@ -183,7 +183,7 @@
           "collapsed": false
         },
         {
-          "no": "2.4",
+          "hns": "2.4",
           "label": "Verify heatsinking via aluminum chassis",
           "done": false,
           "unit": "",
@@ -198,7 +198,7 @@
       ]
     },
     {
-      "no": "3",
+      "hns": "3",
       "label": "Snubber Power Check",
       "done": false,
       "unit": "",
@@ -211,7 +211,7 @@
       "collapsed": true,
       "children": [
         {
-          "no": "3.1",
+          "hns": "3.1",
           "label": "47 Ω 10W flameproof resistor",
           "done": false,
           "unit": "",
@@ -224,7 +224,7 @@
           "collapsed": false
         },
         {
-          "no": "3.2",
+          "hns": "3.2",
           "label": "Simulate power dissipation under load",
           "done": false,
           "unit": "",
@@ -239,7 +239,7 @@
       ]
     },
     {
-      "no": "4",
+      "hns": "4",
       "label": "Voltage detection primary",
       "done": false,
       "unit": "",
@@ -252,7 +252,7 @@
       "collapsed": true,
       "children": [
         {
-          "no": "4.1",
+          "hns": "4.1",
           "label": "Transformer winding 75:1 ratio",
           "done": false,
           "unit": "",
@@ -265,7 +265,7 @@
           "collapsed": false
         },
         {
-          "no": "4.2",
+          "hns": "4.2",
           "label": "output to voltage divider  (10k/5.6k)",
           "done": false,
           "unit": "",
@@ -278,7 +278,7 @@
           "collapsed": false
         },
         {
-          "no": "4.3",
+          "hns": "4.3",
           "label": "Input to STM32 ADC",
           "done": false,
           "unit": "",
@@ -293,7 +293,7 @@
       ]
     },
     {
-      "no": "5",
+      "hns": "5",
       "label": "Voltage Detection secondary(AC Monitoring)",
       "done": false,
       "unit": "",
@@ -306,7 +306,7 @@
       "collapsed": true,
       "children": [
         {
-          "no": "6.1",
+          "hns": "6.1",
           "label": "Transformer winding 400:1 ratio",
           "done": false,
           "unit": "",
@@ -319,7 +319,7 @@
           "collapsed": false
         },
         {
-          "no": "6.2",
+          "hns": "6.2",
           "label": "Custom winding tool ready",
           "done": false,
           "unit": "",
@@ -332,7 +332,7 @@
           "collapsed": false
         },
         {
-          "no": "6.3",
+          "hns": "6.3",
           "label": "Output to voltage divider (10k/5.6k)",
           "done": false,
           "unit": "",
@@ -345,7 +345,7 @@
           "collapsed": false
         },
         {
-          "no": "6.4",
+          "hns": "6.4",
           "label": "Input to STM32 ADC",
           "done": false,
           "unit": "",
@@ -358,7 +358,7 @@
           "collapsed": false
         },
         {
-          "no": "6.5",
+          "hns": "6.5",
           "label": "Test scaling up to 1200 V spikes",
           "done": false,
           "unit": "",
@@ -373,7 +373,7 @@
       ]
     },
     {
-      "no": "6",
+      "hns": "6",
       "label": "Current Sensing on line, primary and secondary",
       "done": false,
       "unit": "",
@@ -386,7 +386,7 @@
       "collapsed": true,
       "children": [
         {
-          "no": "6.1",
+          "hns": "6.1",
           "label": "3 times ACS711ELCTR-25AB-T wired to ADC",
           "done": false,
           "unit": "",
@@ -399,7 +399,7 @@
           "collapsed": false
         },
         {
-          "no": "6.2",
+          "hns": "6.2",
           "label": "Verified real-time current feedback",
           "done": false,
           "unit": "",
@@ -414,7 +414,7 @@
       ]
     },
     {
-      "no": "7",
+      "hns": "7",
       "label": "Temperature Feedback",
       "done": false,
       "unit": "",
@@ -427,7 +427,7 @@
       "collapsed": true,
       "children": [
         {
-          "no": "7.1",
+          "hns": "7.1",
           "label": "LM35DZ mounted, on triacs",
           "done": false,
           "unit": "",
@@ -440,7 +440,7 @@
           "collapsed": false
         },
         {
-          "no": "7.2",
+          "hns": "7.2",
           "label": "ADC input verified",
           "done": false,
           "unit": "",
@@ -455,7 +455,7 @@
       ]
     },
     {
-      "no": "8",
+      "hns": "8",
       "label": "Control Logic (MCU)",
       "done": false,
       "unit": "",
@@ -468,7 +468,7 @@
       "collapsed": true,
       "children": [
         {
-          "no": "8.1",
+          "hns": "8.1",
           "label": "STM32G431 installed",
           "done": false,
           "unit": "",
@@ -481,7 +481,7 @@
           "collapsed": false
         },
         {
-          "no": "8.2",
+          "hns": "8.2",
           "label": "GPIO triggers opto",
           "done": false,
           "unit": "",
@@ -494,7 +494,7 @@
           "collapsed": false
         },
         {
-          "no": "8.3",
+          "hns": "8.3",
           "label": "ADC channels wired (V/I/T)",
           "done": false,
           "unit": "",
@@ -507,7 +507,7 @@
           "collapsed": false
         },
         {
-          "no": "8.4",
+          "hns": "8.4",
           "label": "Burst/phase firmware hybrid",
           "done": false,
           "unit": "",
@@ -522,7 +522,7 @@
       ]
     },
     {
-      "no": "9",
+      "hns": "9",
       "label": "RS-485 Communication",
       "done": false,
       "unit": "",
@@ -535,7 +535,7 @@
       "collapsed": true,
       "children": [
         {
-          "no": "9.1",
+          "hns": "9.1",
           "label": "MAX3087EESA mounted",
           "done": false,
           "unit": "",
@@ -548,7 +548,7 @@
           "collapsed": false
         },
         {
-          "no": "9.2",
+          "hns": "9.2",
           "label": "SM712 ESD diode + TVS protection",
           "done": false,
           "unit": "",
@@ -561,7 +561,7 @@
           "collapsed": false
         },
         {
-          "no": "9.3",
+          "hns": "9.3",
           "label": "RJ45 ports + terminator setup",
           "done": false,
           "unit": "",
@@ -574,7 +574,7 @@
           "collapsed": false
         },
         {
-          "no": "9.4",
+          "hns": "9.4",
           "label": "DIP switch tested",
           "done": false,
           "unit": "",
@@ -589,7 +589,7 @@
       ]
     },
     {
-      "no": "10",
+      "hns": "10",
       "label": "Zero-Cross Detection",
       "done": false,
       "unit": "",
@@ -602,7 +602,7 @@
       "collapsed": true,
       "children": [
         {
-          "no": "10.1",
+          "hns": "10.1",
           "label": "Zero-cross detection implemented in firmware",
           "done": false,
           "unit": "",
@@ -615,7 +615,7 @@
           "collapsed": false
         },
         {
-          "no": "10.2",
+          "hns": "10.2",
           "label": "Verified zero sync vs power phase",
           "done": false,
           "unit": "",
@@ -630,7 +630,7 @@
       ]
     },
     {
-      "no": "11",
+      "hns": "11",
       "label": "Firmware",
       "done": false,
       "unit": "",
@@ -643,7 +643,7 @@
       "collapsed": true,
       "children": [
         {
-          "no": "11.1",
+          "hns": "11.1",
           "label": "PID regulation verified",
           "done": false,
           "unit": "",
@@ -656,7 +656,7 @@
           "collapsed": false
         },
         {
-          "no": "11.2",
+          "hns": "11.2",
           "label": "Modbus-like RS485 support",
           "done": false,
           "unit": "",
@@ -669,7 +669,7 @@
           "collapsed": false
         },
         {
-          "no": "11.3",
+          "hns": "11.3",
           "label": "EEPROM config save working",
           "done": false,
           "unit": "",
@@ -684,7 +684,7 @@
       ]
     },
     {
-      "no": "12",
+      "hns": "12",
       "label": "GUI & Debug",
       "done": false,
       "unit": "",
@@ -697,7 +697,7 @@
       "collapsed": true,
       "children": [
         {
-          "no": "12.1",
+          "hns": "12.1",
           "label": "Python GUI debug hooks",
           "done": false,
           "unit": "",
@@ -710,7 +710,7 @@
           "collapsed": false
         },
         {
-          "no": "12.2",
+          "hns": "12.2",
           "label": "RS485 & UART monitoring",
           "done": false,
           "unit": "",
@@ -725,7 +725,7 @@
       ]
     },
     {
-      "no": "13",
+      "hns": "13",
       "label": "Enclosure",
       "done": false,
       "unit": "",
@@ -738,7 +738,7 @@
       "collapsed": true,
       "children": [
         {
-          "no": "13.1",
+          "hns": "13.1",
           "label": "Aluminum box installed",
           "done": false,
           "unit": "",
@@ -751,7 +751,7 @@
           "collapsed": false
         },
         {
-          "no": "13.2",
+          "hns": "13.2",
           "label": "Cable glands mounted",
           "done": false,
           "unit": "",
@@ -764,7 +764,7 @@
           "collapsed": false
         },
         {
-          "no": "13.3",
+          "hns": "13.3",
           "label": "CNC labeling ready",
           "done": false,
           "unit": "",
@@ -779,7 +779,7 @@
       ]
     },
     {
-      "no": "14",
+      "hns": "14",
       "label": "Bill of Materials (BOM)",
       "done": true,
       "unit": "",
@@ -792,7 +792,7 @@
       "collapsed": false,
       "children": [
         {
-          "no": "14.1",
+          "hns": "14.1",
           "label": "EMI filter (X2 cap + MOV)",
           "done": false,
           "unit": "pcs",
@@ -805,7 +805,7 @@
           "collapsed": false
         },
         {
-          "no": "14.2",
+          "hns": "14.2",
           "label": "Fast-blow fuse (Eaton 25A KLKE-25)",
           "done": false,
           "unit": "pcs",
@@ -818,7 +818,7 @@
           "collapsed": false
         },
         {
-          "no": "14.3",
+          "hns": "14.3",
           "label": "TRIAC TPDV1240RG (40 A, 1200 V)",
           "done": false,
           "unit": "pcs",
@@ -831,7 +831,7 @@
           "collapsed": false
         },
         {
-          "no": "14.4",
+          "hns": "14.4",
           "label": "Opto-triac driver (MOC3052)",
           "done": false,
           "unit": "pcs",
@@ -844,7 +844,7 @@
           "collapsed": false
         },
         {
-          "no": "14.5",
+          "hns": "14.5",
           "label": "Snubber resistor 47 Ω 10 W",
           "done": false,
           "unit": "pcs",
@@ -857,7 +857,7 @@
           "collapsed": false
         },
         {
-          "no": "14.6",
+          "hns": "14.6",
           "label": "Snubber capacitor 0.15 µF Nichicon PPA2253150KN",
           "done": false,
           "unit": "pcs",
@@ -870,7 +870,7 @@
           "collapsed": false
         },
         {
-          "no": "14.7",
+          "hns": "14.7",
           "label": "ACS711ELCTR-25AB-T current sensor",
           "done": false,
           "unit": "pcs",
@@ -883,7 +883,7 @@
           "collapsed": false
         },
         {
-          "no": "14.8",
+          "hns": "14.8",
           "label": "LM35DZ temperature sensor",
           "done": false,
           "unit": "pcs",
@@ -896,7 +896,7 @@
           "collapsed": false
         },
         {
-          "no": "14.9",
+          "hns": "14.9",
           "label": "Voltage transformer (EC35 core, custom winding)",
           "done": false,
           "unit": "pcs",
@@ -909,7 +909,7 @@
           "collapsed": false
         },
         {
-          "no": "14.10",
+          "hns": "14.10",
           "label": "STM32G431 MCU module (WeAct Long)",
           "done": false,
           "unit": "pcs",
@@ -922,7 +922,7 @@
           "collapsed": false
         },
         {
-          "no": "14.11",
+          "hns": "14.11",
           "label": "MAX3087EESA RS-485 transceiver",
           "done": false,
           "unit": "pcs",
@@ -935,7 +935,7 @@
           "collapsed": false
         },
         {
-          "no": "14.12",
+          "hns": "14.12",
           "label": "SM712 ESD diode",
           "done": false,
           "unit": "pcs",
@@ -948,7 +948,7 @@
           "collapsed": false
         },
         {
-          "no": "14.13",
+          "hns": "14.13",
           "label": "RJ45 connector (2 ports)",
           "done": false,
           "unit": "pcs",
@@ -961,7 +961,7 @@
           "collapsed": false
         },
         {
-          "no": "14.14",
+          "hns": "14.14",
           "label": "Aluminum enclosure (Telituny box)",
           "done": false,
           "unit": "pcs",
@@ -974,7 +974,7 @@
           "collapsed": false
         },
         {
-          "no": "14.15",
+          "hns": "14.15",
           "label": "M20 cable glands (set of 4)",
           "done": false,
           "unit": "set",

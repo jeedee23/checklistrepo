@@ -31,8 +31,8 @@
           "requiredFields": []
         }
       ],
-      "defaultVisibleColumns": ["done", "no", "label", "Resp", "Acc", "date"],
-      "recommendedFields": ["done", "no", "label", "Resp", "Acc", "Support", "Consult", "Informed", "date", "who", "status", "priority", "progress"]
+      "defaultVisibleColumns": ["done", "hns", "label", "Resp", "Acc", "date"],
+      "recommendedFields": ["done", "hns", "label", "Resp", "Acc", "Support", "Consult", "Informed", "date", "who", "status", "priority", "progress"]
     },
     
     "Task List": {
@@ -55,8 +55,8 @@
           "requiredFields": []
         }
       ],
-      "defaultVisibleColumns": ["done", "no", "label", "who", "date"],
-      "recommendedFields": ["done", "no", "label", "date", "who", "status", "priority", "progress"]
+      "defaultVisibleColumns": ["done", "hns", "label", "who", "date"],
+      "recommendedFields": ["done", "hns", "label", "date", "who", "status", "priority", "progress"]
     },
     
     "Quote": {
@@ -86,8 +86,8 @@
           "requiredFields": []
         }
       ],
-      "defaultVisibleColumns": ["done", "no", "label", "qty_est", "price_unit", "total_price"],
-      "recommendedFields": ["done", "no", "label", "unit", "qty_est", "qty_real", "price_unit", "total_price"]
+      "defaultVisibleColumns": ["done", "hns", "label", "qty_est", "price_unit", "total_price"],
+      "recommendedFields": ["done", "hns", "label", "unit", "qty_est", "qty_real", "price_unit", "total_price"]
     },
     
     "Technical Specification": {
@@ -117,8 +117,8 @@
           "requiredFields": []
         }
       ],
-      "defaultVisibleColumns": ["done", "no", "label", "type", "who"],
-      "recommendedFields": ["done", "no", "label", "type", "unit", "who", "need"]
+      "defaultVisibleColumns": ["done", "hns", "label", "type", "who"],
+      "recommendedFields": ["done", "hns", "label", "type", "unit", "who", "need"]
     },
     
     "Process Overview": {
@@ -148,8 +148,8 @@
           "requiredFields": []
         }
       ],
-      "defaultVisibleColumns": ["done", "no", "label", "Resp", "Acc"],
-      "recommendedFields": ["done", "no", "label", "Resp", "Acc", "Support", "Consult", "Informed"]
+      "defaultVisibleColumns": ["done", "hns", "label", "Resp", "Acc"],
+      "recommendedFields": ["done", "hns", "label", "Resp", "Acc", "Support", "Consult", "Informed"]
     },
     
     "Custom": {
@@ -165,7 +165,7 @@
           "requiredFields": []
         }
       ],
-      "defaultVisibleColumns": ["done", "no", "label"],
+      "defaultVisibleColumns": ["done", "hns", "label"],
       "recommendedFields": []
     }
   },

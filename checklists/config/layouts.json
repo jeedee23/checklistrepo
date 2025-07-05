@@ -5,18 +5,18 @@
       "description": "Standard checklist view with basic fields",
       "columns": {
         "done": { "width": "50px", "visible": true, "label": "✔ Done" },
-        "no": { "width": "60px", "visible": true, "label": "No" },
+        "hns": { "width": "60px", "visible": true, "label": "hns" },
         "label": { "width": "300px", "visible": true, "label": "Label" }
       },
       "rowHeight": 30,
-      "columnOrder": ["done", "no", "label"]
+      "columnOrder": ["done", "hns", "label"]
     },
     "project": {
       "name": "Project Management",
       "description": "Full project management view with status, dates, and assignments",
       "columns": {
         "done": { "width": "50px", "visible": true, "label": "✔ Done" },
-        "no": { "width": "60px", "visible": true, "label": "No" },
+        "hns": { "width": "60px", "visible": true, "label": "hns" },
         "label": { "width": "250px", "visible": true, "label": "Task" },
         "status": { "width": "120px", "visible": true, "label": "Status" },
         "priority": { "width": "80px", "visible": true, "label": "Priority" },
@@ -25,14 +25,14 @@
         "progress": { "width": "80px", "visible": true, "label": "Progress" }
       },
       "rowHeight": 35,
-      "columnOrder": ["done", "no", "label", "status", "priority", "who", "date", "progress"]
+      "columnOrder": ["done", "hns", "label", "status", "priority", "who", "date", "progress"]
     },
     "budget": {
       "name": "Budget & Costing",
       "description": "Financial tracking with quantities and pricing",
       "columns": {
         "done": { "width": "50px", "visible": true, "label": "✔ Done" },
-        "no": { "width": "60px", "visible": true, "label": "No" },
+        "hns": { "width": "60px", "visible": true, "label": "hns" },
         "label": { "width": "200px", "visible": true, "label": "Item" },
         "unit": { "width": "80px", "visible": true, "label": "Unit" },
         "qty_est": { "width": "100px", "visible": true, "label": "Est. Qty" },
@@ -41,14 +41,14 @@
         "total_price": { "width": "120px", "visible": true, "label": "Total Price" }
       },
       "rowHeight": 30,
-      "columnOrder": ["done", "no", "label", "unit", "qty_est", "qty_real", "price_unit", "total_price"]
+      "columnOrder": ["done", "hns", "label", "unit", "qty_est", "qty_real", "price_unit", "total_price"]
     },
     "raci": {
       "name": "RACI Matrix",
       "description": "Responsibility assignment matrix view",
       "columns": {
         "done": { "width": "50px", "visible": true, "label": "✔ Done" },
-        "no": { "width": "60px", "visible": true, "label": "No" },
+        "hns": { "width": "60px", "visible": true, "label": "hns" },
         "label": { "width": "250px", "visible": true, "label": "Activity" },
         "Resp": { "width": "120px", "visible": true, "label": "Responsible" },
         "Acc": { "width": "120px", "visible": true, "label": "Accountable" },
@@ -56,7 +56,7 @@
         "Informed": { "width": "120px", "visible": true, "label": "Informed" }
       },
       "rowHeight": 30,
-      "columnOrder": ["done", "no", "label", "Resp", "Acc", "Consult", "Informed"]
+      "columnOrder": ["done", "hns", "label", "Resp", "Acc", "Consult", "Informed"]
     }
   },
   "activeLayout": "default"

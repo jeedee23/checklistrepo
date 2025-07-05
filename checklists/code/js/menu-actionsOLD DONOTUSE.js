@@ -189,8 +189,8 @@ export function addLink() {
   }
   //** If a user pastes a link, the icon will become a link icon, 
   // and the pop-up will ask for the text and the item will be shown as a blue underlined link. 
-  // the text should normally contain the 'no' field. the input box should by default have the checklist ID (to implement in the json)
-  // Then a "-" and then the 'no' field and then a'-' after which the user should fill in. Should he change the complete text, that is no problem
+  // the text should normally contain the 'hns' field. the input box should by default have the checklist ID (to implement in the json)
+  // Then a "-" and then the 'hns' field and then a'-' after which the user should fill in. Should he change the complete text, that is no problem
   // we simply give a hint  */
 }
 

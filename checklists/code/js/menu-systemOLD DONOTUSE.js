@@ -944,7 +944,7 @@ function buildFieldsGrid(dialog, fieldDefs) {
     // Check if field is active - either in fields config OR in layout columns OR is a core field
     const isInFields = sharedState.checklistData.fields && sharedState.checklistData.fields[fieldKey] !== undefined;
     const isInLayout = currentLayout[fieldKey] !== undefined;
-    const isCoreField = ['done', 'label', 'no'].includes(fieldKey);
+    const isCoreField = ['done', 'label', 'hns'].includes(fieldKey);
     const isActive = isInFields || isInLayout || isCoreField || isFixed;
     
     const isVisible = currentLayout[fieldKey] && currentLayout[fieldKey].visible;

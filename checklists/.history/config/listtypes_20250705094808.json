@@ -1,0 +1,174 @@
+{
+  "version": "1.0",
+  "updatedAt": "2025-07-01T14:30:00Z",
+  "updatedBy": "System",
+  
+  "types": {
+    "Project Management": {
+      "key": "project-management",
+      "description": "For managing projects with responsibilities, tasks, and timeline tracking",
+      "icon": "📋",
+      "tools": [
+        {
+          "id": "rasci-matrix",
+          "name": "RASCI Matrix",
+          "description": "View and edit responsibility matrix",
+          "availableFields": ["Resp", "Acc", "Support", "Consult", "Informed"],
+          "requiredFields": ["Resp"]
+        },
+        {
+          "id": "timeline-view",
+          "name": "Timeline View",
+          "description": "Visualize project timeline",
+          "availableFields": ["date", "status", "progress"],
+          "requiredFields": ["date"]
+        },
+        {
+          "id": "version-history",
+          "name": "Version History",
+          "description": "View previous versions of checklist",
+          "availableFields": [],
+          "requiredFields": []
+        }
+      ],
+      "defaultVisibleColumns": ["done", "hns", "label", "Resp", "Acc", "date"],
+      "recommendedFields": ["done", "hns", "label", "Resp", "Acc", "Support", "Consult", "Informed", "date", "who", "status", "priority", "progress"]
+    },
+    
+    "Task List": {
+      "key": "task-list",
+      "description": "For managing personal or team tasks and to-dos",
+      "icon": "✅",
+      "tools": [
+        {
+          "id": "calculate-progress",
+          "name": "Calculate Progress",
+          "description": "Calculate completion percentage",
+          "availableFields": ["done", "progress"],
+          "requiredFields": ["done"]
+        },
+        {
+          "id": "version-history",
+          "name": "Version History",
+          "description": "View previous versions of checklist",
+          "availableFields": [],
+          "requiredFields": []
+        }
+      ],
+      "defaultVisibleColumns": ["done", "hns", "label", "who", "date"],
+      "recommendedFields": ["done", "hns", "label", "date", "who", "status", "priority", "progress"]
+    },
+    
+    "Quote": {
+      "key": "quote",
+      "description": "For creating price quotes and estimates",
+      "icon": "💰",
+      "tools": [
+        {
+          "id": "calculate-totals",
+          "name": "Calculate Totals",
+          "description": "Calculate sum totals for all numeric columns",
+          "availableFields": ["qty_est", "qty_real", "price_unit", "total_price"],
+          "requiredFields": ["price_unit"]
+        },
+        {
+          "id": "export-pdf",
+          "name": "Export Quote",
+          "description": "Generate formatted PDF quote",
+          "availableFields": [],
+          "requiredFields": []
+        },
+        {
+          "id": "version-history",
+          "name": "Version History",
+          "description": "View previous versions of checklist",
+          "availableFields": [],
+          "requiredFields": []
+        }
+      ],
+      "defaultVisibleColumns": ["done", "hns", "label", "qty_est", "price_unit", "total_price"],
+      "recommendedFields": ["done", "hns", "label", "unit", "qty_est", "qty_real", "price_unit", "total_price"]
+    },
+    
+    "Technical Specification": {
+      "key": "technical-spec",
+      "description": "For detailed technical specifications and engineering documents",
+      "icon": "🔧",
+      "tools": [
+        {
+          "id": "export-data",
+          "name": "Export Data",
+          "description": "Export technical specs to various formats",
+          "availableFields": [],
+          "requiredFields": []
+        },
+        {
+          "id": "import-data",
+          "name": "Import Data",
+          "description": "Import specs from external sources",
+          "availableFields": [],
+          "requiredFields": []
+        },
+        {
+          "id": "version-history",
+          "name": "Version History",
+          "description": "View previous versions of checklist",
+          "availableFields": [],
+          "requiredFields": []
+        }
+      ],
+      "defaultVisibleColumns": ["done", "hns", "label", "type", "who"],
+      "recommendedFields": ["done", "hns", "label", "type", "unit", "who", "need"]
+    },
+    
+    "Process Overview": {
+      "key": "process-overview",
+      "description": "For documenting business or manufacturing processes",
+      "icon": "⚙️",
+      "tools": [
+        {
+          "id": "process-flow",
+          "name": "Process Flow",
+          "description": "Visualize process flow between items",
+          "availableFields": [],
+          "requiredFields": []
+        },
+        {
+          "id": "rasci-matrix",
+          "name": "RASCI Matrix",
+          "description": "View and edit responsibility matrix",
+          "availableFields": ["Resp", "Acc", "Support", "Consult", "Informed"],
+          "requiredFields": ["Resp"]
+        },
+        {
+          "id": "version-history",
+          "name": "Version History",
+          "description": "View previous versions of checklist",
+          "availableFields": [],
+          "requiredFields": []
+        }
+      ],
+      "defaultVisibleColumns": ["done", "hns", "label", "Resp", "Acc"],
+      "recommendedFields": ["done", "hns", "label", "Resp", "Acc", "Support", "Consult", "Informed"]
+    },
+    
+    "Custom": {
+      "key": "custom",
+      "description": "Custom list type with configurable options",
+      "icon": "🔧",
+      "tools": [
+        {
+          "id": "version-history",
+          "name": "Version History",
+          "description": "View previous versions of checklist",
+          "availableFields": [],
+          "requiredFields": []
+        }
+      ],
+      "defaultVisibleColumns": ["done", "hns", "label"],
+      "recommendedFields": []
+    }
+  },
+  
+  "defaultType": "Task List"
+}

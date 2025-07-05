@@ -442,7 +442,7 @@ export function createUserManagementDialog() {
             <select id="accesslevel-select">
               <option value="0" ${currentUser.defaultAccessLevel === 0 ? 'selected' : ''}>0 - Full Admin/Developer</option>
               <option value="1" ${currentUser.defaultAccessLevel === 1 ? 'selected' : ''}>1 - Full Admin/User Management</option>
-              <option value="2" ${currentUser.defaultAccessLevel === 2 ? 'selected' : ''}>2 - Admin (no field/user mgmt)</option>
+              <option value="2" ${currentUser.defaultAccessLevel === 2 ? 'selected' : ''}>2 - Admin (hns field/user mgmt)</option>
               <option value="3" ${currentUser.defaultAccessLevel === 3 ? 'selected' : ''}>3 - User (read/write)</option>
               <option value="4" ${currentUser.defaultAccessLevel === 4 ? 'selected' : ''}>4 - User (read only)</option>
               <option value="5" ${currentUser.defaultAccessLevel === 5 ? 'selected' : ''}>5 - Guest (limited access)</option>

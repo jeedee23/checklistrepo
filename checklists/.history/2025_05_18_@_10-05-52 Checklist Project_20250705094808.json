@@ -1,0 +1,925 @@
+{
+  "title": "Checklist Project",
+  "collaborators": [
+    "Johan",
+    "Frédéric"
+  ],
+  "unitChoices": [
+    "kg",
+    "ton",
+    "hr",
+    "sec",
+    "m",
+    "m²",
+    "m³",
+    "l",
+    "pc"
+  ],
+  "layout": {
+    "columns": {
+      "done": {
+        "width": 37,
+        "visible": true
+      },
+      "hns": {
+        "width": 40,
+        "visible": true
+      },
+      "label": {
+        "width": 715,
+        "visible": true
+      },
+      "unit": {
+        "width": 23,
+        "visible": false
+      },
+      "qty_est": {
+        "width": 53,
+        "visible": false
+      },
+      "qty_real": {
+        "width": 51,
+        "visible": false
+      },
+      "price_unit": {
+        "width": 48,
+        "visible": false
+      },
+      "total_price": {
+        "width": 47,
+        "visible": false
+      },
+      "date": {
+        "width": 174,
+        "visible": false
+      },
+      "who": {
+        "width": 100,
+        "visible": true
+      }
+    },
+    "rows": {
+      "height": 30
+    }
+  },
+  "items": [
+    {
+      "hns": "1",
+      "label": "HTML b",
+      "done": false,
+      "unit": "",
+      "qty_est": "",
+      "qty_real": "",
+      "price_unit": "",
+      "total_price": 0,
+      "date": "",
+      "who": "Johan",
+      "collapsed": true,
+      "children": [
+        {
+          "hns": "1.1",
+          "label": "Header",
+          "done": true,
+          "unit": "",
+          "qty_est": "",
+          "qty_real": "",
+          "price_unit": "",
+          "total_price": 0,
+          "date": "",
+          "who": "Johan",
+          "collapsed": false,
+          "children": [
+            {
+              "hns": "1.1.1",
+              "label": "Left cell",
+              "done": true,
+              "unit": "",
+              "qty_est": "",
+              "qty_real": "",
+              "price_unit": "",
+              "total_price": 0,
+              "date": "",
+              "who": "Johan",
+              "collapsed": false,
+              "children": [
+                {
+                  "hns": "1.1.1.1",
+                  "label": "title/logo",
+                  "done": true,
+                  "unit": "",
+                  "qty_est": "",
+                  "qty_real": "",
+                  "price_unit": "",
+                  "total_price": 0,
+                  "date": "",
+                  "who": "Johan",
+                  "collapsed": false,
+                  "children": [],
+                  "color": "rgba(0,0,255,1)",
+                  "bold": true
+                }
+              ],
+              "color": "rgba(255,0,0,1)",
+              "important": false
+            },
+            {
+              "hns": "1.1.2",
+              "label": "Right cell",
+              "done": true,
+              "unit": "",
+              "qty_est": "",
+              "qty_real": "",
+              "price_unit": "",
+              "total_price": 0,
+              "date": "",
+              "who": "Johan",
+              "collapsed": false,
+              "children": [
+                {
+                  "label": "filter button",
+                  "done": true,
+                  "unit": "",
+                  "qty_est": 0,
+                  "qty_real": 0,
+                  "price_unit": 0,
+                  "date": "2025-05-18",
+                  "who": "Johan",
+                  "children": [],
+                  "hns": "1.1.2.1",
+                  "imageFile": "2025_05_18_@_15-41-22_2024-11-16_14-19-19.png",
+                  "image": "2025_05_18_@_15-41-22_2024-11-16_14-19-19.png"
+                },
+                {
+                  "label": "show mine button",
+                  "done": true,
+                  "hns": "1.1.2.2",
+                  "children": []
+                },
+                {
+                  "label": "Title of checklist",
+                  "done": true,
+                  "unit": "",
+                  "qty_est": "",
+                  "qty_real": "",
+                  "price_unit": "",
+                  "total_price": 0,
+                  "date": "2025-06-03",
+                  "who": "Johan",
+                  "children": [],
+                  "collapsed": false,
+                  "hns": "1.1.2.3"
+                },
+                {
+                  "label": "status text",
+                  "done": true,
+                  "unit": "",
+                  "qty_est": "",
+                  "qty_real": "",
+                  "price_unit": "",
+                  "total_price": 0,
+                  "date": "2025-06-03",
+                  "who": "Johan",
+                  "children": [],
+                  "collapsed": false,
+                  "hns": "1.1.2.4"
+                }
+              ],
+              "imageFile": "2025_05_18_@_15-40-04_2025-04-03_13-12-13.png",
+              "image": "2025_05_18_@_15-40-04_2025-04-03_13-12-13.png"
+            }
+          ],
+          "important": true
+        },
+        {
+          "label": "Body",
+          "done": false,
+          "unit": "",
+          "qty_est": "",
+          "qty_real": "",
+          "price_unit": "",
+          "total_price": 0,
+          "date": "2025-06-03",
+          "who": "Johan",
+          "children": [
+            {
+              "hns": "1.2.1",
+              "label": "Sidebar(left pane)",
+              "done": false,
+              "unit": "",
+              "qty_est": "",
+              "qty_real": "",
+              "price_unit": "",
+              "total_price": 0,
+              "date": "",
+              "who": "Johan",
+              "collapsed": false,
+              "children": [
+                {
+                  "label": "text search for a certain project",
+                  "done": false,
+                  "unit": "",
+                  "qty_est": "",
+                  "qty_real": "",
+                  "price_unit": "",
+                  "total_price": 0,
+                  "date": "2025-06-03",
+                  "who": "Johan",
+                  "children": [],
+                  "collapsed": false,
+                  "hns": "1.2.1.1"
+                },
+                {
+                  "hns": "1.2.1.2",
+                  "label": "Checklist Table",
+                  "done": false,
+                  "unit": "",
+                  "qty_est": "",
+                  "qty_real": "",
+                  "price_unit": "",
+                  "total_price": 0,
+                  "date": "",
+                  "who": "Johan",
+                  "collapsed": false,
+                  "children": [
+                    {
+                      "label": "Can the pop-up be in bg yellow, and text of popup: short description of list",
+                      "done": false,
+                      "unit": "",
+                      "qty_est": 0,
+                      "qty_real": 0,
+                      "price_unit": 0,
+                      "date": "2025-06-03",
+                      "who": "Johan",
+                      "children": [],
+                      "hns": "1.2.1.2.1"
+                    }
+                  ]
+                },
+                {
+                  "label": "Bottom buttons",
+                  "done": true,
+                  "unit": "",
+                  "qty_est": "",
+                  "qty_real": "",
+                  "price_unit": "",
+                  "total_price": 0,
+                  "date": "2025-06-03",
+                  "who": "Johan",
+                  "children": [
+                    {
+                      "label": "New Checklist",
+                      "done": true,
+                      "unit": "",
+                      "qty_est": 0,
+                      "qty_real": 0,
+                      "price_unit": 0,
+                      "date": "2025-06-03",
+                      "who": "Johan",
+                      "children": [],
+                      "hns": "1.2.1.3.1"
+                    },
+                    {
+                      "label": "Save",
+                      "done": true,
+                      "unit": "",
+                      "qty_est": "",
+                      "qty_real": "",
+                      "price_unit": "",
+                      "total_price": 0,
+                      "date": "2025-06-03",
+                      "who": "Johan",
+                      "children": [],
+                      "collapsed": false,
+                      "hns": "1.2.1.3.2"
+                    }
+                  ],
+                  "collapsed": false,
+                  "hns": "1.2.1.3"
+                },
+                {
+                  "label": "Footer of sidebar",
+                  "done": false,
+                  "unit": "",
+                  "qty_est": "",
+                  "qty_real": "",
+                  "price_unit": "",
+                  "total_price": 0,
+                  "date": "2025-06-03",
+                  "who": "Johan",
+                  "children": [
+                    {
+                      "label": "edit account link",
+                      "done": true,
+                      "unit": "",
+                      "qty_est": "",
+                      "qty_real": "",
+                      "price_unit": "",
+                      "total_price": 0,
+                      "date": "2025-06-03",
+                      "who": "Johan",
+                      "children": [],
+                      "collapsed": false,
+                      "hns": "1.2.1.4.1"
+                    },
+                    {
+                      "label": "Current user",
+                      "done": true,
+                      "unit": "",
+                      "qty_est": "",
+                      "qty_real": "",
+                      "price_unit": "",
+                      "total_price": 0,
+                      "date": "2025-06-03",
+                      "who": "Johan",
+                      "children": [],
+                      "collapsed": false,
+                      "hns": "1.2.1.4.2"
+                    },
+                    {
+                      "label": "gear for settings only visible for Johan",
+                      "done": false,
+                      "unit": "",
+                      "qty_est": "",
+                      "qty_real": "",
+                      "price_unit": "",
+                      "total_price": 0,
+                      "date": "2025-06-03",
+                      "who": "Johan",
+                      "children": [],
+                      "collapsed": false,
+                      "hns": "1.2.1.4.3"
+                    }
+                  ],
+                  "collapsed": false,
+                  "hns": "1.2.1.4"
+                }
+              ]
+            },
+            {
+              "label": "Right pane",
+              "done": false,
+              "unit": "",
+              "qty_est": "",
+              "qty_real": "",
+              "price_unit": "",
+              "total_price": 0,
+              "date": "2025-06-03",
+              "who": "Johan",
+              "children": [
+                {
+                  "label": "Has no footer ( a small footer could contain more information)",
+                  "done": false,
+                  "unit": "",
+                  "qty_est": 0,
+                  "qty_real": 0,
+                  "price_unit": 0,
+                  "date": "2025-06-03",
+                  "who": "Johan",
+                  "children": [],
+                  "hns": "1.2.2.1"
+                },
+                {
+                  "label": "The top row should be visible at all times",
+                  "done": false,
+                  "unit": "",
+                  "qty_est": "",
+                  "qty_real": "",
+                  "price_unit": "",
+                  "total_price": 0,
+                  "date": "2025-06-03",
+                  "who": "Johan",
+                  "children": [],
+                  "collapsed": false,
+                  "hns": "1.2.2.2"
+                },
+                {
+                  "label": "right-click ->style: add option stylenames",
+                  "done": false,
+                  "unit": "",
+                  "qty_est": "",
+                  "qty_real": "",
+                  "price_unit": "",
+                  "total_price": 0,
+                  "date": "2025-06-03",
+                  "who": "Johan",
+                  "children": [],
+                  "collapsed": false,
+                  "hns": "1.2.2.3"
+                },
+                {
+                  "label": "wordwrap in a cell",
+                  "done": false,
+                  "unit": "",
+                  "qty_est": "",
+                  "qty_real": "",
+                  "price_unit": "",
+                  "total_price": 0,
+                  "date": "2025-06-03",
+                  "who": "Johan",
+                  "children": [],
+                  "collapsed": false,
+                  "hns": "1.2.2.4"
+                }
+              ],
+              "collapsed": false,
+              "hns": "1.2.2"
+            }
+          ],
+          "collapsed": false,
+          "hns": "1.2"
+        }
+      ],
+      "noteFile": "checklists/notes/2025_05_18_@_12-57-21.html"
+    },
+    {
+      "hns": "2",
+      "label": "Style: in /css/style.css : this is the basic style for the HTML page, not to be confused with the style the user creates for display and printing",
+      "done": false,
+      "unit": "",
+      "qty_est": "",
+      "qty_real": "",
+      "price_unit": "",
+      "total_price": 0,
+      "date": "",
+      "who": "Johan",
+      "collapsed": true,
+      "children": [
+        {
+          "hns": "2.1",
+          "label": "Layout & spacing",
+          "done": false,
+          "unit": "",
+          "qty_est": "",
+          "qty_real": "",
+          "price_unit": "",
+          "total_price": 0,
+          "date": "",
+          "who": "Johan",
+          "collapsed": false
+        },
+        {
+          "hns": "2.2",
+          "label": "Colors and themes",
+          "done": false,
+          "unit": "",
+          "qty_est": "",
+          "qty_real": "",
+          "price_unit": "",
+          "total_price": 0,
+          "date": "",
+          "who": "Johan",
+          "collapsed": false
+        },
+        {
+          "hns": "2.3",
+          "label": "Responsive design",
+          "done": false,
+          "unit": "",
+          "qty_est": "",
+          "qty_real": "",
+          "price_unit": "",
+          "total_price": 0,
+          "date": "",
+          "who": "Johan",
+          "collapsed": false
+        },
+        {
+          "hns": "2.4",
+          "label": "Custom fonts and icons",
+          "done": false,
+          "unit": "",
+          "qty_est": "",
+          "qty_real": "",
+          "price_unit": "",
+          "total_price": 0,
+          "date": "",
+          "who": "Johan",
+          "collapsed": false
+        }
+      ]
+    },
+    {
+      "hns": "3",
+      "label": "Script",
+      "done": false,
+      "unit": "",
+      "qty_est": "",
+      "qty_real": "",
+      "price_unit": "",
+      "total_price": 0,
+      "date": "",
+      "who": "Johan",
+      "collapsed": false,
+      "children": [
+        {
+          "hns": "3.1",
+          "label": "Checklist rendering",
+          "done": false,
+          "unit": "",
+          "qty_est": "",
+          "qty_real": "",
+          "price_unit": "",
+          "total_price": 0,
+          "date": "",
+          "who": "Johan",
+          "collapsed": false,
+          "children": [
+            {
+              "label": "columns can be dragged",
+              "done": false,
+              "unit": "",
+              "qty_est": 0,
+              "qty_real": 0,
+              "price_unit": 0,
+              "date": "2025-06-22",
+              "who": "Johan",
+              "children": [],
+              "hns": "3.1.1"
+            }
+          ]
+        },
+        {
+          "hns": "3.2",
+          "label": "Filter logic",
+          "done": true,
+          "unit": "",
+          "qty_est": "",
+          "qty_real": "",
+          "price_unit": "",
+          "total_price": 0,
+          "date": "",
+          "who": "Johan",
+          "collapsed": false
+        },
+        {
+          "hns": "3.3",
+          "label": "Right-click menu",
+          "done": false,
+          "unit": "",
+          "qty_est": "",
+          "qty_real": "",
+          "price_unit": "",
+          "total_price": 0,
+          "date": "",
+          "who": "Johan",
+          "collapsed": false
+        },
+        {
+          "hns": "3.4",
+          "label": "Modal and Quill editor",
+          "done": true,
+          "unit": "",
+          "qty_est": "",
+          "qty_real": "",
+          "price_unit": "",
+          "total_price": 0,
+          "date": "",
+          "who": "Johan",
+          "collapsed": false
+        },
+        {
+          "hns": "3.5",
+          "label": "Save/load logic",
+          "done": true,
+          "unit": "",
+          "qty_est": "",
+          "qty_real": "",
+          "price_unit": "",
+          "total_price": 0,
+          "date": "",
+          "who": "Johan",
+          "collapsed": false
+        },
+        {
+          "hns": "3.6",
+          "label": "GitHub integration",
+          "done": true,
+          "unit": "",
+          "qty_est": "",
+          "qty_real": "",
+          "price_unit": "",
+          "total_price": 0,
+          "date": "",
+          "who": "Johan",
+          "collapsed": false
+        }
+      ]
+    },
+    {
+      "hns": "4",
+      "label": "Files",
+      "done": false,
+      "unit": "",
+      "qty_est": "",
+      "qty_real": "",
+      "price_unit": "",
+      "total_price": 0,
+      "date": "",
+      "who": "Johan",
+      "collapsed": false,
+      "children": [
+        {
+          "hns": "4.1",
+          "label": "index.html : the main page",
+          "done": false,
+          "unit": "",
+          "qty_est": "",
+          "qty_real": "",
+          "price_unit": "",
+          "total_price": 0,
+          "date": "",
+          "who": "Johan",
+          "collapsed": false
+        },
+        {
+          "label": "styles.html: the styles editor page for user interface",
+          "done": false,
+          "unit": "",
+          "qty_est": "",
+          "qty_real": "",
+          "price_unit": "",
+          "total_price": 0,
+          "date": "2025-06-03",
+          "who": "Johan",
+          "children": [],
+          "collapsed": false,
+          "hns": "4.2"
+        },
+        {
+          "hns": "4.3",
+          "label": "style.css",
+          "done": false,
+          "unit": "",
+          "qty_est": "",
+          "qty_real": "",
+          "price_unit": "",
+          "total_price": 0,
+          "date": "",
+          "who": "Johan",
+          "collapsed": false
+        },
+        {
+          "hns": "4.4",
+          "label": "script.js",
+          "done": false,
+          "unit": "",
+          "qty_est": "",
+          "qty_real": "",
+          "price_unit": "",
+          "total_price": 0,
+          "date": "",
+          "who": "Johan",
+          "collapsed": false
+        },
+        {
+          "hns": "4.5",
+          "label": "checklist jsons",
+          "done": false,
+          "unit": "",
+          "qty_est": "",
+          "qty_real": "",
+          "price_unit": "",
+          "total_price": 0,
+          "date": "",
+          "who": "Johan",
+          "collapsed": false,
+          "children": [
+            {
+              "label": "per checklist a json",
+              "done": false,
+              "unit": "",
+              "qty_est": 0,
+              "qty_real": 0,
+              "price_unit": 0,
+              "date": "2025-06-03",
+              "who": "Johan",
+              "children": [],
+              "hns": "4.5.1"
+            }
+          ]
+        },
+        {
+          "hns": "4.6",
+          "label": "GitHub token and security",
+          "done": false,
+          "unit": "",
+          "qty_est": "",
+          "qty_real": "",
+          "price_unit": "",
+          "total_price": 0,
+          "date": "",
+          "who": "Johan",
+          "collapsed": false
+        }
+      ]
+    },
+    {
+      "hns": "5",
+      "label": "Settings (not yet developed)",
+      "done": false,
+      "unit": "",
+      "qty_est": "",
+      "qty_real": "",
+      "price_unit": "",
+      "total_price": 0,
+      "date": "",
+      "who": "Johan",
+      "collapsed": true,
+      "children": [
+        {
+          "hns": "5.1",
+          "label": "User preferences",
+          "done": false,
+          "unit": "",
+          "qty_est": "",
+          "qty_real": "",
+          "price_unit": "",
+          "total_price": 0,
+          "date": "",
+          "who": "Johan",
+          "collapsed": false
+        },
+        {
+          "hns": "5.2",
+          "label": "Theme toggles",
+          "done": false,
+          "unit": "",
+          "qty_est": "",
+          "qty_real": "",
+          "price_unit": "",
+          "total_price": 0,
+          "date": "",
+          "who": "Johan",
+          "collapsed": false,
+          "noteFile": "checklists/notes/2025_05_18_@_13-16-17.html"
+        },
+        {
+          "hns": "5.3",
+          "label": "Column visibility",
+          "done": false,
+          "unit": "",
+          "qty_est": "",
+          "qty_real": "",
+          "price_unit": "",
+          "total_price": 0,
+          "date": "",
+          "who": "Johan",
+          "collapsed": false,
+          "noteFile": "notes/2025_05_18_@_11-50-42.html"
+        }
+      ]
+    },
+    {
+      "hns": "6",
+      "label": "Settings (not yet developed)",
+      "done": false,
+      "unit": "",
+      "qty_est": "",
+      "qty_real": "",
+      "price_unit": "",
+      "total_price": 0,
+      "date": "",
+      "who": "Johan",
+      "collapsed": true,
+      "children": [
+        {
+          "hns": "6.1",
+          "label": "User preferences",
+          "done": false,
+          "unit": "",
+          "qty_est": "",
+          "qty_real": "",
+          "price_unit": "",
+          "total_price": 0,
+          "date": "",
+          "who": "Johan",
+          "collapsed": false
+        },
+        {
+          "hns": "6.2",
+          "label": "Theme toggles",
+          "done": false,
+          "unit": "",
+          "qty_est": "",
+          "qty_real": "",
+          "price_unit": "",
+          "total_price": 0,
+          "date": "",
+          "who": "Johan",
+          "collapsed": false,
+          "children": []
+        },
+        {
+          "hns": "6.3",
+          "label": "Column visibility",
+          "done": false,
+          "unit": "",
+          "qty_est": "",
+          "qty_real": "",
+          "price_unit": "",
+          "total_price": 0,
+          "date": "",
+          "who": "Johan",
+          "collapsed": false,
+          "noteFile": "notes/2025_05_18_@_11-34-35.html"
+        }
+      ]
+    },
+    {
+      "hns": "7",
+      "label": "shortcuts",
+      "done": false,
+      "unit": "",
+      "qty_est": "",
+      "qty_real": "",
+      "price_unit": "",
+      "total_price": 0,
+      "date": "",
+      "who": "Johan",
+      "collapsed": true,
+      "children": [
+        {
+          "hns": "7.1",
+          "label": "dblclick in label -> add one below if it is last",
+          "done": false,
+          "unit": "",
+          "qty_est": "",
+          "qty_real": "",
+          "price_unit": "",
+          "total_price": 0,
+          "date": "",
+          "who": "Johan",
+          "collapsed": false
+        },
+        {
+          "hns": "7.2",
+          "label": "ctrl-b = bold",
+          "done": false,
+          "unit": "",
+          "qty_est": "",
+          "qty_real": "",
+          "price_unit": "",
+          "total_price": 0,
+          "date": "",
+          "who": "Johan",
+          "collapsed": false,
+          "bold": true
+        },
+        {
+          "hns": "7.3",
+          "label": "ctrl-d = duplicate complete below structure before other parent",
+          "done": false,
+          "unit": "",
+          "qty_est": "",
+          "qty_real": "",
+          "price_unit": "",
+          "total_price": 0,
+          "date": "",
+          "who": "Johan",
+          "collapsed": false,
+          "children": []
+        },
+        {
+          "hns": "7.4",
+          "label": "ctrl-up = move up one level",
+          "done": false,
+          "unit": "",
+          "qty_est": "",
+          "qty_real": "",
+          "price_unit": "",
+          "total_price": 0,
+          "date": "",
+          "who": "Johan",
+          "collapsed": false,
+          "children": []
+        },
+        {
+          "label": "if duplicate 7.3 it should make 7.4 with below",
+          "done": false,
+          "unit": "",
+          "qty_est": 0,
+          "qty_real": 0,
+          "price_unit": 0,
+          "date": "2025-05-18",
+          "who": "Johan",
+          "children": [],
+          "hns": "7.5"
+        },
+        {
+          "label": "Type content here (ctrl-del to delete row)",
+          "done": false,
+          "unit": "",
+          "qty_est": "",
+          "qty_real": "",
+          "price_unit": "",
+          "total_price": 0,
+          "date": "2025-05-18",
+          "who": "Johan",
+          "children": [],
+          "collapsed": false,
+          "hns": "7.6"
+        }
+      ]
+    }
+  ]
+}
