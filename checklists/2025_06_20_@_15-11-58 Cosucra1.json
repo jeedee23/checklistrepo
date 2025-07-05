@@ -1,6 +1,6 @@
 {
   "title": "Cosucra Project structure",
-  "lastSave": "2025_07_05_@_18-49-16",
+  "lastSave": "2025_07_05_@_21-03-25",
   "lastlayout": "minilist",
   "lastcollaborator": "Johan",
   "fields": {
@@ -102,7 +102,7 @@
           "visible": true
         },
         "hns": {
-          "width": 80,
+          "width": 55,
           "visible": true
         },
         "label": {
@@ -130,11 +130,11 @@
           "visible": false
         },
         "date": {
-          "width": 120,
+          "width": 47,
           "visible": true
         },
         "who": {
-          "width": 120,
+          "width": 84,
           "visible": true
         },
         "progress": {
@@ -162,7 +162,7 @@
           "visible": false
         },
         "IsPE": {
-          "width": "100px",
+          "width": 47,
           "visible": true
         }
       },
@@ -6195,7 +6195,7 @@
         "visible": true
       },
       "hns": {
-        "width": 80,
+        "width": 55,
         "visible": true
       },
       "label": {
@@ -6223,11 +6223,11 @@
         "visible": false
       },
       "date": {
-        "width": 120,
+        "width": 47,
         "visible": true
       },
       "who": {
-        "width": 120,
+        "width": 84,
         "visible": true
       },
       "progress": {
@@ -6255,7 +6255,7 @@
         "visible": false
       },
       "IsPE": {
-        "width": "100px",
+        "width": 47,
         "visible": true
       }
     },
