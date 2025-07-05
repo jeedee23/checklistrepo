@@ -1,9 +1,9 @@
 {
   "title": "Cosucra Project structure",
-  "lastSave": "2025_07_05_@_15-26-38",
+  "lastSave": "2025_07_05_@_16-06-44",
   "lastlayout": "minilist",
   "layouts": [
-       {
+    {
       "layoutName": "minilist",
       "columns": {
         "done": {
@@ -6096,18 +6096,17 @@
     }
   ],
   "layout": {
-    "layoutName": "lastused",
     "columns": {
       "done": {
         "width": 50,
         "visible": true
       },
       "hns": {
-        "width": "90px",
+        "width": 80,
         "visible": true
       },
       "label": {
-        "width": "335px",
+        "width": 250,
         "visible": true
       },
       "unit": {
@@ -6167,20 +6166,29 @@
         "visible": true
       }
     },
-    "rows": {
-      "height": 30
-    },
     "columnOrder": [
       "done",
       "hns",
       "label",
       "date",
       "who",
-      "progress"
+      "progress",
+      "unit",
+      "qty_est",
+      "qty_real",
+      "price_unit",
+      "total_price",
+      "Resp",
+      "Acc",
+      "Support",
+      "Consult",
+      "Informed",
+      "IsPreEngineering"
     ],
+    "rowHeight": 30,
     "layouts": [
       {
-        "layoutName": "lastused",
+        "layoutName": "default",
         "columns": {
           "done": {
             "width": 50,
@@ -6191,7 +6199,7 @@
             "visible": true
           },
           "label": {
-            "width": "335px",
+            "width": 250,
             "visible": true
           },
           "unit": {
@@ -6245,6 +6253,10 @@
           "Informed": {
             "width": 120,
             "visible": false
+          },
+          "IsPreEngineering": {
+            "width": "100px",
+            "visible": true
           }
         },
         "rows": {
@@ -6256,7 +6268,18 @@
           "label",
           "date",
           "who",
-          "progress"
+          "progress",
+          "unit",
+          "qty_est",
+          "qty_real",
+          "price_unit",
+          "total_price",
+          "Resp",
+          "Acc",
+          "Support",
+          "Consult",
+          "Informed",
+          "IsPreEngineering"
         ]
       }
     ],
