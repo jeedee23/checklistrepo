@@ -158,7 +158,7 @@
       "default_value": "∅"
     },
     "21": {
-      "key": "IsPreEngineering",
+      "key": "IsPE",
       "label": "IsPE",
       "type": "checkbox",
       "default_value": false
