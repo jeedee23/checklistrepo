@@ -1,6 +1,6 @@
 {
   "title": "Cosucra Project structure",
-  "lastSave": "2025_07_05_@_21-04-25",
+  "lastSave": "2025_07_05_@_21-08-54",
   "lastlayout": "minilist",
   "lastcollaborator": "Johan",
   "fields": {
@@ -143,26 +143,26 @@
         },
         "Resp": {
           "width": 120,
-          "visible": false
+          "visible": true
         },
         "Acc": {
           "width": 120,
-          "visible": false
+          "visible": true
         },
         "Support": {
           "width": 120,
-          "visible": false
+          "visible": true
         },
         "Consult": {
-          "width": 120,
-          "visible": false
+          "width": 133,
+          "visible": true
         },
         "Informed": {
           "width": 120,
           "visible": false
         },
         "IsPE": {
-          "width": 47,
+          "width": 76,
           "visible": true
         }
       },
@@ -3448,7 +3448,8 @@
       "important": true,
       "noteFile": "checklists/notes/2025_06_22_@_21-35-48.html",
       "Resp": "Frédéric",
-      "_pendingNoteSha": null
+      "_pendingNoteSha": null,
+      "IsPE": true
     },
     {
       "hns": "3",
@@ -5465,7 +5466,8 @@
           "collapsed": true,
           "hns": "4.7"
         }
-      ]
+      ],
+      "IsPE": true
     },
     {
       "hns": "5",
@@ -6236,26 +6238,26 @@
       },
       "Resp": {
         "width": 120,
-        "visible": false
+        "visible": true
       },
       "Acc": {
         "width": 120,
-        "visible": false
+        "visible": true
       },
       "Support": {
         "width": 120,
-        "visible": false
+        "visible": true
       },
       "Consult": {
-        "width": 120,
-        "visible": false
+        "width": 133,
+        "visible": true
       },
       "Informed": {
         "width": 120,
         "visible": false
       },
       "IsPE": {
-        "width": 47,
+        "width": 76,
         "visible": true
       }
     },
