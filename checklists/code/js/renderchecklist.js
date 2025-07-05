@@ -14,11 +14,22 @@ import { waitForEventFlag } from './ui-mainrender.js';
  * @param {number} eventId - Optional event ID that triggered this render
  */
 export async function renderChecklist(eventId = 0) {
+  console.log(`[renderChecklist] Starting render with eventId: ${eventId}`);
+  
   // Log the specific event that triggered this render
   if (eventId > 0) {
     const eventName = sharedState.getDirtyEventName(eventId);
     console.log(`[renderChecklist] Event ID: ${eventId} - ${eventName}`);
   }
+  
+  // Log current fields and layout state
+  console.log('[renderChecklist] Current fields:', Object.keys(sharedState.checklistData?.fields || {}));
+  console.log('[renderChecklist] Current layout columns:', Object.keys(sharedState.checklistData?.layout?.columns || {}));
+  console.log('[renderChecklist] Visible columns:', 
+    Object.entries(sharedState.checklistData?.layout?.columns || {})
+      .filter(([key, col]) => col.visible)
+      .map(([key]) => key)
+  );
   
   // For structural changes, always renumber the checklist first
   // Only these events actually change the structure and require renumbering

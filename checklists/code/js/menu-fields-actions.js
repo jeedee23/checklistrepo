@@ -263,13 +263,32 @@ export function setupFieldsGridEventHandlers(dialog, gridData) {
     const visibleCheckbox = document.getElementById(`visible-${field.id}`);
     
     if (activeCheckbox && visibleCheckbox) {
+      // Add change listener for Active checkbox
       activeCheckbox.addEventListener('change', () => {
+        console.log(`[Fields Dialog] 🔄 Active checkbox toggled for ${field.fieldKey}:`, {
+          checked: activeCheckbox.checked,
+          fieldType: field.fieldType,
+          fieldName: field.fieldName
+        });
+        
         if (activeCheckbox.checked) {
           visibleCheckbox.disabled = false;
+          console.log(`[Fields Dialog] ✅ Enabled Visible checkbox for ${field.fieldKey}`);
         } else {
           visibleCheckbox.disabled = true;
           visibleCheckbox.checked = false;
+          console.log(`[Fields Dialog] ❌ Disabled and unchecked Visible checkbox for ${field.fieldKey}`);
         }
+      });
+      
+      // Add change listener for Visible checkbox
+      visibleCheckbox.addEventListener('change', () => {
+        console.log(`[Fields Dialog] 👁️ Visible checkbox toggled for ${field.fieldKey}:`, {
+          checked: visibleCheckbox.checked,
+          activeChecked: activeCheckbox.checked,
+          fieldType: field.fieldType,
+          fieldName: field.fieldName
+        });
       });
     }
   });
@@ -280,6 +299,7 @@ export function setupFieldsGridEventHandlers(dialog, gridData) {
  */
 export function applyFieldsToCurrentLayout(gridData) {
   console.log('[Fields Dialog] Applying changes to current layout');
+  console.log('[Fields Dialog] Original grid data:', gridData);
   
   // Update checklistData.fields based on Active checkboxes
   if (!sharedState.checklistData.fields) {
@@ -291,13 +311,26 @@ export function applyFieldsToCurrentLayout(gridData) {
     sharedState.checklistData.layout.columns = {};
   }
   
+  console.log('[Fields Dialog] BEFORE - Fields:', Object.keys(sharedState.checklistData.fields));
+  console.log('[Fields Dialog] BEFORE - Layout columns:', Object.keys(sharedState.checklistData.layout.columns));
+  
   gridData.forEach(field => {
     const activeCheckbox = document.getElementById(`active-${field.id}`);
     const visibleCheckbox = document.getElementById(`visible-${field.id}`);
     
     if (activeCheckbox && visibleCheckbox) {
+      // Read CURRENT checkbox states, not the original gridData values
       const isActive = activeCheckbox.checked;
       const isVisible = visibleCheckbox.checked;
+      
+      console.log(`[Fields Dialog] Processing field ${field.fieldKey}:`, {
+        originalIsActive: field.isActive,
+        currentIsActive: isActive,
+        originalIsVisible: field.isVisible,
+        currentIsVisible: isVisible,
+        fieldType: field.fieldType,
+        fieldName: field.fieldName
+      });
       
       // Update fields
       if (isActive) {
@@ -307,6 +340,9 @@ export function applyFieldsToCurrentLayout(gridData) {
             type: field.fieldType,
             label: field.fieldName
           };
+          console.log(`[Fields Dialog] ✅ Added field ${field.fieldKey} to checklistData.fields`);
+        } else {
+          console.log(`[Fields Dialog] ℹ️ Field ${field.fieldKey} already exists in checklistData.fields`);
         }
         
         // Update layout columns
@@ -315,20 +351,76 @@ export function applyFieldsToCurrentLayout(gridData) {
             width: '100px',
             visible: isVisible
           };
+          console.log(`[Fields Dialog] ✅ Added field ${field.fieldKey} to layout.columns with visible=${isVisible}`);
         } else {
           sharedState.checklistData.layout.columns[field.fieldKey].visible = isVisible;
+          console.log(`[Fields Dialog] ✅ Updated field ${field.fieldKey} visibility to ${isVisible} in layout.columns`);
         }
       } else {
         // Remove field from fields and layout
-        delete sharedState.checklistData.fields[field.fieldKey];
-        delete sharedState.checklistData.layout.columns[field.fieldKey];
+        if (sharedState.checklistData.fields[field.fieldKey]) {
+          delete sharedState.checklistData.fields[field.fieldKey];
+          console.log(`[Fields Dialog] ❌ Removed field ${field.fieldKey} from checklistData.fields`);
+        }
+        if (sharedState.checklistData.layout.columns[field.fieldKey]) {
+          delete sharedState.checklistData.layout.columns[field.fieldKey];
+          console.log(`[Fields Dialog] ❌ Removed field ${field.fieldKey} from layout.columns`);
+        }
+      }
+    } else {
+      console.log(`[Fields Dialog] ⚠️ Could not find checkboxes for field ${field.fieldKey}:`, {
+        activeCheckbox: !!activeCheckbox,
+        visibleCheckbox: !!visibleCheckbox
+      });
+    }
+  });
+  
+  console.log('[Fields Dialog] AFTER - Fields:', Object.keys(sharedState.checklistData.fields));
+  console.log('[Fields Dialog] AFTER - Layout columns:', Object.keys(sharedState.checklistData.layout.columns));
+  console.log('[Fields Dialog] AFTER - Visible columns:', 
+    Object.entries(sharedState.checklistData.layout.columns)
+      .filter(([key, col]) => col.visible)
+      .map(([key]) => key)
+  );
+  
+  // Update columnOrder to include all columns that have been added
+  if (!sharedState.checklistData.layout.columnOrder) {
+    sharedState.checklistData.layout.columnOrder = [];
+  }
+  
+  // Get current column order
+  const currentColumnOrder = [...sharedState.checklistData.layout.columnOrder];
+  
+  // Add any new columns that are not in the column order
+  gridData.forEach(field => {
+    const activeCheckbox = document.getElementById(`active-${field.id}`);
+    if (activeCheckbox && activeCheckbox.checked) {
+      if (!currentColumnOrder.includes(field.fieldKey)) {
+        currentColumnOrder.push(field.fieldKey);
+        console.log(`[Fields Dialog] ✅ Added ${field.fieldKey} to columnOrder`);
+      }
+    } else {
+      // Remove from column order if field is deactivated
+      const index = currentColumnOrder.indexOf(field.fieldKey);
+      if (index > -1) {
+        currentColumnOrder.splice(index, 1);
+        console.log(`[Fields Dialog] ❌ Removed ${field.fieldKey} from columnOrder`);
       }
     }
   });
   
+  // Update the layout columnOrder
+  sharedState.checklistData.layout.columnOrder = currentColumnOrder;
+  console.log('[Fields Dialog] AFTER - Column order:', sharedState.checklistData.layout.columnOrder);
+  
   // Mark as dirty and re-render
+  console.log('[Fields Dialog] Marking as dirty and triggering re-render...');
   markSaveDirty(true, sharedState.DIRTY_EVENTS.FIELD_METADATA);
+  
+  console.log('[Fields Dialog] Calling renderChecklist()...');
   renderChecklist();
+  
+  console.log('[Fields Dialog] ✅ Field changes applied successfully');
   showNotification('success', 'Fields updated in current layout');
 }
 
