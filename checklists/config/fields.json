@@ -5,137 +5,163 @@
       "label": "✔ Done",
       "type": "checkbox",
       "fixed": true,
-      "default_value": false      
+      "default_value": false
     },
     "2": {
       "key": "hns",
       "label": "hns",
       "type": "number",
-      "default_value": 0      
+      "default_value": 0
     },
     "3": {
       "key": "label",
       "label": "Label",
       "type": "tree",
       "fixed": true,
-      "default_value": "please fill in value"      
+      "default_value": "please fill in value"
     },
     "4": {
       "key": "unit",
       "label": "Unit",
       "type": "text",
-      "default_value": ""      
+      "default_value": ""
     },
     "5": {
       "key": "qty_est",
       "label": "Est. Qty",
       "type": "number",
-      "default_value": 0      
+      "default_value": 0
     },
     "6": {
       "key": "qty_real",
       "label": "Real Qty",
       "type": "number",
-      "default_value": 0      
+      "default_value": 0
     },
     "7": {
       "key": "price_unit",
       "label": "Unit Price",
       "type": "number",
-      "default_value": 0      
+      "default_value": 0
     },
     "8": {
       "key": "total_price",
       "label": "Total Price",
       "type": "computed",
       "formula": "qty_real * price_unit",
-      "default_value": 0      
+      "default_value": 0
     },
     "9": {
       "key": "date",
       "label": "Date",
       "type": "date",
-      "default_value": "now"      
+      "default_value": "now"
     },
     "10": {
       "key": "who",
       "label": "Who",
       "type": "select",
       "source": "collaborators",
-      "default_value": "currentuser"      
+      "default_value": "currentuser"
     },
     "11": {
       "key": "status",
       "label": "Status",
       "type": "select",
-      "options": ["Planned", "In Progress", "Completed", "Blocked"],
-      "default_value": ""      
+      "options": [
+        "Planned",
+        "In Progress",
+        "Completed",
+        "Blocked"
+      ],
+      "default_value": ""
     },
     "12": {
       "key": "priority",
       "label": "Priority",
       "type": "select",
-      "options": ["Low", "Normal", "High"],
-      "default_value": ""      
+      "options": [
+        "Low",
+        "Normal",
+        "High"
+      ],
+      "default_value": ""
     },
     "13": {
       "key": "progress",
       "label": "Progress (%)",
       "type": "number",
-      "default_value": 0      
+      "default_value": 0
     },
     "14": {
       "key": "need",
       "label": "Need",
       "type": "select",
-      "options": ["Low", "Normal", "High"],
-      "default_value": ""      
+      "options": [
+        "Low",
+        "Normal",
+        "High"
+      ],
+      "default_value": ""
     },
     "15": {
       "key": "type",
       "label": "Type",
       "type": "select",
       "options": [
-        "Part", "Component", "Manhours", "Assembly",
-        "Target", "Userdefined", "Code", "Electronics",
-        "Process", "PLC"
+        "Part",
+        "Component",
+        "Manhours",
+        "Assembly",
+        "Target",
+        "Userdefined",
+        "Code",
+        "Electronics",
+        "Process",
+        "PLC"
       ],
-      "default_value": ""      
+      "default_value": ""
     },
     "16": {
       "key": "Resp",
       "label": "Responsable",
       "type": "select",
       "source": "collaborators",
-      "default_value": "∅"      
+      "default_value": "∅"
     },
     "17": {
       "key": "Acc",
       "label": "Accountable",
       "type": "select",
       "source": "collaborators",
-      "default_value": "∅"      
+      "default_value": "∅"
     },
     "18": {
       "key": "Support",
       "label": "Support",
       "type": "select",
       "source": "collaborators",
-      "default_value": "∅"      
+      "default_value": "∅"
     },
     "19": {
       "key": "Consult",
       "label": "Consult",
       "type": "select",
       "source": "collaborators",
-      "default_value": "∅"      
+      "default_value": "∅"
     },
     "20": {
       "key": "Informed",
       "label": "Informed",
       "type": "select",
       "source": "collaborators",
-      "default_value": "∅"      
+      "default_value": "∅"
+    },
+    "21": {
+      "key": "IsPreEngineering",
+      "label": "IsPE",
+      "type": "checkbox",
+      "default_value": "0"
     }
   }
 }
