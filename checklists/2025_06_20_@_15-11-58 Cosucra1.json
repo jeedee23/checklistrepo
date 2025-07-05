@@ -1,7 +1,98 @@
 {
   "title": "Cosucra Project structure",
-  "lastSave": "2025_07_05_@_18-42-31",
+  "lastSave": "2025_07_05_@_16-30-00",
   "lastlayout": "minilist",
+  "lastcollaborator": "Johan",
+  "fields": {
+    "done": {
+      "type": "checkbox",
+      "label": "✔ Done"
+    },
+    "hns": {
+      "type": "number",
+      "label": "hns"
+    },
+    "label": {
+      "type": "tree",
+      "label": "Label"
+    },
+    "unit": {
+      "type": "text",
+      "label": "Unit"
+    },
+    "qty_est": {
+      "type": "number",
+      "label": "Est. Qty"
+    },
+    "qty_real": {
+      "type": "number",
+      "label": "Real Qty"
+    },
+    "price_unit": {
+      "type": "number",
+      "label": "Unit Price"
+    },
+    "total_price": {
+      "type": "computed",
+      "label": "Total Price"
+    },
+    "date": {
+      "type": "date",
+      "label": "Date"
+    },
+    "who": {
+      "type": "select",
+      "label": "Who"
+    },
+    "Resp": {
+      "type": "select",
+      "label": "Responsable"
+    },
+    "Acc": {
+      "type": "select",
+      "label": "Accountable"
+    },
+    "Support": {
+      "type": "select",
+      "label": "Support"
+    },
+    "Consult": {
+      "type": "select",
+      "label": "Consult"
+    },
+    "Informed": {
+      "type": "select",
+      "label": "Informed"
+    },
+    "progress": {
+      "type": "number",
+      "label": "Progress (%)"
+    },
+    "IsPreEngineering": {
+      "type": "checkbox",
+      "label": "IsPE"
+    }
+  },
+  "sources": {
+    "collaborators": [
+      "∅",
+      "Johan",
+      "Fred",
+      "Cuong"
+    ],
+    "unitChoices": [
+      "kg",
+      "ton",
+      "hr",
+      "sec",
+      "m",
+      "m²",
+      "m³",
+      "l",
+      "pc"
+    ]
+  },
+  "other_inits": {},
   "layouts": [
     {
       "layoutName": "minilist",
@@ -69,10 +160,6 @@
         "Informed": {
           "width": 120,
           "visible": false
-        },
-        "IsPreEngineering": {
-          "width": "100px",
-          "visible": true
         }
       },
       "rows": {
@@ -84,18 +171,7 @@
         "label",
         "date",
         "who",
-        "progress",
-        "unit",
-        "qty_est",
-        "qty_real",
-        "price_unit",
-        "total_price",
-        "Resp",
-        "Acc",
-        "Support",
-        "Consult",
-        "Informed",
-        "IsPreEngineering"
+        "progress"
       ]
     },
     {
@@ -180,21 +256,7 @@
       ]
     }
   ],
-  "files": [
-    {
-      "name": "RASCI.png",
-      "path": "checklists/files/RASCI.png",
-      "uploadedBy": "Johan",
-      "uploadedAt": "2025-06-26T20:31:58.481Z"
-    },
-    {
-      "name": "Improved_Letter.docx",
-      "path": "checklists/files/Improved_Letter.docx",
-      "uploadedBy": "Johan",
-      "uploadedAt": "2025-06-26T20:35:01.970Z"
-    }
-  ],
-  "items": [
+   "items": [
     {
       "hns": "1",
       "label": "Introduction.",
@@ -6109,187 +6171,5 @@
         }
       ]
     }
-  ],
-  "layout": {
-    "columns": {
-      "done": {
-        "width": 50,
-        "visible": true
-      },
-      "hns": {
-        "width": 80,
-        "visible": true
-      },
-      "label": {
-        "width": 250,
-        "visible": true
-      },
-      "unit": {
-        "width": 120,
-        "visible": false
-      },
-      "qty_est": {
-        "width": 80,
-        "visible": false
-      },
-      "qty_real": {
-        "width": 80,
-        "visible": false
-      },
-      "price_unit": {
-        "width": 80,
-        "visible": false
-      },
-      "total_price": {
-        "width": 100,
-        "visible": false
-      },
-      "date": {
-        "width": 120,
-        "visible": true
-      },
-      "who": {
-        "width": 120,
-        "visible": true
-      },
-      "progress": {
-        "width": 80,
-        "visible": false
-      },
-      "Resp": {
-        "width": 120,
-        "visible": false
-      },
-      "Acc": {
-        "width": 120,
-        "visible": false
-      },
-      "Support": {
-        "width": 120,
-        "visible": false
-      },
-      "Consult": {
-        "width": 120,
-        "visible": false
-      },
-      "Informed": {
-        "width": 120,
-        "visible": false
-      },
-      "IsPreEngineering": {
-        "width": "100px",
-        "visible": true
-      }
-    },
-    "columnOrder": [
-      "done",
-      "hns",
-      "label",
-      "date",
-      "who",
-      "progress",
-      "unit",
-      "qty_est",
-      "qty_real",
-      "price_unit",
-      "total_price",
-      "Resp",
-      "Acc",
-      "Support",
-      "Consult",
-      "Informed",
-      "IsPreEngineering"
-    ],
-    "rowHeight": 30
-  },
-  "activeLayoutIndex": 0,
-  "fields": {
-    "done": {
-      "type": "checkbox",
-      "label": "✔ Done"
-    },
-    "hns": {
-      "type": "number",
-      "label": "hns"
-    },
-    "label": {
-      "type": "tree",
-      "label": "Label"
-    },
-    "unit": {
-      "type": "text",
-      "label": "Unit"
-    },
-    "qty_est": {
-      "type": "number",
-      "label": "Est. Qty"
-    },
-    "qty_real": {
-      "type": "number",
-      "label": "Real Qty"
-    },
-    "price_unit": {
-      "type": "number",
-      "label": "Unit Price"
-    },
-    "total_price": {
-      "type": "computed",
-      "label": "Total Price"
-    },
-    "date": {
-      "type": "date",
-      "label": "Date"
-    },
-    "who": {
-      "type": "select",
-      "label": "Who"
-    },
-    "Resp": {
-      "type": "select",
-      "label": "Responsable"
-    },
-    "Acc": {
-      "type": "select",
-      "label": "Accountable"
-    },
-    "Support": {
-      "type": "select",
-      "label": "Support"
-    },
-    "Consult": {
-      "type": "select",
-      "label": "Consult"
-    },
-    "Informed": {
-      "type": "select",
-      "label": "Informed"
-    },
-    "progress": {
-      "type": "number",
-      "label": "Progress (%)"
-    },
-    "IsPreEngineering": {
-      "type": "checkbox",
-      "label": "IsPE"
-    }
-  },
-  "sources": {
-    "collaborators": [
-      "∅",
-      "Johan",
-      "Fred",
-      "Cuong"
-    ],
-    "unitChoices": [
-      "kg",
-      "ton",
-      "hr",
-      "sec",
-      "m",
-      "m²",
-      "m³",
-      "l",
-      "pc"
-    ]
-  }
+  ]
 }
