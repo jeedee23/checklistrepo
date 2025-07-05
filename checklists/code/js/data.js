@@ -321,9 +321,18 @@ export async function loadChecklist(path) {
       console.log('[Data] Added empty collaborators array to sources');
     }
     
-    // Step 6: Maintain backward compatibility properties
-    sharedState.checklistData.collaborators = sharedState.checklistData.sources.collaborators;
-    sharedState.checklistData.unitChoices = sharedState.checklistData.sources.unitChoices;
+    // Step 6: Clean up legacy properties after migration
+    if (sharedState.checklistData.collaborators && sharedState.checklistData.sources.collaborators) {
+      console.log('[Data] Removing legacy collaborators property');
+      delete sharedState.checklistData.collaborators;
+      defaultsApplied = true;
+    }
+    
+    if (sharedState.checklistData.unitChoices && sharedState.checklistData.sources.unitChoices) {
+      console.log('[Data] Removing legacy unitChoices property');
+      delete sharedState.checklistData.unitChoices;
+      defaultsApplied = true;
+    }
     
     // Step 7: Log the final sources structure
     if (sourcesCreated || defaultsApplied) {

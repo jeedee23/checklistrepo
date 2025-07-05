@@ -26,6 +26,20 @@ export async function newChecklist() {
       unitChoices: ["kg", "ton", "hr", "sec", "m", "m²", "m³", "l", "pc"],
       collaborators: [sharedState.currentUser || ""]
     },
+    layouts: [
+      {
+        layoutName: "Default",
+        columns: {
+          done: { visible: true, width: 50 },
+          label: { visible: true, width: 400 },
+          who: { visible: true, width: 100 },
+          date: { visible: true, width: 100 }
+        },
+        columnOrder: ["done", "label", "who", "date"],
+        rows: { height: 30 }
+      }
+    ],
+    activeLayoutIndex: 0,
     items: [
       {
         label: "First item",
@@ -33,17 +47,23 @@ export async function newChecklist() {
         children: []
       }
     ],
+    fields: {
+      done: { type: "checkbox", label: "✔ Done" },
+      label: { type: "tree", label: "Label" },
+      who: { type: "select", label: "Who", source: "collaborators" },
+      date: { type: "date", label: "Date" },
+      unit: { type: "select", label: "Unit", source: "unitChoices" }
+    },
     layout: {
       columns: {
-        label: { visible: true, width: 400 },
         done: { visible: true, width: 50 },
+        label: { visible: true, width: 400 },
         who: { visible: true, width: 100 },
         date: { visible: true, width: 100 }
-      }
+      },
+      columnOrder: ["done", "label", "who", "date"],
+      rows: { height: 30 }
     },
-    // Backward compatibility properties (point to sources)
-    collaborators: [sharedState.currentUser || ""],
-    unitChoices: ["kg", "ton", "hr", "sec", "m", "m²", "m³", "l", "pc"],
     files: []
   };
   
